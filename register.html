@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>深圳嘉德森</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Public/CSS/main.css">
+
+  </head>
+
+  <body onload="createCode()">
+
+    <!-- 最顶部的navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top first-bar">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#first-bar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+          <a class="navbar-brand" href="#">欢迎来到必安医疗</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-right" id="first-bar">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="#" data-toggle="modal" data-target="#register">请登录 <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li>
+              <a href="#">免费注册</a>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">系统公告 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">公告一</a>
+                </li>
+                <li>
+                  <a href="#">公告二</a>
+                </li>
+                <li>
+                  <a href="#">公告三</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+
+    <!--
+  作者：offline
+  时间：2017-07-08
+  描述：注册主面板内容
+-->
+
+    <div class="container" style="margin-top:30px;margin-bottom:20px;">
+      <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+          <h3>注 册</h3>
+        </div>
+      </div>
+
+      <form class="form-horizontal">
+
+        <!--姓名输入-->
+        <div class="form-group">
+          <label class="col-md-4 control-label">用户姓名：</label>
+          <div class="col-md-4">
+            <input type="text" class="form-control" id="username" name="username" oninput="checkname()" style="width:340px;display: inline;" placeholder="请输入2-20位中文或英文用户名">
+            <label>
+              <span id="n_o" class="glyphicon glyphicon-ok form-control-feedback form" style="display:none"></span>
+              <span id="n_e" class="glyphicon glyphicon-remove form-control-feedback"></span>
+            </label>
+          </div>
+        </div>
+        <!--手机号码-->
+        <div class="form-group">
+          <label class="col-md-4 control-label">手机号码：</label>
+          <div class="col-md-4">
+            <input type="text" class="form-control" id="phone" name="phone" oninput="checknumb()" style="width:340px;display: inline;" placeholder="请输入11位手机号码">
+            <label>
+              <span id="p_o" class="glyphicon glyphicon-ok form-control-feedback form" style="display:none"></span>
+              <span id="p_e" class="glyphicon glyphicon-remove form-control-feedback"></span>
+            </label>
+          </div>
+
+        </div>
+        <!--验证码-->
+        <div class="form-group">
+          <label class="col-md-4 control-label">验证码：</label>
+          <div class="col-md-4">
+            <input type="text" class="form-control" id="check_one" name="check_one" style="width: 240px;display: inline;" oninput="check()" placeholder="请输入验证码">
+            <input type="button" id="code" class="input-sm" onclick="createCode()" style="width:60px;" />
+            <!--
+                          作者：offline
+                          时间：2017-07-11
+                          描述：<button type="button" id="refresh" class="btn btn-default" style="margin-bottom: 3px;" onclick="createCode()">刷新</button>
+            
+                        -->
+            <a href="javascript:void(0)" onclick="createCode()">刷新</a>
+            <label>
+              <span id="y_o" class="glyphicon glyphicon-ok form-control-feedback form" style="display:none"></span>
+              <span id="y_e" class="glyphicon glyphicon-remove form-control-feedback"></span>
+            </label>
+          </div>
+
+        </div>
+        <!--短信验证码-->
+        <div class="form-group">
+          <label class="col-md-4 control-label">短信验证码：</label>
+          <div class="col-md-4">
+            <div class="input-group" style="width: 340px;">
+              <input type="text" id="dxCode" class="form-control" oninput="check_d()" placeholder="请输入短信验证码" />
+              <span class="input-group-btn">
+                            <input class="btn btn-default" id="time_btn" type="button" value="发送短信验证码" onclick="showtime(60)" />
+                        </span>
+            </div>
+            <label>
+              <span id="dy_o" class="glyphicon glyphicon-ok form-control-feedback form" style="display:none"></span>
+              <span id="dy_e" class="glyphicon glyphicon-remove form-control-feedback"></span>
+            </label>
+
+            <!-- /input-group -->
+          </div>
+          <!-- /.col-lg-4 -->
+        </div>
+        <!--设置密码-->
+        <div class="form-group">
+          <label class="col-md-4 control-label">密码：</label>
+          <div class="col-md-4">
+            <input type="password" class="form-control" id="pwd" style="width:340px;display: inline;" oninput="validate()" onKeyUp="pwStrength(this.value)" onBlur="pwStrength(this.value)" placeholder="请输入6-18位且以字母开头的密码">
+            <label>
+              <span id="pwd_o" class="glyphicon glyphicon-ok form-control-feedback form" style="display:none"></span>
+              <span id="pwd_e" class="glyphicon glyphicon-remove form-control-feedback"></span>
+            </label>
+          </div>
+
+        </div>
+        <!--密码强度-->
+        <div class="form-group">
+          <label class="col-md-5 control-label">密码强度:</label>
+          <table width="217" border="1" cellspacing="0" cellpadding="1" bordercolor="#cccccc" height="20">
+            <tr align="center" bgcolor="#eeeeee">
+              <td width="33%" id="strength_L">弱</td>
+              <td width="33%" id="strength_M">中</td>
+              <td width="33%" id="strength_H">强</td>
+            </tr>
+          </table>
+        </div>
+        <!--确认密码-->
+        <div class="form-group">
+          <label class="col-md-4 control-label">确认密码：</label>
+          <div class="col-md-4">
+            <input type="password" class="form-control" id="pwd_again" style="width:340px;display: inline;" oninput="validate()" placeholder="请输入再次确认密码">
+            <label>
+              <span id="pwd2_o" class="glyphicon glyphicon-ok form-control-feedback form" style="display:none"></span>
+              <span id="pwd2_e" class="glyphicon glyphicon-remove form-control-feedback"></span>
+            </label>
+          </div>
+
+        </div>
+        <!--注册类型-->
+        <div class="form-group">
+          <label for="inputEmail3" class="col-md-4 control-label">注册类型</label>
+          <div class="col-md-4">
+                          <select class="form-control" id="usertype" style="width: 340px;" oninput="chose()">
+                            <option disabled selected value>请选择</option>
+              <option>管理层</option>
+              <option>普通员工</option>
+              <option>游客</option>
+            </select> 
+            
+            <label>
+            <span id="s_o" class="glyphicon glyphicon-ok form-control-feedback form" style="display:none"></span>
+            <span id="s_e" class="glyphicon glyphicon-remove form-control-feedback"></span>
+          </label>
+          </div>
+          
+        </div>
+        <!--协议注册-->
+        <div class="form-group" style="text-align: center;">
+          <div class="col-md-12">
+            <div class="checkbox">
+              <label>
+                          <input type="checkbox"/> 我已阅读<a href="#">必安医疗用户协议</a>
+                        </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" style="text-align: center;">
+          <div class=" col-md-12">
+            <button type="submit" class="btn btn-default">注册</button>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+
+    <!-- 第四部分的navbar -->
+    <nav class="navbar navbar-default fouth-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+              <a class="navbar-brand" href="#">
+                <img src="recourse/Image/site-sprite.png" alt="">
+              </a>
+              <p>正品保证</p>
+              <p>正品保障，品牌货源</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                 </button>
+              <a class="navbar-brand" href="#">
+                <img src="recourse/Image/site-sprite.png" alt="">
+              </a>
+              <p>正品保证</p>
+              <p>正品保障，品牌货源</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+              <a class="navbar-brand" href="#">
+                <img src="recourse/Image/site-sprite.png" alt="">
+              </a>
+              <p>正品保证</p>
+              <p>正品保障，品牌货源</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+              <a class="navbar-brand" href="#">
+                <img src="recourse/Image/site-sprite.png" alt="">
+              </a>
+              <p>正品保证</p>
+              <p>正品保障，品牌货源</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+
+    <!-- 底部的footer -->
+    <nav class="navbar-inverse footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <ul class="list-unstyled">
+              <li>新手指南</li>
+              <li>用户注册</li>
+            </ul>
+          </div>
+
+          <div class="col-md-2">
+            <ul class="list-unstyled">
+              <li>北登服务</li>
+              <li>服务协议</li>
+            </ul>
+          </div>
+
+          <div class="col-md-2">
+            <ul class="list-unstyled">
+              <li>信息安全</li>
+              <li>免责声明</li>
+            </ul>
+          </div>
+
+          <div class="col-md-2">
+            <ul class="list-unstyled">
+              <li>隐私声明</li>
+              <li>法律声明</li>
+              <li>联系我们</li>
+              <li>关于我们</li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <img src="recourse/Image/weixin.jpg" alt="" class="img-responsive" style="width: 100px">
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="row">
+          <div class="col-md-12 word-list">
+            隐私声明 | 法律声明 | 联系我们 | 关于我们 | 产品地图 | 器械数据库 | 知识库 | 网站导航 | 互联网药品信息服务资格证
+          </div>
+
+          <div class="col-md-12 word-list">
+            Copyright © 2010-2016 VEDENG Corporation (www.vedeng.com) All Rights Reserved ICP备案证书号:苏ICP备11075436号
+          </div>
+
+          <div class="col-md-12 word-list" style="margin-bottom: 50px">
+            友情链接： 贝登医疗 二手设备 抗癌健康网 环境试验箱 中国医疗器械网 医疗器械招商 淘宝刷流量 显微镜 甲醛检测仪 香港服务器 找工业品网 蓝贝
+          </div>
+
+        </div>
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+
+  </body>
+  <script type="text/javascript" src="jquery-2.1.1/jquery.js"></script>
+  <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <script>
+    //及时验证用户名
+    function checkname() {
+      //在每个函数中定义check变量是为了在表单提交后，能够逐个验证每个函数是否通过，很好很好。（以下同理）
+      //  var check;
+      var username = document.getElementById("username").value;
+      var infoSapn_n1 = document.getElementById("n_o");
+      var infoSapn_n2 = document.getElementById("n_e");
+      if(!(/^[\u4e00-\u9fa5 ]{2,20}$/.test(username) || /^[a-zA-Z\/ ]{2,20}$/.test(username))) {
+        //alert("用户名输入不合法，请重新输入！"); 
+        infoSapn_n1.style.display = "none";
+        infoSapn_n2.style.display = "";
+        //此处甚妙，既然你在此处输入错误，那么按理说当然要在此处继续输入了。（在此处继续获取焦点！）
+        document.getElementById("username").focus();
+        //      check = false;
+      } else {
+        //document.getElementById("checktext1").innerHTML = "* 用户名由6-18位字符组成 √";
+        infoSapn_n1.style.display = "";
+        infoSapn_n2.style.display = "none";
+        //    check = true;
+      }
+      //  return check;
+    }
+
+    //及时验证手机号码
+    function checknumb() {
+
+      //在每个函数中定义check变量是为了在表单提交后，能够逐个验证每个函数是否通过，很好很好。（以下同理）
+      //  var check;
+      var phone = document.getElementById("phone").value;
+      var infoSapn_p1 = document.getElementById("p_o");
+      var infoSapn_p2 = document.getElementById("p_e");
+      if(!(/^1[34578]\d{9}$/.test(phone))) {
+        //alert("用户名输入不合法，请重新输入！"); 
+        infoSapn_p1.style.display = "none";
+        infoSapn_p2.style.display = "";
+        //此处甚妙，既然你在此处输入错误，那么按理说当然要在此处继续输入了。（在此处继续获取焦点！）
+        document.getElementById("phone").focus();
+        //    check = false;
+      } else {
+        //document.getElementById("checktext1").innerHTML = "* 用户名由6-18位字符组成 √";
+        infoSapn_p1.style.display = "";
+        infoSapn_p2.style.display = "none";
+        //    check = true;
+      }
+      //  return check;
+    }
+
+    var code; //在全局定义验证码  
+
+    function createCode() {
+      code = "";
+      var codeLength = 4; //验证码的长度  
+      var checkCode = document.getElementById("code");
+      var random = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+        'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); //随机数  
+      for(var i = 0; i < codeLength; i++) { //循环操作  
+        var index = Math.floor(Math.random() * 36); //取得随机数的索引（0~35）  
+        code += random[index]; //根据索引取得随机数加到code上  
+      }
+      checkCode.value = code; //把code值赋给验证码  
+    }
+    //校验验证码  
+    function check() {
+      var inputCode = document.getElementById("check_one").value.toUpperCase(); //取得输入的验证码并转化为大写   
+      var infoSpan_y1 = document.getElementById("y_o");
+      var infoSpan_y2 = document.getElementById("y_e");
+      var infoSpan
+      if(inputCode.length <= 0 || inputCode != code) { //若输入的验证码长度为0
+        //    alert("请输入验证码！"); //则弹出请输入验证码 
+        //  } else if(inputCode != code) { //若输入的验证码与产生的验证码不一致时  
+        //  alert("验证码输入错误！@_@"); //则弹出验证码输入错误  
+        //  createCode(); //刷新验证码  
+        //  document.getElementById("check_one").value = ""; //清空文本框 
+        infoSpan_y1.style.display = "none";
+        infoSpan_y2.style.display = "";
+      } else { //输入正确时  
+        //  alert("合格！^-^");
+        infoSpan_y1.style.display = "";
+        infoSpan_y2.style.display = "none";
+      }
+    }
+
+    //校验短信验证码  
+    function check_d() {
+      var dCode = document.getElementById("dxCode").value; //取得输入的验证码并转化为大写   
+      var infoSpan_dy1 = document.getElementById("dy_o");
+      var infoSpan_dy2 = document.getElementById("dy_e");
+      var infoSpan
+      if(/^\d{4}$/.test(dCode)) { //若输入验证码
+        
+        infoSpan_dy1.style.display = "";
+        infoSpan_dy2.style.display = "none";
+      } else { //输入正确时  
+        //  alert("合格！^-^");
+        infoSpan_dy1.style.display = "none";
+        infoSpan_dy2.style.display = "";
+      }
+    }
+    
+    //CharMode函数
+    //测试某个字符是属于哪一类.
+    function CharMode(iN) {
+      if(iN >= 48 && iN <= 57) //数字
+        return 1;
+      if(iN >= 65 && iN <= 90) //大写字母
+        return 2;
+      if(iN >= 97 && iN <= 122) //小写
+        return 4;
+      else
+        return 8; //特殊字符
+    }
+    //bitTotal函数
+    //计算出当前密码当中一共有多少种模式
+    function bitTotal(num) {
+      modes = 0;
+      for(i = 0; i < 4; i++) {
+        if(num & 1) modes++;
+        num /= 2;
+      }
+      return modes;
+    }
+    //checkStrong函数
+    //返回密码的强度级别
+    function checkStrong(sPW) {
+      if(sPW.length <= 4)
+        return 0; //密码太短
+      Modes = 0;
+      for(i = 0; i < sPW.length; i++) {
+        //测试每一个字符的类别并统计一共有多少种模式.
+        Modes |= CharMode(sPW.charCodeAt(i));
+      }
+      return bitTotal(Modes);
+    }
+    //pwStrength函数
+    //当用户放开键盘或密码输入框失去焦点时，根据不同的级别显示不同的颜色
+    function pwStrength(pwd) {
+      O_color = "#eeeeee";
+      L_color = "#FF0000";
+      M_color = "#FF9900";
+      H_color = "#33CC00";
+      if(pwd == null || pwd == '') {
+        Lcolor = Mcolor = Hcolor = O_color;
+      } else {
+        S_level = checkStrong(pwd);
+        switch(S_level) {
+          case 0:
+            Lcolor = Mcolor = Hcolor = O_color;
+          case 1:
+            Lcolor = L_color;
+            Mcolor = Hcolor = O_color;
+            break;
+          case 2:
+            Lcolor = Mcolor = M_color;
+            Hcolor = O_color;
+            break;
+          default:
+            Lcolor = Mcolor = Hcolor = H_color;
+        }
+      }
+      document.getElementById("strength_L").style.background = Lcolor;
+      document.getElementById("strength_M").style.background = Mcolor;
+      document.getElementById("strength_H").style.background = Hcolor;
+    }
+    //验证两次密码是否一致
+    function validate() {
+      var pwd1 = document.getElementById("pwd").value;
+      var pwd2 = document.getElementById("pwd_again").value;
+      var infoSpan_pwd11 = document.getElementById("pwd_o");
+      var infoSpan_pwd12 = document.getElementById("pwd_e");
+      var infoSpan_pwd21 = document.getElementById("pwd2_o");
+      var infoSpan_pwd22 = document.getElementById("pwd2_e");
+      //  以字母开头，长度在6~18之间，只能包含字符、数字和下划线
+      if(!(/^[a-zA-Z]\w{5,17}$/.test(pwd1))) {
+        infoSpan_pwd11.style.display = "none";
+        infoSpan_pwd12.style.display = "";
+      } else {
+        infoSpan_pwd11.style.display = "";
+        infoSpan_pwd12.style.display = "none";
+      }
+
+      //   对比两次输入的密码 
+      if(pwd1 == pwd2 && pwd1.length >= 6) {
+        infoSpan_pwd21.style.display = "";
+        infoSpan_pwd22.style.display = "none";
+      } else {
+        infoSpan_pwd21.style.display = "none";
+        infoSpan_pwd22.style.display = "";
+      }
+    }
+
+    function showtime(t) {
+      document.getElementById("time_btn").disabled = true;
+      for(i = 1; i <= t; i++) {
+        window.setTimeout("update_p(" + i + "," + t + ")", i * 1000);
+      }
+
+    }
+
+    function update_p(num, t) {
+      if(num == t) {
+        document.getElementById("time_btn").value = " 重新发送 ";
+        document.getElementById("time_btn").disabled = false;
+      } else {
+        printnr = t - num;
+        document.getElementById("time_btn").value = " (" + printnr + ")秒后重新发送";
+      }
+    }
+
+    //注册类型监听 
+    function chose() {
+      var sType = document.getElementById("usertype").value; //取得输入的验证码并转化为大写   
+      var infoSpan_s1 = document.getElementById("s_o");
+      var infoSpan_s2 = document.getElementById("s_e");
+      var infoSpan
+      if(sType =="" || sType == null) { 
+        
+        infoSpan_s1.style.display = "none";
+        infoSpan_s2.style.display = "";
+      } else {
+        infoSpan_s1.style.display = "";
+        infoSpan_s2.style.display = "none";
+      }
+    }
+  </script>
+  <style type='text/css'>
+    #code {
+      font-family: Arial, 宋体;
+      font-style: italic;
+      color: green;
+      border: 0;
+      padding: 2px 3px;
+      letter-spacing: 3px;
+      font-weight: bolder;
+    }
+  </style>
+
+</html>
