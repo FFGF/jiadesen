@@ -9,111 +9,7 @@
     <link rel="stylesheet" href="Public/CSS/main.css">
 
 	<style type="text/css">
-	.active-menu{
-		position:relative;
-		display: none;
-	}
-	.dropdown-menu-two-level { 
-	  position: absolute;
-	  background-color: #f3f3f3;
-	  z-index: 1000;float: left;
-	  min-width: 120px;
-	  padding: 5px 0;
-	  list-style: none;
-	  border: 2px solid #2476e2;
-	}
-	.dropdown-menu-two-level li{
-		text-align:center; 
-		cursor: pointer;
-		font-weight: normal;
-		margin: 10px auto;
-		display: block;
-		height: 35px;
-	}
 
-	.dropdown-menu-two-level li a{
-        display: block;
-    	padding: 3px 0px;
-    	text-decoration: none;
-    	border-bottom: 2px solid #f3f3f3;
-    	border-top: 2px solid #f3f3f3;
-    	line-height: 20px;
-    	position: absolute;
-    	width: 116px;
-	}
-
-
-	.maintainHover{
-		background-color: white;
-    	border-right: 2px solid white;
-    	z-index: 1000;
-	}
-
-	.popover-menu {
-	  position: absolute;
-	  top: 0;
-	  left: 0; 
-	  z-index: 999;
-	  display: none;
-	  width: 800px;
-	  -webkit-border-radius: 6px;
-	  -moz-border-radius: 6px;
-	  border-radius: 6px;
-	  -webkit-border-top-left-radius: 0px;
-	  -webkit-border-bottom-left-radius: 0px;
-	  border-top-left-radius: 0px;
-	  border-bottom-left-radius: 0px;
-	  overflow: hidden;		
-	  padding: 1px 1px 1px 15px;
-	  text-align: left;
-	  white-space: normal;
-	  background-color: #fff;
-	  border: 1px solid #ccc;
-	  border: 1px solid rgba(0, 0, 0, 0.2);
-	  padding-top: 30px;
-      padding-left: 15px;
-	}	
-	.popover-menu dt{
-		float: left;
-	}
-	.popover-menu dt a{
-		color:#09f;
-		font-weight: normal;
-    	font-size: 16px;
-    	text-decoration: none;
-    	font-family: Arial, 宋体, 微软雅黑, Helvetica, sans-serif;
-	}
-	.popover-menu dl{
-		border-bottom: 1px dotted #e4e4e4;
-    	padding-bottom: 12px;
-    	width: 750px;
-	}
-	.popover-menu dl dd{
-		float: right;
-    	width: 600px;
-    	margin-right: 60px;
-	}
-	.popover-menu dl dd a{
-		text-decoration: none;
-		display: inline-block;
-		border-right: 1px solid #e4e4e4;
-        padding: 0px 10px;
-        font-family: Arial, 宋体, 微软雅黑, Helvetica, sans-serif;
-        font-weight: normal;
-    	font-size: 15px;
-	}
-
-	.popover-menu dl dd a em{
-		font-style: normal;
-		color: #f60;
-	}
-	.popover-menu dl dd a:last-child{
-			border-right: 1px solid white;
-	        padding: 0px 10px;
-	}
-	#third-bar .popover-menu dl dd a:hover{
-		color: #f60;
-	}
 	</style>
 </head>
 <body>
@@ -128,15 +24,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">欢迎来到必安医疗</a>
+      <a class="navbar-brand" href="index.html">欢迎来到必安医疗</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse pull-right" id="first-bar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#" data-toggle="modal" data-target="#register">请登录 <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="login.html">请登录 <span class="sr-only">(current)</span></a></li>
 
-        <li><a href="#">免费注册</a></li>
+        <li><a href="register.html">免费注册</a></li>
 
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">系统公告 <span class="caret"></span></a>
@@ -198,7 +94,7 @@
 
 		
         <li class="header-category">
-        	<a href="#" id="find-product">找产品</a>	
+        	<a href="findProduct.html" id="find-product">找产品</a>	
         	<div class="active-menu">
 				    <ul class="dropdown-menu-two-level" role="menu">
 				        <li data-submenu-id="submenu-patas"><a href="">临床检验</a></li>
@@ -221,8 +117,9 @@
         <li class="dropdown" id="third-dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">找渠道 <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">我要推广</a></li>
-            <li><a href="#">我要购买</a></li>
+            <li><a href="generalizeList.html">推广列表</a></li>
+            <li><a href="procurementList.html">采购列表</a></li>
+            <li><a href="procurementList.html">代理列表</a></li>
           </ul>
         </li>
 
@@ -281,197 +178,210 @@
   </a>
 </div>
 <!-- 优势产品 热门品牌 -->
-<div class="container">
+<div class="container container-index">
 	<p class="format">优势产品</p>
 	<div class="row">
-		<div class="col-md-6">
-			<div class="row">
-				<div class="col-md-3">
-					<div class="thumbnail">
-					    <img src="recourse/Image/recommend-1.jpg" alt="...">
-					    <div class="caption">					    
-					        <p><a href="">血球分析仪</a></p>
-					    </div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-					    <img src="recourse/Image/recommend-2.jpg" alt="...">
-					    <div class="caption">					    
-					        <p><a href="">血球分析仪</a></p>
-					    </div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-					    <img src="recourse/Image/recommend-3.jpg" alt="...">
-					    <div class="caption">					    
-					        <p><a href="">血球分析仪</a></p>
-					    </div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-					    <img src="recourse/Image/recommend-4.jpg" alt="...">
-					    <div class="caption">					    
-					        <p><a href="">血球分析仪</a></p>
-					    </div>
-					</div>
-				</div>
-			</div>
+		<div class="col-md-2">
+		    <div class="thumbnail">
+		        <img src="recourse/Image/recommend-1.jpg" alt="...">
+		        <div class="caption">
+		            <p><a href="">血球分析仪</a></p>
+		        </div>
+		    </div>
 		</div>
-		<div class="col-md-6">
-			<div class="row">
-				<div class="col-md-3">
-					<div class="thumbnail">
-					    <img src="recourse/Image/recommend-5.jpg" alt="...">
-					    <div class="caption">					    
-					        <p><a href="">血球分析仪</a></p>
-					    </div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-					    <img src="recourse/Image/recommend-6.jpg" alt="...">
-					    <div class="caption">					    
-					        <p><a href="">血球分析仪</a></p>
-					    </div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-					    <img src="recourse/Image/recommend-7.jpg" alt="...">
-					    <div class="caption">					    
-					        <p><a href="">血球分析仪</a></p>
-					    </div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-					    <img src="recourse/Image/recommend-8.jpg" alt="...">
-					    <div class="caption">					    
-					        <p><a href="">血球分析仪</a></p>
-					    </div>
-					</div>
-				</div>
-			</div>
+		<div class="col-md-2">
+			<div class="thumbnail">
+			    <img src="recourse/Image/recommend-2.jpg" alt="...">
+			    <div class="caption">					    
+			        <p><a href="">血球分析仪</a></p>
+			    </div>
+			</div>			
+		</div>
+		<div class="col-md-2">
+			<div class="thumbnail">
+			    <img src="recourse/Image/recommend-3.jpg" alt="...">
+			    <div class="caption">					    
+			        <p><a href="">血球分析仪</a></p>
+			    </div>
+			</div>			
+		</div>
+		<div class="col-md-2">
+			<div class="thumbnail">
+			    <img src="recourse/Image/recommend-4.jpg" alt="...">
+			    <div class="caption">					    
+			        <p><a href="">血球分析仪</a></p>
+			    </div>
+			</div>			
+		</div>
+		<div class="col-md-2">
+			<div class="thumbnail">
+			    <img src="recourse/Image/recommend-5.jpg" alt="...">
+			    <div class="caption">					    
+			        <p><a href="">血球分析仪</a></p>
+			    </div>
+			</div>			
+		</div>
+		<div class="col-md-2">
+			<div class="thumbnail">
+			    <img src="recourse/Image/recommend-6.jpg" alt="...">
+			    <div class="caption">					    
+			        <p><a href="">血球分析仪</a></p>
+			    </div>
+			</div>			
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-6">
-			<div class="row">
-				<div class="col-md-3">
-					<div class="thumbnail">
-					    <img src="recourse/Image/recommend-9.jpg" alt="...">
-					    <div class="caption">					    
-					        <p><a href="">血球分析仪</a></p>
-					    </div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-					    <img src="recourse/Image/recommend-10.jpg" alt="...">
-					    <div class="caption">					    
-					        <p><a href="">血球分析仪</a></p>
-					    </div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-					    <img src="recourse/Image/recommend-11.jpg" alt="...">
-					    <div class="caption">					    
-					        <p><a href="">血球分析仪</a></p>
-					    </div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-					    <img src="recourse/Image/recommend-12.jpg" alt="...">
-					    <div class="caption">					    
-					        <p><a href="">血球分析仪</a></p>
-					    </div>
-					</div>
-				</div>
+		<div class="col-md-2">
+			<div class="thumbnail">
+			    <img src="recourse/Image/recommend-7.jpg" alt="...">
+			    <div class="caption">					    
+			        <p><a href="">血球分析仪</a></p>
+			    </div>
 			</div>
 		</div>
-		<div class="col-md-6">
-			<div class="row">
-				<div class="col-md-3">
-					<div class="thumbnail">
-					    <img src="recourse/Image/recommend-13.jpg" alt="...">
-					    <div class="caption">					    
-					        <p><a href="">血球分析仪</a></p>
-					    </div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-					    <img src="recourse/Image/recommend-14.jpg" alt="...">
-					    <div class="caption">					    
-					        <p><a href="">血球分析仪</a></p>
-					    </div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-					    <img src="recourse/Image/recommend-15.jpg" alt="...">
-					    <div class="caption">					    
-					        <p><a href="">血球分析仪</a></p>
-					    </div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-					    <img src="recourse/Image/recommend-16.jpg" alt="...">
-					    <div class="caption">					    
-					        <p><a href="">血球分析仪</a></p>
-					    </div>
-					</div>
-				</div>
-			</div>
+		<div class="col-md-2">
+			<div class="thumbnail">
+			    <img src="recourse/Image/recommend-8.jpg" alt="...">
+			    <div class="caption">					    
+			        <p><a href="">血球分析仪</a></p>
+			    </div>
+			</div>			
+		</div>
+		<div class="col-md-2">
+			<div class="thumbnail">
+			    <img src="recourse/Image/recommend-9.jpg" alt="...">
+			    <div class="caption">					    
+			        <p><a href="">血球分析仪</a></p>
+			    </div>
+			</div>			
+		</div>
+		<div class="col-md-2">
+			<div class="thumbnail">
+			    <img src="recourse/Image/recommend-10.jpg" alt="...">
+			    <div class="caption">					    
+			        <p><a href="">血球分析仪</a></p>
+			    </div>
+			</div>			
+		</div>
+		<div class="col-md-2">
+			<div class="thumbnail">
+			    <img src="recourse/Image/recommend-11.jpg" alt="...">
+			    <div class="caption">					    
+			        <p><a href="">血球分析仪</a></p>
+			    </div>
+			</div>			
+		</div>
+		<div class="col-md-2">
+			<div class="thumbnail">
+			    <img src="recourse/Image/recommend-12.jpg" alt="...">
+			    <div class="caption">					    
+			        <p><a href="">血球分析仪</a></p>
+			    </div>
+			</div>			
 		</div>
 	</div>
 
 	<p class="format">热门品牌</p>
+
 	<div class="row">
-		<div class="col-md-8">
-			<div class="row mb">
-				<img src="recourse/Image/brand-1.jpg"  class="img-responsive" alt="">
-			</div>
-			<div class="row mb">
-				<img src="recourse/Image/brand-2.jpg"  class="img-responsive" alt="">
-			</div>
-			<div class="row mb">
-				<img src="recourse/Image/brand-3.jpg"  class="img-responsive" alt="">
-			</div>
-			<div class="row mb">
-				<img src="recourse/Image/brand-4.jpg"  class="img-responsive" alt="">
-			</div>
-			<div class="row mb">
-				<img src="recourse/Image/brand-5.jpg"  class="img-responsive" alt="">
-			</div>
+		<div class="col-md-2">
+			<div class="thumbnail">
+			    <img src="recourse/Image/mairuiLogo.jpg" alt="...">
+			    <div class="caption">
+			        <p><a href="">血球分析仪</a></p>
+			    </div>
+			</div>			
 		</div>
+		<div class="col-md-2">
+			<div class="thumbnail">
+			    <img src="recourse/Image/yianLogo.jpg" alt="...">
+			    <div class="caption">
+			        <p><a href="">血球分析仪</a></p>
+			    </div>
+			</div>				
+		</div>
+		<div class="col-md-2">
+			<div class="thumbnail">
+			    <img src="recourse/Image/eppendorfLogo.png" alt="...">
+			    <div class="caption">
+			        <p><a href="">血球分析仪</a></p>
+			    </div>
+			</div>				
+		</div>
+		<div class="col-md-2">
+		    <div class="thumbnail">
+		        <img src="recourse/Image/wandongLogo.png" alt="...">
+		        <div class="caption">
+		            <p><a href="">血球分析仪</a></p>
+		        </div>
+		    </div>
+		</div>
+		<div class="col-md-2">
+		    <div class="thumbnail">
+		        <img src="recourse/Image/xiangyiLogo.gif" alt="...">
+		        <div class="caption">
+		            <p><a href="">血球分析仪</a></p>
+		        </div>
+		    </div>
+		</div>
+		<div class="col-md-2">
+		    <div class="thumbnail">
+		        <img src="recourse/Image/liuliuLogo.jpg" alt="...">
+		        <div class="caption">
+		            <p><a href="">血球分析仪</a></p>
+		        </div>
+		    </div>
+		</div>
+	</div>
 
-		<div class="col-md-4">
-			<div class="row">
-				<div class="col-md-6">
-					<img src="http://www.vedeng.com/uploads/images/brand/2015-12-24/1427830901844545101.png" class="center-block img-responsive" alt="湘仪">
-				</div>
-
-				<div class="col-md-6">
-					<img src="http://www.vedeng.com/uploads/brand/2015-12-25/14510279842074.jpg" class="img-responsive center-block" alt="理邦EDAN">
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-6">
-					<img src="http://www.vedeng.com/uploads/brand/2017-05-16/14949151743405.jpg" class="img-responsive center-block" alt="Aeonmed谊安">
-				</div>
-
-				<div class="col-md-6">
-					<img src="http://www.vedeng.com/uploads/brand/2016-01-26/14537803114641.jpg" class="img-responsive center-block" alt="迈瑞Mindray">
-				</div>
-			</div>
+	<div class="row">
+		<div class="col-md-2">
+			<div class="thumbnail">
+			    <img src="recourse/Image/mairuiLogo.jpg" alt="...">
+			    <div class="caption">
+			        <p><a href="">血球分析仪</a></p>
+			    </div>
+			</div>			
+		</div>
+		<div class="col-md-2">
+			<div class="thumbnail">
+			    <img src="recourse/Image/yianLogo.jpg" alt="...">
+			    <div class="caption">
+			        <p><a href="">血球分析仪</a></p>
+			    </div>
+			</div>				
+		</div>
+		<div class="col-md-2">
+			<div class="thumbnail">
+			    <img src="recourse/Image/eppendorfLogo.png" alt="...">
+			    <div class="caption">
+			        <p><a href="">血球分析仪</a></p>
+			    </div>
+			</div>				
+		</div>
+		<div class="col-md-2">
+		    <div class="thumbnail">
+		        <img src="recourse/Image/wandongLogo.png" alt="...">
+		        <div class="caption">
+		            <p><a href="">血球分析仪</a></p>
+		        </div>
+		    </div>
+		</div>
+		<div class="col-md-2">
+		    <div class="thumbnail">
+		        <img src="recourse/Image/xiangyiLogo.gif" alt="...">
+		        <div class="caption">
+		            <p><a href="">血球分析仪</a></p>
+		        </div>
+		    </div>
+		</div>
+		<div class="col-md-2">
+		    <div class="thumbnail">
+		        <img src="recourse/Image/liuliuLogo.jpg" alt="...">
+		        <div class="caption">
+		            <p><a href="">血球分析仪</a></p>
+		        </div>
+		    </div>
 		</div>
 	</div>
 </div>
@@ -661,98 +571,8 @@
 <script type="text/javascript" src="jquery-2.1.1/jquery.js"></script>
 <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="Public/JS/jquery.menu-aim.js"></script>
+<script type="text/javascript" src="Public/JS/fgf.js"></script>
 <script>
-//鼠标移动到“找产品”浮现菜单
-$(function(){
-
-	var popoverMenuUrl = $("#popover-menu").attr("dataurl");
-
-	$("#popover-menu").load(popoverMenuUrl,function(){
-		$(".header-category").mouseenter(function(event) {
-			$(this).children('.active-menu').show()
-		}).mouseleave(function(event) {
-			$(this).children('.active-menu').hide()
-		});
-	})
-}) 
-
-	//仿贝登网二级菜单实现
-	$(function(){
-		 $(".dropdown-menu-two-level").menuAim({
-				activate: activateSubmenu,
-	            deactivate: deactivateSubmenu
-	     });
-	});
-	var $menu = $(".dropdown-menu-two-level");
-
-	function activateSubmenu(row) {
-	  	var $row = $(row),
-	    submenuId = $row.data("submenuId"),
-	    $submenu = $("#" + submenuId),
-	    offset = $menu.offset(),
-	    height = $menu.outerHeight(),
-	    width = $menu.outerWidth();
-
-	   	$submenu.css({
-	         display: "block",
-	         top: 0,
-	         left:119,  // main should overlay submenu
-	         height: 384  // padding for main dropdown's arrow
-	    });
-
-	    $row.find("a").addClass("maintainHover");
-
-	    $row.find("a").css("border-bottom", "2px solid #2476e2")
-	    $row.find("a").css("border-top", "2px solid #2476e2")
-	    $row.find("a").css("width", "118px")
-	}
-
-	function deactivateSubmenu(row) {
-	    var $row = $(row),
-	    submenuId = $row.data("submenuId"),
-	    $submenu = $("#" + submenuId);
-
-	    $submenu.css("display", "none");
-	    $row.find("a").removeClass("maintainHover");
-
-	    $row.find("a").css("border-bottom", "2px solid #f3f3f3")
-	    $row.find("a").css("border-top", "2px solid #f3f3f3")
-	    $row.find("a").css("width", "116px")
-	}
-
-	$(document).click(function() {
-	    $(".popover-menu").css("display", "none");
-	});
-
-
-
-
-
-   // 为第三个navbar的dropdown添加鼠标移动上去下拉查单浮现，移走下拉菜单消失
-	$('#third-dropdown').mouseover(function(){
-     		$(this).addClass('open');})
-	                    .mouseout(function() {
-	        $(this).removeClass('open');}); 
-    //弹出的登录模态框居中
-    function centerModals() {   
-　　$('#register').each(function(i) {   
-　　　　var $clone = $(this).clone().css('display','block').appendTo('body');
-　　　　var top = Math.round(($clone.height() - $clone.find('.modal-content').height()) / 2);
-　　　　top = top > 0 ? top : 0;   
-　　　　$clone.remove();   
-　　　　$(this).find('.modal-content').css("margin-top", top);   
-　　　　});   
-	};   
-
-	$('#register').on('show.bs.modal', centerModals);
-		//禁用空白处点击关闭
-		$('#register').modal({
-		backdrop: 'static',
-		keyboard: false,//禁止键盘
-		show:false
-	});
-	//页面大小变化是仍然保证模态框水平垂直居中
-	$(window).on('resize', centerModals); 
 
 
 </script>
