@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>修改密码</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../Public/CSS/liu.css">
+
+	</head>
+
+	<body>
+
+		<!-- 最顶部的navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top first-bar">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#first-bar" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				    </button>
+					<a class="navbar-brand" href="#">欢迎来到必安医疗</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse pull-right" id="first-bar">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="#" data-toggle="modal" data-target="#register">请登录 <span class="sr-only">(current)</span></a>
+						</li>
+
+						<li>
+							<a href="#">免费注册</a>
+						</li>
+
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">系统公告 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">公告一</a>
+								</li>
+								<li>
+									<a href="#">公告二</a>
+								</li>
+								<li>
+									<a href="#">公告三</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+
+		<div class="container-fluid medium">
+			<!--<p>段落测试</p>-->
+
+			<div class="row">
+				<!--  整体的   左侧放置手风琴框   右侧放置内容   -->
+				<div class="col-md-2">
+					<!--左侧手风琴框-->
+
+					<div class="row leftpart">
+						<div class="accountclass">
+							<!--我的账号部分-->
+							<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp &nbsp我的信息</h4>
+						</div>
+						<!--我的账号部分-->
+
+						<div class="infoclass">
+							<!--我的账号  下面部分-->
+							<h4>账号管理</h4>
+							<ul>
+								<li><a href="../csoperson/repwd.html">修改密码</a></li>
+								<li><a href="../csoperson/page0-2myinfo-csoperson.html">我的信息</a></li>
+								<li><a href="../csoperson/security.html">账户安全</a></li>
+							</ul>
+
+							<h4>业务操作</h4>
+							<ul>
+						<li><a href="../csoperson/page1-myproxy.html">我的申请</a></li>
+						<li><a href="../csoperson/page2-wantproxy.html">我要代理</a></li>
+						<li><a href="../csoperson/page3-myconcern.html">我的关注</a></li>
+						<li><a href="../csoperson/page4-myreceive-info.html">我的接收信息</a></li>
+							</ul>
+
+						</div>
+						<!--我的账号  下面部分-->
+					</div>
+
+				</div>
+				<!--左侧手风琴框-->
+
+				<div class="col-md-10">
+					<!--右侧-->
+					
+					<div class="row">
+						<h3>修改密码</h3>
+						<div class="container col-md-10 " style="margin-top:30px;margin-bottom:20px;">
+
+							<form class="form-horizontal pull-left">
+
+								<!--原密码-->
+								<div class="form-group">
+									<label class="col-md-4 control-label">原密码：</label>
+									<div class="col-md-6">
+										<input type="password" class="form-control" id="pwd" style="width:340px;display: inline;" oninput="validate()" onKeyUp="pwStrength(this.value)" onBlur="pwStrength(this.value)" placeholder="请输入原密码">
+
+									</div>
+								</div>
+								<!--设置密码-->
+								<div class="form-group">
+									<label class="col-md-4 control-label">新密码：</label>
+									<div class="col-md-6">
+										<input type="password" class="form-control" id="pwd" style="width:340px;display: inline;" oninput="validate()" onKeyUp="pwStrength(this.value)" onBlur="pwStrength(this.value)" placeholder="请输入6-18位且以字母开头的密码">
+										<!--<label>
+											<span id="pwd_o" class="glyphicon glyphicon-ok form-control-feedback form" style="display:none"></span>
+											<span id="pwd_e" class="glyphicon glyphicon-remove form-control-feedback"></span>
+										</label>-->
+									</div>
+
+								</div>
+								<!--密码强度-->
+								<div class="form-group">
+									<label class="col-md-5 control-label">密码强度:</label>
+									<table width="217" border="1" cellspacing="0" cellpadding="1" bordercolor="#cccccc" height="20">
+										<tr align="center" bgcolor="#eeeeee">
+											<td width="33%" id="strength_L">弱</td>
+											<td width="33%" id="strength_M">中</td>
+											<td width="33%" id="strength_H">强</td>
+										</tr>
+									</table>
+								</div>
+								<!--确认密码-->
+								<div class="form-group">
+									<label class="col-md-4 control-label">确认密码：</label>
+									<div class="col-md-6">
+										<input type="password" class="form-control" id="pwd_again" style="width:340px;display: inline;" oninput="validate()" placeholder="请输入再次确认密码">
+										<!--<label>
+											<span id="pwd2_o" class="glyphicon glyphicon-ok form-control-feedback form" style="display:none"></span>
+											<span id="pwd2_e" class="glyphicon glyphicon-remove form-control-feedback"></span>
+										</label>-->
+									</div>
+
+								</div>
+
+								<div class="form-group" style="margin-left: 250px;">
+										
+										<button type="submit" class="btn btn-default">确认</button>
+										&nbsp;&nbsp;&nbsp;
+										<button type="submit" class="btn btn-default">重置</button>
+									
+								</div>
+
+							</form>
+						</div>
+
+					</div>
+					<!--second-row-->
+
+				</div>
+				<!--右侧内容-->
+
+			</div>
+			<!--  整体的   左侧放置手风琴框   右侧放置内容   -->
+
+		</div>
+		<!--"container-fluid medium"-->
+
+		<!-- 底部的footer -->
+		<nav class="navbar-inverse footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>新手指南</li>
+							<li>用户注册</li>
+						</ul>
+					</div>
+
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>北登服务</li>
+							<li>服务协议</li>
+						</ul>
+					</div>
+
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>信息安全</li>
+							<li>免责声明</li>
+						</ul>
+					</div>
+
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>隐私声明</li>
+							<li>法律声明</li>
+							<li>联系我们</li>
+							<li>关于我们</li>
+						</ul>
+					</div>
+
+					<div class="col-md-4">
+						<img src="../recourse/Image/weixin.jpg" alt="" class="img-responsive" style="width: 100px">
+					</div>
+				</div>
+
+				<hr class="divider">
+
+				<div class="row">
+					<div class="col-md-12 word-list">
+						隐私声明 | 法律声明 | 联系我们 | 关于我们 | 产品地图 | 器械数据库 | 知识库 | 网站导航 | 互联网药品信息服务资格证
+					</div>
+
+					<div class="col-md-12 word-list">
+						Copyright © 2010-2016 VEDENG Corporation (www.vedeng.com) All Rights Reserved ICP备案证书号:苏ICP备11075436号
+					</div>
+
+					<div class="col-md-12 word-list" style="margin-bottom: 50px">
+						友情链接： 贝登医疗 二手设备 抗癌健康网 环境试验箱 中国医疗器械网 医疗器械招商 淘宝刷流量 显微镜 甲醛检测仪 香港服务器 找工业品网 蓝贝
+					</div>
+
+				</div>
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+		<script type="text/javascript" src="../jquery-2.1.1/jquery.js"></script>
+		<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>发布新产品</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../Public/CSS/liu.css">
+
+	</head>
+
+	<body>
+
+		<!-- 最顶部的navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top first-bar">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#first-bar" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				    </button>
+					<a class="navbar-brand" href="#">欢迎来到必安医疗</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse pull-right" id="first-bar">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="#" data-toggle="modal" data-target="#register">请登录 <span class="sr-only">(current)</span></a>
+						</li>
+
+						<li>
+							<a href="#">免费注册</a>
+						</li>
+
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">系统公告 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">公告一</a>
+								</li>
+								<li>
+									<a href="#">公告二</a>
+								</li>
+								<li>
+									<a href="#">公告三</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+		<div class="container-fluid medium">
+			<!--<p>段落测试</p>-->
+
+			<div class="row">
+				<!--  整体的   左侧放置手风琴框   右侧放置内容   -->
+				<div class="col-md-2">
+					<!--左侧手风琴框-->
+
+					<div class="row leftpart">
+						<div class="accountclass">
+							<!--我的账号部分-->
+							<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp &nbsp我的信息</h4>
+						</div>
+						<!--我的账号部分-->
+						<div class="infoclass">
+							<!--我的账号  下面部分-->
+							<h4>账号管理</h4>
+							<ul>
+								<li>
+									<a href="repwd.html">修改密码</a>
+								</li>
+								<li>
+									<a href="info.html">我的信息</a>
+								</li>
+								<li>
+									<a href="security.html">账户安全</a>
+								</li>
+							</ul>
+
+							<h4>业务操作</h4>
+							<ul>
+								<li>
+									<a href="goods_info.html">产品信息</a>
+								</li>
+								<li>
+									<a href="tuiguang.html">推广记录</a>
+								</li>
+								<li>
+									<a href="caigou.html">采购需求信息</a>
+								</li>
+								<li>
+									<a href="lianxixinxi.html">医疗机构联系信息</a>
+								</li>
+								<li>
+									<a href="daililist.html">代理列表</a>
+								</li>
+								<li>
+									<a href="mydaili.html">我的代理</a>
+								</li>
+								<li>
+									<a href="applydaililist.html">申请代理列表</a>
+								</li>
+								<li>
+									<a href="CSOinfo.html">查看CSO公司详情</a>
+								</li>
+							</ul>
+
+						</div>
+
+						<!--我的账号  下面部分-->
+					</div>
+
+				</div>
+				<!--左侧手风琴框-->
+
+				<div class="col-md-10" id="g_info_2">
+					<table class="table condition-table" style="margin-bottom: 0px;">
+						<!--包括渠道、。。。区域什么的-->
+						<tbody>
+							<tr>
+								<!--第一行-->
+								<td class="condition-title">产品注册名</td>
+								<td>
+									<input class="form-control" type="text" style="width: 200px;">
+								</td>
+								<td class="condition-title">产品简称</td>
+								<td>
+									<input class="form-control" type="text" style="width: 200px;">
+								</td>
+							</tr>
+
+							<tr>
+								<!--第二行-->
+								<td class="condition-title">品牌</td>
+								<td>
+									<input class="form-control" type="text" style="width: 200px;">
+								</td>
+								<td class="condition-title">产地</td>
+								<td>
+									<input class="form-control" type="text" style="width: 200px;">
+								</td>
+							</tr>
+
+							<tr>
+								<!--第三行-->
+								<td class="condition-title">产品类别</td>
+								<td>
+									<input class="form-control" type="text" style="width: 200px;">
+								</td>
+								<td class="condition-title">适用科室</td>
+								<td>
+									<input class="form-control" type="text" style="width: 200px;">
+								</td>
+							</tr>
+
+							<tr>
+								<!--第四行-->
+								<td class="condition-title">规格</td>
+								<td>
+									<input class="form-control" type="text" style="width: 200px;">
+								</td>
+								<td class="condition-title">单位</td>
+								<td>
+									<input class="form-control" type="text" style="width: 200px;">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<table class="table condition-table" style="margin-top: 0px;">
+						<tbody>
+							<tr>
+								<!--第五行-->
+								<td class="condition-title">产品注册证号</td>
+								<td>
+									<input class="form-control" type="text" style="width: 400px;">
+								</td>
+							</tr>
+
+							<tr>
+								<!--第六行-->
+								<td class="condition-title">产品图片</td>
+								<td>
+									<input type="file" />
+									<input type="file" />
+									<input type="file" />
+									<input type="file" />
+								</td>
+							</tr>
+							
+							<tr>
+								<!--第七行-->
+								<td class="condition-title">产品介绍</td>
+								<td>
+									<div>
+										<textarea class="form-control" rows="3" style="width: 400px;display: inline;"></textarea>
+										<button class="btn btn-default">上传</button>
+									</div>									
+								</td>
+							</tr>
+							
+							<tr>
+								<!--第八行-->
+								<td class="condition-title">技术参数</td>
+								<td>
+									<div>
+										<textarea class="form-control" rows="3" style="width: 400px;display: inline;"></textarea>
+										<button class="btn btn-default">上传</button>
+									</div>
+								</td>
+							</tr>
+							
+							<tr>
+								<!--第九行-->
+								<td class="condition-title">技术文档</td>
+								<td>
+									<div>
+										<textarea class="form-control" rows="3" style="width: 400px;display: inline;"></textarea>
+										<button class="btn btn-default">上传</button>
+									</div>
+								</td>
+							</tr>
+							
+							<tr>
+								<!--第十行-->
+								<td class="condition-title">售后保障</td>
+								<td>
+									<div>
+										<textarea class="form-control" rows="3" style="width: 400px;display: inline;"></textarea>
+										<button class="btn btn-default">上传</button>
+									</div>
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+					
+					<div class="form-group" style="margin-left: 400px;">										
+						<button type="submit" class="btn btn-default">发布</button>
+					</div>
+
+				</div>
+				<!--右侧内容-->
+
+			</div>
+			<!--  整体的   左侧放置手风琴框   右侧放置内容   -->
+
+		</div>
+		<!--"container-fluid medium"-->
+
+		<!-- 底部的footer -->
+		<nav class="navbar-inverse footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>新手指南</li>
+							<li>用户注册</li>
+						</ul>
+					</div>
+
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>北登服务</li>
+							<li>服务协议</li>
+						</ul>
+					</div>
+
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>信息安全</li>
+							<li>免责声明</li>
+						</ul>
+					</div>
+
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>隐私声明</li>
+							<li>法律声明</li>
+							<li>联系我们</li>
+							<li>关于我们</li>
+						</ul>
+					</div>
+
+					<div class="col-md-4">
+						<img src="recourse/Image/weixin.jpg" alt="" class="img-responsive" style="width: 100px">
+					</div>
+				</div>
+
+				<hr class="divider">
+
+				<div class="row">
+					<div class="col-md-12 word-list">
+						隐私声明 | 法律声明 | 联系我们 | 关于我们 | 产品地图 | 器械数据库 | 知识库 | 网站导航 | 互联网药品信息服务资格证
+					</div>
+
+					<div class="col-md-12 word-list">
+						Copyright © 2010-2016 VEDENG Corporation (www.vedeng.com) All Rights Reserved ICP备案证书号:苏ICP备11075436号
+					</div>
+
+					<div class="col-md-12 word-list" style="margin-bottom: 50px">
+						友情链接： 贝登医疗 二手设备 抗癌健康网 环境试验箱 中国医疗器械网 医疗器械招商 淘宝刷流量 显微镜 甲醛检测仪 香港服务器 找工业品网 蓝贝
+					</div>
+
+				</div>
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+		<script type="text/javascript" src="../jquery-2.1.1/jquery.js"></script>
+		<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>安全中心</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../Public/CSS/main.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap-imageupload.css">
+		<script src="../jquery-2.1.1/jquery-1.12.4.min.js"></script>
+		<script src="../bootstrap-3.3.7-dist/css/bootstrap-imageupload.css"></script>
+		<script src="../bootstrap-3.3.7-dist/js/bootstrap-imageupload.js"></script>
+		<link rel="stylesheet" href="../Public/CSS/liu.css">
+	</head>
+
+	<body>
+
+		<!-- 最顶部的navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top first-bar">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#first-bar" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				    </button>
+					<a class="navbar-brand" href="#">欢迎来到必安医疗</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse pull-right" id="first-bar">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="#" data-toggle="modal" data-target="#register">请登录 <span class="sr-only">(current)</span></a>
+						</li>
+
+						<li>
+							<a href="#">免费注册</a>
+						</li>
+
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">系统公告 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">公告一</a>
+								</li>
+								<li>
+									<a href="#">公告二</a>
+								</li>
+								<li>
+									<a href="#">公告三</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+		<div class="container-fluid medium">
+			<!--<p>段落测试</p>-->
+
+			<div class="row">
+				<!--  整体的   左侧放置手风琴框   右侧放置内容   -->
+				<div class="col-md-2">
+					<!--左侧手风琴框-->
+
+					<div class="row leftpart">
+						<div class="accountclass">
+							<!--我的账号部分-->
+							<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp &nbsp我的信息</h4>
+						</div>
+						<!--我的账号部分-->
+						<div class="infoclass">
+							<!--我的账号  下面部分-->
+							<h4>账号管理</h4>
+							<ul>
+								<li><a href="../hospital/repwd.html">修改密码</a></li>
+								<li><a href="../hospital/hospital0-myinfo.html">我的信息</a></li>
+								<li><a href="../hospital/security.html">账户安全</a></li>
+							</ul>
+
+							<h4>业务操作</h4>
+							<ul>
+								<li><a href="../hospital/hospital1-wantbuy.html">我要采购</a></li>
+								<li><a href="../hospital/hospital2-mybuy.html">我的采购</a></li>
+								<li><a href="../hospital/hospital3-myconcern.html">我的关注</a></li>
+							</ul>
+
+						</div>
+
+						<!--我的账号  下面部分-->
+					</div>
+
+				</div>
+				<!--左侧手风琴框-->
+
+				<div class="col-md-10">
+					<!--右侧-->
+					<div class="row">
+						<h3>安全中心</h3>
+						<table class="table product-list-table">
+							<tr>
+								<div class="panel-heading">
+									<td class="col-md-1">
+										<label>
+											<span class="glyphicon glyphicon-exclamation-sign" style="font-size: 40px;color: #EC971F;" aria-hidden="true"></span>
+											<span class="glyphicon glyphicon-remove-sign" style="font-size: 40px;color: red;display: none;" aria-hidden="true"></span>
+											<span class="glyphicon glyphicon-ok-sign" style="font-size: 40px;color: green;display: none;" aria-hidden="true"></span>
+										</label>
+									</td>
+									<td class="col-md-10">
+										<div style="margin-top: 20px;">
+											<div class="progress" style="display: none;">
+												<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+													<span class="sr-only">90%</span>
+												</div>
+											</div>
+											<div class="progress">
+												<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+													<span class="sr-only">60%</span>
+												</div>
+											</div>
+											<div class="progress" style="display: none;">
+												<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+													<span class="sr-only">30%</span>
+												</div>
+											</div>
+										</div>
+
+										<p>上次登录时间：xxxx-xx-xx xx:xx:xx，如非本人登录，请按以下步骤及时修改登录密码或其它安全设置。</p>
+
+									</td>
+
+								</div>
+
+							</tr>
+							<tr>
+								<td>
+									<label>
+										<span class="glyphicon glyphicon-exclamation-sign" style="font-size: 40px;color: #EC971F;display: none;" aria-hidden="true"></span>
+										<span class="glyphicon glyphicon-remove-sign" style="font-size: 40px;color: red;display: none;" aria-hidden="true"></span>
+										<span class="glyphicon glyphicon-ok-sign" style="font-size: 40px;color: green;" aria-hidden="true"></span>
+									</label>
+								</td>
+								<td>
+									<p style="margin-left: auto;">登录密码</p>
+									<p style="margin-left: 80px;">安全性高的密码可以使账户更安全，建议定期更换密码。</p>
+									<a href="#" style="margin-left: 100px;">修改>></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>
+										<span class="glyphicon glyphicon-exclamation-sign" style="font-size: 40px;color: #EC971F;display: none;" aria-hidden="true"></span>
+										<span class="glyphicon glyphicon-remove-sign" style="font-size: 40px;color: red;" aria-hidden="true"></span>
+										<span class="glyphicon glyphicon-ok-sign" style="font-size: 40px;color: green;display: none;" aria-hidden="true"></span>
+									</label>
+								</td>
+								<td>
+									<p style="margin-left: auto;">绑定邮箱</p>
+									<p style="margin-left: 80px;">验证后可用于邮箱找回密码、接受订单提醒等，保障账户更加安全。</p>
+									<a href="#" style="margin-left: 30px;">修改>></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>
+											<span class="glyphicon glyphicon-exclamation-sign" style="font-size: 40px;color: #EC971F;display: none;" aria-hidden="true"></span>
+											<span class="glyphicon glyphicon-remove-sign" style="font-size: 40px;color: red;display: none;" aria-hidden="true"></span>
+											<span class="glyphicon glyphicon-ok-sign" style="font-size: 40px;color: green;" aria-hidden="true"></span>
+										</label>
+								</td>
+								<td>
+									<p style="margin-left: auto;">绑定手机</p>
+									<p style="margin-left: 80px;">绑定后可用于手机找回密码、接收手机动态验证码等，使账户更加安全。</p>
+									<a href="#" style="margin-left: 0px;">修改>></a>
+								</td>
+							</tr>
+
+						</table>
+
+					</div>
+					<!--second-row-->
+
+					<div class="row">
+						<!--third-row-->
+						<hr class="hrclass">
+						<div class="col-md-2 quanxuan1">
+						</div>
+						<!--col-md-3-->
+
+					</div>
+					<!--third-row-->
+
+				</div>
+				<!--右侧内容-->
+
+			</div>
+			<!--  整体的   左侧放置手风琴框   右侧放置内容   -->
+
+		</div>
+		<!--"container-fluid medium"-->
+
+		<!-- 底部的footer -->
+		<nav class="navbar-inverse footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>新手指南</li>
+							<li>用户注册</li>
+						</ul>
+					</div>
+
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>北登服务</li>
+							<li>服务协议</li>
+						</ul>
+					</div>
+
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>信息安全</li>
+							<li>免责声明</li>
+						</ul>
+					</div>
+
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>隐私声明</li>
+							<li>法律声明</li>
+							<li>联系我们</li>
+							<li>关于我们</li>
+						</ul>
+					</div>
+
+					<div class="col-md-4">
+						<img src="recourse/Image/weixin.jpg" alt="" class="img-responsive" style="width: 100px">
+					</div>
+				</div>
+
+				<hr class="divider">
+
+				<div class="row">
+					<div class="col-md-12 word-list">
+						隐私声明 | 法律声明 | 联系我们 | 关于我们 | 产品地图 | 器械数据库 | 知识库 | 网站导航 | 互联网药品信息服务资格证
+					</div>
+
+					<div class="col-md-12 word-list">
+						Copyright © 2010-2016 VEDENG Corporation (www.vedeng.com) All Rights Reserved ICP备案证书号:苏ICP备11075436号
+					</div>
+
+					<div class="col-md-12 word-list" style="margin-bottom: 50px">
+						友情链接： 贝登医疗 二手设备 抗癌健康网 环境试验箱 中国医疗器械网 医疗器械招商 淘宝刷流量 显微镜 甲醛检测仪 香港服务器 找工业品网 蓝贝
+					</div>
+
+				</div>
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+	</body>
+	<script type="text/javascript" src="../jquery-2.1.1/jquery.js"></script>
+	<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../Public/JS/zh.js"></script>
+
+</html>

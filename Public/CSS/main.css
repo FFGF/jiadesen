@@ -26,7 +26,9 @@ body { padding-top: 60px }
 .register { width: 310px }
 .register .modal-body { padding-bottom: 0px }
 .register h4 { margin: 10px }
-
+/*朱浩添加的css*/
+p { display: inline; }
+#goods_1 td { border: 1px solid grey; }
 /*首页的找产品二级菜单*/
 .active-menu { position: relative; display: none; }
 .dropdown-menu-two-level { position: absolute; background-color: #f3f3f3; z-index: 1000; float: left; min-width: 120px; padding: 5px 0; list-style: none; border: 2px solid #2476e2; }
@@ -68,73 +70,6 @@ body { padding-top: 60px }
 .agency .keshi .col-md-8 ul { height: 24px; overflow: hidden; }
 .agency-list .row .col-md-4 nav p { display: inline-block; position: relative; top: -32px; left: 10px; }
 .agency-list .row table thead { background-color: #f3f3f3; }
-/*找产品页面的css*/
-.brand-select { margin: 40px auto; border-top: 1px solid #ddd; }
-.brand-select > .row:first-child { border-bottom: 1px solid #ddd; }
-.select-value { margin: 10px 20px 10px 20px; }
-.select-value span { display: none; }
-.select-value .col-md-2 { border: 1px solid #ddd; margin: -1px -1px 0 0; padding-left: 0px; padding-right: 0px; }
-.select-value .col-md-2 a { text-decoration: none; color: red; cursor: pointer; }
-.select-key { background-color: #f3f3f3; width: 90px; padding-left: 5px; }
-.select-ext span { display: inline-block; border: 1px solid #ddd; width: 70px; margin-top: 2px; padding-left: 2px; margin-right: 5px; }
-.select-ext span:hover { cursor: pointer; color: red; }
-.select-ext span i { transition: all 0.5s ease-in-out; }
-.select-ext span:hover i { transform: rotate(180deg); transform: rotate(180deg); -ms-transform: rotate(180deg); 	/* IE 9 */ -moz-transform: rotate(180deg); 	/* Firefox */ -webkit-transform: rotate(180deg); /* Safari 和 Chrome */ -o-transform: rotate(180deg); }
-.select-ext span:first-child i { background: url(../../recourse/Image/down_arrow.png); width: 17px; height: 15px; position: absolute; left: 63px; top: 6px; }
-.select-ext span:last-child i { background: url(../../recourse/Image/plus_math.png); width: 17px; height: 15px; position: absolute; left: 139px; top: 6px; }
-.brand-select .col-md-8 .nav li a { padding: 5px 5px; padding-top: 0px; padding-bottom: 0px; }
-.brand-select .col-md-8 .nav li a:hover { border: 1px solid red; border-radius: 2px; color: red; background: white; cursor: pointer; }
-#myTabs { margin-top: 5px; }
-.tab-content { overflow-y: auto; height: 158px; }
-.show-select .brand { font-style: normal; margin-right: 5px; }
-.show-select .name { color: red; }
-.show-select .one-condition-brand { margin-right: 10px; border: 1px solid #ddd; display: inline-block; padding-left: 8px; padding-right: 8px; border-right: 20px solid #ddd; background-color: #ddd; }
-.show-select .one-condition-brand:hover { border: 1px solid red; border-right: 20px solid red; background-color: white; cursor: pointer; }
-.show-select .one-condition-brand .glyphicon { left: 24px; }
-.show-select .one-condition-brand:hover .glyphicon { color: white; }
-.show-select .one-condition-product { margin-right: 10px; border: 1px solid #ddd; display: inline-block; padding-left: 8px; padding-right: 8px; border-right: 20px solid #ddd; background-color: #ddd; }
-.show-select .one-condition-product:hover { border: 1px solid red; border-right: 20px solid red; background-color: white; cursor: pointer; }
-.show-select .one-condition-product .glyphicon { left: 24px; }
-.show-select .one-condition-product:hover .glyphicon { color: white; }
-.show-select .one-condition-keshi { margin-right: 10px; border: 1px solid #ddd; display: inline-block; padding-left: 8px; padding-right: 8px; border-right: 20px solid #ddd; background-color: #ddd; }
-.show-select .one-condition-keshi:hover { border: 1px solid red; border-right: 20px solid red; background-color: white; cursor: pointer; }
-.show-select .one-condition-keshi .glyphicon { left: 24px; }
-.show-select .one-condition-keshi:hover .glyphicon { color: white; }
-.col-xs-1-8, .col-sm-1-8, .col-md-1-8, .col-lg-1-8 { min-height: 1px; padding-left: 15px; padding-right: 15px; position: relative; }
-.col-xs-1-8 { width: 12.5%; float: left; }
-@media (min-width:768px) {
-	.col-sm-1-8 { width: 12.5%; float: left; }
-}
-@media (min-width:992px) {
-	.col-md-1-8 { width: 12.5%; float: left; }
-}
-@media (min-width:1200px) {
-	.col-lg-1-8 { width: 12.5%; float: left; }
-}
-.product-kind { height: 40px; border-bottom: 1px solid #ddd; }
-.product-kind .col-md-8 { padding-top: 10px; }
-.product-kind .col-md-8 .col-md-1-8 span { color: #005aa0; cursor: pointer; }
-.product-kind .col-md-8 .col-md-1-8 span:hover { color: #e4393c; }
-.product-kind .select-ext span i { left: 183px; }
-.product-kind .select-ext span { margin-left: 116px; }
-.product-category { padding-left: 5px; width: 90px; height: 40px; background-color: #f3f3f3; }
-.keshi { width: 90px; background-color: #f3f3f3; padding-left: 5px; }
-.hospital-department { border-bottom: 1px solid #ddd; }
-.hospital-department .col-md-8 span { color: #005aa0; cursor: pointer; }
-.hospital-department .col-md-8 span:hover { color: #e4393c; }
-.hospital-department .col-md-8 { padding-top: 10px; padding-bottom: 10px; margin-right: 40px; }
-.more-keshi { overflow-y: auto; height: 90px; overflow-x: hidden; }
-.juti-product-list table { border: 1px solid #ddd; }
-.juti-product-list table thead { background-color: #f3f3f3; }
-.juti-product-list table tbody tr td:nth-child(3) { vertical-align: middle; }
-.juti-product-list table tbody tr td:nth-child(3) a:hover { color: #ff8f0f; cursor: pointer; text-decoration: none; }
-.juti-product-list table tbody tr td:nth-child(4) { vertical-align: middle; }
-.juti-product-list table tbody tr td:nth-child(5) { vertical-align: middle; }
-.juti-product-list .quanxuan { margin-top: 0px; }
-.juti-product-list .pagination { margin: 0px; }
-.juti-product-list .col-md-4 nav p { display: inline-block; position: relative; top: -10px; left: 10px }
-.juti-product-list .quanxuan .guanzu { margin-left: 5px; cursor: pointer; color: #0099ff; }
-.juti-product-list .quanxuan .guanzu:hover { color: black; }
 /*推广列表的css*/
 .generalize { border: 1px solid #ddd; padding-top: 10px; margin-bottom: 30px; border-bottom: 0px; }
 .generalize .row { border-bottom: 1px solid #ddd; margin-top: 10px; }
@@ -147,7 +82,7 @@ body { padding-top: 60px }
 .generalize .col-md-8 { padding-left: 0px; }
 .generalize .area .col-md-8 ul { height: 24px; overflow: hidden; }
 .generalize  .more { border: 1px solid #ddd; width: 60px; display: inline-block; padding-left: 4px; cursor: pointer; }
-.generalize  .more i { background-image: url(recourse/Image/down_arrow.png); width: 17px; height: 16px; position: absolute; left: 55px; top: 2px }
+.generalize  .more i { background-image: url(../../recourse/Image/down_arrow.png); width: 17px; height: 16px; position: absolute; left: 55px; top: 2px }
 .generalize  .more i { transition: all 0.5s ease-in-out; }
 .generalize  .more:hover i { transform: rotate(180deg); transform: rotate(180deg); -ms-transform: rotate(180deg); 	/* IE 9 */ -moz-transform: rotate(180deg); 	/* Firefox */ -webkit-transform: rotate(180deg); /* Safari 和 Chrome */ -o-transform: rotate(180deg); }
 .generalize .area .more:hover { color: #fb8300; }
@@ -176,3 +111,4 @@ body { padding-top: 60px }
 .procurement .area .more:hover { color: #fb8300; }
 .procurement-product-list .row .col-md-4 nav p { display: inline-block; position: relative; top: -32px; left: 10px; }
 .procurement-product-list .row table thead { background-color: #f3f3f3; }
+/*找产品页面的css*/
