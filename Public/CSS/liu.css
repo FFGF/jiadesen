@@ -35,7 +35,7 @@ body { padding-top: 60px; }
 .selectallclass { margin-left: 30px; vertical-align: middle !important; }
 .hrclass { margin-left: -38px; margin-right: 100px }
 .pitem-info { vertical-align: middle !important; text-align: right }
-
+.first-bar .navbar-brand{padding-top: 0px;}
 /*
 下面开始   我要申请页面的CSS  page-wantproxy.html
  */
@@ -198,3 +198,4 @@ page0-22myinfo-csocompany.html
 
 /*所有的input   变成圆角*/
 input { border: 1px solid #ccc; border-radius: 4px; height: 34px; }
+th { white-space: nowrap; }

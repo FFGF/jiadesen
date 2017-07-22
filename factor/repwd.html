@@ -24,18 +24,18 @@
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 			      </button>
-					<a class="navbar-brand" href="#">欢迎来到安必选医疗</a>
+					<a class="navbar-brand" href="../index.html"><img alt="安必选医疗" src="../recourse/Image/Logo.png"></a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse pull-right" id="first-bar">
 					<ul class="nav navbar-nav">
 						<li class="active">
-							<a href="#" data-toggle="modal" data-target="#register">请登录 <span class="sr-only">(current)</span></a>
+							<a href="../login.html">请登录 <span class="sr-only">(current)</span></a>
 						</li>
 
 						<li>
-							<a href="#">免费注册</a>
+							<a href="../register.html">免费注册</a>
 						</li>
 
 						<li class="dropdown">
@@ -59,7 +59,6 @@
 			<!-- /.container-fluid -->
 		</nav>
 
-
 		<div class="container-fluid medium">
 			<!--<p>段落测试</p>-->
 
@@ -75,7 +74,7 @@
 						</div>
 						<!--我的账号部分-->
 
-						<div class="infoclass">
+											<div class="infoclass">
 							<!--我的账号  下面部分-->
 							<h4>账号管理</h4>
 							<ul>
@@ -83,39 +82,41 @@
 									<a href="repwd.html">修改密码</a>
 								</li>
 								<li>
-									<a href="info.html" >我的信息</a>
+									<a href="info.html">我的信息</a>
 								</li>
 								<li>
-									<a href="security.html" >账户安全</a>
+									<a href="security.html">账户安全</a>
 								</li>
 							</ul>
 
-							<h4>业务操作</h4>
+							<h4>产品管理</h4>
 							<ul>
 								<li>
 									<a href="goods_info.html">产品信息</a>
 								</li>
+							</ul>
+							
+							<h4>推广记录</h4>
+							<ul>
 								<li>
 									<a href="tuiguang.html">推广记录</a>
 								</li>
+							</ul>
+							
+							
+							<h4>招商信息</h4>
+							<ul>								
 								<li>
 									<a href="caigou.html">采购需求信息</a>
 								</li>
-								<li>
-									<a href="lianxixinxi.html">医疗机构联系信息</a>
-								</li>
-								<li>
-									<a href="daililist.html">代理列表</a>
-								</li>
+								
 								<li>
 									<a href="mydaili.html">我的代理</a>
 								</li>
 								<li>
 									<a href="applydaililist.html">申请代理列表</a>
 								</li>
-								<li>
-									<a href="CSOinfo.html">查看CSO公司详情</a>
-								</li>
+								
 							</ul>
 
 						</div>
@@ -142,15 +143,13 @@
 
 									</div>
 								</div>
+
 								<!--设置密码-->
 								<div class="form-group">
-									<label class="col-md-4 control-label">新密码：</label>
-									<div class="col-md-6">
+									<label class="col-md-4 control-label">密码：</label>
+									<div class="col-md-4">
 										<input type="password" class="form-control" id="pwd" style="width:340px;display: inline;" oninput="validate()" onKeyUp="pwStrength(this.value)" onBlur="pwStrength(this.value)" placeholder="请输入6-18位且以字母开头的密码">
-										<!--<label>
-											<span id="pwd_o" class="glyphicon glyphicon-ok form-control-feedback form" style="display:none"></span>
-											<span id="pwd_e" class="glyphicon glyphicon-remove form-control-feedback"></span>
-										</label>-->
+										
 									</div>
 
 								</div>
@@ -168,22 +167,17 @@
 								<!--确认密码-->
 								<div class="form-group">
 									<label class="col-md-4 control-label">确认密码：</label>
-									<div class="col-md-6">
+									<div class="col-md-4">
 										<input type="password" class="form-control" id="pwd_again" style="width:340px;display: inline;" oninput="validate()" placeholder="请输入再次确认密码">
-										<!--<label>
-											<span id="pwd2_o" class="glyphicon glyphicon-ok form-control-feedback form" style="display:none"></span>
-											<span id="pwd2_e" class="glyphicon glyphicon-remove form-control-feedback"></span>
-										</label>-->
 									</div>
 
 								</div>
 
 								<div class="form-group" style="margin-left: 250px;">
-										
-										<button type="submit" class="btn btn-default">确认</button>
-										&nbsp;&nbsp;&nbsp;
-										<button type="submit" class="btn btn-default">重置</button>
-									
+
+									<button type="submit" class="btn btn-default">确认</button> &nbsp;&nbsp;&nbsp;
+									<button type="submit" class="btn btn-default">重置</button>
+
 								</div>
 
 							</form>
@@ -236,7 +230,7 @@
 					</div>
 
 					<div class="col-md-4">
-						<img src="recourse/Image/weixin.jpg" alt="" class="img-responsive" style="width: 100px">
+						<img src="../recourse/Image/weixin.jpg" alt="" class="img-responsive" style="width: 100px">
 					</div>
 				</div>
 

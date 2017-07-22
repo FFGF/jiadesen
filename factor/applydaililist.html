@@ -8,6 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../Public/CSS/liu.css">
+
 	</head>
 
 	<body>
@@ -23,18 +24,18 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				    </button>
-					<a class="navbar-brand" href="#"><b>欢迎来到安必选医疗</b></a>
+					<a class="navbar-brand" href="../index.html"><img alt="安必选医疗" src="../recourse/Image/Logo.png"></a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse pull-right" id="first-bar">
 					<ul class="nav navbar-nav">
 						<li class="active">
-							<a href="#" data-toggle="modal" data-target="#register"><b>请登录</b> <span class="sr-only">(current)</span></a>
+							<a href="../login.html">请登录 <span class="sr-only">(current)</span></a>
 						</li>
 
 						<li>
-							<a href="#"><b>免费注册</b></a>
+							<a href="../register.html">免费注册</a>
 						</li>
 
 						<li class="dropdown">
@@ -88,32 +89,34 @@
 								</li>
 							</ul>
 
-							<h4>业务操作</h4>
+							<h4>产品管理</h4>
 							<ul>
 								<li>
 									<a href="goods_info.html">产品信息</a>
 								</li>
+							</ul>
+							
+							<h4>推广记录</h4>
+							<ul>
 								<li>
 									<a href="tuiguang.html">推广记录</a>
 								</li>
+							</ul>
+							
+							
+							<h4>招商信息</h4>
+							<ul>								
 								<li>
 									<a href="caigou.html">采购需求信息</a>
 								</li>
-								<li>
-									<a href="lianxixinxi.html">医疗机构联系信息</a>
-								</li>
-								<li>
-									<a href="daililist.html">代理列表</a>
-								</li>
+								
 								<li>
 									<a href="mydaili.html">我的代理</a>
 								</li>
 								<li>
 									<a href="applydaililist.html">申请代理列表</a>
 								</li>
-								<li>
-									<a href="CSOinfo.html">查看CSO公司详情</a>
-								</li>
+								
 							</ul>
 
 						</div>
@@ -128,8 +131,7 @@
 
 					<div class="row">
 
-						<div class="col-md-1">
-						</div>
+						
 
 						<div class="col-md-6">
 							<div class="input-group inputsize">
@@ -141,13 +143,12 @@
 							<!-- /input-group -->
 						</div>
 						<!-- /.col-lg-6 -->
-						<div class="col-md-2">
+						<div class="col-md-6">
 							<button class="btn btn-default" style="width: 110px;">同意为代理</button>
 							<button class="btn btn-default" style="width: 110px;">驳回代理申请</button>
 						</div>
 
-						<div class="col-md-3">
-						</div>
+						
 
 					</div>
 					<!-- /.row -->
@@ -157,7 +158,7 @@
 							<thead class="tablehead">
 								<th></th>
 								<th>申请公司名称</th>
-								<th> 申请代理产品</th>
+								<th>申请代理产品</th>
 								<th>区域</th>
 								<th>医疗机构</th>
 								<th>科室</th>
@@ -170,12 +171,12 @@
 									<td>
 										<input type="checkbox" />
 									</td>
-									<td>一个公司名称例子：例如某某某公司</td>
-									<td>产品名称：例如普利生全自动血凝分析仪C2000-A</td>
-									<td>区域例子：上海市</td>
-									<td>申请时间：Date()</td>
-									<td></td>
-									<td></td>
+									<td><a href="CSOinfo.html">上海王二代理公司</a> </td>
+									<td>普利生全自动血凝分析仪C2000-A</td>
+									<td>上海市</td>
+									<td>上海市第一人民医院</td>
+									<td>心肺科</td>
+									<td>2017-08-20</td>
 								</tr>
 
 								<tr>
@@ -183,12 +184,12 @@
 									<td>
 										<input type="checkbox" />
 									</td>
-									<td>一个公司名称例子：例如某某某公司</td>
-									<td>产品名称：例如TECO德高 半自动血凝仪 M1</td>
-									<td>区域例子：北京市</td>
-									<td>申请时间：Date()</td>
-									<td></td>
-									<td></td>
+									<td><a href="CSOinfo.html">上海王二代理公司</a> </td>
+									<td>普利生全自动血凝分析仪C2000-A</td>
+									<td>上海市</td>
+									<td>上海市第一人民医院</td>
+									<td>心肺科</td>
+									<td>2017-08-20</td>
 								</tr>
 
 							</tbody>
@@ -295,7 +296,7 @@
 					</div>
 
 					<div class="col-md-4">
-						<img src="recourse/Image/weixin.jpg" alt="" class="img-responsive" style="width: 100px">
+						<img src="../recourse/Image/weixin.jpg" alt="" class="img-responsive" style="width: 100px">
 					</div>
 				</div>
 

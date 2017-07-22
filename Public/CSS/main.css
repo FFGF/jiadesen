@@ -26,6 +26,7 @@ body { padding-top: 60px }
 .register { width: 310px }
 .register .modal-body { padding-bottom: 0px }
 .register h4 { margin: 10px }
+.first-bar .navbar-brand{padding-top: 0px;}
 
 /*首页的找产品二级菜单*/
 .active-menu { position: relative; display: none; }

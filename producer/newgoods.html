@@ -7,8 +7,13 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap-imageupload.css">
+		<script src="../jquery-2.1.1/jquery-1.12.4.min.js"></script>
+		<script src="../bootstrap-3.3.7-dist/css/bootstrap-imageupload.css"></script>
+		<script src="../bootstrap-3.3.7-dist/js/bootstrap-imageupload.js"></script>
 		<link rel="stylesheet" href="../Public/CSS/liu.css">
-
 	</head>
 
 	<body>
@@ -24,18 +29,18 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				    </button>
-					<a class="navbar-brand" href="#">欢迎来到安必选医疗</a>
+					<a class="navbar-brand" href="../index.html"><img alt="安必选医疗" src="../recourse/Image/Logo.png"></a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse pull-right" id="first-bar">
 					<ul class="nav navbar-nav">
 						<li class="active">
-							<a href="#" data-toggle="modal" data-target="#register">请登录 <span class="sr-only">(current)</span></a>
+							<a href="../login.html">请登录 <span class="sr-only">(current)</span></a>
 						</li>
 
 						<li>
-							<a href="#">免费注册</a>
+							<a href="../register.html">免费注册</a>
 						</li>
 
 						<li class="dropdown">
@@ -88,32 +93,34 @@
 								</li>
 							</ul>
 
-							<h4>业务操作</h4>
+							<h4>产品管理</h4>
 							<ul>
 								<li>
 									<a href="goods_info.html">产品信息</a>
 								</li>
+							</ul>
+							
+							<h4>推广记录</h4>
+							<ul>
 								<li>
 									<a href="tuiguang.html">推广记录</a>
 								</li>
+							</ul>
+							
+							
+							<h4>招商信息</h4>
+							<ul>								
 								<li>
 									<a href="caigou.html">采购需求信息</a>
 								</li>
-								<li>
-									<a href="lianxixinxi.html">医疗机构联系信息</a>
-								</li>
-								<li>
-									<a href="daililist.html">代理列表</a>
-								</li>
+								
 								<li>
 									<a href="mydaili.html">我的代理</a>
 								</li>
 								<li>
 									<a href="applydaililist.html">申请代理列表</a>
 								</li>
-								<li>
-									<a href="CSOinfo.html">查看CSO公司详情</a>
-								</li>
+								
 							</ul>
 
 						</div>
@@ -189,15 +196,62 @@
 							</tr>
 
 							<tr>
-								<!--第六行-->
-								<td class="condition-title">产品图片</td>
-								<td>
-									<input type="file" />
-									<input type="file" />
-									<input type="file" />
-									<input type="file" />
-								</td>
-							</tr>
+									<!--第六行-->
+									<td class="condition-title">产品图片</td>
+									<td>
+										<div class="imageupload panel panel-default" style="width:340px;">
+
+											<div class="file-tab panel-body">
+												<label class="btn btn-default btn-file">
+				                       			<span>浏览</span>
+				                       			<!-- The file is stored here. -->
+				                        			<input type="file" name="image-file_1">
+				                    			</label>
+												<button type="button" class="btn btn-default">Remove</button>
+											</div>
+											<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_1" class="btn btn-default">上传</button></P>
+										</div>
+
+										<div class="imageupload panel panel-default" style="width:340px;">
+
+											<div class="file-tab panel-body">
+												<label class="btn btn-default btn-file">
+				                       			<span>浏览</span>
+				                       			<!-- The file is stored here. -->
+				                        			<input type="file" name="image-file_2">
+				                    			</label>
+												<button type="button" class="btn btn-default">Remove</button>
+											</div>
+											<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_1" class="btn btn-default">上传</button></P>
+										</div>
+
+										<div class="imageupload panel panel-default" style="width:340px;">
+
+											<div class="file-tab panel-body">
+												<label class="btn btn-default btn-file">
+				                       			<span>浏览</span>
+				                       			<!-- The file is stored here. -->
+				                        			<input type="file" name="image-file_3">
+				                    			</label>
+												<button type="button" class="btn btn-default">Remove</button>
+											</div>
+											<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_1" class="btn btn-default">上传</button></P>
+										</div>
+
+										<div class="imageupload panel panel-default" style="width:340px;">
+
+											<div class="file-tab panel-body">
+												<label class="btn btn-default btn-file">
+				                       			<span>浏览</span>
+				                       			<!-- The file is stored here. -->
+				                        			<input type="file" name="image-file_4">
+				                    			</label>
+												<button type="button" class="btn btn-default">Remove</button>
+											</div>
+											<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_1" class="btn btn-default">上传</button></P>
+										</div>
+									</td>
+								</tr>
 							
 							<tr>
 								<!--第七行-->
@@ -294,7 +348,7 @@
 					</div>
 
 					<div class="col-md-4">
-						<img src="recourse/Image/weixin.jpg" alt="" class="img-responsive" style="width: 100px">
+						<img src="../recourse/Image/weixin.jpg" alt="" class="img-responsive" style="width: 100px">
 					</div>
 				</div>
 
@@ -318,8 +372,19 @@
 			<!-- /.container-fluid -->
 		</nav>
 
-		<script type="text/javascript" src="../jquery-2.1.1/jquery.js"></script>
-		<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<script>
+			var $imageupload = $('.imageupload');
+			$imageupload.imageupload();
+
+			//			$('#imageupload-disable').on('click', function() {
+			//				$imageupload.imageupload('disable');
+			//				$(this).blur();
+			//			})
+		</script>
 	</body>
+	
+	<script type="text/javascript" src="../jquery-2.1.1/jquery.js"></script>
+	<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../Public/JS/zh.js"></script>
 
 </html>
