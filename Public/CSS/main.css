@@ -26,9 +26,7 @@ body { padding-top: 60px }
 .register { width: 310px }
 .register .modal-body { padding-bottom: 0px }
 .register h4 { margin: 10px }
-/*朱浩添加的css*/
-p { display: inline; }
-#goods_1 td { border: 1px solid grey; }
+
 /*首页的找产品二级菜单*/
 .active-menu { position: relative; display: none; }
 .dropdown-menu-two-level { position: absolute; background-color: #f3f3f3; z-index: 1000; float: left; min-width: 120px; padding: 5px 0; list-style: none; border: 2px solid #2476e2; }
@@ -105,7 +103,7 @@ p { display: inline; }
 .procurement .col-md-8 { padding-left: 0px; }
 .procurement .area .col-md-8 ul { height: 24px; overflow: hidden; }
 .procurement  .more { border: 1px solid #ddd; width: 60px; display: inline-block; padding-left: 4px; cursor: pointer; }
-.procurement  .more i { background-image: url(recourse/Image/down_arrow.png); width: 17px; height: 16px; position: absolute; left: 55px; top: 2px }
+.procurement  .more i { background-image: url(../../recourse/Image/down_arrow.png); width: 17px; height: 16px; position: absolute; left: 55px; top: 2px }
 .procurement  .more i { transition: all 0.5s ease-in-out; }
 .procurement  .more:hover i { transform: rotate(180deg); transform: rotate(180deg); -ms-transform: rotate(180deg); 	/* IE 9 */ -moz-transform: rotate(180deg); 	/* Firefox */ -webkit-transform: rotate(180deg); /* Safari 和 Chrome */ -o-transform: rotate(180deg); }
 .procurement .area .more:hover { color: #fb8300; }
