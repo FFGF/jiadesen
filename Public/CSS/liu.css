@@ -1,5 +1,4 @@
 body { padding-top: 60px; }
-/*.first-bar { background-color: #66b3ff }*/
 .second-bar { height: 90px; background-color: white; border: 0px; }
 #second-bar form { line-height: 60px; margin-left: 150px; }
 #second-bar form input { width: 400px; }
@@ -18,8 +17,6 @@ body { padding-top: 60px; }
 .tablehead { background-color: #f3f3f3; }
 .divider { margin-top: 0px; border-color: #434343; }
 .row .word-list { text-align: center; color: #ccc; font-size: 12px; margin-bottom: 10px; }
-/*.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover { background-color: #66b3ff; }*/
-.medium { margin-left: 50px; margin-right: :50px; margin-bottom: 50px; }
 .dropclass { margin-left: 30px; }
 .inputsize { width: 400px; }
 .row { margin-top: 30px; margin-bottom: 50px; }
@@ -50,17 +47,7 @@ tr td p { margin-left: 20px; }
 .condition-table2 { width: 80%; border: 1px solid #e4e4e4; margin-top: -20px; margin-left: 45px; }
 .condition-title2 { text-align: center; vertical-align: middle !important; background-color: #f2f2f2; font-weight: normal; line-height: 2.5; color: #666; border-right: 1px solid #e4e4e4; width: 280px; }
 
-/*
-.config-height{
-	height:160px;
-	text-align: center;
-	vertical-align: middle !important;
-}
-.config-size{
-	width:250px;
-	height:150px;
-}
-*/
+
 .configmarginr { margin-right: 165px; border: 1px solid #e4e4e4; }
 .configmarginr .col-md-4 { border-right: 1px solid #e4e4e4; }
 .container-fluid .row .col-md-10 .configmarginr { margin-left: 45px; margin-top: -20px; }
@@ -108,15 +95,6 @@ color:#333; background-color: #fff; border-color: #ccc; }
 .receive-list-table th { text-align: center; height: 50px; vertical-align: middle !important; }
 .receive-list-table td { text-align: center; vertical-align: middle !important; }
 
-/*
-.p-recev-name{
-	height:20px;
-	overflow: hidden; 
-	white-space: nowrap; 
-	text-overflow: clip;
-	width:200px;
-}
-*/
 .reciv_type { width: 80px; }
 .reciv_comp_width { width: 150px; }
 .reciv_product_width { width: 180px; }
@@ -127,14 +105,18 @@ color:#333; background-color: #fff; border-color: #ccc; }
 .recev-depart { }
 .recev-time { }
 
-/*我要采购页面  hospital2-wantbuy.html*/
+/*我要采购页面  hospital1-wantbuy.html*/
 tr td input { margin-left: 20px; }
+.expiredate-size { width: 153px; }
+.button_position2 { margin-top: 5px; }
+.button_position { margin-top: 4px; }
+.caigouinput_size { height: 24px; width: 185px; }
 .hos-type1-dropdown { width: 200px; margin-left: 20px; float: left; margin-top: 8px; margin-bottom: 8px; }
 .hos-type2-dropdown { float: left; width: 200px; margin-left: 0px; margin-top: 8px; margin-bottom: 8px; }
 .hos-type3-dropdown { float: left; width: 200px; margin-left: -75px; margin-top: 8px; margin-bottom: 8px; }
 .hos-type1-dropdown-input { margin-left: 0px; margin-top: 5px; }
 .hos-type1-dropdown-input2 { margin-left: 0px; margin-top: 5px; width: 110px; }
-.info2 { margin: 13px; text-align: left; margin-left: 25px; }
+.info2 { margin: 13px; text-align: left; margin-left: 21px; }
 .info2 select { border: 1px #993300 solid; background: #FFFFFF; display: inline-block; padding: 6px 12px; margin-bottom: 0; font-size: 14px; font-weight: 400; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid transparent; border-radius: 4px
 color:#333; background-color: #fff; border-color: #ccc; }
 #s_province { border-radius: 4px }
@@ -173,7 +155,7 @@ color:#333; background-color: #fff; border-color: #ccc; }
 .xiugai-position { margin-left: 655px; margin-top: 35px; background-color: #66b3ff; width: 85px; }
 
 /*cso个人  上传身份证件正反面 */
-.leftright_part .part_shenfen { border-right: 1px solid #e4e4e4; float: left; width: 160px; height: 300px; }
+.leftright_part .part_shenfen { border-right: 1px solid #e4e4e4; float: left; width: 160px; height: 320px; }
 .condition-title { text-align: center; vertical-align: middle !important; background-color: #f2f2f2; font-weight: normal; line-height: 2.5; color: #666; width: 160px; }
 .zhengjian-size { width: 680px; float: left; }
 .zhengjian-size input { width: 250px; height: 23px; border: 0px; margin-top: 30px; }
@@ -198,4 +180,3 @@ page0-22myinfo-csocompany.html
 
 /*所有的input   变成圆角*/
 input { border: 1px solid #ccc; border-radius: 4px; height: 34px; }
-th { white-space: nowrap; }

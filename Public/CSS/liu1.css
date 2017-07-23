@@ -1,0 +1,199 @@
+body { padding-top: 60px; }
+.second-bar { height: 90px; background-color: white; border: 0px; }
+#second-bar form { line-height: 60px; margin-left: 150px; }
+#second-bar form input { width: 400px; }
+#second-bar button { margin-left: 10px; margin-top: 11px; }
+.navbar-nav > li { margin-left: 40px }
+.fouth-bar .navbar-header { width: 200px; }
+.navbar-header > p:first-of-type { margin-top: 16px; font-size: 16px; font-weight: bold; }
+.footer { margin-top: -20px; }
+.footer ul { color: #ccc; margin: 30px 0px; }
+.footer ul > li:first-child { color: white; }
+.footer img { margin: 30px auto; }
+.container-fluid .row .col-md-2 .leftpart { margin-top: 0px; margin-right: 10px; border: 1px solid #e4e4e4; }
+.accountclass { border-bottom: 1px solid #0099ff; text-align: center; }
+.infoclass { padding: 8px 0px 10px 20px; }
+.infoclass li { margin-top: 6px; margin-bottom: 6px; }
+.tablehead { background-color: #f3f3f3; }
+.divider { margin-top: 0px; border-color: #434343; }
+.row .word-list { text-align: center; color: #ccc; font-size: 12px; margin-bottom: 10px; }
+.medium { margin-left: 50px; margin-right: :50px; margin-bottom: 50px; }
+.dropclass { margin-left: 30px; }
+.inputsize { width: 400px; }
+.row { margin-top: 30px; margin-bottom: 50px; }
+.table { width: 90%; }
+.product-list-table { margin-left: -25px; margin-right: 20px; border: 1px solid #ddd; }
+.product-list-table th { text-align: center; height: 50px; vertical-align: middle !important; }
+.product-list-table td { text-align: center; vertical-align: middle !important; }
+.selectclass { width: 60px; }
+.agentproduct { width: 180px; }
+.quanxuan1 { height: 80px; vertical-align: middle !important; margin-top: 19px; }
+.quanxuan2 { height: 80px; vertical-align: middle !important; margin-top: 28px; }
+.quanxuan3 { height: 80px; vertical-align: middle !important; }
+.selectallclass { margin-left: 30px; vertical-align: middle !important; }
+.hrclass { margin-left: -38px; margin-right: 100px }
+.pitem-info { vertical-align: middle !important; text-align: right }
+.first-bar .navbar-brand{padding-top: 0px;}
+/*
+下面开始   我要申请页面的CSS  page-wantproxy.html
+ */
+.container-fluid .row .col-md-10 .row { margin-left: 50px; }
+.searchsize { width: 135px; }
+.container-fluid .row .col-md-10 .row .col-md-5 .form-group p { margin-top: 8px; }
+.container-fluid .row .col-md-10 .row { margin-top: 20px; margin-bottom: 20px; }
+.container-fluid .row .col-md-10 .row .col-md-4 .input-group-btn .timesearchbutton { margin-top: -16px; margin-left: 78px; background-color: blue }
+.condition-table { width: 80%; border: 1px solid #e4e4e4; margin-top: 25px; margin-left: 45px; }
+.condition-title { text-align: center; vertical-align: middle !important; background-color: #f2f2f2; font-weight: normal; line-height: 2.5; color: #666; width: 160px; }
+tr td p { margin-left: 20px; }
+.condition-table2 { width: 80%; border: 1px solid #e4e4e4; margin-top: -20px; margin-left: 45px; }
+.condition-title2 { text-align: center; vertical-align: middle !important; background-color: #f2f2f2; font-weight: normal; line-height: 2.5; color: #666; border-right: 1px solid #e4e4e4; width: 280px; }
+
+/*
+.config-height{
+	height:160px;
+	text-align: center;
+	vertical-align: middle !important;
+}
+.config-size{
+	width:250px;
+	height:150px;
+}
+*/
+.configmarginr { margin-right: 165px; border: 1px solid #e4e4e4; }
+.configmarginr .col-md-4 { border-right: 1px solid #e4e4e4; }
+.container-fluid .row .col-md-10 .configmarginr { margin-left: 45px; margin-top: -20px; }
+.config-size { width: 160px; height: 190px; margin-left: 40px; margin-bottom: 15px; margin-top: 15px; }
+.checkbox label { padding-left: 40px; }
+.qudaosize { width: 100px; }
+.qudaosize input { margin-top: -5px; }
+.qudaosize2 { width: 80px; }
+.qudaosize2 input { margin-top: -5px; }
+.keshisize { width: 100px; padding-top: 8px; }
+.keshisize input { margin-top: -5px; }
+.keshisize2 { width: 160px; padding-top: 8px; }
+.keshisize2 input { margin-top: -5px; }
+.qitakeshi-size { padding-top: 8px; width: 265px; height: 38px; }
+.qitakeshi-size input { margin-left: -10px; }
+.neike-marginleft { margin-left: 10px; }
+.type1-dropdown { width: 200px; margin-left: 20px; float: left; margin-top: 8px; margin-bottom: 8px; }
+.type2-dropdown { float: left; width: 200px; margin-left: 0px; margin-top: 8px; margin-bottom: 8px; }
+.info { margin: 13px; text-align: left; margin-left: 25px; }
+.info select { border: 1px #993300 solid; background: #FFFFFF; display: inline-block; padding: 6px 12px; margin-bottom: 0; font-size: 14px; font-weight: 400; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid transparent; border-radius: 4px
+color:#333; background-color: #fff; border-color: #ccc; }
+#s_province { border-radius: 4px }
+#s_city { border-radius: 4px }
+#s_county { border-radius: 4px }
+.yulan-position { margin-left: 350px; margin-top: 45px; background-color: #66b3ff; }
+
+/*我的关注页面*/
+.product-list-table-myconcern { margin-left: -10px; margin-right: 20px; border: 1px solid #ddd; }
+.product-list-table-myconcern th { text-align: center; height: 50px; vertical-align: middle !important; }
+.product-list-table-myconcern td { text-align: center; vertical-align: middle !important; height: 100px; }
+.detailclass { width: 100px; }
+.productimg { width: 120px; height: 80px; }
+.productimgsize { width: 80px; height: 80px; }
+.productname { width: 260px; }
+.productbrand { width: 150px; }
+.productconfig { width: 150px; }
+.seetime { width: 150px; }
+.selectallclass .allchoose-position { margin-top: -5px; }
+
+/*
+我的接收信息
+ */
+.hrclass2 { margin-left: -38px; margin-right: 100px }
+.receive-list-table { margin-left: -25px; margin-right: 20px }
+.receive-list-table th { text-align: center; height: 50px; vertical-align: middle !important; }
+.receive-list-table td { text-align: center; vertical-align: middle !important; }
+
+/*
+.p-recev-name{
+	height:20px;
+	overflow: hidden; 
+	white-space: nowrap; 
+	text-overflow: clip;
+	width:200px;
+}
+*/
+.reciv_type { width: 80px; }
+.reciv_comp_width { width: 150px; }
+.reciv_product_width { width: 180px; }
+.recev-name { width: 200px; }
+.recev-product { width: 200px; }
+.recev-area { }
+.recev-hospital { }
+.recev-depart { }
+.recev-time { }
+
+/*我要采购页面  hospital2-wantbuy.html*/
+tr td input { margin-left: 20px; }
+.hos-type1-dropdown { width: 200px; margin-left: 20px; float: left; margin-top: 8px; margin-bottom: 8px; }
+.hos-type2-dropdown { float: left; width: 200px; margin-left: 0px; margin-top: 8px; margin-bottom: 8px; }
+.hos-type3-dropdown { float: left; width: 200px; margin-left: -75px; margin-top: 8px; margin-bottom: 8px; }
+.hos-type1-dropdown-input { margin-left: 0px; margin-top: 5px; }
+.hos-type1-dropdown-input2 { margin-left: 0px; margin-top: 5px; width: 110px; }
+.info2 { margin: 13px; text-align: left; margin-left: 25px; }
+.info2 select { border: 1px #993300 solid; background: #FFFFFF; display: inline-block; padding: 6px 12px; margin-bottom: 0; font-size: 14px; font-weight: 400; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid transparent; border-radius: 4px
+color:#333; background-color: #fff; border-color: #ccc; }
+#s_province { border-radius: 4px }
+#s_city { border-radius: 4px }
+#s_county { border-radius: 4px }
+.jiaohuo-position { width: 420px; }
+
+/*
+page0-2myinfo-csoperson.html
+ */
+.info { margin: 13px; text-align: left; margin-left: 21px; }
+.info select { border: 1px #993300 solid; background: #FFFFFF; display: inline-block; padding: 6px 12px; margin-bottom: 0; font-size: 14px; font-weight: 400; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid transparent; border-radius: 4px
+color:#333; background-color: #fff; border-color: #ccc; }
+#s_province { border-radius: 4px }
+#s_city { border-radius: 4px }
+#s_county { border-radius: 4px }
+.leftright_part { margin-right: 165px; border: 1px solid #e4e4e4; width: 842px; }
+.leftright_part .part1 { border-right: 1px solid #e4e4e4; float: left; width: 160px; height: 300px; }
+.leftright_part .part2 { float: left; width: 270px; height: 300px; }
+.leftright_part .part3 { float: left; width: 140px; height: 300px; }
+.leftright_part .part4 { float: left; width: 270px; height: 300px; }
+.leftright_part .part5 { border-right: 1px solid #e4e4e4; float: left; width: 160px; height: 100px; }
+.leftright_part .part6 { width: 340px; border-right: 1px solid #e4e4e4; float: left; height: 100px; }
+.leftright_part .part7 { width: 340px; float: left; height: 100px; }
+.leftright_part .part6 .part6input { margin-left: 75px; margin-top: 15px; width: 178px; height: 24px; }
+.leftright_part .part7 .part6input { margin-left: 75px; margin-top: 15px; width: 178px; height: 24px; }
+.leftright_part .part6 .part6button { margin-top: 12px; margin-left: 82px; }
+.leftright_part .part7 .part6button { margin-top: 12px; margin-left: 82px; }
+.container-fluid .row .col-md-10 .leftright_part { margin-left: 45px; margin-top: -20px; }
+.condition-title { text-align: center; vertical-align: middle !important; background-color: #f2f2f2; font-weight: normal; line-height: 2.5; color: #666; width: 160px; }
+.select1class { margin-left: 30px; margin-right: 30px; width: 200px; height: 245px; margin-top: 30px; overflow-x: scroll; }
+.container-fluid .row .col-md-10 .leftright_part .part2 .select1class { height: 245px; }
+.container-fluid .row .col-md-10 .leftright_part .part4 .select1class { height: 245px; }
+.rightchoose { width: 82px; margin-top: 99px; margin-left: 25px; }
+.leftchoose { width: 82px; margin-top: 40px; margin-left: 25px; }
+.xiugai-position { margin-left: 655px; margin-top: 35px; background-color: #66b3ff; width: 85px; }
+
+/*cso个人  上传身份证件正反面 */
+.leftright_part .part_shenfen { border-right: 1px solid #e4e4e4; float: left; width: 160px; height: 300px; }
+.condition-title { text-align: center; vertical-align: middle !important; background-color: #f2f2f2; font-weight: normal; line-height: 2.5; color: #666; width: 160px; }
+.zhengjian-size { width: 680px; float: left; }
+.zhengjian-size input { width: 250px; height: 23px; border: 0px; margin-top: 30px; }
+.zhengjian-size .upload_p { font-size: 15px; margin-left: 25px; float: left; }
+.yulan_p { margin-left: 30px; }
+.zhengjian-size img { width: 490px; height: 190px; margin-left: 70px; }
+.leftright_part .part_zhizhao { border-right: 1px solid #e4e4e4; float: left; width: 160px; height: 500px; }
+.condition-title { text-align: center; vertical-align: middle !important; background-color: #f2f2f2; font-weight: normal; line-height: 2.5; color: #666; width: 160px; }
+.zhizhao-size { width: 680px; float: left; }
+.zhizhao-size input { width: 250px; height: 23px; border: 0px; margin-top: 30px; }
+.zhizhao-size .upload_p { font-size: 15px; margin-left: 25px; float: left; }
+.yulan_p { margin-left: 30px; }
+.zhizhao-size img { width: 490px; height: 380px; margin-left: 70px; }
+
+/*
+page0-22myinfo-csocompany.html
+ */
+.company_name_size { width: 500px; }
+.leftright_part .part6 .part7button { margin-top: 12px; margin-left: 88px; }
+.leftright_part .part7 .part8button { margin-top: 12px; margin-left: 60px; }
+.xiugai-position2 { margin-left: 435px; margin-top: 35px; background-color: #66b3ff; width: 85px; }
+
+/*所有的input   变成圆角*/
+input { border: 1px solid #ccc; border-radius: 4px; height: 34px; }
+th { white-space: nowrap; }
