@@ -258,6 +258,11 @@ sh.onclick = function() {
 
 }
 
+
+
+
+
+
 //省市区三级联动
 var Gid = document.getElementById;
 var showArea = function() {
@@ -266,6 +271,11 @@ var showArea = function() {
 		Gid('s_county').value + "</h3>"
 }
 Gid('s_county').setAttribute('onchange', 'showArea()');
+
+
+
+
+
 
 //参考该页面的
 //http://www.cnblogs.com/lantu1989/p/6148319.html
