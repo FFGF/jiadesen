@@ -1,5 +1,5 @@
 body { padding-top: 60px }
-.first-bar { background-color: white }
+/*.first-bar { background-color: white }*/
 .first-bar{border: 0px;}/*老师非觉得顶部navbar去掉下边框好看，无语了*/
 .second-bar { height: 90px; background-color: white; border: 0px }
 #second-bar{text-align: center;}
