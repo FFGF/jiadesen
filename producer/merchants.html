@@ -3,11 +3,13 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>采购需求信息</title>
+		<title>我要推广</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
 		<link rel="stylesheet" href="../Public/CSS/liu.css">
+		
 
 	</head>
 
@@ -39,7 +41,7 @@
 						</li>
 
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>系统公告</b> <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">系统公告 <span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li>
 									<a href="#">公告一</a>
@@ -70,7 +72,7 @@
 					<div class="row leftpart">
 						<div class="accountclass">
 							<!--我的账号部分-->
-							<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp &nbsp我的信息</h4>
+							<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp &nbsp用户中心</h4>
 						</div>
 						<!--我的账号部分-->
 
@@ -82,7 +84,7 @@
 									<a href="repwd.html">修改密码</a>
 								</li>
 								<li>
-									<a href="info.html">用户中心</a>
+									<a href="info.html">个人信息</a>
 								</li>
 								<li>
 									<a href="security.html">账户安全</a>
@@ -92,37 +94,43 @@
 							<h4>信息发布</h4>
 							<ul>
 								<li>
-									<a href="newgoods.html">产品发布</a>
+									<a href="productsLaunch.html">产品发布</a>
 								</li>
 								<li>
-									<a href="goods_info.html">发布对外招商信息</a>
+									<a href="merchants.html">发布对外招商信息</a>
 								</li>
 							</ul>
 							
 							<h4>信息反馈</h4>
 							<ul>
 								<li>
-									<a href="woyaotuiguang.html">医疗机构推送信息</a>
+									<a href="hospitalPush.html">医疗机构推送信息</a>
 								</li>
 								<li>
-									<a href="tuiguang.html">CSO请求代理信息</a>
+									<a href="CSOapply.html">CSO请求代理信息</a>
 								</li>
 							</ul>
 							
 							
-							<h4>问小安</h4>
+							<h4>信息查询</h4>
 							<ul>								
 								<li>
-									<a href="applydaililist.html">产品招商记录</a>
+									<a href="merchantsRecrods.html">产品招商记录</a>
 								</li>
 								
 								<li>
-									<a href="caigou.html">产品发布记录</a>
+									<a href="productsRecords.html">产品发布记录</a>
 								</li>
 								<li>
-									<a href="mydaili.html">我的代理商</a>
+									<a href="myAgents.html">我的代理商</a>
 								</li>
-								
+							</ul>
+
+							<h4>联系后台</h4>
+							<ul>								
+								<li>
+									<a href="#">问小安</a>
+								</li>								
 							</ul>
 
 						</div>
@@ -132,136 +140,120 @@
 				</div>
 				<!--左侧手风琴框-->
 
-				<div class="col-md-10">
+				<div class="col-md-10" style="margin-top: 60px">
 					<!--右侧-->
+					<table class="table condition-table" style="margin-top: 0px;">
+						<!--包括渠道、。。。区域什么的-->
+						<tbody>
 
-					<div class="row">
+							<tr>
+								<td class="condition-title">产品分类</td>
+								<td>
+									<select class="form-control" id="info_usertype" style="width: 340px;" oninput="chose()">
+										<option disabled selected value>所属产品分类</option>
+										<option>血液类</option>
+										<option>呼吸类</option>
+										<option>内科类</option>
+									</select>
+								</td>
+							</tr>
 
-						<div class="col-md-1">
+							<tr>
+								<td class="condition-title">本公司已发布产品</td>
+								<td>
+									<select class="form-control" id="info_usertype" style="width: 340px;" oninput="chose()">
+										<option disabled selected value>产品选择</option>
+										<option>凝血仪</option>
+										<option>心率监测器</option>
+										<option>呼吸机</option>
+									</select>
+								</td>
+							</tr>
+
+							<tr>
+								<td class="condition-title">招商区域</td>
+								<td>
+
+									<div class="info">
+										<div>
+											<select id="s_province" name="s_province"></select>
+											<select id="s_city" name="s_city"></select>
+											<select id="s_county" name="s_county"></select>
+											<script class="resources library" src="http://sandbox.runjs.cn/uploads/rs/267/g3ugugjp/area.js" type="text/javascript"></script>
+
+											<script type="text/javascript">
+												_init_area();
+											</script>
+										</div>
+										<div id="show"></div>
+									</div>
+
+								</td>
+							</tr>
+
+
+						</tbody>
+					</table>
+
+					<div class="row leftright_part" style="margin-bottom: 0px;">
+						<div class="part1 condition-title">
+							产品名称
 						</div>
 
-						<div class="col-md-6">
-							<div class="input-group inputsize">
-								<input type="text" class="form-control" placeholder="请输入关键字...">
-								<span class="input-group-btn">
-					        			<button class="btn btn-default" type="button">搜索</button>
-					      		</span>
-							</div>
-							<!-- /input-group -->
-						</div>
-						<!-- /.col-lg-6 -->
-						<div class="col-md-2">
-							<a href="daililist.html" class="btn btn-default" style="width: 140px;">推送至我的代理商</a>
-
+						<div class="part2">
+							<select id="select1" multiple="multiple" class="select1class">
+								<option>血液仪</option>
+								<option>离心器</option>
+								<option>心脏支架</option>
+								
+								<option>其他</option>
+							</select>
 						</div>
 
-						<div class="col-md-3">
+						<div class="part3">
+							<input class="rightchoose" type="button" value=">>" onclick="selectedToRight();" /><br/>
+							<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft();" /><br/>
 						</div>
 
+						<div class="part4">
+							<select id="select2" multiple="multiple" class="select1class">
+								<option>呼吸器</option>
+							</select>
+						</div>
 					</div>
-					<!-- /.row -->
 
-					<div class="row">
-						<table class="table table-striped table-hover product-list-table">
-							<thead class="tablehead">
-								<th></th>
-								<th>产品名称</th>
-								<th> 区域</th>
-								<th>医疗机构</th>
-								<th>科室</th>
-								<th>发布采购需求时间</th>
-							</thead>
+					<table class="table condition-table" style="margin-top: 0px;">
+						<!--包括渠道、。。。区域什么的-->
+						<tbody>
 
-							<tbody>
-								<tr>
-									<!-- 第一条信息（一行）-->
-									<td>
-										<input type="checkbox" />
-									</td>
-									<td><a href="lianxixinxi.html">普利生全自动血凝分析仪C2000-A</a></td>
-									<td>上海市</td>
-									<td>上海市第一人民医院</td>
-									<td>心肺科</td>
-									<td>2017-08-20</td>
-								</tr>
+							<tr>
+								<td class="condition-title">科室分类</td>
+								<td>
+									<select class="form-control" id="info_usertype" style="width: 340px;" oninput="chose()">
+										<option disabled selected value>科室分类，可多选</option>
+										<option>血液科</option>
+										<option>内科</option>
+										<option>外科</option>
+									</select>
+								</td>
+							</tr>
 
-								<tr>
-									<!-- 第二条信息（一行）-->
-									<td>
-										<input type="checkbox" />
-									</td>
-									<td><a href="lianxixinxi.html">普利生全自动血凝分析仪C2000-A</a></td>
-									<td>上海市</td>
-									<td>上海市第一人民医院</td>
-									<td>心肺科</td>
-									<td>2017-08-20</td>
-								</tr>
-
-							</tbody>
-						</table>
-
-					</div>
-					<!--second-row-->
-
-					<div class="row">
-						<!--third-row-->
-						<hr class="hrclass">
-						<div class="col-md-2 quanxuan1">
-							<!--
-			<label for class="checkbox selectallclass">
-				<input type="checkbox" name="select_all" onclick="xxfunction()">全部选择(可删除，没必)
-			</label>
-			-->
-
-						</div>
-						<!--col-md-3-->
-
-						<div class="col-md-3 quanxuan2">
-							<p class="pitem-info">共有xx条记录，每页显示20条</p>
-						</div>
-						<!--col-md-3-->
-
-						<div class="col-md-7 quanxuan3">
-							<nav aria-label="Page navigation">
-								<ul class="pagination">
-									<li>
-										<a href="#" aria-label="Previous">
-											<span aria-hidden="true">&laquo;</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">1</a>
-									</li>
-									<li>
-										<a href="#">2</a>
-									</li>
-									<li>
-										<a href="#">3</a>
-									</li>
-									<li>
-										<a href="#">4</a>
-									</li>
-									<li>
-										<a href="#">5</a>
-									</li>
-									<li>
-										<a href="#" aria-label="Next">
-											<span aria-hidden="true">&raquo;</span>
-										</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-						<!--col-md-6-->
-
-					</div>
-					<!--third-row-->
+						</tbody>
+					</table>
 
 				</div>
-				<!--右侧内容-->
+
+
+				<div class="form-group" style="margin-left: 650px;">										
+						<button type="submit" class="btn btn-default">发布</button>
+				</div>
+				<!--第五部分：预览发布-->
 
 			</div>
-			<!--  整体的   左侧放置手风琴框   右侧放置内容   -->
+			<!--右侧内容-->
+
+		</div>
+		<!--  整体的   左侧放置手风琴框   右侧放置内容   -->
 
 		</div>
 		<!--"container-fluid medium"-->
@@ -313,11 +305,9 @@
 					</div>
 
 					<div class="col-md-12 word-list">
-						Copyright © 2010-2016 VEDENG Corporation (www.vedeng.com) All Rights Reserved ICP备案证书号:苏ICP备11075436号
 					</div>
 
 					<div class="col-md-12 word-list" style="margin-bottom: 50px">
-						友情链接： 贝登医疗 二手设备 抗癌健康网 环境试验箱 中国医疗器械网 医疗器械招商 淘宝刷流量 显微镜 甲醛检测仪 香港服务器 找工业品网 蓝贝
 					</div>
 
 				</div>
@@ -327,7 +317,7 @@
 
 		<script type="text/javascript" src="../jquery-2.1.1/jquery.js"></script>
 		<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-
+		<script type="text/javascript" src="../Public/JS/zh2.js"></script>
 	</body>
 
 </html>
