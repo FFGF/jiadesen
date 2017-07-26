@@ -6,10 +6,18 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+     <link rel="stylesheet" href="Public/CSS/liMarquee.css">
     <link rel="stylesheet" href="Public/CSS/main.css">
 
 	<style type="text/css">
-/*.first-bar .navbar-brand{padding-top: 15px;}*/
+		.first-bar .navbar-brand{padding-top: 15px;}
+		.container .daohang{
+			font-size: 15px;
+			padding-bottom: 10px;
+		}
+		.container .daohang .col-md-12{
+			padding-left: 0px;
+			}
 	</style>
 </head>
 <body>
@@ -24,7 +32,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html"><img alt="安必选医疗" src="recourse/Image/Logo.png"></a>
+      <a class="navbar-brand" href="index.html">欢迎光临安必选医械网</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -58,7 +66,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#" style="margin-left: 50px">
-      	<!-- <img src="recourse/Image/Logo.png" alt="嘉德森"> -->
+      	<img src="recourse/Image/Logo.png" alt="嘉德森">
       </a>
     </div>
 
@@ -73,6 +81,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
 <!-- 第三部分的navbar -->
 <nav class="navbar navbar-default third-bar">
   <div class="container">
@@ -89,39 +98,46 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="third-bar">
       <ul class="nav navbar-nav">
+      	<li class="header-category"><a href="">产品分类</a>
+	      	<div class="active-menu">
+					    <ul class="dropdown-menu-two-level" role="menu">
+					        <li data-submenu-id="submenu-patas"><a href="">临床检验</a></li>
+					        <li data-submenu-id="submenu-snub-nosed"><a href="">医学影像</a></li>
+					        <li data-submenu-id="submenu-duoc-langur"><a href="">电子超声</a></li>
+					        <li data-submenu-id="submenu-pygmy"><a href="">手术急救</a></li>
+					        <li data-submenu-id="submenu-tamarin"><a href="">实验仪器</a></li>
+					        <li data-submenu-id="submenu-monk"><a href="">消毒灭菌</a></li>
+					        <li data-submenu-id="submenu-gabon"><a href="">医用光学</a></li>
+					        <li data-submenu-id="submenu-king-colobus"><a href="">医用耗材</a></li>
+					    </ul>
+					    <!-- 面板开始 -->
+						<div dataurl="./popover-menu.html" id="popover-menu">
+						<!-- 面板结束 -->
+      	</li>
         <li class="active"><a href="index.html">首页 <span class="sr-only">(current)</span></a></li>
-        <!-- <li><a href="#">找品牌</a></li> -->
-
-		
         <li class="header-category">
         	<a href="findProduct.html" id="find-product">找产品</a>	
         	<div class="active-menu">
-				    <ul class="dropdown-menu-two-level" role="menu">
-				        <li data-submenu-id="submenu-patas"><a href="">临床检验</a></li>
-				        <li data-submenu-id="submenu-snub-nosed"><a href="">医学影像</a></li>
-				        <li data-submenu-id="submenu-duoc-langur"><a href="">电子超声</a></li>
-				        <li data-submenu-id="submenu-pygmy"><a href="">手术急救</a></li>
-				        <li data-submenu-id="submenu-tamarin"><a href="">实验仪器</a></li>
-				        <li data-submenu-id="submenu-monk"><a href="">消毒灭菌</a></li>
-				        <li data-submenu-id="submenu-gabon"><a href="">医用光学</a></li>
-				        <li data-submenu-id="submenu-king-colobus"><a href="">医用耗材</a></li>
-				    </ul>
-				    <!-- 面板开始 -->
-					<div dataurl="./popover-menu.html" id="popover-menu">
-					<!-- 面板结束 -->
 			</div>
-        </li>
-				
-
-
+        </li>				
         <li class="dropdown" id="third-dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">找渠道 <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="generalizeList.html">推广列表</a></li>
-            <li><a href="procurementList.html">采购列表</a></li>
-            <li><a href="agencyList.html">代理列表</a></li>
+            <li><a href="generalizeList.html">招商查询信息</a></li>
+            <li><a href="procurementList.html">采购查询信息</a></li>
+            <li><a href="agencyList.html">代理申请信息</a></li>
           </ul>
         </li>
+
+        <li class="dropdown" id="fouth-dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">找物流<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="">找仓储</a></li>
+            <li><a href="">找配送</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">找融资</a></li>
 
         <li><a href="#">关于我们</a></li>
        
@@ -129,7 +145,28 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
+<!-- 滚动 -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+		    <div class="dowebok" id="dowebok">
+		        <a href="javascript:">李四发布了一个招商信息</a>
+		        <a href="javascript:">李四发布了一个招商信息</a>
+		        <a href="javascript:">李四发布了一个招商信息</a>
+		        <a href="javascript:">李四发布了一个招商信息</a>
+		        <a href="javascript:">李四发布了一个招商信息</a>
+		    </div>
+		</div>
+	</div>
+</div>
+<!-- 箭头导航 -->
+<div class="container">
+	<div class="row daohang">
+		<div class="col-md-12">
+			首页 > 找渠道 > 招商查询信息
+		</div>
+	</div>
+</div>
 <div class="container generalize">
 	<div class="row area">
 		<div class="col-md-1">
@@ -449,11 +486,9 @@
 		</div>
 
 		<div class="col-md-12 word-list">
-			Copyright © 2010-2016 VEDENG Corporation (www.vedeng.com) All Rights Reserved ICP备案证书号:苏ICP备11075436号
 		</div>
 
 		<div class="col-md-12 word-list" style="margin-bottom: 50px">
-			友情链接： 贝登医疗 二手设备 抗癌健康网 环境试验箱 中国医疗器械网 医疗器械招商 淘宝刷流量 显微镜 甲醛检测仪 香港服务器 找工业品网 蓝贝
 		</div>
 
 	</div>
@@ -463,7 +498,12 @@
 <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="Public/JS/jquery.menu-aim.js"></script>
 <script type="text/javascript" src="Public/JS/fgf.js"></script>
+<script type="text/javascript" src="Public/JS/jquery.liMarquee.js"></script>
 <script>
+// 信息滚动
+$(function(){
+    $('#dowebok').liMarquee();
+});
 //实现地区分类点击加上背景色效果
 $(".generalize .area ul li").on('click', function(){
 	$(".generalize .area ul li").removeClass('click')

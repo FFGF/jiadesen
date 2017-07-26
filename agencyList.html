@@ -7,8 +7,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="Public/CSS/main.css">
-
+    <link rel="stylesheet" href="Public/CSS/liMarquee.css">
+	<script type="text/javascript" src="Public/JS/area.js" ></script>
 	<style type="text/css">
+	.first-bar .navbar-brand{padding-top: 15px;}
+
+		.container .daohang{
+			font-size: 15px;
+			padding-bottom: 10px;
+		}
+		.container .daohang .col-md-12{
+			padding-left: 0px;
+		}
+
+.info {text-align: left;}
+.info select { border: 1px #993300 solid; background: #FFFFFF; display: inline-block; padding: 6px 12px; margin-bottom: 0; font-size: 14px; font-weight: 400; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid transparent; border-radius: 4px color:#333; background-color: #fff; border-color: #ccc; }
 	</style>
 </head>
 <body>
@@ -23,7 +36,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html"><img alt="安必选医疗" src="recourse/Image/Logo.png"></a>
+      <a class="navbar-brand" href="index.html">欢迎光临安必选医械网</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,7 +70,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#" style="margin-left: 50px">
-      	<!-- <img src="recourse/Image/Logo.png" alt="嘉德森"> -->
+      	<img src="recourse/Image/Logo.png" alt="嘉德森">
       </a>
     </div>
 
@@ -88,36 +101,46 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="third-bar">
       <ul class="nav navbar-nav">
+      	<li class="header-category"><a href="">产品分类</a>
+	      	<div class="active-menu">
+					    <ul class="dropdown-menu-two-level" role="menu">
+					        <li data-submenu-id="submenu-patas"><a href="">临床检验</a></li>
+					        <li data-submenu-id="submenu-snub-nosed"><a href="">医学影像</a></li>
+					        <li data-submenu-id="submenu-duoc-langur"><a href="">电子超声</a></li>
+					        <li data-submenu-id="submenu-pygmy"><a href="">手术急救</a></li>
+					        <li data-submenu-id="submenu-tamarin"><a href="">实验仪器</a></li>
+					        <li data-submenu-id="submenu-monk"><a href="">消毒灭菌</a></li>
+					        <li data-submenu-id="submenu-gabon"><a href="">医用光学</a></li>
+					        <li data-submenu-id="submenu-king-colobus"><a href="">医用耗材</a></li>
+					    </ul>
+					    <!-- 面板开始 -->
+						<div dataurl="./popover-menu.html" id="popover-menu">
+						<!-- 面板结束 -->
+      	</li>
         <li class="active"><a href="index.html">首页 <span class="sr-only">(current)</span></a></li>
         <li class="header-category">
         	<a href="findProduct.html" id="find-product">找产品</a>	
         	<div class="active-menu">
-				    <ul class="dropdown-menu-two-level" role="menu">
-				        <li data-submenu-id="submenu-patas"><a href="">临床检验</a></li>
-				        <li data-submenu-id="submenu-snub-nosed"><a href="">医学影像</a></li>
-				        <li data-submenu-id="submenu-duoc-langur"><a href="">电子超声</a></li>
-				        <li data-submenu-id="submenu-pygmy"><a href="">手术急救</a></li>
-				        <li data-submenu-id="submenu-tamarin"><a href="">实验仪器</a></li>
-				        <li data-submenu-id="submenu-monk"><a href="">消毒灭菌</a></li>
-				        <li data-submenu-id="submenu-gabon"><a href="">医用光学</a></li>
-				        <li data-submenu-id="submenu-king-colobus"><a href="">医用耗材</a></li>
-				    </ul>
-				    <!-- 面板开始 -->
-					<div dataurl="./popover-menu.html" id="popover-menu">
-					<!-- 面板结束 -->
 			</div>
-        </li>
-				
-
-
+        </li>				
         <li class="dropdown" id="third-dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">找渠道 <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="generalizeList.html">推广列表</a></li>
-            <li><a href="procurementList.html">采购列表</a></li>
-            <li><a href="agencyList.html">代理列表</a></li>
+            <li><a href="generalizeList.html">招商查询信息</a></li>
+            <li><a href="procurementList.html">采购查询信息</a></li>
+            <li><a href="agencyList.html">代理申请信息</a></li>
           </ul>
         </li>
+
+        <li class="dropdown" id="fouth-dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">找物流<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="">找仓储</a></li>
+            <li><a href="">找配送</a></li>
+          </ul>
+        </li>
+
+        <li ><a href="#">找融资</a></li>
 
         <li><a href="#">关于我们</a></li>
        
@@ -125,71 +148,76 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+		    <div class="dowebok" id="dowebok">
+		        <a href="javascript:">王小二发布了一个代理申请</a>
+		        <a href="javascript:">王小二发布了一个代理申请</a>
+		        <a href="javascript:">王小二发布了一个代理申请</a>
+		        <a href="javascript:">王小二发布了一个代理申请</a>
+		        <a href="javascript:">王小二发布了一个代理申请</a>
+		    </div>
+		</div>
+	</div>
+</div>
+<!-- 箭头导航 -->
+<div class="container">
+	<div class="row daohang">
+		<div class="col-md-12">
+			首页 > 找渠道 > 代理申请信息
+		</div>
+	</div>
+</div>
 <div class="container agency">
 	<div class="row area">
+		<div class="col-md-1"><span>地区选择：</span></div>
+		<div class="col-md-8">
+			<div class="info">
+				<div>
+					<select id="s_province" name="s_province"></select>  
+				    <select id="s_city" name="s_city" ></select>  
+				    <select id="s_county" name="s_county"></select>
+				    
+				    <script type="text/javascript">_init_area();</script>
+				</div>
+			    <div id="show"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row hospital">
 		<div class="col-md-1">
-			<span>地区分类：</span>
+			<span>医疗机构：</span>
 		</div>
 		<div class="col-md-8">
 			<ul>
 				<li class="click">全部</li>
-				<li>安徽</li>
-				<li>澳门</li>
-				<li>北京</li>
-				<li>福建</li>
-				<li>甘肃</li>
-				<li>广东</li>
-				<li>安徽</li>
-				<li>澳门</li>
-				<li>北京</li>
-				<li>福建</li>
-				<li>甘肃</li>
-				<li>广东</li>
-				<li>安徽</li>
-				<li>澳门</li>
-				<li>北京</li>
-				<li>福建</li>
-				<li>甘肃</li>
-				<li>广东</li>
-				<li>安徽</li>
-				<li>澳门</li>
-				<li>北京</li>
-				<li>福建</li>
-				<li>甘肃</li>
-				<li>广东</li>
-				<li>安徽</li>
-				<li>澳门</li>
-				<li>北京</li>
-				<li>福建</li>
-				<li>甘肃</li>
-				<li>广东</li>
-				<li>北京</li>
-				<li>福建</li>
-				<li>甘肃</li>
-				<li>广东</li>
+				<li>北京胸科医院（中央结核病研究所、结核病院）</li>
+				<li>北京市通州区中医院</li>
+				<li>北京市通州区中医院</li>
+				<li>北京市通州区中医医院</li>
+				<li>北京通州潞河医院</li>
+				<li>北京市通州区中西医结合骨伤医院北京市通州区工业品公司运通医院</li>
+				<li>中国人民解放军第二六三医院（解放军263医院）</li>
+				<li>北京市通州区中西医结合骨伤医院北京市通州区工业品公司运通医院</li>
+				<li>中国人民解放军第二六三医院（解放军263医院）</li>
+				<li>北京胸科医院（中央结核病研究所、结核病院）</li>
+				<li>北京市通州区中医院</li>
+				<li>北京市通州区中医院</li>
+				<li>北京市通州区中医医院</li>
+				<li>北京通州潞河医院</li>
+				<li>北京市通州区中西医结合骨伤医院北京市通州区工业品公司运通医院</li>
+				<li>中国人民解放军第二六三医院（解放军263医院）</li>
+				<li>北京市通州区中西医结合骨伤医院北京市通州区工业品公司运通医院</li>
+				<li>中国人民解放军第二六三医院（解放军263医院）</li>
 			</ul>
 		</div>
 		<div class="col-md-1">
-			<span class="more" data-flag=1>更多<i></i></span>
+			<span class="more" data-flag=1 id="fgf">更多<i></i></span>
 		</div>
 	</div>
-	<div class="row product">
-		<div class="col-md-1"><span>产品分类：</span></div>
-		<div class="col-md-8">
-			<ul>
-				<li class="click">全部</li>
-				<li>临床检验</li>
-				<li>医学影像</li>
-				<li>电子超声</li>
-				<li>手术急救</li>
-				<li>实验仪器</li>
-				<li>消毒灭菌</li>
-				<li>医用光学</li>
-				<li>医用耗材</li>
-			</ul>
-		</div>
-	</div>
+
 	<div class="row keshi">
 		<div class="col-md-1"><span>科室分类：</span></div>
 		<div class="col-md-8">
@@ -237,42 +265,38 @@
 			<table class="table table-striped table-hover table-bordered">
 				<thead>
 					<tr>
-						<td>产品类别</td>
 						<td>代理区域</td>
+						<td>医疗机构</td>
+						<td>科室</td>
 						<td>销售渠道</td>
 						<td>发布日期</td>
 						<td>发布人</td>
-						<td><a href="">详情</a></td>
+						<td>详情</td>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td>医疗器械</td>
 						<td>上海</td>
+						<td>上海第一人民医院</td>
+						<td>神经科</td>
 						<td>个人</td>
 						<td>2017-8-20</td>
 						<td>王小二</td>
 						<td><a href="">详情</a></td>
 					</tr>
 					<tr>
-						<td>医疗器械</td>
 						<td>上海</td>
+						<td>上海第一人民医院</td>
+						<td>神经科</td>
 						<td>个人</td>
 						<td>2017-8-20</td>
 						<td>王小二</td>
 						<td><a href="">详情</a></td>
 					</tr>
 					<tr>
-						<td>医疗器械</td>
 						<td>上海</td>
-						<td>个人</td>
-						<td>2017-8-20</td>
-						<td>王小二</td>
-						<td><a href="">详情</a></td>
-					</tr>
-					<tr>
-						<td>医疗器械</td>
-						<td>上海</td>
+						<td>上海第一人民医院</td>
+						<td>神经科</td>
 						<td>个人</td>
 						<td>2017-8-20</td>
 						<td>王小二</td>
@@ -428,11 +452,11 @@
 		</div>
 
 		<div class="col-md-12 word-list">
-			Copyright © 2010-2016 VEDENG Corporation (www.vedeng.com) All Rights Reserved ICP备案证书号:苏ICP备11075436号
+
 		</div>
 
 		<div class="col-md-12 word-list" style="margin-bottom: 50px">
-			友情链接： 贝登医疗 二手设备 抗癌健康网 环境试验箱 中国医疗器械网 医疗器械招商 淘宝刷流量 显微镜 甲醛检测仪 香港服务器 找工业品网 蓝贝
+
 		</div>
 
 	</div>
@@ -442,31 +466,22 @@
 <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="Public/JS/jquery.menu-aim.js"></script>
 <script type="text/javascript" src="Public/JS/fgf.js"></script>
+<script type="text/javascript" src="Public/JS/jquery.liMarquee.js"></script>
+
 <script>
-//实现地区分类点击加上背景色效果
-$(".agency .area ul li").on('click', function(){
-	$(".agency .area ul li").removeClass('click')
-	$(this).addClass('click')
-})
+// 信息滚动
+$(function(){
+    $('#dowebok').liMarquee();
+});
 
-//实现产品分类分类点击加上背景色效果
-$(".agency .product ul li").on('click', function(){
-	$(".agency .product ul li").removeClass('click')
-	$(this).addClass('click')
-})
 
-//实现科室分类分类点击加上背景色效果
-$(".agency .keshi ul li").on('click', function(){
-	$(".agency .keshi ul li").removeClass('click')
-	$(this).addClass('click')
-})
-
-$(".agency .area .more").on('click', function(){
+$(".agency .hospital .more").on('click', function(){
 	if($(this).attr('data-flag') == 1){
-		$('.agency .area .col-md-8 ul').css('height', '50px')
+		$('.agency .hospital .col-md-8 ul').css('height', '100px')
+		$('.agency .hospital .col-md-8 ul').css('overflow-y', 'auto')
 		$(this).attr('data-flag', 0)
 	}else{
-		$('.agency .area .col-md-8 ul').css('height', '24px')
+		$('.agency .hospital .col-md-8 ul').css('height', '24px')
 		$(this).attr('data-flag', 1)
 	}
 })
@@ -479,6 +494,32 @@ $(".agency .keshi .more").on('click', function(){
 		$('.agency .keshi .col-md-8 ul').css('height', '24px')
 		$(this).attr('data-flag', 1)
 	}
+})
+// 省市县
+var Gid  = document.getElementById ;
+var showArea = function(){
+	Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" + 	
+	Gid('s_city').value + " - 县/区" + 
+	Gid('s_county').value + "</h3>"
+							}
+Gid('s_county').setAttribute('onchange','showArea()');
+
+//实现地区分类点击加上背景色效果
+$(".agency .hospital ul li").on('click', function(){
+	$(".agency .hospital ul li").removeClass('click')
+	$(this).addClass('click')
+})
+
+//实现产品分类分类点击加上背景色效果
+$(".agency .area ul li").on('click', function(){
+	$(".agency .area ul li").removeClass('click')
+	$(this).addClass('click')
+})
+
+//实现科室分类分类点击加上背景色效果
+$(".agency .keshi ul li").on('click', function(){
+	$(".agency .keshi ul li").removeClass('click')
+	$(this).addClass('click')
 })
 
 </script>
