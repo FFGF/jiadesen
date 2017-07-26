@@ -1,6 +1,5 @@
 body { padding-top: 60px }
 /*.first-bar { background-color: white }*/
-.first-bar{border: 0px;}/*老师非觉得顶部navbar去掉下边框好看，无语了*/
 .second-bar { height: 90px; background-color: white; border: 0px }
 #second-bar{text-align: center;}
 #second-bar form { line-height: 60px;}
@@ -60,14 +59,17 @@ body { padding-top: 60px }
 .agency  ul li:hover { cursor: pointer; color: blue; }
 .agency  ul .click { background-color: #fb8300; color: white; }
 .agency  ul .click:hover { color: white; }
+.agency .area .col-md-1{margin-top: 7px;}
+.agency .area .col-md-8{padding-bottom: 15px;}
+
 .agency .col-md-1 { padding-right: 0px; }
 .agency .col-md-8 { padding-left: 0px; }
-.agency .area .col-md-8 ul { height: 24px; overflow: hidden; }
+.agency .hospital .col-md-8 ul { height: 24px; overflow: hidden; }
 .agency  .more { border: 1px solid #ddd; width: 60px; display: inline-block; padding-left: 4px; cursor: pointer; }
-.agency  .more i { background-image: url(../../recourse/Image/down_arrow.png); width: 17px; height: 16px; position: absolute; left: 55px; top: 2px }
+.agency  .more i { background-image: url(recourse/Image/down_arrow.png); width: 17px; height: 16px; position: absolute; left: 55px; top: 2px }
 .agency  .more i { transition: all 0.5s ease-in-out; }
 .agency  .more:hover i { transform: rotate(180deg); transform: rotate(180deg); -ms-transform: rotate(180deg); 	/* IE 9 */ -moz-transform: rotate(180deg); 	/* Firefox */ -webkit-transform: rotate(180deg); /* Safari 和 Chrome */ -o-transform: rotate(180deg); }
-.agency .area .more:hover { color: #fb8300; }
+.agency .hospital .more:hover { color: #fb8300; }
 .agency .keshi .col-md-8 ul { height: 24px; overflow: hidden; }
 .agency-list .row .col-md-4 nav p { display: inline-block; position: relative; top: -32px; left: 10px; }
 .agency-list .row table thead { background-color: #f3f3f3; }
@@ -114,4 +116,7 @@ body { padding-top: 60px }
 .procurement-product-list .row .col-md-4 nav p { display: inline-block; position: relative; top: -32px; left: 10px; }
 .procurement-product-list .row table thead { background-color: #f3f3f3; }
 .procurement-product-list{padding-left: 0px;}
-/*找产品页面的css*/
+.procurement .area .col-md-1 { margin-top: 6px; }
+.procurement .area .col-md-8 { padding-bottom: 15px; }
+/*页面的滚动信息*/
+.dowebok a{margin-right: 10px;text-decoration: none;}
