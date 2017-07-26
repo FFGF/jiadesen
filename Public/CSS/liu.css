@@ -189,3 +189,60 @@ page0-22myinfo-csocompany.html
 
 /*所有的input   变成圆角*/
 input { border: 1px solid #ccc; border-radius: 4px; height: 34px; }
+
+
+/*
+问小安
+ */
+.totalclass{
+	border:2px solid #cccccf;
+	border-width: 4px 4px 6px 4px;
+	width:600px;
+	height:350px;
+	margin-left:100px;
+	margin-top:0px;
+	border-top-left-radius:6px;
+	border-top-right-radius:6px;
+	/*border-bottom-right-radius:2em;
+	border-bottom-left-radius:2em;*/
+}
+.totalclass2{
+	border:1px solid #cccccf;
+	background-color: #cccccf;
+	width:600px;
+	height:14px;
+	margin-left:100px;
+}
+.imgface{
+	margin-left: 20px;
+	width:37px;
+	height:30px;
+	margin-top:-7px;
+}
+.totalclass3{
+	border:2px solid #cccccf;
+	border-width: 10px 4px 4px 4px;
+	width:600px;
+	height:160px;
+	margin-left:100px;
+	border-bottom-right-radius:6px;
+	border-bottom-left-radius:6px;
+}
+.consult_input_size{
+	width: 593px;
+    height: 100px;
+    border-bottom: 0px;
+    float:left;
+}
+.totalclass3 .consult_button_position2{
+    margin-top: 3px;
+    margin-left: 435px;
+    background-color: #cccccf;
+}
+
+.totalclass3 .consult_button_position{
+    margin-top: -55px;
+    margin-left: 520px;
+    background-color: #cccccf;
+}
+
