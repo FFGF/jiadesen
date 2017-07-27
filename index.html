@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="Public/CSS/main.css">
 
 	<style type="text/css">
-		/*.first-bar .navbar-brand{padding-top: 15px;}*/
+		.first-bar .navbar-brand{padding-top: 15px;}
 	</style>
 </head>
 <body>
+	
 <!-- 最顶部的navbar -->
 <nav class="navbar navbar-default navbar-fixed-top first-bar">
   <div class="container">
@@ -24,7 +25,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-       <a class="navbar-brand" href="index.html"><img alt="安必选医疗" src="recourse/Image/Logo.png"></a>
+       <a class="navbar-brand" href="index.html">欢迎光临安必选医械网</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -58,7 +59,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#" style="margin-left: 50px">
-      	<!-- <img src="recourse/Image/Logo.png" alt="嘉德森"> -->
+      	<img src="recourse/Image/Logo.png" alt="嘉德森">
       </a>
     </div>
 
@@ -89,37 +90,45 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="third-bar">
       <ul class="nav navbar-nav">
+      	<li class="header-category"><a href="">产品分类</a>
+	      	<div class="active-menu">
+					    <ul class="dropdown-menu-two-level" role="menu">
+					        <li data-submenu-id="submenu-patas"><a href="">临床检验</a></li>
+					        <li data-submenu-id="submenu-snub-nosed"><a href="">医学影像</a></li>
+					        <li data-submenu-id="submenu-duoc-langur"><a href="">电子超声</a></li>
+					        <li data-submenu-id="submenu-pygmy"><a href="">手术急救</a></li>
+					        <li data-submenu-id="submenu-tamarin"><a href="">实验仪器</a></li>
+					        <li data-submenu-id="submenu-monk"><a href="">消毒灭菌</a></li>
+					        <li data-submenu-id="submenu-gabon"><a href="">医用光学</a></li>
+					        <li data-submenu-id="submenu-king-colobus"><a href="">医用耗材</a></li>
+					    </ul>
+					    <!-- 面板开始 -->
+						<div dataurl="./popover-menu.html" id="popover-menu">
+						<!-- 面板结束 -->
+      	</li>
         <li class="active"><a href="index.html">首页 <span class="sr-only">(current)</span></a></li>
-<!--         <li><a href="#">找品牌</a></li> -->
         <li class="header-category">
         	<a href="findProduct.html" id="find-product">找产品</a>	
         	<div class="active-menu">
-				    <ul class="dropdown-menu-two-level" role="menu">
-				        <li data-submenu-id="submenu-patas"><a href="">临床检验</a></li>
-				        <li data-submenu-id="submenu-snub-nosed"><a href="">医学影像</a></li>
-				        <li data-submenu-id="submenu-duoc-langur"><a href="">电子超声</a></li>
-				        <li data-submenu-id="submenu-pygmy"><a href="">手术急救</a></li>
-				        <li data-submenu-id="submenu-tamarin"><a href="">实验仪器</a></li>
-				        <li data-submenu-id="submenu-monk"><a href="">消毒灭菌</a></li>
-				        <li data-submenu-id="submenu-gabon"><a href="">医用光学</a></li>
-				        <li data-submenu-id="submenu-king-colobus"><a href="">医用耗材</a></li>
-				    </ul>
-				    <!-- 面板开始 -->
-					<div dataurl="./popover-menu.html" id="popover-menu">
-					<!-- 面板结束 -->
 			</div>
-        </li>
-				
-
-
+        </li>				
         <li class="dropdown" id="third-dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">找渠道 <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="generalizeList.html">推广列表</a></li>
-            <li><a href="procurementList.html">采购列表</a></li>
-            <li><a href="procurementList.html">代理列表</a></li>
+            <li><a href="generalizeList.html">招商查询信息</a></li>
+            <li><a href="procurementList.html">采购查询信息</a></li>
+            <li><a href="agencyList.html">代理申请信息</a></li>
           </ul>
         </li>
+
+        <li class="dropdown" id="fouth-dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">找物流<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="">找仓储</a></li>
+            <li><a href="">找配送</a></li>
+          </ul>
+        </li>
+        <li><a href="#">找融资</a></li>
 
         <li><a href="#">关于我们</a></li>
        
@@ -468,7 +477,7 @@
 
 	  	<div class="col-md-2">
 	  		<ul class="list-unstyled">
-  				<li>北登服务</li>
+  				<li>安必选服务</li>
   				<li>服务协议</li>
 			</ul>
 	  	</div>
@@ -502,68 +511,16 @@
 		</div>
 
 		<div class="col-md-12 word-list">
-			Copyright © 2010-2016 VEDENG Corporation (www.vedeng.com) All Rights Reserved ICP备案证书号:苏ICP备11075436号
+			<!-- Copyright © 2010-2016 VEDENG Corporation (www.vedeng.com) All Rights Reserved ICP备案证书号:苏ICP备11075436号 -->
 		</div>
 
 		<div class="col-md-12 word-list" style="margin-bottom: 50px">
-			友情链接： 贝登医疗 二手设备 抗癌健康网 环境试验箱 中国医疗器械网 医疗器械招商 淘宝刷流量 显微镜 甲醛检测仪 香港服务器 找工业品网 蓝贝
+<!-- 			友情链接： 贝登医疗 二手设备 抗癌健康网 环境试验箱 中国医疗器械网 医疗器械招商 淘宝刷流量 显微镜 甲醛检测仪 香港服务器 找工业品网 蓝贝 -->
 		</div>
 
 	</div>
   </div><!-- /.container-fluid -->
 </nav>
-
-<!-- 登录模态框 -->
-<div class="modal fade" tabindex="-1" role="dialog" id="register">
-  <div class="modal-dialog register" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="pull-left">用户登录</h4>
-        <h4 class="pull-right"><a href="">立即注册</a></h4>
-      </div>
-
-      <div class="modal-body">
-		<form class="form-horizontal">
-		    <div class="form-group">
-		        <label class="sr-only" for="user_name">用户名</label>
-		        <div class="input-group col-md-10 col-md-offset-1">
-		            <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
-		            <input type="text" class="form-control" id="username" placeholder="用户名">
-		        </div>
-		    </div>
-
-		    <div class="form-group">
-		        <label class="sr-only" for="user_password">密码</label>
-		        <div class="input-group col-md-10 col-md-offset-1">
-		            <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
-		            <input type="password" class="form-control" id="user_password" placeholder="密码">
-		        </div>
-		    </div>
-
-		    <div class="form-group">
-			    <div class="col-md-offset-1 col-md-5">
-			      <div class="checkbox">
-			        <label>
-			          <input type="checkbox">自动登录
-			        </label>
-			      </div>
-			    </div>
-			    <div class="col-md-4">
-			    	<p class="form-control-static"><a href="">忘记密码？</a></p>
-			    </div>
-			</div>
-
-
-		</form>
-      </div>
-
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-primary col-md-4 col-md-offset-4" data-dismiss="modal">登录</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div>
 
 
 <script type="text/javascript" src="jquery-2.1.1/jquery.js"></script>

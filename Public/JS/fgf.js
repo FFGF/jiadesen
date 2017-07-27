@@ -75,6 +75,11 @@ $('#third-dropdown').mouseover(function(){
  		$(this).addClass('open');})
                     .mouseout(function() {
         $(this).removeClass('open');}); 
+
+$('#fouth-dropdown').mouseover(function(){
+        $(this).addClass('open');})
+                    .mouseout(function() {
+        $(this).removeClass('open');});                     
 //弹出的登录模态框居中
 function centerModals() {   
 　　$('#register').each(function(i) {   
