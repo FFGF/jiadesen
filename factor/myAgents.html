@@ -3,11 +3,10 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>代理列表</title>
+		<title>我的代理</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
-
 		<link rel="stylesheet" href="../Public/CSS/liu.css">
 
 	</head>
@@ -31,6 +30,7 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse pull-right" id="first-bar">
 					<ul class="nav navbar-nav">
+					 <li class="welcome"><a>欢迎王小二</a></li>
 						<li class="active">
 							<a href="../login.html">请登录 <span class="sr-only">(current)</span></a>
 						</li>
@@ -40,7 +40,7 @@
 						</li>
 
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">系统公告 <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>系统公告</b> <span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li>
 									<a href="#">公告一</a>
@@ -71,94 +71,206 @@
 					<div class="row leftpart">
 						<div class="accountclass">
 							<!--我的账号部分-->
-							<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp &nbsp我的信息</h4>
+							<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp &nbsp用户中心</h4>
 						</div>
 						<!--我的账号部分-->
-												<div class="infoclass">
+
+						<div class="infoclass">
 							<!--我的账号  下面部分-->
-							<h4>账号管理</h4>
+							<h4>账户管理</h4>
 							<ul>
 								<li>
 									<a href="repwd.html">修改密码</a>
 								</li>
 								<li>
-									<a href="info.html">我的信息</a>
+									<a href="info.html">个人信息</a>
 								</li>
 								<li>
 									<a href="security.html">账户安全</a>
 								</li>
 							</ul>
 
-							<h4>产品管理</h4>
+							<h4>信息发布</h4>
 							<ul>
 								<li>
-									<a href="goods_info.html">产品信息</a>
+									<a href="productsLaunch.html">产品发布</a>
+								</li>
+								<li>
+									<a href="merchants.html">发布对外招商信息</a>
 								</li>
 							</ul>
 							
-							<h4>推广记录</h4>
+							<h4>信息反馈</h4>
 							<ul>
 								<li>
-									<a href="tuiguang.html">推广记录</a>
+									<a href="hospitalPush.html">医疗机构推送信息</a>
+								</li>
+								<li>
+									<a href="CSOapply.html">CSO请求代理信息</a>
 								</li>
 							</ul>
 							
 							
-							<h4>招商信息</h4>
+							<h4>信息查询</h4>
 							<ul>								
 								<li>
-									<a href="caigou.html">采购需求信息</a>
+									<a href="merchantsRecords.html">产品招商记录</a>
 								</li>
 								
 								<li>
-									<a href="mydaili.html">我的代理</a>
+									<a href="productsRecords.html">产品发布记录</a>
 								</li>
 								<li>
-									<a href="applydaililist.html">申请代理列表</a>
+									<a href="myAgents.html">我的代理商</a>
 								</li>
-								
+							</ul>
+
+							<h4>联系后台</h4>
+							<ul>								
+								<li>
+									<a href="#">问小安</a>
+								</li>								
 							</ul>
 
 						</div>
-
 						<!--我的账号  下面部分-->
 					</div>
 
 				</div>
 				<!--左侧手风琴框-->
 
-				<div class="col-md-10" style="margin-top: 80px;">
+				<div class="col-md-10">
 					<!--右侧-->
 
-					<div class="row leftright_part">
-						<div></div>
+					<div class="row">
 
-						<div class="part2">
-							<select id="select1" multiple="multiple" class="select1class">
-								<option>xxx代理商</option>
-								<option>yyy代理商</option>
-								<option>zzz代理商</option>
-								<option>qqq代理商</option>
-								<option>sss代理商</option>
-								<option>uuu代理商</option>
-							</select>
+						<div class="col-md-1">
 						</div>
 
-						<div class="part3">
-							<input class="rightchoose" type="button" value="添加" onclick="selectedToRight();" /><br/>
-							<input class="leftchoose" type="button" value="移除" onclick="selectedToLeft();" /><br/>
+						<div class="col-md-6">
+							<div class="input-group inputsize">
+								<input type="text" class="form-control" placeholder="请输入关键字...">
+								<span class="input-group-btn">
+				        			<button class="btn btn-default" type="button">搜索</button>
+				      			</span>
+							</div>
+							<!-- /input-group -->
+						</div>
+						<!-- /.col-lg-6 -->
+						<div class="col-md-2">
+							<button class="btn btn-default">取消代理</button>
 						</div>
 
-						<div class="part4">
-							<select id="select2" multiple="multiple" class="select1class">
-								<option>ddd代理商</option>
-							</select>
+						<div class="col-md-3">
 						</div>
+
 					</div>
+					<!-- /.row -->
 
-					<div class="form-group" style="margin-left: 360px;">
-						<button type="submit" class="btn btn-default">修改</button>
+					<div class="row">
+						<div class="col-md-12">
+							<table class="table table-striped table-hover product-list-table">
+								<thead class="tablehead">
+									<th></th>
+									<th>代理公司名称</th>
+									<th>代理产品</th>
+									<th>区域</th>
+									<th>医疗机构</th>
+									<th>科室</th>
+									<th>代理时间</th>
+									<th>代理时限</th>
+								</thead>
+
+								<tbody>
+									<tr>
+										<!-- 第一条信息（一行）-->
+										<td>
+											<input type="checkbox" />
+										</td>
+										<td>上海王二代理公司</td>
+										<td>普利生全自动血凝分析仪C2000-A</td>
+										<td>上海市</td>
+										<td>上海市第一人民医院</td>
+										<td>心肺科</td>
+										<td>2017-2-24</td>
+										<td>2年</td>
+									</tr>
+
+									<tr>
+										<!-- 第二条信息（一行）-->
+										<td>
+											<input type="checkbox" />
+										</td>
+										<td>上海王二代理公司</td>
+										<td>普利生全自动血凝分析仪C2000-A</td>
+										<td>上海市</td>
+										<td>上海市第一人民医院</td>
+										<td>心肺科</td>
+										<td>2017-5-15</td>
+										<td>2年</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+
+
 					</div>
+					<!--second-row-->
+
+					<div class="row">
+						<!--third-row-->
+						<hr class="hrclass">
+						<div class="col-md-2 quanxuan1">
+							<!--
+			<label for class="checkbox selectallclass">
+				<input type="checkbox" name="select_all" onclick="xxfunction()">全部选择(可删除，没必)
+			</label>
+			-->
+
+						</div>
+						<!--col-md-3-->
+
+						<div class="col-md-3 quanxuan2">
+							<p class="pitem-info">共有xx条记录，每页显示20条</p>
+						</div>
+						<!--col-md-3-->
+
+						<div class="col-md-7 quanxuan3">
+							<nav aria-label="Page navigation">
+								<ul class="pagination">
+									<li>
+										<a href="#" aria-label="Previous">
+											<span aria-hidden="true">&laquo;</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#">4</a>
+									</li>
+									<li>
+										<a href="#">5</a>
+									</li>
+									<li>
+										<a href="#" aria-label="Next">
+											<span aria-hidden="true">&raquo;</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<!--col-md-6-->
+
+					</div>
+					<!--third-row-->
 
 				</div>
 				<!--右侧内容-->
@@ -216,11 +328,9 @@
 					</div>
 
 					<div class="col-md-12 word-list">
-						Copyright © 2010-2016 VEDENG Corporation (www.vedeng.com) All Rights Reserved ICP备案证书号:苏ICP备11075436号
 					</div>
 
 					<div class="col-md-12 word-list" style="margin-bottom: 50px">
-						友情链接： 贝登医疗 二手设备 抗癌健康网 环境试验箱 中国医疗器械网 医疗器械招商 淘宝刷流量 显微镜 甲醛检测仪 香港服务器 找工业品网 蓝贝
 					</div>
 
 				</div>

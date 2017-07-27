@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
 
 		<link rel="stylesheet" href="../Public/CSS/liu.css">
+		
 
 	</head>
 
@@ -31,6 +32,7 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse pull-right" id="first-bar">
 					<ul class="nav navbar-nav">
+					 <li class="welcome"><a>欢迎王小二</a></li>
 						<li class="active">
 							<a href="../login.html">请登录 <span class="sr-only">(current)</span></a>
 						</li>
@@ -71,100 +73,106 @@
 					<div class="row leftpart">
 						<div class="accountclass">
 							<!--我的账号部分-->
-							<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp &nbsp我的信息</h4>
+							<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp &nbsp用户中心</h4>
 						</div>
 						<!--我的账号部分-->
-												<div class="infoclass">
+
+						<div class="infoclass">
 							<!--我的账号  下面部分-->
-							<h4>账号管理</h4>
+							<h4>账户管理</h4>
 							<ul>
 								<li>
 									<a href="repwd.html">修改密码</a>
 								</li>
 								<li>
-									<a href="info.html">我的信息</a>
+									<a href="info.html">个人信息</a>
 								</li>
 								<li>
 									<a href="security.html">账户安全</a>
 								</li>
 							</ul>
 
-							<h4>产品管理</h4>
+							<h4>信息发布</h4>
 							<ul>
 								<li>
-									<a href="goods_info.html">产品信息</a>
+									<a href="productsLaunch.html">产品发布</a>
+								</li>
+								<li>
+									<a href="merchants.html">发布对外招商信息</a>
 								</li>
 							</ul>
 							
-							<h4>推广记录</h4>
+							<h4>信息反馈</h4>
 							<ul>
 								<li>
-									<a href="tuiguang.html">推广记录</a>
+									<a href="hospitalPush.html">医疗机构推送信息</a>
+								</li>
+								<li>
+									<a href="CSOapply.html">CSO请求代理信息</a>
 								</li>
 							</ul>
 							
 							
-							<h4>招商信息</h4>
+							<h4>信息查询</h4>
 							<ul>								
 								<li>
-									<a href="caigou.html">采购需求信息</a>
+									<a href="merchantsRecrods.html">产品招商记录</a>
 								</li>
 								
 								<li>
-									<a href="mydaili.html">我的代理</a>
+									<a href="productsRecords.html">产品发布记录</a>
 								</li>
 								<li>
-									<a href="applydaililist.html">申请代理列表</a>
+									<a href="myAgents.html">我的代理商</a>
 								</li>
-								
+							</ul>
+
+							<h4>联系后台</h4>
+							<ul>								
+								<li>
+									<a href="#">问小安</a>
+								</li>								
 							</ul>
 
 						</div>
-
 						<!--我的账号  下面部分-->
 					</div>
 
 				</div>
 				<!--左侧手风琴框-->
 
-				<div class="col-md-10" style="margin-top: 60px;">
+				<div class="col-md-10" style="margin-top: 60px">
 					<!--右侧-->
-
-					<div class="row leftright_part" style="margin-bottom: 0px;">
-						<div class="part1 condition-title">
-							推广医院
-						</div>
-
-						<div class="part2">
-							<select id="select1" multiple="multiple" class="select1class">
-								<option>上海市第一人民医院</option>
-								<option>南京市鼓楼医院</option>
-								<option>北京市人民医院</option>
-								<option>杭州市人民医院</option>
-								<option>江苏省人民医院</option>
-								<option>广东省人民医院</option>
-								<option>其他</option>
-							</select>
-						</div>
-
-						<div class="part3">
-							<input class="rightchoose" type="button" value=">>" onclick="selectedToRight();" /><br/>
-							<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft();" /><br/>
-						</div>
-
-						<div class="part4">
-							<select id="select2" multiple="multiple" class="select1class">
-								<option>上海市第九人民医院</option>
-							</select>
-						</div>
-					</div>
-
 					<table class="table condition-table" style="margin-top: 0px;">
 						<!--包括渠道、。。。区域什么的-->
 						<tbody>
 
 							<tr>
-								<td class="condition-title">所属区域</td>
+								<td class="condition-title">产品分类</td>
+								<td>
+									<select class="form-control" id="info_usertype" style="width: 340px;" oninput="chose()">
+										<option disabled selected value>所属产品分类</option>
+										<option>血液类</option>
+										<option>呼吸类</option>
+										<option>内科类</option>
+									</select>
+								</td>
+							</tr>
+
+							<tr>
+								<td class="condition-title">本公司已发布产品</td>
+								<td>
+									<select class="form-control" id="info_usertype" style="width: 340px;" oninput="chose()">
+										<option disabled selected value>产品选择</option>
+										<option>凝血仪</option>
+										<option>心率监测器</option>
+										<option>呼吸机</option>
+									</select>
+								</td>
+							</tr>
+
+							<tr>
+								<td class="condition-title">招商区域</td>
 								<td>
 
 									<div class="info">
@@ -184,26 +192,49 @@
 								</td>
 							</tr>
 
-							<tr>
-								<td class="condition-title">产品分类</td>
-								<td>
-									<select class="form-control" id="info_usertype" style="width: 340px;" oninput="chose()">
-										<option disabled selected value>所属产品分类</option>
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-									</select>
-								</td>
-							</tr>
+
+						</tbody>
+					</table>
+
+					<div class="row leftright_part" style="margin-bottom: 0px;">
+						<div class="part1 condition-title">
+							产品名称
+						</div>
+
+						<div class="part2">
+							<select id="select1" multiple="multiple" class="select1class">
+								<option>血液仪</option>
+								<option>离心器</option>
+								<option>心脏支架</option>
+								
+								<option>其他</option>
+							</select>
+						</div>
+
+						<div class="part3">
+							<input class="rightchoose" type="button" value=">>" onclick="selectedToRight();" /><br/>
+							<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft();" /><br/>
+						</div>
+
+						<div class="part4">
+							<select id="select2" multiple="multiple" class="select1class">
+								<option>呼吸器</option>
+							</select>
+						</div>
+					</div>
+
+					<table class="table condition-table" style="margin-top: 0px;">
+						<!--包括渠道、。。。区域什么的-->
+						<tbody>
 
 							<tr>
 								<td class="condition-title">科室分类</td>
 								<td>
 									<select class="form-control" id="info_usertype" style="width: 340px;" oninput="chose()">
 										<option disabled selected value>科室分类，可多选</option>
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
+										<option>血液科</option>
+										<option>内科</option>
+										<option>外科</option>
 									</select>
 								</td>
 							</tr>
@@ -212,6 +243,7 @@
 					</table>
 
 				</div>
+
 
 				<div class="form-group" style="margin-left: 650px;">										
 						<button type="submit" class="btn btn-default">发布</button>
@@ -274,11 +306,9 @@
 					</div>
 
 					<div class="col-md-12 word-list">
-						Copyright © 2010-2016 VEDENG Corporation (www.vedeng.com) All Rights Reserved ICP备案证书号:苏ICP备11075436号
 					</div>
 
 					<div class="col-md-12 word-list" style="margin-bottom: 50px">
-						友情链接： 贝登医疗 二手设备 抗癌健康网 环境试验箱 中国医疗器械网 医疗器械招商 淘宝刷流量 显微镜 甲醛检测仪 香港服务器 找工业品网 蓝贝
 					</div>
 
 				</div>
@@ -288,7 +318,7 @@
 
 		<script type="text/javascript" src="../jquery-2.1.1/jquery.js"></script>
 		<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-
+		<script type="text/javascript" src="../Public/JS/zh2.js"></script>
 	</body>
 
 </html>
