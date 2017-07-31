@@ -3,11 +3,12 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>相匹配医院需求信息</title>
+		<title>区域代理请求信息</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../Public/CSS/liu.css">
+		<link rel="stylesheet" href="../Public/CSS/zh.css">
 
 	</head>
 
@@ -32,7 +33,7 @@
 					<ul class="nav navbar-nav">
 					 <li class="welcome"><a>欢迎王小二</a></li>
 						<li class="active">
-							<a href="../login.html">请登录<span class="sr-only">(current)</span></a>
+							<a href="../login.html">请登录 <span class="sr-only">(current)</span></a>
 						</li>
 
 						<li>
@@ -160,25 +161,25 @@
 
 					<div class="row">
 
+
 						<div class="col-md-1">
-						</div>
+						</div>	
 
 						<div class="col-md-6">
 							<div class="input-group inputsize">
 								<input type="text" class="form-control" placeholder="请输入关键字...">
 								<span class="input-group-btn">
-        			<button class="btn btn-default" type="button">搜索</button>
-      			</span>
+					        			<button class="btn btn-default" type="button">搜索</button>
+					      		</span>
 							</div>
 							<!-- /input-group -->
 						</div>
 						<!-- /.col-lg-6 -->
-						<div class="col-md-2">
-							<a href="agentsList.html" class="btn btn-default">推送至我的代理商</a>
+						<div class="col-md-5">
+							
 						</div>
 
-						<div class="col-md-3">
-						</div>
+						
 
 					</div>
 					<!-- /.row -->
@@ -187,14 +188,16 @@
 						<table class="table table-striped table-hover product-list-table">
 							<thead class="tablehead">
 								<th></th>
-								<th>产品名称</th>
-								<th>产品类别</th>
-								<th> 区域</th>
+								<th>区域</th>
 								<th>医疗机构</th>
-								<th>科室</th>
-								<th>发布时间</th>
+								<th>熟悉科室</th>
+								<th>产品类别</th>
+								<th>推广经验</th>
+								<th>专业能力</th>
+								<th>联系人</th>
+								<th>联系电话</th>
+								<th>E-mail</th>
 								<th>详情信息</th>
-								
 							</thead>
 
 							<tbody>
@@ -203,27 +206,33 @@
 									<td>
 										<input type="checkbox" />
 									</td>
-									<td>普利生全自动血凝分析仪C2000-A</td>
-									<td>凝血类</td>
-									<td>上海</td>
+									<td>上海市-上海市-虹口区 </td>
 									<td>上海市第一人民医院</td>
-									<td>血液科</td>
-									<td>2017-08-20</td>
-									<td><a href="contactInformation.html">查看详情</a> </td>
-								
+									<td>外科</td>
+									<td>血液类</td>
+									<td>5年</td>
+									<td>学术推广</td>
+									<td>张三</td>
+									<td>139-1234-1234</td>
+									<td>zhangsan@123.com</td>
+									<td><a href="#">查看详情</a> </td>
 								</tr>
+
 								<tr>
+									<!-- 第二条信息（一行）-->
 									<td>
 										<input type="checkbox" />
 									</td>
-									<td>普利生全自动血凝分析仪C2000-A</td>
-									<td>凝血类</td>
-									<td>上海</td>
+									<td>上海市-上海市-虹口区 </td>
 									<td>上海市第一人民医院</td>
-									<td>血液科</td>
-									<td>2017-08-20</td>
-									<td><a href="contactInformation.html">查看详情</a> </td>
-									
+									<td>外科</td>
+									<td>血液类</td>
+									<td>5年</td>
+									<td>学术推广</td>
+									<td>张三</td>
+									<td>139-1234-1234</td>
+									<td>zhangsan@123.com</td>
+									<td><a href="#">查看详情</a> </td>
 								</tr>
 
 							</tbody>
@@ -236,6 +245,11 @@
 						<!--third-row-->
 						<hr class="hrclass">
 						<div class="col-md-2 quanxuan1">
+							<!--
+			<label for class="checkbox selectallclass">
+				<input type="checkbox" name="select_all" onclick="xxfunction()">全部选择(可删除，没必)
+			</label>
+			-->
 
 						</div>
 						<!--col-md-3-->

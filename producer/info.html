@@ -3,11 +3,12 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>个人信息</title>
+		<title>我的资料</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../Public/CSS/liu.css">
+		<link rel="stylesheet" href="../Public/CSS/zh.css">
 		<link rel="stylesheet" href="../Public/CSS/bootstrap-imageupload.css">
 	</head>
 
@@ -77,51 +78,67 @@
 
 						<div class="infoclass">
 							<!--我的账号  下面部分-->
-							<h4>账户管理</h4>
+							<h4>我的账户</h4>
 							<ul>
 								<li>
 									<a href="repwd.html">修改密码</a>
 								</li>
 								<li>
-									<a href="info.html">个人信息</a>
+									<a href="info.html">我的资料</a>
 								</li>
 								<li>
 									<a href="security.html">账户安全</a>
 								</li>
 							</ul>
 
-							<h4>信息发布</h4>
+							<h4>我的信息</h4>
 							<ul>
 								<li>
-									<a href="productsLaunch.html">产品发布</a>
+									<a href="productsLaunch.html">产品信息发布</a>
 								</li>
 								<li>
-									<a href="merchants.html">发布对外招商信息</a>
+									<a href="merchants.html">区域代理招商信息</a>
 								</li>
-							</ul>
 							
-							<h4>信息反馈</h4>
-							<ul>
 								<li>
-									<a href="hospitalPush.html">医疗机构推送信息</a>
+									<a href="hospitalPush.html">相匹配医院需求信息</a>
 								</li>
 								<li>
-									<a href="CSOapply.html">CSO请求代理信息</a>
+									<a href="CSOapply.html">区域代理请求信息</a>
 								</li>
-							</ul>
-							
-							
-							<h4>信息查询</h4>
-							<ul>								
+
 								<li>
-									<a href="merchantsRecrods.html">产品招商记录</a>
+									<a href="CSOhospital.html">直销医院请求信息</a>
+								</li>
+
+								<li>
+									<a href="myAgents.html">我的区域代理</a>
+								</li>
+
+								<li>
+									<a href="myInstitutions.html">我的直销机构</a>
+								</li>
+														
+								<li>
+									<a href="merchantsRecords.html">区域代理招商记录</a>
 								</li>
 								
 								<li>
-									<a href="productsRecords.html">产品发布记录</a>
+									<a href="productsRecords.html">产品信息发布记录</a>
+								</li>
+								
+							</ul>
+
+							<h4>统计报表</h4>
+							<ul>
+								<li>
+									<a href="#">同类产品分析报表</a>
 								</li>
 								<li>
-									<a href="myAgents.html">我的代理商</a>
+									<a href="#">区域产品统计报表</a>
+								</li>
+								<li>
+									<a href="#">关注度报表</a>
 								</li>
 							</ul>
 
@@ -144,128 +161,121 @@
 
 					<div class="row">
 						
-						<h3>个人信息</h3>
-						<div class="container col-md-10 " style="margin-top:30px;margin-bottom:20px;">
+						<h3>我的资料</h3>
+						<table class="table condition-table">
+							<!--包括渠道、。。。区域什么的-->
+							<tbody>
 
-							<form class="form-horizontal pull-left">
+								<tr>
+									<td class="condition-title">用户名称</td>
+									<td>
+										<input type="text" class="form-control" id="info_username" oninput="checkname()" style="width:340px" placeholder="请输入2-20位中文用户名">
+									</td>
+								</tr>
 
-								<!--用户名称-->
-								<div class="form-group">
-									<label class="col-md-4 control-label">用户名称：</label>
-									<div class="col-md-4">
-										<input type="text" class="form-control" id="info_username" oninput="checkname()" style="width:340px;display: inline;" placeholder="请输入2-20位中文或英文用户名">
+								<tr>
+									<td class="condition-title">手机号码</td>
+									<td>
+										<input type="text" class="form-control" id="info_phone" oninput="checknumb()" style="width:340px" placeholder="请输入11位手机号码">
+									</td>
+								</tr>
 
-									</div>
-								</div>
-								<!--手机号码-->
-								<div class="form-group">
-									<label class="col-md-4 control-label">手机号码：</label>
-									<div class="col-md-4">
-										<input type="text" class="form-control" id="info_phone" oninput="checknumb()" style="width:340px;display: inline;" placeholder="请输入11位手机号码">
-									</div>
-								</div>
+								<tr>
+									<td class="condition-title">注册类型</td>
+									<td>
+										<input type="text" class="form-control" id="info_usertype" style="width:340px" placeholder="注册类型">
+									</td>
+								</tr>
 
-								<!--用户类型-->
-								<div class="form-group">
-									<label for="inputEmail3" class="col-md-4 control-label">注册类型</label>
-									<div class="col-md-4">
-										<select class="form-control" id="info_usertype" style="width: 340px;" oninput="chose()">
-											<option disabled selected value>请选择</option>
-											<option>生产商</option>
-								            <option>一级代理商</option>
-								            <option>CSO个人</option>
-								            <option>CSO公司</option>
-								            <option>医疗机构</option>
-										</select>
-									</div>
+								<tr>
+									<td class="condition-title">企业名称</td>
+									<td>
+										<input type="text" class="form-control" id="info_corporation" style="width:340px" placeholder="请输入中文名称">
+										<br>
+										<input type="text" class="form-control" id="info_corporation" style="width:340px" placeholder="请输入英文名称">
 
-								</div>
+									</td>
+								</tr>
 
-								<!--企业名称-->
-								<div class="form-group">
-									<label class="col-md-4 control-label">企业名称：</label>
-									<div class="col-md-4">
-										<input type="text" class="form-control" id="info_corporation" style="width:340px;" placeholder="请输入2-20位中文或英文用户名">
+								<tr>
+									<td class="condition-title">品牌</td>
+									<td>
+										<div id="logo">
+																						
+												<input type="file" id="logo_pic" style="width: 200px;display: inline;" value="请选择品牌logo">
+												<input type="text" style="display: inline;" placeholder="请输入品牌名称">
+												
+												<button class="btn btn-default" onclick="copy()">+</button>
+												<button class="btn btn-default" onclick="delparent(this)">-</button>
+											
+										</div>
+										<div id="logo2"></div>
 
-									</div>
-								</div>
+									</td>
+								</tr>
 
-								<!--品牌-->
-								<div class="form-group">
-									<label class="col-md-4 control-label">品牌：</label>
-									<div class="col-md-4">
-										<input type="text" class="form-control" id="info_brand" style="width:340px;" placeholder="请输品牌名称">
-
-									</div>
-								</div>
-
-								<!--营业执照-->
-								<div class="form-group">
-									<label class="col-md-4 control-label">营业执照：</label>
-									<div class="col-md-4">
-
-										<div class="imageupload panel panel-default" style="width:340px;">
+								<tr>
+									<td class="condition-title">营业执照</td>
+									<td>
+										<div class="imageupload panel panel-default" style="width:340px;margin-left: 20px">
 
 											<div class="file-tab panel-body">
 												<label class="btn btn-default btn-file">
-				                        				<span>浏览</span>
-				                        				<!-- The file is stored here. -->
-				                        				<input type="file" name="image-file_1">
-				                    				</label>
+					                       			<span>浏览</span>
+					                       			<!-- The file is stored here. -->
+					                        			<input type="file" name="image-file_1">
+					                    			</label>
 												<button type="button" class="btn btn-default">Remove</button>
 											</div>
 											<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_1" class="btn btn-default">上传</button></P>
 										</div>
-									</div>
-								</div>
+									</td>
+								</tr>
 
-								<!--医疗器械生产企业许可证-->
-								<div class="form-group">
-									<label class="col-md-4 control-label">医疗器械生产企业许可证：</label>
-									<div class="col-md-4">
-
-										<div class="imageupload panel panel-default" style="width:340px;">
+								<tr>
+									<td class="condition-title">医疗器械生产许可证</td>
+									<td>
+										<div class="imageupload panel panel-default" style="width:340px;margin-left: 20px">
 
 											<div class="file-tab panel-body">
 												<label class="btn btn-default btn-file">
-				                        				<span>浏览</span>
-				                        				<!-- The file is stored here. -->
-				                        				<input type="file" name="image-file_2">
-				                    				</label>
+					                       			<span>浏览</span>
+					                       			<!-- The file is stored here. -->
+					                        			<input type="file" name="image-file_1">
+					                    			</label>
 												<button type="button" class="btn btn-default">Remove</button>
 											</div>
-											<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_2" class="btn btn-default">上传</button></p>
+											<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_1" class="btn btn-default">上传</button></P>
 										</div>
+									</td>
+								</tr>
 
-									</div>
-								</div>
-								<!--医疗器械经营企业许可证-->
-								<div class="form-group">
-									<label class="col-md-4 control-label">医疗器械经营企业许可证：</label>
-									<div class="col-md-4">
-
-										<div class="imageupload panel panel-default" style="width:340px;">
+								<tr>
+									<td class="condition-title">医疗器械经营许可证</td>
+									<td>
+										<div class="imageupload panel panel-default" style="width:340px;margin-left: 20px">
 
 											<div class="file-tab panel-body">
 												<label class="btn btn-default btn-file">
-				                        				<span>浏览</span>
-				                        				<!-- The file is stored here. -->
-				                        				<input type="file" name="image-file_3">
-				                    				</label>
+					                       			<span>浏览</span>
+					                       			<!-- The file is stored here. -->
+					                        			<input type="file" name="image-file_1">
+					                    			</label>
 												<button type="button" class="btn btn-default">Remove</button>
 											</div>
-											<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_2" class="btn btn-default">上传</button></p>
+											<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_1" class="btn btn-default">上传</button></P>
 										</div>
+									</td>
+								</tr>
 
-									</div>
-								</div>
 
-								<div class="form-group" style="text-align: center;">
-									<div class=" col-md-12">
-										<button type="submit" class="btn btn-default">修改</button>
-									</div>
-								</div>
-							</form>
+							</tbody>
+						</table>
+
+						<div class="form-group" style="text-align: center;">
+							<div class=" col-md-12">
+								<button type="submit" class="btn btn-default">修改</button>
+							</div>
 						</div>
 
 					</div>
@@ -338,14 +348,24 @@
 		</nav>
 
 		<script src="../Public/JS/jquery-1.12.4.min.js"></script>
-<!-- 		<script src="../jquery-2.1.1/jquery.js"></script>
- -->		<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+ 		
+	 	<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 		<script src="../Public/JS/bootstrap-imageupload.js"></script>
 		<script type="text/javascript" src="../Public/JS/zh2.js"></script>
 
 		<script>
 			var $imageupload = $('.imageupload');
 			$imageupload.imageupload();
+
+			var delparent = function(o){
+				o.parentNode.parentNode.removeChild(o.parentNode)
+			}
+
+			function copy(){
+				var itm=document.getElementById("logo");
+				var cln=itm.cloneNode(true);
+				document.getElementById("logo2").appendChild(cln);
+			}
 		</script>
 
 	</body>
