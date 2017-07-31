@@ -166,7 +166,7 @@
 <div class="container">
 	<div class="row daohang">
 		<div class="col-md-12">
-			首页 > 找渠道 > 区域代理信息
+			首页 > 找渠道 > 直销医院信息
 		</div>
 	</div>
 </div>
@@ -189,27 +189,37 @@
 
 	<div class="row hospital">
 		<div class="col-md-1">
-			<span>产品分类：</span>
+			<span>医疗机构：</span>
 		</div>
 		<div class="col-md-8">
 			<ul>
 				<li class="click">全部</li>
-				<li>临床检验</li>
-				<li>电子超声</li>
-				<li>实验仪器</li>
-				<li>医用光学</li>
-				<li>医学影像</li>
-				<li>手术急救</li>
-				<li>消毒灭菌</li>
-				<li>医用耗材</li>
+				<li>北京胸科医院（中央结核病研究所、结核病院）</li>
+				<li>北京市通州区中医院</li>
+				<li>北京市通州区中医院</li>
+				<li>北京市通州区中医医院</li>
+				<li>北京通州潞河医院</li>
+				<li>北京市通州区中西医结合骨伤医院北京市通州区工业品公司运通医院</li>
+				<li>中国人民解放军第二六三医院（解放军263医院）</li>
+				<li>北京市通州区中西医结合骨伤医院北京市通州区工业品公司运通医院</li>
+				<li>中国人民解放军第二六三医院（解放军263医院）</li>
+				<li>北京胸科医院（中央结核病研究所、结核病院）</li>
+				<li>北京市通州区中医院</li>
+				<li>北京市通州区中医院</li>
+				<li>北京市通州区中医医院</li>
+				<li>北京通州潞河医院</li>
+				<li>北京市通州区中西医结合骨伤医院北京市通州区工业品公司运通医院</li>
+				<li>中国人民解放军第二六三医院（解放军263医院）</li>
+				<li>北京市通州区中西医结合骨伤医院北京市通州区工业品公司运通医院</li>
+				<li>中国人民解放军第二六三医院（解放军263医院）</li>
 			</ul>
 		</div>
 		<div class="col-md-1">
-			<!-- <span class="more" data-flag=1 id="fgf">更多<i></i></span> -->
+			<span class="more" data-flag=1 id="fgf">更多<i></i></span>
 		</div>
 	</div>
 
-<!-- 	<div class="row keshi">
+	<div class="row keshi">
 		<div class="col-md-1"><span>科室分类：</span></div>
 		<div class="col-md-8">
 			<ul>
@@ -248,7 +258,7 @@
 		<div class="col-md-1">
 			<span class="more" data-flag=1>更多<i></i></span>
 		</div>
-	</div> -->
+	</div>
 </div>
 <div class="container agency-list">
 	<div class="row">
@@ -257,7 +267,8 @@
 				<thead>
 					<tr>
 						<td>申请代理区域</td>
-						<td>产品分类</td>
+						<td>医疗机构</td>
+						<td>科室</td>
 						<td>发布日期</td>
 						<td>发布人</td>
 						<td>详情</td>
@@ -266,21 +277,24 @@
 				<tbody>
 					<tr>
 						<td>上海</td>
-						<td>临床检验</td>
+						<td>上海第一人民医院</td>
+						<td>神经科</td>
 						<td>2017-8-20</td>
 						<td>王小二</td>
 						<td><a href="">详情</a></td>
 					</tr>
 					<tr>
 						<td>上海</td>
-						<td>临床检验</td>
+						<td>上海第一人民医院</td>
+						<td>神经科</td>
 						<td>2017-8-20</td>
 						<td>王小二</td>
 						<td><a href="">详情</a></td>
 					</tr>
 					<tr>
 						<td>上海</td>
-						<td>临床检验</td>
+						<td>上海第一人民医院</td>
+						<td>神经科</td>
 						<td>2017-8-20</td>
 						<td>王小二</td>
 						<td><a href="">详情</a></td>
@@ -457,6 +471,7 @@ $(function(){
     $('#dowebok').liMarquee();
 });
 
+
 //实现地区分类点击加上背景色效果
 $(".agency .hospital ul li").on('click', function(){
 	$(".agency .hospital ul li").removeClass('click')
@@ -469,11 +484,11 @@ $(".agency .area ul li").on('click', function(){
 	$(this).addClass('click')
 })
 
-// //实现科室分类分类点击加上背景色效果
-// $(".agency .keshi ul li").on('click', function(){
-// 	$(".agency .keshi ul li").removeClass('click')
-// 	$(this).addClass('click')
-// })
+//实现科室分类分类点击加上背景色效果
+$(".agency .keshi ul li").on('click', function(){
+	$(".agency .keshi ul li").removeClass('click')
+	$(this).addClass('click')
+})
 
 $(".agency .hospital .more").on('click', function(){
 	if($(this).attr('data-flag') == 1){
@@ -486,15 +501,15 @@ $(".agency .hospital .more").on('click', function(){
 	}
 })
 
-// $(".agency .keshi .more").on('click', function(){
-// 	if($(this).attr('data-flag') == 1){
-// 		$('.agency .keshi .col-md-8 ul').css('height', '70px')
-// 		$(this).attr('data-flag', 0)
-// 	}else{
-// 		$('.agency .keshi .col-md-8 ul').css('height', '24px')
-// 		$(this).attr('data-flag', 1)
-// 	}
-// })
+$(".agency .keshi .more").on('click', function(){
+	if($(this).attr('data-flag') == 1){
+		$('.agency .keshi .col-md-8 ul').css('height', '70px')
+		$(this).attr('data-flag', 0)
+	}else{
+		$('.agency .keshi .col-md-8 ul').css('height', '24px')
+		$(this).attr('data-flag', 1)
+	}
+})
 // 省市县
 var Gid  = document.getElementById ;
 var showArea = function(){
@@ -503,7 +518,6 @@ var showArea = function(){
 	Gid('s_county').value + "</h3>"
 							}
 Gid('s_county').setAttribute('onchange','showArea()');
-
 
 
 </script>

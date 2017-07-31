@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="Public/CSS/main.css">
     <link rel="stylesheet" href="Public/CSS/etalage.css">
+    <script type="text/javascript" src="Public/JS/area.js" ></script>
 
 	<style type="text/css">
 	/*必须放在这个地方这一行代码*/
@@ -29,6 +30,16 @@
 		}
 		.container .daohang .col-md-12 a{
 			text-decoration: none;
+		}
+		.info {text-align: left;}
+		.info select { border: 1px #993300 solid; background: #FFFFFF; display: inline-block; padding: 6px 12px; margin-bottom: 0; font-size: 14px; font-weight: 400; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid transparent; border-radius: 4px color:#333; background-color: #fff; border-color: #ccc; }
+		.agent-show .table{
+			border-left: 1px solid #ddd;
+			border-right: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+		}
+		.product .ml{
+			margin-left: 115px;
 		}
 	</style>
 
@@ -135,9 +146,10 @@
         <li class="dropdown" id="third-dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">找渠道 <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="generalizeList.html">招商查询信息</a></li>
-            <li><a href="procurementList.html">采购查询信息</a></li>
-            <li><a href="agencyList.html">代理申请信息</a></li>
+            <!-- <li><a href="generalizeList.html">招商查询信息</a></li> -->
+            <li><a href="agencyList.html">区域代理信息</a></li>
+            <li><a href="directSellingHospital.html">直销医院信息</a></li>
+            <li><a href="procurementList.html">医院需求信息</a></li>
           </ul>
         </li>
 
@@ -187,7 +199,16 @@
 				<dt>批准文号:</dt><dd><a href="http://app2.sfda.gov.cn/datasearchp/gzcxSearch.do?formRender=cx&page=1&optionType=V2&searchcx=%D4%C1%CA%B3%D2%A9%BC%E0%D0%B5%28%D7%BC%29%D7%D62013%B5%DA2400635%BA%C5" target="_blank">批准文号查询</a></dd>
 				<dt>类别:</dt><dd>迈瑞Mindray</dd>
 				<dt>型号:</dt><dd>BC-1800</dd>
+				<dt>产品注册名:</dt><dd></dd>
+				<dt>产品简称:</dt><dd>迈瑞全自动</dd>
+				<dt>品牌:</dt><dd>迈瑞</dd>
+				<dt>产地:</dt><dd>上海</dd>
+				<dt>产品类别:</dt><dd>临床检验</dd>
+				<dt>适用科室:</dt><dd>内科</dd>
+				<dt>规格:</dt><dd></dd>
+				<dt>单位:</dt><dd>台</dd>
 			</dl>
+			<button type="button" class="btn btn-primary ml" data-toggle="modal" data-target="#myModal">代理商查看</button>
 		</div>
 	</div>
 	<div class="row">
@@ -384,7 +405,113 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">代理商查看</h4>
+      </div>
+      <div class="modal-body agent-show">
+	      <dl class="dl-horizontal">
+	      	<dt>产品名称:</dt><dd>迈瑞全自动</dd>
+	      	<dt>注册号:</dt><dd>20153660001</dd>
+	      	<dt>区域</dt><dd>			
+		      	<div class="info">
+					<div>
+						<select id="s_province" name="s_province"></select>  
+					    <select id="s_city" name="s_city" ></select>  
+					    <select id="s_county" name="s_county"></select>
+					    
+					    <script type="text/javascript">_init_area();</script>
+					</div>
+				    <div id="show"></div>
+				</div>
+			</dd>
+	      </dl>
 
+	      <div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">当前代理区域</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">正在招商区域</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content " >
+    <div role="tabpanel" class="tab-pane active" id="home">
+    	<table class="table table-striped table-hover">
+    		<thead>
+    			<th>代理公司</th>
+    			<th>代理区域</th>
+    			<th>联系人</th>
+    			<th>电话</th>
+    			<th>详情</th>
+    		</thead>
+    		<tbody>
+    			<tr>
+    				<td>上海正大代理公司</td>
+    				<td>上海</td>
+    				<td>王小二</td>
+    				<td>12345678901</td>
+    				<td><a href="">详情</a></td>
+    			</tr>
+    			<tr>
+    				<td>上海正大代理公司</td>
+    				<td>上海</td>
+    				<td>王小二</td>
+    				<td>12345678901</td>
+    				<td><a href="">详情</a></td>
+    			</tr>
+    			<tr>
+    				<td>上海正大代理公司</td>
+    				<td>上海</td>
+    				<td>王小二</td>
+    				<td>12345678901</td>
+    				<td><a href="">详情</a></td>
+    			</tr>    			    			
+    		</tbody>
+    	</table>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="profile">
+    	<table class="table table-striped table-hover">
+    		<thead>
+    			<th>招商区域</th>
+    			<th>招商日期</th>
+    			<th>申请</th>
+    		</thead>
+    		<tbody>
+    			<tr>
+    				<td>上海</td>
+    				<td>2017-7-31</td>
+    				<td><a href="">申请</a></td>
+    			</tr>
+    			<tr>
+    				<td>上海</td>
+    				<td>2017-7-31</td>
+    				<td><a href="">申请</a></td>
+    			</tr>
+    			<tr>
+    				<td>上海</td>
+    				<td>2017-7-31</td>
+    				<td><a href="">申请</a></td>
+    			</tr>    			
+    		</tbody>
+    	</table>
+    </div>
+  </div>
+
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script type="text/javascript" src="jquery-2.1.1/jquery.js"></script>
 <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
@@ -418,6 +545,15 @@
 			}
 		})
 	})
+
+// 省市县
+var Gid  = document.getElementById ;
+var showArea = function(){
+	Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" + 	
+	Gid('s_city').value + " - 县/区" + 
+	Gid('s_county').value + "</h3>"
+							}
+Gid('s_county').setAttribute('onchange','showArea()');
 </script>
 </body>
 </html>
