@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 	<meta charset="UTF-8">
-	<title>发布采购信息-医疗机构</title>
+	<title>发布需求信息-医疗机构</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
@@ -29,7 +29,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse pull-right" id="first-bar">
       <ul class="nav navbar-nav">
-      <li class="welcome"><a>欢迎王小二</a></li>
+      <li class="welcome"><a>欢迎附属医院</a></li>
         <li class="active"><a href="../login.html">请登录 <span class="sr-only">(current)</span></a></li>
 
         <li><a href="../register.html">免费注册</a></li>
@@ -64,24 +64,21 @@
 			
 
 				<div class="infoclass"><!--我的账号  下面部分-->
-					<h4>账号管理</h4>
+					<h4>我的账户</h4>
 					<ul>
 						<li><a href="../hospital/repwd.html">修改密码</a></li>
-						<li><a href="../hospital/hospital0-myinfo.html">我的信息</a></li>
+						<li><a href="../hospital/MyInfo.html">我的资料</a></li>
 						<li><a href="../hospital/security.html">账户安全</a></li>
 					</ul>
-					<h4>信息发布</h4>
+					<h4>我的信息</h4>
 					<ul>
-						<li><a href="../hospital/hospital1-wantbuy.html">发布采购信息</a></li>
-					</ul>
-					<h4>信息查询</h4>
-					<ul>
-						<li><a href="../hospital/hospital2-mybuy.html">我的采购记录</a></li>
-						<li><a href="../hospital/hospital3-myconcern.html">我的关注</a></li>
+						<li><a href="../hospital/PublishNeedInfo.html">发布需求信息</a></li>
+						<li><a href="../hospital/MyInfoQuery.html">我的信息查询</a></li>
+						<li><a href="../hospital/MyConcern.html">我的关注</a></li>
 					</ul>
 					<h4>联系后台</h4>
 					<ul>
-						<li><a href="../hospital/consult.html">问小安</a></li>				
+						<li><a href="../hospital/consult.html">问小安</a></li>		
 					</ul>
 
 				</div><!--我的账号  下面部分-->
@@ -95,42 +92,51 @@
 
 			<table class="table condition-table"><!--包括渠道、。。。区域什么的-->
 				<tbody>
-					<tr><!--用户名-->
+					<tr>
 						<td class="condition-title">联系人</td>
 						<td>
 							<input type="text">
 						</td>
 					</tr>
 
-					<tr><!--用户名-->
+					<tr>
 						<td class="condition-title">联系电话</td>
 						<td>
 							<input type="text">
 						</td>
 					</tr>
 
-					<tr><!--用户名-->
-						<td class="condition-title">产品名称</td>
+					<tr>
+						<td class="condition-title">EMAIL</td>
 						<td>
 							<input type="text">
 						</td>
 					</tr>
 
-					<tr><!--用户名-->
+
+					<tr>
+						<td class="condition-title">拟采购产品名称</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+
+					<!--
+					<tr>
 						<td class="condition-title">到期日期</td>
 						<td>
 							<input class="expiredate-size" type="date">
 						</td>
 					</tr>
 
-					<tr><!--用户名-->
+					<tr>
 						<td class="condition-title">&nbsp;&nbsp;&nbsp;&nbsp;需求描述：</td>
 						<td style="background-color:#f2f2f2"></td>
 					</tr>
-					
+					-->					
 
 					<tr><!--用户名-->
-						<td class="condition-title">所属分类</td>
+						<td class="condition-title">产品类别</td>
 						<td>
 							<div class="dropdown hos-type1-dropdown">
 								  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -162,8 +168,69 @@
 						</td>
 					</tr>
 
+
+					<tr>
+						<td class="condition-title">使用科室</td>
+						<td>
+						<div>
+							<div class="hos-pisition1">
+								<select id="select3" multiple="multiple" class="select1class">
+					                <option>结核科</option>
+					                <option>肿瘤科</option>
+					                <option>胸外科</option>
+					                <option>骨科</option>
+					                <option>综合科</option>
+					                <option>普内科</option>
+					                <option>放疗科</option>
+					                <option>急诊科</option>
+					                <option>麻醉科</option>
+					                <option>放射科</option>
+					                <option>检验科</option>
+					                <option>药剂科</option>
+					                <option>功能科</option>
+					                <option>病理科</option>		         
+			                	</select>
+							</div>
+
+
+							<div class="hos-pisition2">
+								<input class="rightchoose" type="button" value=">>" onclick="selectedToRight2();"/><br/>
+								<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft2();"/><br/>
+							</div>
+
+
+							<div class="hos-pisition3">
+								<select id="select4" multiple="multiple" class="select1class">
+			                		<option>营养科</option>
+			                	</select>
+							</div>
+						</div>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">规格</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">型号</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">有效期</td>
+						<td>
+							<input class="expiredate-size" type="date">
+						</td>
+					</tr>
+
 					<tr><!--用户名-->
-						<td class="condition-title">要求数量</td>
+						<td class="condition-title">拟采购数量</td>
 						<td>
 							<div class="dropdown hos-type1-dropdown">
 								  <input class="hos-type1-dropdown-input" type="text">
@@ -185,7 +252,7 @@
 					</tr>
 
 					<tr><!--用户名-->
-						<td class="condition-title">价格</td>
+						<td class="condition-title">采购预算价格</td>
 						<td>
 							<div class="dropdown hos-type1-dropdown">
 								  <input class="hos-type1-dropdown-input2" type="text">&nbsp;&nbsp;元人民币
@@ -334,6 +401,49 @@ var showArea = function(){
 	Gid('s_county').value + "</h3>"
 							}
 Gid('s_county').setAttribute('onchange','showArea()');
+
+function selectedToRight2(){
+    // 获取select2标签
+    var select4 = document.getElementById("select4");
+    // 获取select1标签
+    var select3 = document.getElementById("select3");
+    // 获取option
+    var option3 = select3.getElementsByTagName("option");
+    // 遍历
+    for (var i=0;i<option3.length;i++) {
+        var optioni = option3[i];
+        //是否被选中
+        if(optioni.selected == true){
+            // 添加到select2里面
+            select4.appendChild(optioni);
+            //数组长度发生变化，需要处理
+            i--;
+        }
+    }
+}
+
+// 选中添加到左边
+function selectedToLeft2(){
+    
+    // 获取select2标签
+    var select4 = document.getElementById("select4");
+    // 获取select1标签
+    var select3 = document.getElementById("select3");
+    // 获取option
+    var option4 = select4.getElementsByTagName("option");
+    // 遍历
+    for (var i=0;i<option4.length;i++) {
+        var optioni = option4[i];
+        //是否被选中
+        if(optioni.selected == true){
+            // 添加到select1里面
+            select3.appendChild(optioni);
+            //数组长度发生变化，需要处理
+            i--;
+        }
+    }
+}
+
 </script>
 
 

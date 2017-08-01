@@ -246,3 +246,60 @@ input { border: 1px solid #ccc; border-radius: 4px; height: 34px; }
     background-color: #cccccf;
 }
 
+
+
+
+/*
+PublishExtensionInfo.html
+ */
+.hos-pisition1{
+ 	width:255px;
+ 	float:left;
+ 	margin-left:-10px;
+}
+
+.hos-pisition2{
+ 	width:130px;
+ 	float:left
+}
+.container-fluid .row .col-md-10 .condition-table tbody tr td  .hos-pisition3{
+	width:200px;
+	float:left
+}
+
+.hos-pisition1 .select1class { 
+	height: 245px;
+	margin-bottom:20px; 
+}
+.hos-pisition3 .select1class { 
+	height: 245px;
+	margin-bottom:20px; 
+}
+.ExtensionExperience-size{
+	width:50px;
+}
+.Profession-size{
+	width:420px;
+	margin-top: 5px;
+}
+.condition-title .default-info{
+    margin-left: 16px;
+    float: left;
+    margin-top: 2px;
+}
+.Contact-size{
+	width:200px;
+	margin-left:50px;
+	margin-top: 5px;
+}
+.Contact-size2{
+	width:200px;
+	margin-left:37px;
+	margin-top: 5px;
+}
+.Contact-size3{
+	width:200px;
+	margin-left:52px;
+	margin-top: 5px;
+}
+
