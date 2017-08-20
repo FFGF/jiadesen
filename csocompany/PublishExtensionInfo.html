@@ -49,39 +49,6 @@
 
 
 
-<!--
-
-
-<nav class="navbar navbar-default second-bar">
-  <div class="container-fluid">
-   
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#second-bar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#" style="margin-left: 50px">
-      	<img src="recourse/Image/Logo.png" alt="嘉德森">
-      </a>
-    </div>
-
-   
-    <div class="collapse navbar-collapse" id="second-bar">
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="输入产品名称或型号">
-        </div>
-        <button type="submit" class="btn btn-default navbar-btn">搜索</button>
-      </form>
-    </div>
-  </div>
-</nav>
-
--->
-
-
 <div class="container-fluid medium">
 	<!--<p>段落测试</p>-->
 	
@@ -100,15 +67,28 @@
 							<li><a href="../csocompany/repwd.html">修改密码</a></li>
 							<li><a href="../csocompany/MyInfo.html">我的资料</a></li>
 							<li><a href="../csocompany/security.html">账户安全</a></li>
+							<li><a href="#">我的点券</a></li>
+							<li><a href="#">我的积分</a></li>
 						</ul>
 
-						<h4>我的信息</h4>
-						<ul>								
-							<li><a href="../csocompany/PublishExtensionInfo.html">发布推广信息</a></li>	
-							<li><a href="../csocompany/ExtensionInfoFeedback.html">推广信息反馈</a></li>		
-							<li><a href="../csocompany/SupplierFeedbackInfo.html">供货商反馈信息</a></li>		
-							<li><a href="../csocompany/MyConcern.html">我的关注</a></li>	
+						<h4>我的发布</h4>
+						<ul>		
+							<li><a href="#">招聘信息</a></li>		
+							<li><a href="../csocompany/ExtensionInfoFeedback.html">推广信息</a></li>		
 						</ul>
+
+						<h4>我的反馈</h4>
+						<ul>								
+							<li><a href="#">招聘反馈</a></li>	
+							<li><a href="../csocompany/SupplierFeedbackInfo.html">医疗机构需求信息</a></li>	
+							<li><a href="#">供货商需求信息</a></li>	
+						</ul>
+
+						<h4>我的关注</h4>
+						<ul>									
+							<li><a href="../csocompany/MyConcern.html">我的关注</a></li>
+						</ul>
+
 						<h4>联系后台</h4>
 						<ul>
 							<li><a href="../csocompany/consult.html">问小安</a></li>					
@@ -122,12 +102,89 @@
 
 
 		<div class="col-md-10"><!--右侧-->
+		<div class="row leftright_part0">
+				<div class="part11 condition-title">
+					医疗机构
+				</div>
+
+
+				<div class="part22">
+					<select id="select1" multiple="multiple" class="select1class">
+		                <option>北京胸科医院（中央结核病研究所、结核病院）</option>
+		                <option>北京市通州区中医院</option>
+		                <option>北京市通州区中医院</option>
+		                <option>北京市通州区中医医院</option>
+		                <option>北京通州潞河医院</option>
+		                <option>北京市通州区中西医结合骨伤医院北京市通州区工业品公司运通医院</option>
+		                <option>中国人民解放军第二六三医院（解放军263医院）</option>
+		                <option>北京市通州区妇幼保健院</option>
+		                <option>北京市通州区新华医院</option>
+		                <option>北京市通州区中西医结合骨伤医院（北京市通州区工业品公司运通医院）</option>
+		                <option>北京市通州区中西医结合骨伤医院（北京市通州区工业品公司运通医院）</option>
+		                <option>北京市通州区第二医院</option>
+		                <option>北京市通州区第二医院</option>
+		                <option>核工业北京化工冶金研究院职工医院</option>		         
+                	</select>
+				</div>
+
+
+				<div class="part33">
+					<input class="rightchoose" type="button" value=">>" onclick="selectedToRight();"/><br/>
+					<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft();"/><br/>
+					<input data-target="#modal1" data-toggle="modal" data-target=".bs-example-modal-sm" class="addchoose" type="button" value="+" onclick="appendOption();"/><br/>
+				</div>
+
+				<div id="modal1" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+								<div class="modal-dialog modal-sm" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+								        	<h4 class="modal-title">新添加医院</h4>
+								        </div>
+								      	<div class="modal-body">
+								        	<input id="newdepart1" placeholder="请输入新医院名称"></input>
+								      	</div>
+								      	<div class="modal-footer">
+									        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									        <button id="savenewdepart" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+									    </div>
+									</div>
+								</div>
+				</div>
+
+
+				<div class="part44">
+					<select id="select2" multiple="multiple" class="select1class">
+                		<option>北京京都医院</option>
+                	</select>
+				</div>
+			</div>
 		
 
-			<table class="table condition-table"><!--包括渠道、。。。区域什么的-->
+			<table class="table condition-table0">
 				<tbody>
-					<tr><!--区域-->
-						<!--http://www.jq22.com/jquery-info448-->
+
+					<tr>
+						<td class="condition-title">
+							产品
+						</td>
+						<td>
+							<input class="publishinputwidth" type="text">
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">
+							截止时间
+						</td>
+						<td>
+							<input type="date">
+						</td>
+					</tr>
+		
+<!--
+			<table class="table condition-table">
+				<tbody>
+					<tr>
 						<td class="condition-title">负责区域</td>
 						<td>
 							<div class="info">
@@ -184,7 +241,7 @@
 					</tr>
 
 
-					<tr><!--熟悉科室-->
+					<tr>
 						<td class="condition-title">熟悉科室</td>
 						<td>
 						<div>
@@ -224,7 +281,7 @@
 					</tr>
 
 
-					<tr><!--第二个tr：：重点关注-->
+					<tr>
 						<td class="condition-title">产品类别</td>
 						<td>
 							
@@ -261,7 +318,7 @@
 					</tr>		
 
 
-					<tr><!--推广经验-->
+					<tr>
 						<td class="condition-title">推广经验</td>
 						<td>
 							<input class="ExtensionExperience-size" type="text">&nbsp;&nbsp;年
@@ -269,7 +326,7 @@
 					</tr>
 
 
-					<tr><!--专业能力-->
+					<tr>
 						<td class="condition-title">专业能力</td>
 						<td>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学术推广<input class="Profession-size" type="text">
@@ -279,7 +336,7 @@
 					</tr>
 
 
-					<tr><!--联系方式-->
+					<tr>
 						<td class="condition-title">
 							<input class="default-info" type="checkbox" id="box1" value="opt1"><p>默认联系方式</p>
 						</td>
@@ -293,7 +350,7 @@
 
 						</td>
 					</tr>
-
+-->
 
 
 <!--
@@ -537,6 +594,25 @@
 <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
+
+$(document).ready(function(){
+  $(".addchoose").click(function(){
+    
+  });
+
+   $("#savenewdepart").click(function(){
+   	 var inputcontent = $("#newdepart1").val();
+     //console.log(inputcontent);
+
+     var con = $("<option>vvv</option>");
+     con.val(inputcontent);
+     //console.log(con.val());
+     //$("#select4").append(con);
+     $("#select2").append('<option value="'+inputcontent+'">'+inputcontent+'</option>');
+   });
+
+});
+
 var Gid  = document.getElementById ;
 var showArea = function(){
 	Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" + 	
