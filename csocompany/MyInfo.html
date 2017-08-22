@@ -64,23 +64,36 @@
 
 				<div class="infoclass"><!--我的账号  下面部分-->
 					<h4>我的账户</h4>
-					<ul>
-						<li><a href="../csocompany/repwd.html">修改密码</a></li>
-						<li><a href="../csocompany/MyInfo.html">我的资料</a></li>
-						<li><a href="../csocompany/security.html">账户安全</a></li>
-					</ul>
+						<ul>
+							<li><a href="../csocompany/repwd.html">修改密码</a></li>
+							<li><a href="../csocompany/MyInfo.html">我的资料</a></li>
+							<li><a href="../csocompany/security.html">账户安全</a></li>
+							<li><a href="#">我的点券</a></li>
+							<li><a href="#">我的积分</a></li>
+						</ul>
 
-					<h4>我的信息</h4>
-					<ul>								
-						<li><a href="../csocompany/PublishExtensionInfo.html">发布推广信息</a></li>	
-						<li><a href="../csocompany/ExtensionInfoFeedback.html">推广信息反馈</a></li>		
-						<li><a href="../csocompany/SupplierFeedbackInfo.html">供货商反馈信息</a></li>		
-						<li><a href="../csocompany/MyConcern.html">我的关注</a></li>	
-					</ul>
-					<h4>联系后台</h4>
-					<ul>
-						<li><a href="../csocompany/consult.html">问小安</a></li>					
-					</ul>
+						<h4>我的发布</h4>
+						<ul>		
+							<li><a href="#">招聘信息</a></li>		
+							<li><a href="../csocompany/ExtensionInfoFeedback.html">推广信息</a></li>		
+						</ul>
+
+						<h4>我的反馈</h4>
+						<ul>								
+							<li><a href="#">招聘反馈</a></li>	
+							<li><a href="../csocompany/SupplierFeedbackInfo.html">医疗机构需求信息</a></li>	
+							<li><a href="#">供货商需求信息</a></li>	
+						</ul>
+
+						<h4>我的关注</h4>
+						<ul>									
+							<li><a href="../csocompany/MyConcern.html">我的关注</a></li>
+						</ul>
+
+						<h4>联系后台</h4>
+						<ul>
+							<li><a href="../csocompany/consult.html">问小安</a></li>					
+						</ul>
 
 
 				</div><!--我的账号  下面部分-->
@@ -137,6 +150,23 @@
 						<td class="condition-title">公司地址</td>
 						<td>
 							<input type="text" class="company_name_size">
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">推广经验</td>
+						<td>
+							<input class="ExtensionExperience-size" type="text">&nbsp;&nbsp;年
+						</td>
+					</tr>
+
+
+					<tr>
+						<td class="condition-title">专业能力</td>
+						<td>
+							<input class="default-info" type="checkbox" id="" value="opt1"><p>&nbsp;&nbsp;&nbsp;&nbsp;学术推广</p>
+							<input class="default-info" type="checkbox" id="" value="opt1"><p>&nbsp;&nbsp;&nbsp;&nbsp;专业会议</p>
+
 						</td>
 					</tr>
 
@@ -204,6 +234,26 @@
 				<div class="part3">
 					<input class="rightchoose" type="button" value=">>" onclick="selectedToRight();"/><br/>
 					<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft();"/><br/>
+
+					<input data-target="#modal1" data-toggle="modal" data-target=".bs-example-modal-sm" class="addchoose" type="button" value="+" onclick="appendOption();"/><br/>
+
+				</div>
+
+				<div id="modal1" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+								<div class="modal-dialog modal-sm" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+								        	<h4 class="modal-title">新添加医院</h4>
+								        </div>
+								      	<div class="modal-body">
+								        	<input id="newdepart1" placeholder="请输入新医院名称"></input>
+								      	</div>
+								      	<div class="modal-footer">
+									        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									        <button id="savenewdepart" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+									    </div>
+									</div>
+								</div>
 				</div>
 
 
@@ -246,7 +296,29 @@
 				<div class="part3">
 					<input class="rightchoose" type="button" value=">>" onclick="selectedToRight2();"/><br/>
 					<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft2();"/><br/>
+
+					<input data-target="#modal2" data-toggle="modal" data-target=".bs-example-modal-sm" class="addchoose" type="button" value="+" onclick="appendOption();"/><br/>
+
 				</div>
+
+				<div id="modal2" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+								<div class="modal-dialog modal-sm" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+								        	<h4 class="modal-title">新添加科室</h4>
+								        </div>
+								      	<div class="modal-body">
+								        	<input id="newdepart2" placeholder="请输入新科室名称"></input>
+								      	</div>
+								      	<div class="modal-footer">
+									        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									        <button id="savenewdepart2" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+									    </div>
+									</div>
+								</div>
+				</div>
+
+
 
 
 				<div class="part4">
@@ -475,6 +547,39 @@
 <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
+
+$(document).ready(function(){
+  $(".addchoose").click(function(){
+    
+  });
+
+   $("#savenewdepart").click(function(){
+   	 var inputcontent = $("#newdepart1").val();
+     //console.log(inputcontent);
+
+     var con = $("<option>vvv</option>");
+     con.val(inputcontent);
+     //console.log(con.val());
+     //$("#select4").append(con);
+     $("#select2").append('<option value="'+inputcontent+'">'+inputcontent+'</option>');
+   });
+
+   $("#savenewdepart2").click(function(){
+   	 var inputcontent = $("#newdepart2").val();
+     //console.log(inputcontent);
+
+     var con = $("<option>vvv</option>");
+     con.val(inputcontent);
+     //console.log(con.val());
+     //$("#select4").append(con);
+     $("#select4").append('<option value="'+inputcontent+'">'+inputcontent+'</option>');
+   });
+
+});
+
+
+
+
 var Gid  = document.getElementById ;
 var showArea = function(){
 	Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" + 	
