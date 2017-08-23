@@ -69,9 +69,9 @@
 						<li><a href="../hospital/repwd.html">修改密码</a></li>
 						<li><a href="../hospital/MyInfo.html">我的资料</a></li>
 						<li><a href="../hospital/security.html">账户安全</a></li>
-						<li><a href="#">充值中心</a></li>
-						<li><a href="#">我的下载券</a></li>
-						<li><a href="#">我的积分</a></li>
+						<li><a href="../hospital/myCoupon.html">我的点券</a></li>
+						<li><a href="../hospital/payHistory.html">充值记录</a></li>
+						<li><a href="../hospital/myIntegral.html">我的积分</a></li>
 					</ul>
 					<h4>我的发布</h4>
 					<ul>
@@ -210,19 +210,19 @@
 
 
 							<div class="hos-pisition2">
-								<input class="rightchoose" type="button" value=">>" onclick="selectedToRight2();"/><br/>
+								<input class="rightchoosecp" type="button" value=">>" onclick="selectedToRight2();"/><br/>
 								<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft2();"/><br/>
 								
-								
+								<!--
 								<input data-toggle="modal" data-target=".bs-example-modal-sm" class="addchoose" type="button" value="+" onclick="appendOption();"/><br/>
-								
+								-->
 
 
 
 							</div>
 
 
-
+							<!--
 							<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 								<div class="modal-dialog modal-sm" role="document">
 									<div class="modal-content">
@@ -239,7 +239,7 @@
 									</div>
 								</div>
 							</div>
-
+							-->
 
 
 
@@ -440,6 +440,7 @@
 
 <script type="text/javascript">
 
+/*
 $(document).ready(function(){
   $(".addchoose").click(function(){
     //$("#select4 option:last").append("<input>Hello world!</input>");
@@ -450,10 +451,10 @@ $(document).ready(function(){
     //var inputcontent = $("#newdepart1");
     //console.log(inputcontent.val());
 	
-/*
-	var inputcontent = $("#newdepart1").val();
-    console.log(inputcontent);
-*/
+
+	//var inputcontent = $("#newdepart1").val();
+    //console.log(inputcontent);
+
     
 	//var con = $("<option>svv</option>");
     //con.val(inputcontent);
@@ -481,7 +482,7 @@ $(document).ready(function(){
 
 
 });
-
+*/
 
 var Gid  = document.getElementById ;
 var showArea = function(){

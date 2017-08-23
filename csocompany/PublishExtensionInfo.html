@@ -67,8 +67,9 @@
 							<li><a href="../csocompany/repwd.html">修改密码</a></li>
 							<li><a href="../csocompany/MyInfo.html">我的资料</a></li>
 							<li><a href="../csocompany/security.html">账户安全</a></li>
-							<li><a href="#">我的点券</a></li>
-							<li><a href="#">我的积分</a></li>
+							<li><a href="../csocompany/myCoupon.html">我的点券</a></li>
+						<li><a href="../csocompany/payHistory.html">充值记录</a></li>
+						<li><a href="../csocompany/myIntegral.html">我的积分</a></li>
 						</ul>
 
 						<h4>我的发布</h4>
@@ -129,11 +130,13 @@
 
 
 				<div class="part33">
-					<input class="rightchoose" type="button" value=">>" onclick="selectedToRight();"/><br/>
+					<input class="rightchoosecp" type="button" value=">>" onclick="selectedToRight();"/><br/>
 					<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft();"/><br/>
-					<input data-target="#modal1" data-toggle="modal" data-target=".bs-example-modal-sm" class="addchoose" type="button" value="+" onclick="appendOption();"/><br/>
+					
+					<!--<input data-target="#modal1" data-toggle="modal" data-target=".bs-example-modal-sm" class="addchoose" type="button" value="+" onclick="appendOption();"/><br/>-->
 				</div>
 
+				<!--
 				<div id="modal1" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 								<div class="modal-dialog modal-sm" role="document">
 									<div class="modal-content">
@@ -150,6 +153,7 @@
 									</div>
 								</div>
 				</div>
+				-->
 
 
 				<div class="part44">
@@ -594,7 +598,7 @@
 <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
-
+/*
 $(document).ready(function(){
   $(".addchoose").click(function(){
     
@@ -612,6 +616,8 @@ $(document).ready(function(){
    });
 
 });
+*/
+
 
 var Gid  = document.getElementById ;
 var showArea = function(){
