@@ -343,3 +343,29 @@ tr td .default-info{
 .publishinputwidth{width:300px;}
 
 .addchoose { width: 82px; margin-top: 37px; margin-left: 25px; }
+
+
+/*
+2017-8-22
+ */
+.employdescript{
+	margin-left: 20px;
+	width:620px;
+}
+.areaposition{
+	margin-top:1px;
+	margin-left: 3px;
+}
+.findposition{
+	margin-left: 156px;
+    width: 76px;
+    background-color: #f3f3f3;
+}
+
+.searchsize2 { width: 170px; }
+
+
+/*
+2017-8-23
+ */
+.rightchoosecp { width: 82px; margin-top: 96px; margin-left: 25px; }

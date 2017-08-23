@@ -69,9 +69,9 @@
 						<li><a href="../hospital/repwd.html">修改密码</a></li>
 						<li><a href="../hospital/MyInfo.html">我的资料</a></li>
 						<li><a href="../hospital/security.html">账户安全</a></li>
-						<li><a href="#">充值中心</a></li>
-						<li><a href="#">我的下载券</a></li>
-						<li><a href="#">我的积分</a></li>
+						<li><a href="../hospital/myCoupon.html">我的点券</a></li>
+						<li><a href="../hospital/payHistory.html">充值记录</a></li>
+						<li><a href="../hospital/myIntegral.html">我的积分</a></li>
 					</ul>
 					<h4>我的发布</h4>
 					<ul>
@@ -180,7 +180,7 @@
 
 			<div class="row leftright_part">
 				<div class="part1 condition-title">
-					所在科室
+					科室
 				</div>
 
 
@@ -424,14 +424,11 @@
      con.val(inputcontent);
      //console.log(con.val());
      //$("#select4").append(con);
-     $("#select4").append('<option value="'+inputcontent+'">'+inputcontent+'</option>');  
+     $("#select4").append('<option value="'+inputcontent+'">'+inputcontent+'</option>');
 
    });
 
-
 });
-
-
 
 
 
@@ -445,7 +442,7 @@ var showArea = function(){
 Gid('s_county').setAttribute('onchange','showArea()');
 
 
-//参考该页面的
+
 //http://www.cnblogs.com/lantu1989/p/6148319.html
 // 选中添加到右边
 function selectedToRight(){

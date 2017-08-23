@@ -122,3 +122,161 @@ function html5Reader2(file) {
 	}
 }
 
+
+
+
+
+ //年月日
+function YYYYMMDDstart()   
+		   {   
+		           MonHead = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];   
+		    
+		           //先给年下拉框赋内容   
+		           var y  = new Date().getFullYear();   
+		           for (var i = (y-30); i < (y+30); i++) //以今年为准，前30年，后30年   
+		                   document.reg_testdate.YYYY.options.add(new Option(" "+ i +" 年", i));   
+		    
+		           //赋月份的下拉框   
+		           for (var i = 1; i < 13; i++)   
+		                   document.reg_testdate.MM.options.add(new Option(" " + i + " 月", i));   
+		    
+		           document.reg_testdate.YYYY.value = y;   
+		           document.reg_testdate.MM.value = new Date().getMonth() + 1;   
+		           var n = MonHead[new Date().getMonth()];   
+		           if (new Date().getMonth() ==1 && IsPinYear(YYYYvalue)) n++;   
+		                writeDay(n); //赋日期下拉框Author:meizz   
+		           document.reg_testdate.DD.value = new Date().getDate();   
+		   }   
+		   if(document.attachEvent)   
+		       window.attachEvent("onload", YYYYMMDDstart);   
+		   else   
+		       window.addEventListener('load', YYYYMMDDstart, false);   
+		   function YYYYDD(str) //年发生变化时日期发生变化(主要是判断闰平年)   
+		   {   
+		           var MMvalue = document.reg_testdate.MM.options[document.reg_testdate.MM.selectedIndex].value;   
+		           if (MMvalue == ""){ var e = document.reg_testdate.DD; optionsClear(e); return;}   
+		           var n = MonHead[MMvalue - 1];   
+		           if (MMvalue ==2 && IsPinYear(str)) n++;   
+		                writeDay(n)   
+		   }   
+		   function MMDD(str)   //月发生变化时日期联动   
+		   {   
+		        var YYYYvalue = document.reg_testdate.YYYY.options[document.reg_testdate.YYYY.selectedIndex].value;   
+		        if (YYYYvalue == ""){ var e = document.reg_testdate.DD; optionsClear(e); return;}   
+		        var n = MonHead[str - 1];   
+		        if (str ==2 && IsPinYear(YYYYvalue)) n++;   
+		       writeDay(n)   
+		   }   
+		   function writeDay(n)   //据条件写日期的下拉框   
+		   {   
+		           var e = document.reg_testdate.DD; optionsClear(e);   
+		           for (var i=1; i<(n+1); i++)   
+		                e.options.add(new Option(" "+ i + " 日", i));   
+		   }   
+		   function IsPinYear(year)//判断是否闰平年   
+		   {     return(0 == year%4 && (year%100 !=0 || year%400 == 0));}   
+		   function optionsClear(e)   
+		   {   
+		        e.options.length = 1;   
+		   }
+
+//广告费用监听 
+function adsPrice() {
+	var sType = document.getElementById("adsTime").value;
+	var infoSpan_r0 = document.getElementById("rmb0");
+	var infoSpan_r1 = document.getElementById("rmb1");
+	var infoSpan_r2 = document.getElementById("rmb2");
+	var infoSpan_r3 = document.getElementById("rmb3");
+	var infoSpan_r4 = document.getElementById("rmb4");
+
+	if(sType == "" || sType == null) {
+
+		infoSpan_r0.style.display = "";
+		infoSpan_r1.style.display = "none";
+		infoSpan_r2.style.display = "none";
+		infoSpan_r3.style.display = "none";
+		infoSpan_r4.style.display = "none";
+
+	} else if(sType == "3个月") {
+
+		infoSpan_r0.style.display = "none";
+		infoSpan_r1.style.display = "";
+		infoSpan_r2.style.display = "none";
+		infoSpan_r3.style.display = "none";
+		infoSpan_r4.style.display = "none";
+
+	} else if(sType == "6个月(9折)") {
+
+		infoSpan_r0.style.display = "none";
+		infoSpan_r1.style.display = "none";
+		infoSpan_r2.style.display = "";
+		infoSpan_r3.style.display = "none";
+		infoSpan_r4.style.display = "none";
+	} else if(sType == "1年(8折)") {
+
+		infoSpan_r0.style.display = "none";
+		infoSpan_r1.style.display = "none";
+		infoSpan_r2.style.display = "none";
+		infoSpan_r3.style.display = "";
+		infoSpan_r4.style.display = "none";
+	} else if(sType == "2年(7.5折)") {
+
+		infoSpan_r0.style.display = "none";
+		infoSpan_r1.style.display = "none";
+		infoSpan_r2.style.display = "none";
+		infoSpan_r3.style.display = "none";
+		infoSpan_r4.style.display = "";
+	}
+ }
+
+
+//单券充值监听 
+function danchong() {
+	var pType = document.getElementById("payKind").value;
+	var paySpan = document.getElementById("numbs");
+											
+
+	if(pType == "单条" ) {
+
+		paySpan.style.display = "";
+				
+	} else {
+
+		paySpan.style.display = "none";
+						
+	}
+}
+
+
+
+//年月选择器
+$(function () {
+  $('#db').datebox({
+  onShowPanel: function () {//显示日趋选择对象后再触发弹出月份层的事件，初始化时没有生成月份层
+   span.trigger('click'); //触发click事件弹出月份层
+   if (!tds) setTimeout(function () {//延时触发获取月份对象，因为上面的事件触发和对象生成有时间间隔
+   tds = p.find('div.calendar-menu-month-inner td');
+   tds.click(function (e) {
+    e.stopPropagation(); //禁止冒泡执行easyui给月份绑定的事件
+    var year = /\d{4}/.exec(span.html())[0]//得到年份
+    , month = parseInt($(this).attr('abbr'), 10); //月份，这里不需要+1
+    $('#db').datebox('hidePanel')//隐藏日期对象
+    .datebox('setValue', year + '-' + month); //设置日期的值
+   });
+   }, 0);
+   yearIpt.unbind();//解绑年份输入框中任何事件
+  },
+  parser: function (s) {
+   if (!s) return new Date();
+   var arr = s.split('-');
+   return new Date(parseInt(arr[0], 10), parseInt(arr[1], 10) - 1, 1);
+  },
+  formatter: function (d) {
+   return d.getFullYear() + '-' + (d.getMonth() + 1);
+  }
+  });
+  var p = $('#db').datebox('panel'), //日期选择对象
+  tds = false, //日期选择对象中月份
+  yearIpt = p.find('input.calendar-menu-year'),//年份输入框
+  span = p.find('span.calendar-text'); //显示月份层的触发控件
+ });　
