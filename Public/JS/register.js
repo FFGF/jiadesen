@@ -208,10 +208,9 @@ function update_p(num, t) {
 
 //注册类型监听 
 function chose() {
-	var sType = document.getElementById("usertype").value; //取得输入的验证码并转化为大写   
+	var sType = document.getElementById("usertype").value;   
 	var infoSpan_s1 = document.getElementById("s_o");
 	var infoSpan_s2 = document.getElementById("s_e");
-	var infoSpan
 	if(sType == "" || sType == null) {
 
 		infoSpan_s1.style.display = "none";
