@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 	<meta charset="UTF-8">
-	<title>我的信息--CSO公司</title>
+	<title>发布招聘信息--CSO公司</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Public/CSS/liu.css">
@@ -108,68 +108,39 @@
 			<table class="table condition-table"><!--包括渠道、。。。区域什么的-->
 				<tbody>
 					<tr><!--用户名-->
-						<td class="condition-title">用户名称</td>
+						<td class="condition-title">公司名称</td>
 						<td>
-							<p>某某用户</p>
+							<p>某医疗仪器公司</p>
 						</td>
 			
-					</tr>
-
-					<tr><!--用户名-->
-						<td class="condition-title">手机号码</td>
-						<td>
-							<p>12345678909</p>
-						</td>
-			
-					</tr>
-
-					<tr><!--用户名-->
-						<td class="condition-title">用户类型</td>
-						<td>
-							<p>CEO公司</p>
-						</td>
 					</tr>
 
 					<tr>
-						<td class="condition-title">公司法人代表姓名</td>
+						<td class="condition-title">职位名称</td>
 						<td>
 							<input type="text">
 						</td>
 					</tr>
 
-
 					<tr>
-						<td class="condition-title">公司名称</td>
+						<td class="condition-title">职位类型</td>
 						<td>
-							<input type="text" class="company_name_size">
+							<div class="dropdown" style="margin-left:20px;">
+				 				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">职位类型选择<span class="caret"></span>
+				  				</button>
+				  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					  				<li><a href="#">临床销售</a></li>
+					   				<li><a href="#">OTC销售</a></li>
+					   				<li><a href="#">器械耗材</a></li>
+					   				<li><a href="#">招商经理</a></li>
+					   				<li><a href="#">主管/经理</a></li>
+					   				<li><a href="#">生产/研发</a></li>
+									<li><a href="#">实习</a></li>
+									<li><a href="#">其他</a></li>
+				 				</ul>
+							</div><!--div:dropdown-->
 						</td>
 					</tr>
-
-
-					<tr>
-						<td class="condition-title">公司地址</td>
-						<td>
-							<input type="text" class="company_name_size">
-						</td>
-					</tr>
-
-					<tr>
-						<td class="condition-title">推广经验</td>
-						<td>
-							<input class="ExtensionExperience-size" type="text">&nbsp;&nbsp;年
-						</td>
-					</tr>
-
-
-					<tr>
-						<td class="condition-title">专业能力</td>
-						<td>
-							<input class="default-info" type="checkbox" id="" value="opt1"><p>&nbsp;&nbsp;&nbsp;&nbsp;学术推广</p>
-							<input class="default-info" type="checkbox" id="" value="opt1"><p>&nbsp;&nbsp;&nbsp;&nbsp;专业会议</p>
-
-						</td>
-					</tr>
-
 
 					<tr>
 						<td class="condition-title">所属区域</td>
@@ -190,287 +161,85 @@
 						</td>
 					</tr>
 
+					<tr>
+						<td class="condition-title">有效期</td>
+						<td>
+							<input type="date">
+						</td>
+					</tr>
+
+
+					<tr>
+						<td class="condition-title">薪资待遇</td>
+						<td>
+							<div class="dropdown" style="margin-left:20px;">
+				 				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">薪资待遇选择<span class="caret"></span>
+				  				</button>
+				  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					  				<li><a href="#">面议</a></li>
+					   				<li><a href="#">3k/月以下</a></li>
+					   				<li><a href="#">3k~5k/月</a></li>
+					   				<li><a href="#">5k~7k/月</a></li>
+					   				<li><a href="#">7k~10k/月</a></li>
+					   				<li><a href="#">10k~15k/月</a></li>
+									<li><a href="#">15k~20k/月</a></li>
+									<li><a href="#">20k~30k/月</a></li>
+									<li><a href="#">30k~50k/月</a></li>
+									<li><a href="#">50k/月以上</a></li>
+				 				</ul>
+							</div><!--div:dropdown-->
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">工作经验</td>
+						<td>
+							<div class="dropdown" style="margin-left:20px;">
+				 				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">工作经验选择<span class="caret"></span>
+				  				</button>
+				  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					  				<li><a href="#">不限</a></li>
+					   				<li><a href="#">应届毕业生</a></li>
+					   				<li><a href="#">1年</a></li>
+					   				<li><a href="#">2年</a></li>
+					   				<li><a href="#">3~4年</a></li>
+					   				<li><a href="#">5~7年</a></li>
+									<li><a href="#">8~9年</a></li>
+									<li><a href="#">10年以上</a></li>
+				 				</ul>
+							</div><!--div:dropdown-->
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">学历要求</td>
+						<td>
+							<div class="dropdown" style="margin-left:20px;">
+				 				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">学历要求选择<span class="caret"></span>
+				  				</button>
+				  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					  				<li><a href="#">不限</a></li>
+					   				<li><a href="#">大专以下</a></li>
+					   				<li><a href="#">大专</a></li>
+					   				<li><a href="#">本科</a></li>
+					   				<li><a href="#">硕士</a></li>
+					   				<li><a href="#">博士</a></li>
+				 				</ul>
+							</div><!--div:dropdown-->
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">职位描述</td>
+						<td>
+							<textarea class="form-control employdescript" rows="5"></textarea>
+						</td>
+					</tr>
+
+					
+
 				</tbody>
 			</table>
-
-<!--
-			<table class="table condition-table2">
-			<tbody>
-				<tr>
-					<th class="condition-title2">营业执照</th>
-					<th class="condition-title2">医疗器械生产企业许可证</th>
-					<th class="condition-title2">医疗器械经营企业许可证</th>
-				</tr>
-			</tbody>
-			</table>
--->
-
-			<div class="row leftright_part">
-				<div class="part1 condition-title">
-					推广医院
-				</div>
-
-
-				<div class="part2">
-					<select id="select1" multiple="multiple" class="select1class">
-		                <option>北京胸科医院（中央结核病研究所、结核病院）</option>
-		                <option>北京市通州区中医院</option>
-		                <option>北京市通州区中医院</option>
-		                <option>北京市通州区中医医院</option>
-		                <option>北京通州潞河医院</option>
-		                <option>北京市通州区中西医结合骨伤医院北京市通州区工业品公司运通医院</option>
-		                <option>中国人民解放军第二六三医院（解放军263医院）</option>
-		                <option>北京市通州区妇幼保健院</option>
-		                <option>北京市通州区新华医院</option>
-		                <option>北京市通州区中西医结合骨伤医院（北京市通州区工业品公司运通医院）</option>
-		                <option>北京市通州区中西医结合骨伤医院（北京市通州区工业品公司运通医院）</option>
-		                <option>北京市通州区第二医院</option>
-		                <option>北京市通州区第二医院</option>
-		                <option>核工业北京化工冶金研究院职工医院</option>		         
-                	</select>
-				</div>
-
-
-				<div class="part3">
-					<input class="rightchoose" type="button" value=">>" onclick="selectedToRight();"/><br/>
-					<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft();"/><br/>
-
-					<input data-target="#modal1" data-toggle="modal" data-target=".bs-example-modal-sm" class="addchoose" type="button" value="+" onclick="appendOption();"/><br/>
-
-				</div>
-
-				<div id="modal1" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-								<div class="modal-dialog modal-sm" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-								        	<h4 class="modal-title">新添加医院</h4>
-								        </div>
-								      	<div class="modal-body">
-								        	<input id="newdepart1" placeholder="请输入新医院名称"></input>
-								      	</div>
-								      	<div class="modal-footer">
-									        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-									        <button id="savenewdepart" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
-									    </div>
-									</div>
-								</div>
-				</div>
-
-
-				<div class="part4">
-					<select id="select2" multiple="multiple" class="select1class">
-                		<option>北京京都医院</option>
-                	</select>
-				</div>
-			</div>
-
-
-			
-
-			<div class="row leftright_part">
-				<div class="part1 condition-title">
-					推广科室
-				</div>
-
-
-				<div class="part2">
-					<select id="select3" multiple="multiple" class="select1class">
-		                <option>结核科</option>
-		                <option>肿瘤科</option>
-		                <option>胸外科</option>
-		                <option>骨科</option>
-		                <option>综合科</option>
-		                <option>普内科</option>
-		                <option>放疗科</option>
-		                <option>急诊科</option>
-		                <option>麻醉科</option>
-		                <option>放射科</option>
-		                <option>检验科</option>
-		                <option>药剂科</option>
-		                <option>功能科</option>
-		                <option>病理科</option>		         
-                	</select>
-				</div>
-
-
-				<div class="part3">
-					<input class="rightchoose" type="button" value=">>" onclick="selectedToRight2();"/><br/>
-					<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft2();"/><br/>
-
-					<input data-target="#modal2" data-toggle="modal" data-target=".bs-example-modal-sm" class="addchoose" type="button" value="+" onclick="appendOption();"/><br/>
-
-				</div>
-
-				<div id="modal2" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-								<div class="modal-dialog modal-sm" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-								        	<h4 class="modal-title">新添加科室</h4>
-								        </div>
-								      	<div class="modal-body">
-								        	<input id="newdepart2" placeholder="请输入新科室名称"></input>
-								      	</div>
-								      	<div class="modal-footer">
-									        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-									        <button id="savenewdepart2" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
-									    </div>
-									</div>
-								</div>
-				</div>
-
-
-
-
-				<div class="part4">
-					<select id="select4" multiple="multiple" class="select1class">
-                		<option>营养科</option>
-                	</select>
-				</div>
-			</div>
-
-<!--			
-			<div class="row leftright_part">
-				<div class="part5 condition-title">
-					法人身份证
-				</div>
-
-				<div class="part6">
-
-					<form id="imageForm" enctype="multipart/form-data" action="url" method="POST">
-					     <input class="part6input" type="file" name="image" accept=""/>
-					     <button class="btn btn-default part6button" type="submit" >确认上传-身份证正面</button>
-					 </form>
-				</div>
-
-
-				<div class="part7">
-					<form id="imageForm2" enctype="multipart/form-data" action="url" method="POST">
-					     <input class="part6input" type="file" name="image" accept=""/>
-					     <button class="btn btn-default part6button" type="submit" >确认上传-身份证背面</button>
-					 </form>
-				</div>
-			</div>
-
-
-
-			<div class="row leftright_part">
-				<div class="part5 condition-title">
-					公司证件
-				</div>
-
-				<div class="part6">
-
-					<form id="imageForm3" enctype="multipart/form-data" action="url" method="POST">
-					     <input class="part6input" type="file" name="image" accept=""/>
-					     <button class="btn btn-default part7button" type="submit" >确认上传-营业执照</button>
-					 </form>
-				</div>
-
-
-				<div class="part7">
-					<form id="imageForm4" enctype="multipart/form-data" action="url" method="POST">
-					     <input class="part6input" type="file" name="image" accept=""/>
-					     <button class="btn btn-default part8button" type="submit" >确认上传-医疗器械经营许可证</button>
-					 </form>
-				</div>
-			</div>
--->
-
-
-
-			<div class="row leftright_part">
-				<div class="part_shenfen condition-title">
-					上传身份证件
-				</div>
-
-				<div class="zhengjian-size">
-
-
-					<form enctype="multipart/form-data" name="form1">
-					    <p class="upload_p">上传身份证正面:&nbsp;&nbsp;&nbsp;</p>	
-					    <input id="f" type="file" name="f" onchange="change()" />
-					   
-					    <p"></p>
-					    <p class="yulan_p">预览:</p>
-
-						<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction()">Remove</button>
-
-					    <img id="preview" alt="" name="pic" />
-					</form>
-					
-				</div>
-			</div>
-
-
-			<div class="row leftright_part">
-					<div class="part_shenfen condition-title">
-					</div>
-						<div class="zhengjian-size">
-
-							<form enctype="multipart/form-data" name="form2">
-							    <p class="upload_p">上传身份证背面:&nbsp;&nbsp;&nbsp;</p>	
-							    <input id="f2" type="file" name="f2" onchange="change2()" />
-							   
-							    <p"></p>
-							    <p class="yulan_p">预览:</p>
-
-							    <button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction2()">Remove</button>
-
-							    <img id="preview2" alt="" name="pic" />
-							</form>
-							
-					</div>
-			</div>
-
-
-		<div class="row leftright_part">
-				<div class="part_zhizhao condition-title">
-					营业执照
-				</div>
-
-				<div class="zhizhao-size">
-
-
-					<form enctype="multipart/form-data" name="form3">
-					    <p class="upload_p">上传营业执照:&nbsp;&nbsp;&nbsp;</p>	
-					    <input id="f3" type="file" name="f3" onchange="change3()" />
-					   
-					    <p"></p>
-					    <p class="yulan_p">预览:</p>
-
-						<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
-
-					    <img id="preview3" alt="" name="pic" />
-					</form>
-					
-				</div>
-		</div>
-
-		
-
-		<div class="row leftright_part">
-				<div class="part_zhizhao condition-title">
-					医疗器械经营许可证
-				</div>
-
-				<div class="zhizhao-size">
-
-
-					<form enctype="multipart/form-data" name="form4">
-					    <p class="upload_p">上传经营许可证:&nbsp;&nbsp;&nbsp;</p>	
-					    <input id="f4" type="file" name="f4" onchange="change4()" />
-					   
-					    <p"></p>
-					    <p class="yulan_p">预览:</p>
-
-					    <button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction4()">Remove</button>
-
-
-					    <img id="preview4" alt="" name="pic" />
-					</form>
-					
-				</div>
-		</div>
 
 
 
