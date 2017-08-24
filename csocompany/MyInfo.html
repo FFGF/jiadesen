@@ -386,16 +386,16 @@
 				<div class="zhengjian-size">
 
 
-					<form enctype="multipart/form-data" name="form1">
+					<form enctype="multipart/form-data" name="form5">
 					    <p class="upload_p">上传身份证正面:&nbsp;&nbsp;&nbsp;</p>	
-					    <input id="f" type="file" name="f" onchange="change()" />
+					    <input id="f5" type="file" name="f5" onchange="change5()" />
 					   
 					    <p"></p>
 					    <p class="yulan_p">预览:</p>
 
-						<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction()">Remove</button>
+						<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction5()">Remove</button>
 
-					    <img id="preview" alt="" name="pic" />
+					    <img id="preview5" alt="" name="pic" />
 					</form>
 					
 				</div>
@@ -680,9 +680,9 @@ function selectedToLeft2(){
 
 
 
-function change() {
-    var pic = document.getElementById("preview"),
-        file = document.getElementById("f");
+function change5() {
+    var pic = document.getElementById("preview5"),
+        file = document.getElementById("f5");
 
     var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
 
@@ -708,16 +708,16 @@ function change() {
              pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
          }
      }else {
-        html5Reader(file);
+        html5Reader5(file);
      }
 }
 
- function html5Reader(file){
+ function html5Reader5(file){
      var file = file.files[0];
      var reader = new FileReader();
      reader.readAsDataURL(file);
      reader.onload = function(e){
-         var pic = document.getElementById("preview");
+         var pic = document.getElementById("preview5");
          pic.src=this.result;
      }
  }
@@ -853,13 +853,7 @@ function change3() {
  }
 
 
-function Removefunction(){
-	//document.getElementById("preview").parentNode.removeChild(document.getElementById("preview"));
-	var file = $("#f");  
-    file.replaceWith(file.clone());
-	$("#preview").attr("src","../recourse/Image/whitespace.jpg");
-	$("#preview").style("border","0 px");
-}
+
 function Removefunction2(){
 	var file = $("#f2");  
     file.replaceWith(file.clone());
@@ -877,6 +871,12 @@ function Removefunction4(){
     file.replaceWith(file.clone());
 	$("#preview4").attr("src","../recourse/Image/whitespace.jpg");
 	$("#preview4").style("border","0 px");
+}
+function Removefunction5(){
+	var file = $("#f5");  
+    file.replaceWith(file.clone());
+	$("#preview5").attr("src","../recourse/Image/whitespace.jpg");
+	$("#preview5").style("border","0 px");
 }
 
 
