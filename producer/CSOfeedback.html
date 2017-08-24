@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>我的积分</title>
+		<title>CSO反馈</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
@@ -19,11 +19,11 @@
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#first-bar" aria-expanded="false">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			      </button>
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				    </button>
 					<a class="navbar-brand" href="../index.html"><img alt="安必选医疗" src="../recourse/Image/Logo.png"></a>
 				</div>
 
@@ -40,7 +40,7 @@
 						</li>
 
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">系统公告 <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>系统公告</b> <span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li>
 									<a href="#">公告一</a>
@@ -147,7 +147,7 @@
 									<a href="hospitalPush.html">医疗机构反馈</a>
 								</li>
 								<li>
-									<a href="CSOfeedback.html">CSO反馈</a>
+									<a href="CSOFeedback.html">CSO反馈</a>
 								</li>
 								 
 								<li>
@@ -171,133 +171,138 @@
 
 				<div class="col-md-10">
 					<!--右侧-->
-					<form class="form-horizontal">
-				  		<div class="form-group">
-				  			<div class="col-md-1"></div>
-
-								<div class="col-md-3">
-									<label>我的积分：</label>
-									<label>100000</label>
-				    			</div>
-
-
-				  		</div>
-
-
-						 <div class="form-group">
-						 	
-						 	
-							<label class="col-md-2 control-label">时间:</label>
-						    <div class="col-md-2">
-						      <input id="startTime" type="month">
-						    </div>
-
-						     <div class="col-md-1">
-								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----</p>
-						     </div>
-
-						    <div class="col-md-2">
-						      <input id="toTime" type="month">
-						    </div>
-						 	
-						 	<div class="col-md-1"></div>
-		 					
-
-						    <div class="col-md-1">
-						      	<button class="btn btn-default" style="margin-left: 40px">查询</button> 
-						    </div>
-
-						 </div>
-					</form>
-
 
 					<div class="row">
-					
-						<table class="table table-striped table-hover product-list-table">
-							<thead class="tablehead">
-								
-								<th>序号</th>	
-								<th>交易时间</th>
-								<th>交易产品</th>
-								<th>安券数量</th>
-								<th>积分</th>
-								
-							</thead>
 
-							<tbody>
-								<tr>
-									<!--<td><input type="checkbox" name="item1" value="value1"></td>-->
-									<td>1</td>
-									<td>2017-2-5</td>
-									<td>离心机</td>
-									<td>1000</td>
-									<td>10</td>
+						<div class="col-md-1">
+						</div>
+
+						<div class="col-md-6">
+							<div class="input-group inputsize">
+								<input type="text" class="form-control" placeholder="请输入关键字...">
+								<span class="input-group-btn">
+				        			<button class="btn btn-default" type="button">搜索</button>
+				      			</span>
+							</div>
+							<!-- /input-group -->
+						</div>
+						<!-- /.col-lg-6 -->
+						<div class="col-md-2">
+							<button class="btn btn-default">取消代理</button>
+						</div>
+
+						<div class="col-md-3">
+						</div>
+
+					</div>
+					<!-- /.row -->
+
+					<div class="row">
+						<div class="col-md-12">
+							<table class="table table-striped table-hover product-list-table">
+								<thead class="tablehead">
+									<th></th>
+									<th>CSO名称</th>
+									<th>CSO类型</th>
+									<th>区域</th>
+									<th>反馈时间</th>
 									
-								</tr>
-								
-								<tr>
-									<!--<td><input type="checkbox" name="item1" value="value1"></td>-->
-									<td>2</td>
-									<td>2017-4-8</td>
-									<td>离心机</td>
-									<td>1000</td>
-									<td>10</td>
-									
-								</tr>
+									<th>详情信息</th>
 
-								
-							</tbody>
-						</table>
-		
+								</thead>
 
-					</div><!--second-row-->
+								<tbody>
+									<tr>
+										<!-- 第一条信息（一行）-->
+										<td>
+											<input type="checkbox" />
+										</td>
+										<td>上海王二代理公司</td>
+										<td>公司</td>
+										<td>上海市</td>
+										
+										<td>2017-2-24</td>
+										<td><a href="CSOhospital.html">查看详情</a> </td>
+									</tr>
+
+									<tr>
+										<!-- 第二条信息（一行）-->
+										<td>
+											<input type="checkbox" />
+										</td>
+										<td>张三</td>
+										<td>专员</td>
+										<td>上海市</td>
+										
+										<td>2017-2-24</td>
+										<td><a href="CSOapply.html">查看详情</a> </td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
 
 
-					<div class="row"><!--third-row-->
+					</div>
+					<!--second-row-->
+
+					<div class="row">
+						<!--third-row-->
 						<hr class="hrclass">
 						<div class="col-md-2 quanxuan1">
 							<!--
-							<label for class="checkbox selectallclass">
-								<input type="checkbox" name="select_all" onclick="xxfunction()">全部选择(可删除，没必)
-							</label>
-							-->
+			<label for class="checkbox selectallclass">
+				<input type="checkbox" name="select_all" onclick="xxfunction()">全部选择(可删除，没必)
+			</label>
+			-->
 
-						</div><!--col-md-3-->
+						</div>
+						<!--col-md-3-->
 
 						<div class="col-md-3 quanxuan2">
 							<p class="pitem-info">共有xx条记录，每页显示20条</p>
-						</div><!--col-md-3-->
-
+						</div>
+						<!--col-md-3-->
 
 						<div class="col-md-7 quanxuan3">
 							<nav aria-label="Page navigation">
-				  				<ul class="pagination">
-				   					 <li>
-				    					  <a href="#" aria-label="Previous">
-				     					   <span aria-hidden="true">&laquo;</span>
-				     					 </a>
-				   					 </li>
-				   					 <li><a href="#">1</a></li>
-				    				<li><a href="#">2</a></li>
-				   					 <li><a href="#">3</a></li>
-				   					 <li><a href="#">4</a></li>
-				    				<li><a href="#">5</a></li>
-				   					 <li>
-				     					 <a href="#" aria-label="Next">
-				       					 <span aria-hidden="true">&raquo;</span>
-				     					 </a>
-				    				</li>
-				  				</ul>
+								<ul class="pagination">
+									<li>
+										<a href="#" aria-label="Previous">
+											<span aria-hidden="true">&laquo;</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#">4</a>
+									</li>
+									<li>
+										<a href="#">5</a>
+									</li>
+									<li>
+										<a href="#" aria-label="Next">
+											<span aria-hidden="true">&raquo;</span>
+										</a>
+									</li>
+								</ul>
 							</nav>
-						</div><!--col-md-6-->
+						</div>
+						<!--col-md-6-->
 
-					</div><!--third-row-->
-
-					
-					<!--second-row-->
+					</div>
+					<!--third-row-->
 
 				</div>
 				<!--右侧内容-->
+
 			</div>
 			<!--  整体的   左侧放置手风琴框   右侧放置内容   -->
 

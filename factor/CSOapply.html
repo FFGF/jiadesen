@@ -3,12 +3,12 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>区域代理请求信息</title>
+		<title>CSO个人</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../Public/CSS/liu.css">
-
+		<link rel="stylesheet" href="../Public/CSS/bootstrap-imageupload.css">
 	</head>
 
 	<body>
@@ -40,7 +40,7 @@
 						</li>
 
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>系统公告</b> <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">系统公告 <span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li>
 									<a href="#">公告一</a>
@@ -89,7 +89,7 @@
 									<a href="security.html">账户安全</a>
 								</li>
 								<li>
-									<a href="myCoupon.html">我的点券</a>
+									<a href="myCoupon.html">我的安券</a>
 								</li>
 								<li>
 									<a href="payHistory.html">充值记录</a>
@@ -151,7 +151,7 @@
 									<a href="hospitalPush.html">医疗机构反馈</a>
 								</li>
 								<li>
-									<a href="#">CSO反馈</a>
+									<a href="CSOfeedback.html">CSO反馈</a>
 								</li>
 								<li>
 									<a href="EmployFeedback.html">招聘反馈</a>
@@ -176,165 +176,68 @@
 				<!--左侧手风琴框-->
 
 				<div class="col-md-10">
-					<!--右侧-->
+					
+					
+					<table class="table condition-table" style="margin-top: 30px;">
+						<tbody>
+							<tr>
+								
+								<td class="condition-title">CSO名称</td>
+								<td>
+									<input class="form-control" type="text" style="width: 400px;">
+								</td>
+							</tr>
 
-					<div class="row">
+							<tr>
+								
+								<td class="condition-title">申请代理产品</td>
+								<td>
+									<input class="form-control" type="text" style="width: 400px;">
+								</td>
+							</tr>
 
+							<tr>
+								
+								<td class="condition-title">区域</td>
+								<td>
+									<input class="form-control" type="text" style="width: 400px;">
+								</td>
+							</tr>
 
-						<div class="col-md-1">
-						</div>	
+							<tr>
+								
+								<td class="condition-title">医疗机构</td>
+								<td>
+									<input class="form-control" type="text" style="width: 400px;">
+								</td>
+							</tr>
 
-						<div class="col-md-6">
-							<div class="input-group inputsize">
-								<input type="text" class="form-control" placeholder="请输入关键字...">
-								<span class="input-group-btn">
-					        			<button class="btn btn-default" type="button">搜索</button>
-					      		</span>
-							</div>
-							<!-- /input-group -->
-						</div>
-						<!-- /.col-lg-6 -->
-						<div class="col-md-5">
-							<button class="btn btn-default" data-toggle="modal" data-target="#myModal2" style="width: 110px;" aria-haspopup="true">同意为代理</button>
-							<button class="btn btn-default" style="width: 110px;">驳回代理申请</button>
+							<tr>
+								
+								<td class="condition-title">科室</td>
+								<td>
+									<div>
+										<input class="form-control" type="text" style="width: 400px;">
+									</div>									
+								</td>
+							</tr>
 
-							<div class="modal fade" id="myModal2" style="margin-top: 200px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-								<div class="modal-dialog">
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-												&times;
-											</button>
-											<h4 class="modal-title" id="myModalLabel">提示</h4>
-										</div>
-										<div class="modal-body">
-											<label>请选择代理期限：</label>
-											<label class="checkbox-inline">
-												<input type="radio" name="optionsRadiosinline" id="optionsRadios3" value="option1" checked> 短期代理：3个月
-											</label>
-											<label class="checkbox-inline">
-												<input type="radio" name="optionsRadiosinline" id="optionsRadios4"  value="option2"> 长期代理：1年
-											</label>
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default">确定
-											</button>
-											<button type="button" class="btn btn-default" data-dismiss="modal">取消
-											</button>
-										</div>
-									</div>
-									<!-- /.modal-content -->
-								</div>
-								<!-- /.modal -->
-							</div>
-						</div>
-
-						
-
+							<tr>
+								
+								<td class="condition-title">申请时间</td>
+								<td>
+									<div>
+										<input class="form-control" type="text" style="width: 400px;">
+									</div>									
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+					
+					<div class="form-group" style="margin-left: 400px;">										
+						<button type="submit" class="btn btn-default">返回</button>
 					</div>
-					<!-- /.row -->
-
-					<div class="row">
-						<table class="table table-striped table-hover product-list-table">
-							<thead class="tablehead">
-								<th></th>
-								<th>申请公司名称</th>
-								<th>申请代理产品</th>
-								<th>区域</th>
-								<th>医疗机构</th>
-								<th>科室</th>
-								<th>申请时间</th>
-								<th>详情信息</th>
-							</thead>
-
-							<tbody>
-								<tr>
-									<!-- 第一条信息（一行）-->
-									<td>
-										<input type="checkbox" />
-									</td>
-									<td>上海王二代理公司 </td>
-									<td>普利生全自动血凝分析仪C2000-A</td>
-									<td>上海市</td>
-									<td>上海市第一人民医院</td>
-									<td>心肺科</td>
-									<td>2017-08-20</td>
-									<td><a href="CSOinfo.html">查看详情</a> </td>
-								</tr>
-
-								<tr>
-									<!-- 第二条信息（一行）-->
-									<td>
-										<input type="checkbox" />
-									</td>
-									<td>上海王二代理公司 </td>
-									<td>普利生全自动血凝分析仪C2000-A</td>
-									<td>上海市</td>
-									<td>上海市第一人民医院</td>
-									<td>心肺科</td>
-									<td>2017-08-20</td>
-									<td><a href="CSOinfo.html">查看详情</a> </td>
-								</tr>
-
-							</tbody>
-						</table>
-
-					</div>
-					<!--second-row-->
-
-					<div class="row">
-						<!--third-row-->
-						<hr class="hrclass">
-						<div class="col-md-2 quanxuan1">
-							<!--
-			<label for class="checkbox selectallclass">
-				<input type="checkbox" name="select_all" onclick="xxfunction()">全部选择(可删除，没必)
-			</label>
-			-->
-
-						</div>
-						<!--col-md-3-->
-
-						<div class="col-md-3 quanxuan2">
-							<p class="pitem-info">共有xx条记录，每页显示20条</p>
-						</div>
-						<!--col-md-3-->
-
-						<div class="col-md-7 quanxuan3">
-							<nav aria-label="Page navigation">
-								<ul class="pagination">
-									<li>
-										<a href="#" aria-label="Previous">
-											<span aria-hidden="true">&laquo;</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">1</a>
-									</li>
-									<li>
-										<a href="#">2</a>
-									</li>
-									<li>
-										<a href="#">3</a>
-									</li>
-									<li>
-										<a href="#">4</a>
-									</li>
-									<li>
-										<a href="#">5</a>
-									</li>
-									<li>
-										<a href="#" aria-label="Next">
-											<span aria-hidden="true">&raquo;</span>
-										</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-						<!--col-md-6-->
-
-					</div>
-					<!--third-row-->
 
 				</div>
 				<!--右侧内容-->
@@ -402,9 +305,19 @@
 			<!-- /.container-fluid -->
 		</nav>
 
-		<script type="text/javascript" src="../jquery-2.1.1/jquery.js"></script>
-		<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<script src="../Public/JS/jquery-1.12.4.min.js"></script>
+<!-- 		<script src="../jquery-2.1.1/jquery.js"></script>
+ -->	<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<script src="../Public/JS/bootstrap-imageupload.js"></script>
+		<script type="text/javascript" src="../Public/JS/zh2.js"></script>
+
+		<script>
+			var $imageupload = $('.imageupload');
+			$imageupload.imageupload();
+		</script>
 
 	</body>
+	
+	
 
 </html>
