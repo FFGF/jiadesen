@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>发布招聘信息--CSO公司</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Public/CSS/liu.css">
+</head>
+<body>
+
+
+<!-- 最顶部的navbar -->
+<nav class="navbar navbar-default navbar-fixed-top first-bar">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#first-bar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../index.html"><img alt="安必选医疗" src="../recourse/Image/Logo.png"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse pull-right" id="first-bar">
+      <ul class="nav navbar-nav">
+
+      	<li class="welcome"><a>欢迎王小二</a></li>
+        <li class="active"><a href="../login.html">请登录 <span class="sr-only">(current)</span></a></li>
+
+        <li><a href="../register.html">免费注册</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">系统公告 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">公告一</a></li>
+            <li><a href="#">公告二</a></li>
+            <li><a href="#">公告三</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+
+<div class="container-fluid medium">
+	<!--<p>段落测试</p>-->
+	
+	<div class="row"><!--  整体的   左侧放置手风琴框   右侧放置内容   -->
+		<div class="col-md-2"><!--左侧手风琴框-->
+
+			<div class="row leftpart">
+				<div class="accountclass"><!--我的账号部分-->
+					<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp &nbsp我的信息</h4>
+				</div><!--我的账号部分-->
+			
+
+				<div class="infoclass"><!--我的账号  下面部分-->
+					<h4>我的账户</h4>
+                        <ul>
+                            <li><a href="../csocompany/repwd.html">修改密码</a></li>
+                            <li><a href="../csocompany/MyInfo.html">我的资料</a></li>
+                            <li><a href="../csocompany/security.html">账户安全</a></li>
+                            <li><a href="../csocompany/myCoupon.html">我的点券</a></li>
+                        <li><a href="../csocompany/payHistory.html">充值记录</a></li>
+                        <li><a href="../csocompany/myIntegral.html">我的积分</a></li>
+                        </ul>
+
+                        <h4>我的发布</h4>
+                        <ul>        
+                            <li><a href="../csocompany/EmployInfo.html">招聘信息</a></li>       
+                            <li><a href="../csocompany/ExtensionInfoFeedback.html">推广信息</a></li>        
+                        </ul>
+
+                        <h4>我的反馈</h4>
+                        <ul>                                
+                            <li><a href="../csocompany/EmployFeedback.html">招聘反馈</a></li>   
+                            <li><a href="../csocompany/SupplierFeedbackInfo.html">医疗机构需求信息</a></li> 
+                            <li><a href="#">供货商需求信息</a></li>    
+                        </ul>
+
+                        <h4>我的关注</h4>
+                        <ul>                                    
+                            <li><a href="../csocompany/MyConcern.html">我的关注</a></li>
+                        </ul>
+
+                        <h4>联系后台</h4>
+                        <ul>
+                            <li><a href="../csocompany/consult.html">问小安</a></li>                   
+                        </ul>
+
+				</div><!--我的账号  下面部分-->
+			</div>	
+
+		</div><!--左侧手风琴框--> 
+
+
+		<div class="col-md-10"><!--右侧-->
+		
+
+			<table class="table condition-table"><!--包括渠道、。。。区域什么的-->
+				<tbody>
+					<tr><!--用户名-->
+						<td class="condition-title">公司名称</td>
+						<td>
+							<p>某公司</p>
+						</td>
+			
+					</tr>
+
+					<tr>
+						<td class="condition-title">职位名称</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">职位类型</td>
+						<td>
+							<div class="dropdown" style="margin-left:20px;">
+				 				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">职位类型选择<span class="caret"></span>
+				  				</button>
+				  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					  				<li><a href="#">临床销售</a></li>
+					   				<li><a href="#">OTC销售</a></li>
+					   				<li><a href="#">器械耗材</a></li>
+					   				<li><a href="#">招商经理</a></li>
+					   				<li><a href="#">主管/经理</a></li>
+					   				<li><a href="#">生产/研发</a></li>
+									<li><a href="#">实习</a></li>
+									<li><a href="#">其他</a></li>
+				 				</ul>
+							</div><!--div:dropdown-->
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">所属区域</td>
+						<td>
+
+							<div class="info">
+								<div>
+								<select id="s_province" name="s_province"></select>  
+							    <select id="s_city" name="s_city" ></select>  
+							    <select id="s_county" name="s_county"></select>
+							    <script class="resources library" src="http://sandbox.runjs.cn/uploads/rs/267/g3ugugjp/area.js" type="text/javascript"></script>
+							    
+							    <script type="text/javascript">_init_area();</script>
+							    </div>
+							    <div id="show"></div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">有效期</td>
+						<td>
+							<input type="date">
+						</td>
+					</tr>
+
+
+					<tr>
+						<td class="condition-title">薪资待遇</td>
+						<td>
+							<div class="dropdown" style="margin-left:20px;">
+				 				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">薪资待遇选择<span class="caret"></span>
+				  				</button>
+				  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					  				<li><a href="#">面议</a></li>
+					   				<li><a href="#">3k/月以下</a></li>
+					   				<li><a href="#">3k~5k/月</a></li>
+					   				<li><a href="#">5k~7k/月</a></li>
+					   				<li><a href="#">7k~10k/月</a></li>
+					   				<li><a href="#">10k~15k/月</a></li>
+									<li><a href="#">15k~20k/月</a></li>
+									<li><a href="#">20k~30k/月</a></li>
+									<li><a href="#">30k~50k/月</a></li>
+									<li><a href="#">50k/月以上</a></li>
+				 				</ul>
+							</div><!--div:dropdown-->
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">工作经验</td>
+						<td>
+							<div class="dropdown" style="margin-left:20px;">
+				 				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">工作经验选择<span class="caret"></span>
+				  				</button>
+				  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					  				<li><a href="#">不限</a></li>
+					   				<li><a href="#">应届毕业生</a></li>
+					   				<li><a href="#">1年</a></li>
+					   				<li><a href="#">2年</a></li>
+					   				<li><a href="#">3~4年</a></li>
+					   				<li><a href="#">5~7年</a></li>
+									<li><a href="#">8~9年</a></li>
+									<li><a href="#">10年以上</a></li>
+				 				</ul>
+							</div><!--div:dropdown-->
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">学历要求</td>
+						<td>
+							<div class="dropdown" style="margin-left:20px;">
+				 				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">学历要求选择<span class="caret"></span>
+				  				</button>
+				  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					  				<li><a href="#">不限</a></li>
+					   				<li><a href="#">大专以下</a></li>
+					   				<li><a href="#">大专</a></li>
+					   				<li><a href="#">本科</a></li>
+					   				<li><a href="#">硕士</a></li>
+					   				<li><a href="#">博士</a></li>
+				 				</ul>
+							</div><!--div:dropdown-->
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">职位描述</td>
+						<td>
+							<textarea class="form-control employdescript" rows="5"></textarea>
+						</td>
+					</tr>
+
+					
+
+				</tbody>
+			</table>
+
+
+
+			<div><!--第五部分：预览发布-->
+				<button class="btn btn-default xiugai-position2">修改</button>
+			</div><!--第五部分：预览发布-->
+
+
+
+
+		</div><!--右侧内容-->
+
+
+	</div><!--  整体的   左侧放置手风琴框   右侧放置内容   -->
+
+	
+</div><!--"container-fluid medium"-->
+
+
+
+
+
+<!-- 底部的footer -->
+<nav class="navbar-inverse footer">
+  <div class="container">
+	  <div class="row">
+	  	<div class="col-md-2">
+	  		<ul class="list-unstyled">
+  				<li>新手指南</li>
+  				<li>用户注册</li>
+			</ul>
+	  	</div>
+
+	  	<div class="col-md-2">
+	  		<ul class="list-unstyled">
+  				<li>北登服务</li>
+  				<li>服务协议</li>
+			</ul>
+	  	</div>
+
+	  	<div class="col-md-2">
+	  		<ul class="list-unstyled">
+  				<li>信息安全</li>
+  				<li>免责声明</li>
+			</ul>
+	  	</div>
+
+	  	<div class="col-md-2">
+	  		<ul class="list-unstyled">
+  				<li>隐私声明</li>
+  				<li>法律声明</li>
+  				<li>联系我们</li>
+  				<li>关于我们</li>
+			</ul>
+	  	</div>
+
+	  	<div class="col-md-4">
+	  		<img src="../recourse/Image/weixin.jpg" alt="" class="img-responsive" style="width: 100px">
+	  	</div>
+	  </div>
+
+	<hr class="divider">
+
+	<div class="row">
+		<div class="col-md-12 word-list">
+			隐私声明 | 法律声明 | 联系我们 | 关于我们 | 产品地图 | 器械数据库 | 知识库 | 网站导航 | 互联网药品信息服务资格证
+		</div>
+
+	</div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<script type="text/javascript" src="../jquery-2.1.1/jquery.js"></script>
+<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+  $(".addchoose").click(function(){
+    
+  });
+
+   $("#savenewdepart").click(function(){
+   	 var inputcontent = $("#newdepart1").val();
+     //console.log(inputcontent);
+
+     var con = $("<option>vvv</option>");
+     con.val(inputcontent);
+     //console.log(con.val());
+     //$("#select4").append(con);
+     $("#select2").append('<option value="'+inputcontent+'">'+inputcontent+'</option>');
+   });
+
+   $("#savenewdepart2").click(function(){
+   	 var inputcontent = $("#newdepart2").val();
+     //console.log(inputcontent);
+
+     var con = $("<option>vvv</option>");
+     con.val(inputcontent);
+     //console.log(con.val());
+     //$("#select4").append(con);
+     $("#select4").append('<option value="'+inputcontent+'">'+inputcontent+'</option>');
+   });
+
+});
+
+
+
+
+var Gid  = document.getElementById ;
+var showArea = function(){
+	Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" + 	
+	Gid('s_city').value + " - 县/区" + 
+	Gid('s_county').value + "</h3>"
+							}
+Gid('s_county').setAttribute('onchange','showArea()');
+
+
+//参考该页面的
+//http://www.cnblogs.com/lantu1989/p/6148319.html
+// 选中添加到右边
+function selectedToRight(){
+    
+    // 获取select2标签
+    var select2 = document.getElementById("select2");
+    // 获取select1标签
+    var select1 = document.getElementById("select1");
+    // 获取option
+    var option1 = select1.getElementsByTagName("option");
+    // 遍历
+    for (var i=0;i<option1.length;i++) {
+        var optioni = option1[i];
+        //是否被选中
+        if(optioni.selected == true){
+            // 添加到select2里面
+            select2.appendChild(optioni);
+            //数组长度发生变化，需要处理
+            i--;
+        }
+    }
+}
+
+// 选中添加到左边
+function selectedToLeft(){
+    
+    // 获取select2标签
+    var select2 = document.getElementById("select2");
+    // 获取select1标签
+    var select1 = document.getElementById("select1");
+    // 获取option
+    var option2 = select2.getElementsByTagName("option");
+    // 遍历
+    for (var i=0;i<option2.length;i++) {
+        var optioni = option2[i];
+        //是否被选中
+        if(optioni.selected == true){
+            // 添加到select1里面
+            select1.appendChild(optioni);
+            //数组长度发生变化，需要处理
+            i--;
+        }
+    }
+}
+
+
+function selectedToRight2(){
+    // 获取select2标签
+    var select4 = document.getElementById("select4");
+    // 获取select1标签
+    var select3 = document.getElementById("select3");
+    // 获取option
+    var option3 = select3.getElementsByTagName("option");
+    // 遍历
+    for (var i=0;i<option3.length;i++) {
+        var optioni = option3[i];
+        //是否被选中
+        if(optioni.selected == true){
+            // 添加到select2里面
+            select4.appendChild(optioni);
+            //数组长度发生变化，需要处理
+            i--;
+        }
+    }
+}
+
+// 选中添加到左边
+function selectedToLeft2(){
+    
+    // 获取select2标签
+    var select4 = document.getElementById("select4");
+    // 获取select1标签
+    var select3 = document.getElementById("select3");
+    // 获取option
+    var option4 = select4.getElementsByTagName("option");
+    // 遍历
+    for (var i=0;i<option4.length;i++) {
+        var optioni = option4[i];
+        //是否被选中
+        if(optioni.selected == true){
+            // 添加到select1里面
+            select3.appendChild(optioni);
+            //数组长度发生变化，需要处理
+            i--;
+        }
+    }
+}
+
+
+
+function change() {
+    var pic = document.getElementById("preview"),
+        file = document.getElementById("f");
+
+    var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
+
+     // gif在IE浏览器暂时无法显示
+     if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
+         alert("图片的格式必须为png或者jpg或者jpeg格式！"); 
+         return;
+     }
+     var isIE = navigator.userAgent.match(/MSIE/)!= null,
+         isIE6 = navigator.userAgent.match(/MSIE 6.0/)!= null;
+
+     if(isIE) {
+        file.select();
+        var reallocalpath = document.selection.createRange().text;
+
+        // IE6浏览器设置img的src为本地路径可以直接显示图片
+         if (isIE6) {
+            pic.src = reallocalpath;
+         }else {
+            // 非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现
+             pic.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src=\"" + reallocalpath + "\")";
+             // 设置img的src为base64编码的透明图片 取消显示浏览器默认图片
+             pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+         }
+     }else {
+        html5Reader(file);
+     }
+}
+
+ function html5Reader(file){
+     var file = file.files[0];
+     var reader = new FileReader();
+     reader.readAsDataURL(file);
+     reader.onload = function(e){
+         var pic = document.getElementById("preview");
+         pic.src=this.result;
+     }
+ }
+
+
+
+function change2() {
+    var pic = document.getElementById("preview2"),
+        file = document.getElementById("f2");
+
+    var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
+
+     // gif在IE浏览器暂时无法显示
+     if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
+         alert("图片的格式必须为png或者jpg或者jpeg格式！"); 
+         return;
+     }
+     var isIE = navigator.userAgent.match(/MSIE/)!= null,
+         isIE6 = navigator.userAgent.match(/MSIE 6.0/)!= null;
+
+     if(isIE) {
+        file.select();
+        var reallocalpath = document.selection.createRange().text;
+
+        // IE6浏览器设置img的src为本地路径可以直接显示图片
+         if (isIE6) {
+            pic.src = reallocalpath;
+         }else {
+            // 非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现
+             pic.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src=\"" + reallocalpath + "\")";
+             // 设置img的src为base64编码的透明图片 取消显示浏览器默认图片
+             pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+         }
+     }else {
+        html5Reader2(file);
+     }
+}
+
+ function html5Reader2(file){
+     var file = file.files[0];
+     var reader = new FileReader();
+     reader.readAsDataURL(file);
+     reader.onload = function(e){
+         var pic = document.getElementById("preview2");
+         pic.src=this.result;
+     }
+ }
+
+
+function change3() {
+    var pic = document.getElementById("preview3"),
+        file = document.getElementById("f3");
+
+    var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
+
+     // gif在IE浏览器暂时无法显示
+     if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
+         alert("图片的格式必须为png或者jpg或者jpeg格式！"); 
+         return;
+     }
+     var isIE = navigator.userAgent.match(/MSIE/)!= null,
+         isIE6 = navigator.userAgent.match(/MSIE 6.0/)!= null;
+
+     if(isIE) {
+        file.select();
+        var reallocalpath = document.selection.createRange().text;
+
+        // IE6浏览器设置img的src为本地路径可以直接显示图片
+         if (isIE6) {
+            pic.src = reallocalpath;
+         }else {
+            // 非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现
+             pic.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src=\"" + reallocalpath + "\")";
+             // 设置img的src为base64编码的透明图片 取消显示浏览器默认图片
+             pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+         }
+     }else {
+        html5Reader3(file);
+     }
+}
+
+ function html5Reader3(file){
+     var file = file.files[0];
+     var reader = new FileReader();
+     reader.readAsDataURL(file);
+     reader.onload = function(e){
+         var pic = document.getElementById("preview3");
+         pic.src=this.result;
+     }
+ }
+
+
+ function change4() {
+    var pic = document.getElementById("preview4"),
+        file = document.getElementById("f4");
+
+    var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
+
+     // gif在IE浏览器暂时无法显示
+     if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
+         alert("图片的格式必须为png或者jpg或者jpeg格式！"); 
+         return;
+     }
+     var isIE = navigator.userAgent.match(/MSIE/)!= null,
+         isIE6 = navigator.userAgent.match(/MSIE 6.0/)!= null;
+
+     if(isIE) {
+        file.select();
+        var reallocalpath = document.selection.createRange().text;
+
+        // IE6浏览器设置img的src为本地路径可以直接显示图片
+         if (isIE6) {
+            pic.src = reallocalpath;
+         }else {
+            // 非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现
+             pic.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src=\"" + reallocalpath + "\")";
+             // 设置img的src为base64编码的透明图片 取消显示浏览器默认图片
+             pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+         }
+     }else {
+        html5Reader4(file);
+     }
+}
+
+ function html5Reader4(file){
+     var file = file.files[0];
+     var reader = new FileReader();
+     reader.readAsDataURL(file);
+     reader.onload = function(e){
+         var pic = document.getElementById("preview4");
+         pic.src=this.result;
+     }
+ }
+
+
+function Removefunction(){
+	//document.getElementById("preview").parentNode.removeChild(document.getElementById("preview"));
+	var file = $("#f");  
+    file.replaceWith(file.clone());
+	$("#preview").attr("src","../recourse/Image/whitespace.jpg");
+	$("#preview").style("border","0 px");
+}
+function Removefunction2(){
+	var file = $("#f2");  
+    file.replaceWith(file.clone());
+	$("#preview2").attr("src","../recourse/Image/whitespace.jpg");
+	$("#preview2").style("border","0 px");
+}
+function Removefunction3(){
+	var file = $("#f3");  
+    file.replaceWith(file.clone());
+	$("#preview3").attr("src","../recourse/Image/whitespace.jpg");
+	$("#preview3").style("border","0 px");
+}
+function Removefunction4(){
+	var file = $("#f4");  
+    file.replaceWith(file.clone());
+	$("#preview4").attr("src","../recourse/Image/whitespace.jpg");
+	$("#preview4").style("border","0 px");
+}
+
+
+</script>
+
+
+</body>
+</html>
