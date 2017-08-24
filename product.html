@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="Public/CSS/main.css">
     <link rel="stylesheet" href="Public/CSS/etalage.css">
+    <script type="text/javascript" src="Public/JS/area.js" ></script>
 
 	<style type="text/css">
 	/*必须放在这个地方这一行代码*/
@@ -30,10 +31,21 @@
 		.container .daohang .col-md-12 a{
 			text-decoration: none;
 		}
+		.info {text-align: left;}
+		.info select { border: 1px #993300 solid; background: #FFFFFF; display: inline-block; padding: 6px 12px; margin-bottom: 0; font-size: 14px; font-weight: 400; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid transparent; border-radius: 4px color:#333; background-color: #fff; border-color: #ccc; }
+		.agent-show .table{
+			border-left: 1px solid #ddd;
+			border-right: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+		}
+		.product .ml{
+			margin-left: 115px;
+		}
 	</style>
 
 </head>
 <body>
+<div class="contactWe"></div>
 <!-- 最顶部的navbar -->
 <nav class="navbar navbar-default navbar-fixed-top first-bar">
   <div class="container">
@@ -45,7 +57,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-       <a class="navbar-brand" href="index.html">欢迎光临安必选医械网</a>
+       <a class="navbar-brand" href="index.html">欢迎光临安必选医乐网</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -110,7 +122,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="third-bar">
       <ul class="nav navbar-nav">
-      	<li class="header-category"><a href="">产品分类</a>
+<!--       	<li class="header-category"><a href="">产品分类</a>
 	      	<div class="active-menu">
 					    <ul class="dropdown-menu-two-level" role="menu">
 					        <li data-submenu-id="submenu-patas"><a href="">临床检验</a></li>
@@ -122,10 +134,10 @@
 					        <li data-submenu-id="submenu-gabon"><a href="">医用光学</a></li>
 					        <li data-submenu-id="submenu-king-colobus"><a href="">医用耗材</a></li>
 					    </ul>
-					    <!-- 面板开始 -->
+					   
 						<div dataurl="./popover-menu.html" id="popover-menu">
-						<!-- 面板结束 -->
-      	</li>
+						
+      	</li> -->
         <li class="active"><a href="index.html">首页 <span class="sr-only">(current)</span></a></li>
         <li class="header-category">
         	<a href="findProduct.html" id="find-product">找产品</a>	
@@ -135,20 +147,31 @@
         <li class="dropdown" id="third-dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">找渠道 <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="generalizeList.html">招商查询信息</a></li>
-            <li><a href="procurementList.html">采购查询信息</a></li>
-            <li><a href="agencyList.html">代理申请信息</a></li>
+            <!-- <li><a href="generalizeList.html">招商查询信息</a></li> -->
+            <li><a href="agencyList.html">区域代理信息</a></li>
+            <li><a href="directSellingHospital.html">直销医院信息</a></li>
+            <li><a href="procurementList.html">医院需求信息</a></li>
           </ul>
         </li>
 
         <li class="dropdown" id="fouth-dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">找物流<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">找服务<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="">找仓储</a></li>
-            <li><a href="">找配送</a></li>
+            <li><a href="">物流服务</a></li>
+            <li><a href="">融资服务</a></li>
+            <li><a href="">商务服务</a></li>
           </ul>
         </li>
-        <li><a href="#">找融资</a></li>
+        <li><a href="#">找人才</a></li>
+
+        <li class="dropdown" id="fifth-dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">找资讯<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="">法律法规</a></li>
+            <li><a href="">招标信息</a></li>
+          </ul>
+        </li>
+                
         <li><a href="#">关于我们</a></li>
        
       </ul>
@@ -187,7 +210,16 @@
 				<dt>批准文号:</dt><dd><a href="http://app2.sfda.gov.cn/datasearchp/gzcxSearch.do?formRender=cx&page=1&optionType=V2&searchcx=%D4%C1%CA%B3%D2%A9%BC%E0%D0%B5%28%D7%BC%29%D7%D62013%B5%DA2400635%BA%C5" target="_blank">批准文号查询</a></dd>
 				<dt>类别:</dt><dd>迈瑞Mindray</dd>
 				<dt>型号:</dt><dd>BC-1800</dd>
+				<dt>产品注册名:</dt><dd></dd>
+				<dt>产品简称:</dt><dd>迈瑞全自动</dd>
+				<dt>品牌:</dt><dd>迈瑞</dd>
+				<dt>产地:</dt><dd>上海</dd>
+				<dt>产品类别:</dt><dd>临床检验</dd>
+				<dt>适用科室:</dt><dd>内科</dd>
+				<dt>规格:</dt><dd></dd>
+				<dt>单位:</dt><dd>台</dd>
 			</dl>
+			<button type="button" class="btn btn-primary ml" data-toggle="modal" data-target="#myModal">代理商查看</button>
 		</div>
 	</div>
 	<div class="row">
@@ -384,7 +416,113 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">代理商查看</h4>
+      </div>
+      <div class="modal-body agent-show">
+	      <dl class="dl-horizontal">
+	      	<dt>产品名称:</dt><dd>迈瑞全自动</dd>
+	      	<dt>注册号:</dt><dd>20153660001</dd>
+	      	<dt>区域</dt><dd>			
+		      	<div class="info">
+					<div>
+						<select id="s_province" name="s_province"></select>  
+					    <select id="s_city" name="s_city" ></select>  
+					    <select id="s_county" name="s_county"></select>
+					    
+					    <script type="text/javascript">_init_area();</script>
+					</div>
+				    <div id="show"></div>
+				</div>
+			</dd>
+	      </dl>
 
+	      <div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">当前代理区域</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">正在招商区域</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content " >
+    <div role="tabpanel" class="tab-pane active" id="home">
+    	<table class="table table-striped table-hover">
+    		<thead>
+    			<th>代理公司</th>
+    			<th>代理区域</th>
+    			<th>联系人</th>
+    			<th>电话</th>
+    			<th>详情</th>
+    		</thead>
+    		<tbody>
+    			<tr>
+    				<td>上海正大代理公司</td>
+    				<td>上海</td>
+    				<td>王小二</td>
+    				<td>12345678901</td>
+    				<td><a href="">详情</a></td>
+    			</tr>
+    			<tr>
+    				<td>上海正大代理公司</td>
+    				<td>上海</td>
+    				<td>王小二</td>
+    				<td>12345678901</td>
+    				<td><a href="">详情</a></td>
+    			</tr>
+    			<tr>
+    				<td>上海正大代理公司</td>
+    				<td>上海</td>
+    				<td>王小二</td>
+    				<td>12345678901</td>
+    				<td><a href="">详情</a></td>
+    			</tr>    			    			
+    		</tbody>
+    	</table>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="profile">
+    	<table class="table table-striped table-hover">
+    		<thead>
+    			<th>招商区域</th>
+    			<th>招商日期</th>
+    			<th>申请</th>
+    		</thead>
+    		<tbody>
+    			<tr>
+    				<td>上海</td>
+    				<td>2017-7-31</td>
+    				<td><a href="">申请</a></td>
+    			</tr>
+    			<tr>
+    				<td>上海</td>
+    				<td>2017-7-31</td>
+    				<td><a href="">申请</a></td>
+    			</tr>
+    			<tr>
+    				<td>上海</td>
+    				<td>2017-7-31</td>
+    				<td><a href="">申请</a></td>
+    			</tr>    			
+    		</tbody>
+    	</table>
+    </div>
+  </div>
+
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script type="text/javascript" src="jquery-2.1.1/jquery.js"></script>
 <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
@@ -418,6 +556,15 @@
 			}
 		})
 	})
+
+// 省市县
+var Gid  = document.getElementById ;
+var showArea = function(){
+	Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" + 	
+	Gid('s_city').value + " - 县/区" + 
+	Gid('s_county').value + "</h3>"
+							}
+Gid('s_county').setAttribute('onchange','showArea()');
 </script>
 </body>
 </html>

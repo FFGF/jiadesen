@@ -25,6 +25,7 @@
 	</style>
 </head>
 <body>
+<div class="contactWe"></div>
 <!-- 最顶部的navbar -->
 <nav class="navbar navbar-default navbar-fixed-top first-bar">
   <div class="container">
@@ -36,7 +37,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">欢迎光临安必选医械网</a>
+      <a class="navbar-brand" href="index.html">欢迎光临安必选医乐网</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -101,7 +102,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="third-bar">
       <ul class="nav navbar-nav">
-      	<li class="header-category"><a href="">产品分类</a>
+<!--       	<li class="header-category"><a href="">产品分类</a>
 	      	<div class="active-menu">
 					    <ul class="dropdown-menu-two-level" role="menu">
 					        <li data-submenu-id="submenu-patas"><a href="">临床检验</a></li>
@@ -113,10 +114,10 @@
 					        <li data-submenu-id="submenu-gabon"><a href="">医用光学</a></li>
 					        <li data-submenu-id="submenu-king-colobus"><a href="">医用耗材</a></li>
 					    </ul>
-					    <!-- 面板开始 -->
+					  
 						<div dataurl="./popover-menu.html" id="popover-menu">
-						<!-- 面板结束 -->
-      	</li>
+						
+      	</li> -->
         <li class="active"><a href="index.html">首页 <span class="sr-only">(current)</span></a></li>
         <li class="header-category">
         	<a href="findProduct.html" id="find-product">找产品</a>	
@@ -126,21 +127,31 @@
         <li class="dropdown" id="third-dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">找渠道 <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="generalizeList.html">招商查询信息</a></li>
-            <li><a href="procurementList.html">采购查询信息</a></li>
-            <li><a href="agencyList.html">代理申请信息</a></li>
+            <!-- <li><a href="generalizeList.html">招商查询信息</a></li> -->
+            <li><a href="agencyList.html">区域代理信息</a></li>
+            <li><a href="directSellingHospital.html">直销医院信息</a></li>
+            <li><a href="procurementList.html">医院需求信息</a></li>
           </ul>
         </li>
 
         <li class="dropdown" id="fouth-dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">找物流<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">找服务<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="">找仓储</a></li>
-            <li><a href="">找配送</a></li>
+            <li><a href="">物流服务</a></li>
+            <li><a href="">融资服务</a></li>
+            <li><a href="">商务服务</a></li>
           </ul>
         </li>
 
-        <li><a href="#">找融资</a></li>
+        <li><a href="#">找人才</a></li>
+
+        <li class="dropdown" id="fifth-dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">找资讯<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="">法律法规</a></li>
+            <li><a href="">招标信息</a></li>
+          </ul>
+        </li>        
 
         <li><a href="#">关于我们</a></li>
        
@@ -166,7 +177,7 @@
 <div class="container">
 	<div class="row daohang">
 		<div class="col-md-12">
-			首页 > 找渠道 > 采购查询信息
+			首页 > 找渠道 > 医院需求信息
 		</div>
 	</div>
 </div>
@@ -198,9 +209,10 @@
 				<thead>
 					<tr>
 						<td>产品名称</td>
+						<td>产品分类</td>
+						<td>使用科室</td>
 						<td>交货地区</td>
-						<td>交货日期</td>
-						<td>购买数量</td>
+						<td>有效期</td>
 						<td>医院名称</td>
 						<td>联系人</td>
 						<td>联系电话</td>
@@ -210,30 +222,33 @@
 				<tbody>
 					<tr>
 						<td>金疤不回液体创面保护膜_医用烧伤烫伤敷料</td>
+						<td>临床检验</td>
+						<td>内科</td>
 						<td>上海</td>
-						<td>2017-08-20</td>
-						<td>10</td>
-						<td>上海市第一人民医院</td>
+						<td>3天</td>
+						<td>上海第一人民医院</td>
 						<td>王小二</td>
 						<td>12345678901</td>
 						<td><a href="">详情</a></td>
 					</tr>
 					<tr>
 						<td>金疤不回液体创面保护膜_医用烧伤烫伤敷料</td>
+						<td>临床检验</td>
+						<td>内科</td>
 						<td>上海</td>
-						<td>2017-08-20</td>
-						<td>10</td>
-						<td>上海市第一人民医院</td>
+						<td>3天</td>
+						<td>上海第一人民医院</td>
 						<td>王小二</td>
 						<td>12345678901</td>
 						<td><a href="">详情</a></td>
 					</tr>
-					<tr>
+															<tr>
 						<td>金疤不回液体创面保护膜_医用烧伤烫伤敷料</td>
+						<td>临床检验</td>
+						<td>内科</td>
 						<td>上海</td>
-						<td>2017-08-20</td>
-						<td>10</td>
-						<td>上海市第一人民医院</td>
+						<td>3天</td>
+						<td>上海第一人民医院</td>
 						<td>王小二</td>
 						<td>12345678901</td>
 						<td><a href="">详情</a></td>

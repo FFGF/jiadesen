@@ -3,11 +3,12 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>推广记录</title>
+		<title>产品信息</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../Public/CSS/liu.css">
+		<link rel="stylesheet" href="../Public/CSS/zh.css">
 
 	</head>
 
@@ -23,7 +24,7 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
-				    </button>
+				     </button>
 					<a class="navbar-brand" href="../index.html"><img alt="安必选医疗" src="../recourse/Image/Logo.png"></a>
 				</div>
 
@@ -40,7 +41,7 @@
 						</li>
 
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>系统公告</b> <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">系统公告 <span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li>
 									<a href="#">公告一</a>
@@ -77,51 +78,87 @@
 
 						<div class="infoclass">
 							<!--我的账号  下面部分-->
-							<h4>账户管理</h4>
+							<h4>我的账户</h4>
 							<ul>
 								<li>
 									<a href="repwd.html">修改密码</a>
 								</li>
 								<li>
-									<a href="info.html">个人信息</a>
+									<a href="info.html">我的资料</a>
 								</li>
 								<li>
 									<a href="security.html">账户安全</a>
 								</li>
+								<li>
+									<a href="myCoupon.html">我的点券</a>
+								</li>
+								<li>
+									<a href="payHistory.html">充值记录</a>
+								</li>
+								<li>
+									<a href="myIntegral.html">我的积分</a>
+								</li>
 							</ul>
 
-							<h4>信息发布</h4>
+							<h4>我的发布</h4>
 							<ul>
 								<li>
-									<a href="productsLaunch.html">产品发布</a>
+									<a href="activities.html">优惠活动</a>
 								</li>
+
 								<li>
-									<a href="merchants.html">发布对外招商信息</a>
+									<a href=" productsInfo.html">产品信息</a>
 								</li>
-							</ul>
+
+								<li>
+									<a href="EmployInfo.html">招聘信息</a>
+								</li>
+
+								<!-- <li>
+									<a href="myAgents.html">我的代理商</a>
+								</li> -->
+
+
+								<li>
+									<a href="merchantsRecords.html">找CSO</a>
+								</li>
+
+								<li>
+									<a href="conferences.html">学术会议</a>
+								</li>
 							
-							<h4>信息反馈</h4>
-							<ul>
+								<!-- 
 								<li>
-									<a href="hospitalPush.html">医疗机构推送信息</a>
+									<a href="CSOapply.html">区域代理请求信息</a>
 								</li>
+
 								<li>
-									<a href="CSOapply.html">CSO请求代理信息</a>
+									<a href="CSOhospital.html">直销医院请求信息</a>
 								</li>
-							</ul>
-							
-							
-							<h4>信息查询</h4>
-							<ul>								
-								<li>
-									<a href="merchantsRecrods.html">产品招商记录</a>
-								</li>
+
 								
 								<li>
-									<a href="productsRecords.html">产品发布记录</a>
+									<a href="myInstitutions.html">我的直销机构</a>
+								</li>
+														
+							
+								 -->
+								
+							</ul>
+
+							<h4>我的反馈</h4>
+							<ul>
+								<li>
+									<a href="hospitalPush.html">医疗机构反馈</a>
 								</li>
 								<li>
-									<a href="myAgents.html">我的代理商</a>
+									<a href="#">CSO反馈</a>
+								</li>
+								<li>
+									<a href="EmployFeedback.html">招聘反馈</a>
+								</li>
+								<li>
+									<a href="conferencesPush.html">学术会议反馈</a>
 								</li>
 							</ul>
 
@@ -137,64 +174,117 @@
 					</div>
 
 				</div>
+
 				<!--左侧手风琴框-->
 
-				<div class="col-md-10">
+				<div class="col-md-10" id="g_info">
 					<!--右侧-->
-
 					<div class="row">
 
-						<div class="col-md-1">
-						</div>
-
-						<div class="col-md-6">
+						<div class="col-md-1"></div>
+						<div class="col-md-5">
 							<div class="input-group inputsize">
 								<input type="text" class="form-control" placeholder="请输入关键字...">
 								<span class="input-group-btn">
-				        			    <button class="btn btn-default" type="button">搜索</button>
-				      			</span>
+		        						<button class="btn btn-default" type="button">搜索</button>
+		      					</span>
 							</div>
 							<!-- /input-group -->
 						</div>
 						<!-- /.col-lg-6 -->
-						<div class="col-md-2">
-							
-						</div>
+						<div class="col-md-1"></div>
 
-						<div class="col-md-3">
+						<div class="col-md-5">
+							<a href="productsLaunch.html"><button class="btn btn-default" type="button" style="width: 108px;" id="" aria-haspopup="true">产品信息发布
+							</button></a>
+
+
+							<button class="btn btn-default" data-toggle="modal" data-target="#myModal" type="button" style="width: 108px;" id="b1" aria-haspopup="true">撤回
+							</button>
 						</div>
+						
+						<div class="col-md-6">
+							
+
+							<!-- 模态框（Modal） -->
+							<div class="modal fade" id="myModal" style="margin-top: 200px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+												&times;
+											</button>
+											<h4 class="modal-title" id="myModalLabel">提示</h4>
+										</div>
+										<div class="modal-body">
+											确认是否撤回已选记录？
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">撤回
+											</button>
+											<button type="button" class="btn btn-default">
+											我再想想
+											</button>
+										</div>
+									</div>
+									<!-- /.modal-content -->
+								</div>
+								<!-- /.modal -->
+							</div>
+						</div>
+						<!--col-md-2 dropclass-->
 
 					</div>
 					<!-- /.row -->
 
 					<div class="row">
-						<table class="table table-striped table-hover product-list-table">
+						<table class="table table-striped table-hover product-list-table" id="goods_1">
 							<thead class="tablehead">
-								<th>推广时间</th>
-								<th>产品名称</th>
-								<th>地区</th>
-								<th>产品分类</th>
-								<th>科室</th>
+								<th class="selectclass"> </th>
+								<th>序号</th>
+								<th>发布状态</th>
+								<th>产品注册名称</th>
+								<th>产品简称</th>
+								<th>品牌</th>
+								<th>产地</th>
+								<th>产品类别</th>
+								<th>适用科室</th>
+								<th>产品注册证号</th>
+								<th>发布日期</th>
+								<th>关注度</th>
 							</thead>
 
 							<tbody>
 								<tr>
 									<!-- 第一条信息（一行）-->
-									<td>2017-2-14</td>
-									<td><a href="contactInformation.html">普利生全自动血凝分析仪C2000-A</a></td>
-									<td>上海市</td>
-									<td>血凝分析仪</td>
-									<td>血液科</td>
+									<td><input type="checkbox" name="item1" value="value1"></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
 								</tr>
 
 								<tr>
 									<!-- 第二条信息（一行）-->
-									<td>2017-6-3</td>
-									<td><a href="contactInformation">TECO德高 半自动血凝仪 M1</a></td>
-									<td>南京市</td>
-									<td>半自动血凝仪</td>
-									<td>申血液科</td>
-
+									<td><input type="checkbox" name="item2" value="value2"></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
 								</tr>
 
 							</tbody>
@@ -207,11 +297,6 @@
 						<!--third-row-->
 						<hr class="hrclass">
 						<div class="col-md-2 quanxuan1">
-							<!--
-			<label for class="checkbox selectallclass">
-				<input type="checkbox" name="select_all" onclick="xxfunction()">全部选择(可删除，没必)
-			</label>
-			-->
 
 						</div>
 						<!--col-md-3-->
@@ -325,7 +410,7 @@
 
 		<script type="text/javascript" src="../jquery-2.1.1/jquery.js"></script>
 		<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-
+		
 	</body>
 
 </html>

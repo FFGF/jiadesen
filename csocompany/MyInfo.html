@@ -578,15 +578,15 @@ $(document).ready(function(){
 });
 
 
-
-
 var Gid  = document.getElementById ;
 var showArea = function(){
 	Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" + 	
 	Gid('s_city').value + " - 县/区" + 
 	Gid('s_county').value + "</h3>"
-							}
+							}						
 Gid('s_county').setAttribute('onchange','showArea()');
+
+// Gid.call(document, 's_county').setAttribute('onchange','showArea()')
 
 
 //参考该页面的
@@ -612,7 +612,6 @@ function selectedToRight(){
         }
     }
 }
-
 // 选中添加到左边
 function selectedToLeft(){
     
@@ -634,8 +633,6 @@ function selectedToLeft(){
         }
     }
 }
-
-
 function selectedToRight2(){
     // 获取select2标签
     var select4 = document.getElementById("select4");
@@ -655,7 +652,6 @@ function selectedToRight2(){
         }
     }
 }
-
 // 选中添加到左边
 function selectedToLeft2(){
     
@@ -683,6 +679,8 @@ function selectedToLeft2(){
 function change5() {
     var pic = document.getElementById("preview5"),
         file = document.getElementById("f5");
+
+
 
     var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
 
