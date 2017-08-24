@@ -369,3 +369,15 @@ tr td .default-info{
 2017-8-23
  */
 .rightchoosecp { width: 82px; margin-top: 96px; margin-left: 25px; }
+
+
+/*
+2017-8-24 file upload
+ */
+form .fileuploadclass{
+border: 1px solid; height: 35px;
+margin-left: 412px;
+margin-top: -128px;
+width: 90px;
+border-color: #ccc;
+}
