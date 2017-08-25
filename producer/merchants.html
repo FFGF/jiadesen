@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>区域代理招商信息</title>
+		<title>区域代理招商信息-生产商</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
@@ -176,6 +176,16 @@
 					<table class="table condition-table" style="margin-top: 0px;">
 						<!--包括渠道、。。。区域什么的-->
 						<tbody>
+							<tr>
+								<td class="condition-title">CSO类型</td>
+								<td>
+									<select class="form-control" id="info_usertype" style="width: 340px;" oninput="chose()">
+										<option disabled selected value>所属类型</option>
+										<option>CSO公司</option>
+										<option>CSO专员</option>
+									</select>
+								</td>
+							</tr>
 
 							<tr>
 								<td class="condition-title">产品类别</td>
@@ -223,10 +233,11 @@
 							</tr>
 
 
+
 						</tbody>
 					</table>
 
-					<div class="row leftright_part" style="margin-bottom: 0px;">
+					<!-- <div class="row leftright_part" style="margin-bottom: 0px;">
 						<div class="part1 condition-title">
 							医疗机构
 						</div>
@@ -250,6 +261,65 @@
 							<select id="select2" multiple="multiple" class="select1class">
 								<option>上海市第九人民医院</option>
 							</select>
+						</div>
+					</div> -->
+
+					<div class="row leftright_part" style="margin-bottom: 0px;">
+						<div class="part1 condition-title">
+							医疗机构
+						</div>
+
+
+						<div class="part2">
+							<select id="select1" multiple="multiple" class="select1class">
+				                <option>北京胸科医院（中央结核病研究所、结核病院）</option>
+				                <option>北京市通州区中医院</option>
+				                <option>北京市通州区中医院</option>
+				                <option>北京市通州区中医医院</option>
+				                <option>北京通州潞河医院</option>
+				                <option>北京市通州区中西医结合骨伤医院北京市通州区工业品公司运通医院</option>
+				                <option>中国人民解放军第二六三医院（解放军263医院）</option>
+				                <option>北京市通州区妇幼保健院</option>
+				                <option>北京市通州区新华医院</option>
+				                <option>北京市通州区中西医结合骨伤医院（北京市通州区工业品公司运通医院）</option>
+				                <option>北京市通州区中西医结合骨伤医院（北京市通州区工业品公司运通医院）</option>
+				                <option>北京市通州区第二医院</option>
+				                <option>北京市通州区第二医院</option>
+				                <option>核工业北京化工冶金研究院职工医院</option>		         
+		                	</select>
+						</div>
+
+
+						<div class="part3">
+							<input class="rightchoose" type="button" value=">>" onclick="selectedToRight();"/><br/>
+							<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft();"/><br/>
+
+							<input data-target="#modal1" data-toggle="modal" data-target=".bs-example-modal-sm" class="addchoose" type="button" value="+" onclick="appendOption();"/><br/>
+
+						</div>
+
+						<div id="modal1" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+										<div class="modal-dialog modal-sm" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+										        	<h4 class="modal-title">新添加医院</h4>
+										        </div>
+										      	<div class="modal-body">
+										        	<input id="newdepart1" placeholder="请输入新医院名称"></input>
+										      	</div>
+										      	<div class="modal-footer">
+											        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											        <button id="savenewdepart" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+											    </div>
+											</div>
+										</div>
+						</div>
+
+
+						<div class="part4">
+							<select id="select2" multiple="multiple" class="select1class">
+		                		<option>北京京都医院</option>
+		                	</select>
 						</div>
 					</div>
 
@@ -349,6 +419,41 @@
 		<script type="text/javascript" src="../jquery-2.1.1/jquery.js"></script>
 		<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../Public/JS/zh2.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function(){
+			  $(".addchoose").click(function(){
+			    
+			  });
+
+			   $("#savenewdepart").click(function(){
+			   	 var inputcontent = $("#newdepart1").val();
+			     //console.log(inputcontent);
+
+			     var con = $("<option>vvv</option>");
+			     con.val(inputcontent);
+			     //console.log(con.val());
+			     //$("#select4").append(con);
+			     $("#select2").append('<option value="'+inputcontent+'">'+inputcontent+'</option>');
+			   });
+
+			   $("#savenewdepart2").click(function(){
+			   	 var inputcontent = $("#newdepart2").val();
+			     //console.log(inputcontent);
+
+			     var con = $("<option>vvv</option>");
+			     con.val(inputcontent);
+			     //console.log(con.val());
+			     //$("#select4").append(con);
+			     $("#select4").append('<option value="'+inputcontent+'">'+inputcontent+'</option>');
+			   });
+
+			});
+
+
+
+
+		</script>
 	</body>
 
 </html>

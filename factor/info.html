@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
-        <title>我的资料</title>
+        <title>我的资料-一级代理</title>
         <meta charset="UTF-8">
         
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +9,7 @@
 		<link rel="stylesheet" href="../Public/CSS/liu.css">
 		<link rel="stylesheet" href="../Public/CSS/bootstrap-imageupload.css">
 
-        	
-        <style>
-            body {
-                padding-top: 70px;
-            }
-
-            .imageupload {
-                margin: 20px 0;
-            }
-        </style>
+       
     </head>
 
 	<body>
@@ -238,7 +229,7 @@
 
 							</tbody>
 						</table>
-
+<!-- 
 						<div class="row leftright_part" style="margin-bottom: 0px;">
 							<div class="part1 condition-title">
 								品牌产品
@@ -264,68 +255,130 @@
 									<option>ddd析透仪</option>
 								</select>
 							</div>
+						</div> -->
+
+
+						<div class="row leftright_part" style="margin-bottom: 0px;">
+							<div class="part1 condition-title">
+								品牌产品
+							</div>
+
+
+							<div class="part2">
+								<select id="select1" multiple="multiple" class="select1class">
+					                <option>xxx凝血仪</option>
+									<option>yyy支架</option>
+									<option>zzz呼吸器</option>
+									<option>aaa检测仪</option>
+									<option>其他</option>		         
+			                	</select>
+							</div>
+
+
+							<div class="part3">
+								<input class="rightchoose" type="button" value=">>" onclick="selectedToRight();"/><br/>
+								<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft();"/><br/>
+
+								<input data-target="#modal1" data-toggle="modal" data-target=".bs-example-modal-sm" class="addchoose" type="button" value="+" onclick="appendOption();"/><br/>
+
+							</div>
+
+							<div id="modal1" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+											<div class="modal-dialog modal-sm" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+											        	<h4 class="modal-title">新添加产品</h4>
+											        </div>
+											      	<div class="modal-body">
+											        	<input id="newdepart1" placeholder="请输入新产品"></input>
+											      	</div>
+											      	<div class="modal-footer">
+												        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												        <button id="savenewdepart" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+												    </div>
+												</div>
+											</div>
+							</div>
+
+
+							<div class="part4">
+								<select id="select2" multiple="multiple" class="select1class">
+			                		<option>ddd析透仪</option>
+			                	</select>
+							</div>
 						</div>
 
-						<table class="table condition-table" style="margin-top: 0px;">
-							<!--包括渠道、。。。区域什么的-->
-							<tbody>
 
-								<tr>
-									<td class="condition-title">营业执照</td>
-									<td>
-										<div class="imageupload panel panel-default" style="width:340px;">
+						<div class="row leftright_part">
+							<div class="part_zhizhao condition-title">
+								营业执照
+							</div>
 
-										<div class="file-tab panel-body">
-											<label class="btn btn-default btn-file">
-				                       			<span>浏览</span>
-				                       			<!-- The file is stored here. -->
-				                        			<input type="file" name="image-file_1">
-				                    			</label>
-											<button type="button" class="btn btn-default">Remove</button>
-										</div>
-										<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_1" class="btn btn-default">上传</button></P>
-									</div>
-									</td>
-								</tr>
+							<div class="zhizhao-size">
 
-								<tr>
-									<td class="condition-title">医疗器械经营许可证</td>
-									<td>
-										<div class="imageupload panel panel-default" style="width:340px;">
 
-										<div class="file-tab panel-body">
-											<label class="btn btn-default btn-file">
-				                       			<span>浏览</span>
-				                       			<!-- The file is stored here. -->
-				                        			<input type="file" name="image-file_1">
-				                    			</label>
-											<button type="button" class="btn btn-default">Remove</button>
-										</div>
-										<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_1" class="btn btn-default">上传</button></P>
-									</div>
-									</td>
-								</tr>
+								<form enctype="multipart/form-data" name="form3">
+								    <p class="upload_p">上传营业执照:&nbsp;&nbsp;&nbsp;</p>	
+								    <input id="f3" type="file" name="f3" onchange="change3()" />
+								   
+								    <p"></p>
+								    <p class="yulan_p">预览:</p>
 
-								<tr>
-									<td class="condition-title">代理授权书</td>
-									<td>
-										<div class="imageupload panel panel-default" style="width:340px;">
+									<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
 
-										<div class="file-tab panel-body">
-											<label class="btn btn-default btn-file">
-				                       			<span>浏览</span>
-				                       			<!-- The file is stored here. -->
-				                        			<input type="file" name="image-file_1">
-				                    			</label>
-											<button type="button" class="btn btn-default">Remove</button>
-										</div>
-										<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_1" class="btn btn-default">上传</button></P>
-									</div>
-									</td>
-								</tr>
+								    <img id="preview3" alt="" name="pic" />
+								</form>
+								
+							</div>
+						</div>
 
-							</tbody>
-						</table>
+						<div class="row leftright_part">
+							<div class="part_zhizhao condition-title">
+								医疗器械经营许可证
+							</div>
+
+							<div class="zhizhao-size">
+
+
+								<form enctype="multipart/form-data" name="form3">
+								    <p class="upload_p">上传许可证:&nbsp;&nbsp;&nbsp;</p>	
+								    <input id="f3" type="file" name="f3" onchange="change3()" />
+								   
+								    <p"></p>
+								    <p class="yulan_p">预览:</p>
+
+									<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
+
+								    <img id="preview3" alt="" name="pic" />
+								</form>
+								
+							</div>
+						</div>
+
+						<div class="row leftright_part">
+								<div class="part_zhizhao condition-title">
+									代理授权书
+								</div>
+
+								<div class="zhizhao-size">
+
+
+									<form enctype="multipart/form-data" name="form3">
+									    <p class="upload_p">上传授权书:&nbsp;&nbsp;&nbsp;</p>	
+									    <input id="f3" type="file" name="f3" onchange="change3()" />
+									   
+									    <p"></p>
+									    <p class="yulan_p">预览:</p>
+
+										<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
+
+									    <img id="preview3" alt="" name="pic" />
+									</form>
+									
+								</div>
+						</div>
+
+
 
 					</div>
 				</div>
@@ -412,6 +465,250 @@
 			var $imageupload = $('.imageupload');
 			$imageupload.imageupload();
 		</script>
+
+		<script type="text/javascript">
+			
+			$(document).ready(function(){
+			  $(".addchoose").click(function(){
+			    
+			  });
+
+			   $("#savenewdepart").click(function(){
+			   	 var inputcontent = $("#newdepart1").val();
+			     //console.log(inputcontent);
+
+			     var con = $("<option>vvv</option>");
+			     con.val(inputcontent);
+			     //console.log(con.val());
+			     //$("#select4").append(con);
+			     $("#select2").append('<option value="'+inputcontent+'">'+inputcontent+'</option>');
+			   });
+
+			   $("#savenewdepart2").click(function(){
+			   	 var inputcontent = $("#newdepart2").val();
+			     //console.log(inputcontent);
+
+			     var con = $("<option>vvv</option>");
+			     con.val(inputcontent);
+			     //console.log(con.val());
+			     //$("#select4").append(con);
+			     $("#select4").append('<option value="'+inputcontent+'">'+inputcontent+'</option>');
+			   });
+
+			});
+
+
+		</script>
+
+		<script type="text/javascript">
+
+
+
+
+
+function change() {
+    var pic = document.getElementById("preview"),
+        file = document.getElementById("f");
+
+
+
+    var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
+
+     // gif在IE浏览器暂时无法显示
+     if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
+         alert("图片的格式必须为png或者jpg或者jpeg格式！"); 
+         return;
+     }
+     var isIE = navigator.userAgent.match(/MSIE/)!= null,
+         isIE6 = navigator.userAgent.match(/MSIE 6.0/)!= null;
+
+     if(isIE) {
+        file.select();
+        var reallocalpath = document.selection.createRange().text;
+
+        // IE6浏览器设置img的src为本地路径可以直接显示图片
+         if (isIE6) {
+            pic.src = reallocalpath;
+         }else {
+            // 非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现
+             pic.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src=\"" + reallocalpath + "\")";
+             // 设置img的src为base64编码的透明图片 取消显示浏览器默认图片
+             pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+         }
+     }else {
+        html5Reader(file);
+     }
+}
+
+ function html5Reader(file){
+     var file = file.files[0];
+     var reader = new FileReader();
+     reader.readAsDataURL(file);
+     reader.onload = function(e){
+         var pic = document.getElementById("preview");
+         pic.src=this.result;
+     }
+ }
+
+
+
+function change2() {
+    var pic = document.getElementById("preview2"),
+        file = document.getElementById("f2");
+
+    var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
+
+     // gif在IE浏览器暂时无法显示
+     if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
+         alert("图片的格式必须为png或者jpg或者jpeg格式！"); 
+         return;
+     }
+     var isIE = navigator.userAgent.match(/MSIE/)!= null,
+         isIE6 = navigator.userAgent.match(/MSIE 6.0/)!= null;
+
+     if(isIE) {
+        file.select();
+        var reallocalpath = document.selection.createRange().text;
+
+        // IE6浏览器设置img的src为本地路径可以直接显示图片
+         if (isIE6) {
+            pic.src = reallocalpath;
+         }else {
+            // 非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现
+             pic.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src=\"" + reallocalpath + "\")";
+             // 设置img的src为base64编码的透明图片 取消显示浏览器默认图片
+             pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+         }
+     }else {
+        html5Reader2(file);
+     }
+}
+
+ function html5Reader2(file){
+     var file = file.files[0];
+     var reader = new FileReader();
+     reader.readAsDataURL(file);
+     reader.onload = function(e){
+         var pic = document.getElementById("preview2");
+         pic.src=this.result;
+     }
+ }
+
+
+function change3() {
+    var pic = document.getElementById("preview3"),
+        file = document.getElementById("f3");
+
+    var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
+
+     // gif在IE浏览器暂时无法显示
+     if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
+         alert("图片的格式必须为png或者jpg或者jpeg格式！"); 
+         return;
+     }
+     var isIE = navigator.userAgent.match(/MSIE/)!= null,
+         isIE6 = navigator.userAgent.match(/MSIE 6.0/)!= null;
+
+     if(isIE) {
+        file.select();
+        var reallocalpath = document.selection.createRange().text;
+
+        // IE6浏览器设置img的src为本地路径可以直接显示图片
+         if (isIE6) {
+            pic.src = reallocalpath;
+         }else {
+            // 非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现
+             pic.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src=\"" + reallocalpath + "\")";
+             // 设置img的src为base64编码的透明图片 取消显示浏览器默认图片
+             pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+         }
+     }else {
+        html5Reader3(file);
+     }
+}
+
+ function html5Reader3(file){
+     var file = file.files[0];
+     var reader = new FileReader();
+     reader.readAsDataURL(file);
+     reader.onload = function(e){
+         var pic = document.getElementById("preview3");
+         pic.src=this.result;
+     }
+ }
+
+
+ function change4() {
+    var pic = document.getElementById("preview4"),
+        file = document.getElementById("f4");
+
+    var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
+
+     // gif在IE浏览器暂时无法显示
+     if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
+         alert("图片的格式必须为png或者jpg或者jpeg格式！"); 
+         return;
+     }
+     var isIE = navigator.userAgent.match(/MSIE/)!= null,
+         isIE6 = navigator.userAgent.match(/MSIE 6.0/)!= null;
+
+     if(isIE) {
+        file.select();
+        var reallocalpath = document.selection.createRange().text;
+
+        // IE6浏览器设置img的src为本地路径可以直接显示图片
+         if (isIE6) {
+            pic.src = reallocalpath;
+         }else {
+            // 非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现
+             pic.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src=\"" + reallocalpath + "\")";
+             // 设置img的src为base64编码的透明图片 取消显示浏览器默认图片
+             pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+         }
+     }else {
+        html5Reader4(file);
+     }
+}
+
+ function html5Reader4(file){
+     var file = file.files[0];
+     var reader = new FileReader();
+     reader.readAsDataURL(file);
+     reader.onload = function(e){
+         var pic = document.getElementById("preview4");
+         pic.src=this.result;
+     }
+ }
+
+
+function Removefunction(){
+	//document.getElementById("preview").parentNode.removeChild(document.getElementById("preview"));
+	var file = $("#f");  
+    file.replaceWith(file.clone());
+	$("#preview").attr("src","../recourse/Image/whitespace.jpg");
+	$("#preview").style("border","0 px");
+}
+function Removefunction2(){
+	var file = $("#f2");  
+    file.replaceWith(file.clone());
+	$("#preview2").attr("src","../recourse/Image/whitespace.jpg");
+	$("#preview2").style("border","0 px");
+}
+function Removefunction3(){
+	var file = $("#f3");  
+    file.replaceWith(file.clone());
+	$("#preview3").attr("src","../recourse/Image/whitespace.jpg");
+	$("#preview3").style("border","0 px");
+}
+function Removefunction4(){
+	var file = $("#f4");  
+    file.replaceWith(file.clone());
+	$("#preview4").attr("src","../recourse/Image/whitespace.jpg");
+	$("#preview4").style("border","0 px");
+}
+
+
+</script>
 	</body>
 	
 

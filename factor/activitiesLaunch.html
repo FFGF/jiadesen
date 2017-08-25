@@ -3,12 +3,14 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>产品信息发布-一级代理</title>
+		<title>优惠信息发布-一级代理</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../Public/CSS/liu.css">
 		<link rel="stylesheet" href="../Public/CSS/bootstrap-imageupload.css">
+		<link rel="stylesheet" type="text/css" href="../Public/CSS/BeatPicker.min.css"> 
+
 	</head>
 
 	<body>
@@ -228,11 +230,31 @@
 										<input class="form-control" type="text" style="width: 200px;">
 									</td>
 								</tr>
+
+								<tr>
+									<!--第五行-->
+									<td class="condition-title">数量</td>
+									<td>
+										<input class="form-control" type="text" style="width: 200px;">
+									</td>
+									<td class="condition-title"></td>
+									<td>
+										
+									</td>
+								</tr>
 							</tbody>
 						</table>
 
 						<table class="table condition-table" style="margin-top: 0px;margin-bottom: 0px;">
 							<tbody>
+
+								<tr>
+									<td class="condition-title">优惠时间</td>
+									<td>
+										<input type="text" data-beatpicker="true" data-beatpicker-position="['*','*']" data-beatpicker-range="true">
+									</td>
+								</tr>
+
 								<tr>
 									<!--第五行-->
 									<td class="condition-title">产品注册证号</td>
@@ -321,7 +343,6 @@
 									</td>
 								</tr>
 
-								
 
 							</tbody>
 						</table>
@@ -402,13 +423,14 @@
  -->		<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 		<script src="../Public/JS/bootstrap-imageupload.js"></script>
 		<script type="text/javascript" src="../Public/JS/zh2.js"></script>
+		<script src="../Public/JS/BeatPicker.min.js"></script> 
+
 
 		<script>
 			var $imageupload = $('.imageupload');
 			$imageupload.imageupload();
 		</script>
 
-		
 		<script type="text/javascript">
 			
 			$(document).ready(function(){

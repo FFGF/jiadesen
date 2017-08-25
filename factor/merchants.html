@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>区域代理招商信息</title>
+		<title>区域代理招商信息-一级代理</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
@@ -181,6 +181,16 @@
 					<table class="table condition-table" style="margin-top: 0px;">
 						<!--包括渠道、。。。区域什么的-->
 						<tbody>
+							<tr>
+								<td class="condition-title">CSO类型</td>
+								<td>
+									<select class="form-control" id="info_usertype" style="width: 340px;" oninput="chose()">
+										<option disabled selected value>所属类型</option>
+										<option>CSO公司</option>
+										<option>CSO专员</option>
+									</select>
+								</td>
+							</tr>
 
 							<tr>
 								<td class="condition-title">产品类别</td>

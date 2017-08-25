@@ -3,12 +3,25 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>学术会议</title>
+		<title>学术会议-生产商</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../Public/CSS/liu.css">
 		<link rel="stylesheet" href="../Public/CSS/zh.css">
+		<style type="text/css">
+			table{
+   
+    				table-layout:fixed;/* 只有定义了表格的布局算法为fixed，下面td的定义才能起作用。 */
+			}
+			.lText{
+			    width:100px;
+			 /*   word-break:keep-all;/* 不换行 */
+			    white-space:nowrap;/* 不换行 */
+			    overflow:hidden; /*内容超出宽度时隐藏超出部分的内容 */
+			    text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+			}
+		</style>
 
 	</head>
 
@@ -200,7 +213,7 @@
 					<!-- /.row -->
 
 					<div class="row">
-						<table class="table table-striped table-hover product-list-table" id="goods_1">
+						<table class="table table-striped table-hover product-list-table" id="conf">
 							<thead class="tablehead">
 								
 								<th>学术会议名称</th>
@@ -208,6 +221,7 @@
 								<th>地点</th>
 								<th>专业</th>
 								<th>会议内容</th>
+								<th>详情信息</th>
 								
 							</thead>
 
@@ -219,7 +233,9 @@
 									<td>2016-08-01</td>
 									<td>上海市会议中心</td>
 									<td>内科</td>
-									<td>心血管疾病</td>
+									<td class="lText">心血管疾病啊多个地方都是公司的年纪谁都阿凡达诉讼法方式阿斯顿个萨打电话啊啥的俄方违法俄方千万千万千万的哈工大
+									</td>
+									<td><a href="conInfo.html">查看详情</a></td>
 									
 									
 								</tr>
@@ -231,9 +247,13 @@
 									<td>2017-07-25</td>
 									<td>上海市新国际会议中心</td>
 									<td>外科</td>
-									<td>外科综合深入讨论</td>
+									<td class="lText">外科综合深入讨论阿凡达扶桑岛国和奋斗奋斗</td>
+									<td><a href="conInfo.html">查看详情</a></td>
+
 									
 								</tr>
+
+								
 
 							</tbody>
 						</table>

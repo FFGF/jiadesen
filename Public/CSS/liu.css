@@ -369,3 +369,86 @@ tr td .default-info{
 2017-8-23
  */
 .rightchoosecp { width: 82px; margin-top: 96px; margin-left: 25px; }
+
+
+
+/*
+2017-8-24 file upload
+ */
+form .fileuploadclass{
+border: 1px solid; height: 35px;
+margin-left: 412px;
+margin-top: -128px;
+width: 90px;
+border-color: #ccc;
+}
+
+
+
+/*
+2017-8-25 SupplierNeedInfo
+ */
+.SupplierNeedclass1{
+	width:100px;
+}
+.SupplierNeedclass2{
+	width:100px;
+}
+.SupplierNeedclass3{
+	width:105px;
+}
+.SupplierNeedclass4{
+	width:150px;
+}
+.SupplierNeedclass5{
+	width:80px;
+}
+.SupplierNeedclass7{
+	width:80px;
+}
+.SupplierNeedclass8{
+	width:100px;
+}
+.SupplierNeedclass9{
+	width:80px;
+}
+
+
+
+.csocompanysupplier1{
+	width:100px;
+}
+.csocompanysupplier2{
+	width:120px;
+}
+.csocompanysupplier3{
+	width:160px;
+}
+
+.csocompanysupplier6{
+	width:120px;
+}
+.csocompanysupplier7{
+	width:100px;
+}
+
+
+/*
+2017-8-25 csocompany EmployFeedbackDetail.html
+ */
+
+.leftright_part .part_zhizhao2 { border-right: 1px solid #e4e4e4; float: left; width: 160px; height: 300px; }
+
+.zhizhao-size2 { width: 680px; float: left; }
+
+.resumeposition{
+	margin-top: 26px;
+    margin-left: 180px;
+}
+
+
+.leftmove{
+	margin-left: -45px;
+}
+
+

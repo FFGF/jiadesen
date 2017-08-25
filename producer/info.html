@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>我的资料</title>
+		<title>我的资料-生产商</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
@@ -228,63 +228,78 @@
 									</td>
 								</tr>
 
-								<tr>
-									<td class="condition-title">营业执照</td>
-									<td>
-										<div class="imageupload panel panel-default" style="width:340px;margin-left: 20px">
-
-											<div class="file-tab panel-body">
-												<label class="btn btn-default btn-file">
-					                       			<span>浏览</span>
-					                       			<!-- The file is stored here. -->
-					                        			<input type="file" name="image-file_1">
-					                    			</label>
-												<button type="button" class="btn btn-default">Remove</button>
-											</div>
-											<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_1" class="btn btn-default">上传</button></P>
-										</div>
-									</td>
-								</tr>
-
-								<tr>
-									<td class="condition-title">医疗器械生产许可证</td>
-									<td>
-										<div class="imageupload panel panel-default" style="width:340px;margin-left: 20px">
-
-											<div class="file-tab panel-body">
-												<label class="btn btn-default btn-file">
-					                       			<span>浏览</span>
-					                       			<!-- The file is stored here. -->
-					                        			<input type="file" name="image-file_1">
-					                    			</label>
-												<button type="button" class="btn btn-default">Remove</button>
-											</div>
-											<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_1" class="btn btn-default">上传</button></P>
-										</div>
-									</td>
-								</tr>
-
-								<tr>
-									<td class="condition-title">医疗器械经营许可证</td>
-									<td>
-										<div class="imageupload panel panel-default" style="width:340px;margin-left: 20px">
-
-											<div class="file-tab panel-body">
-												<label class="btn btn-default btn-file">
-					                       			<span>浏览</span>
-					                       			<!-- The file is stored here. -->
-					                        			<input type="file" name="image-file_1">
-					                    			</label>
-												<button type="button" class="btn btn-default">Remove</button>
-											</div>
-											<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_1" class="btn btn-default">上传</button></P>
-										</div>
-									</td>
-								</tr>
-
-
 							</tbody>
 						</table>
+
+						<div class="row leftright_part">
+							<div class="part_zhizhao condition-title">
+								营业执照
+							</div>
+
+							<div class="zhizhao-size">
+
+
+								<form enctype="multipart/form-data" name="form3">
+								    <p class="upload_p">上传营业执照:&nbsp;&nbsp;&nbsp;</p>	
+								    <input id="f3" type="file" name="f3" onchange="change3()" />
+								   
+								    <p"></p>
+								    <p class="yulan_p">预览:</p>
+
+									<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
+
+								    <img id="preview3" alt="" name="pic" />
+								</form>
+								
+							</div>
+						</div>
+
+						<div class="row leftright_part">
+							<div class="part_zhizhao condition-title">
+								医疗器械经营许可证
+							</div>
+
+							<div class="zhizhao-size">
+
+
+								<form enctype="multipart/form-data" name="form3">
+								    <p class="upload_p">上传许可证:&nbsp;&nbsp;&nbsp;</p>	
+								    <input id="f3" type="file" name="f3" onchange="change3()" />
+								   
+								    <p"></p>
+								    <p class="yulan_p">预览:</p>
+
+									<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
+
+								    <img id="preview3" alt="" name="pic" />
+								</form>
+								
+							</div>
+						</div>
+
+						<div class="row leftright_part">
+								<div class="part_zhizhao condition-title">
+									代理授权书
+								</div>
+
+								<div class="zhizhao-size">
+
+
+									<form enctype="multipart/form-data" name="form3">
+									    <p class="upload_p">上传授权书:&nbsp;&nbsp;&nbsp;</p>	
+									    <input id="f3" type="file" name="f3" onchange="change3()" />
+									   
+									    <p"></p>
+									    <p class="yulan_p">预览:</p>
+
+										<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
+
+									    <img id="preview3" alt="" name="pic" />
+									</form>
+									
+								</div>
+						</div>
+
 
 						<div class="form-group" style="text-align: center;">
 							<div class=" col-md-12">
