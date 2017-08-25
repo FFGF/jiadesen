@@ -70,7 +70,7 @@
 							<li><a href="../csoperson/repwd.html">修改密码</a></li>
 							<li><a href="../csoperson/MyInfo.html">我的资料</a></li>
 							<li><a href="../csoperson/security.html">账户安全</a></li>
-							<li><a href="../csoperson/myCoupon.html">我的点券</a></li>
+							<li><a href="../csoperson/myCoupon.html">我的安券</a></li>
 						<li><a href="../csoperson/payHistory.html">充值记录</a></li>
 						<li><a href="../csoperson/myIntegral.html">我的积分</a></li>
 
@@ -78,15 +78,15 @@
 
 						<h4>我的发布</h4>
 						<ul>
-							<li><a href="#">求职信息</a></li>	
+							<li><a href="../csoperson/WantJobInfo.html">求职信息</a></li>	
 							<li><a href="../csoperson/ExtensionInfoFeedback.html">推广信息</a></li>		
 						</ul>
 
 						<h4>我的反馈</h4>
 						<ul>								
-							<li><a href="#">求职反馈</a></li>	
+							<li><a href="../csoperson/WantJobFeedback.html">求职反馈</a></li>	
 							<li><a href="../csoperson/SupplierFeedbackInfo.html">医疗机构需求信息</a></li>	
-							<li><a href="#">供货商需求信息</a></li>					
+							<li><a href="../csoperson/SupplierNeedInfo.html">供货商需求信息</a></li>					
 						</ul>
 
 						<h4>我的关注</h4>
@@ -193,6 +193,93 @@
 
 						</td>
 					</tr>
+
+					<tr>
+						<td class="condition-title">Email</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+					<tr>
+						<td class="condition-title">性别</td>
+						<td>
+							<div class="dropdown" style="margin-left:20px;">
+				 				<button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">性别<span class="caret"></span>
+				  				</button>
+				  				<ul class="dropdown-menu" aria-labelledby="">
+					  				<li><a href="#">男</a></li>
+					   				<li><a href="#">女</a></li>
+				 				</ul>
+							</div><!--div:dropdown-->
+						</td>
+					</tr>
+					<tr>
+						<td class="condition-title">年龄</td>
+						<td>
+							<input class="ExtensionExperience-size" type="text">&nbsp;&nbsp;岁
+						</td>
+					</tr>
+					<tr>
+						<td class="condition-title">职位类型</td>
+						<td>
+							<div class="dropdown" style="margin-left:20px;">
+				 				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">职位类型选择<span class="caret"></span>
+				  				</button>
+				  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					  				<li><a href="#">临床销售</a></li>
+					   				<li><a href="#">OTC销售</a></li>
+					   				<li><a href="#">器械耗材</a></li>
+					   				<li><a href="#">招商经理</a></li>
+					   				<li><a href="#">主管/经理</a></li>
+					   				<li><a href="#">生产/研发</a></li>
+									<li><a href="#">实习</a></li>
+									<li><a href="#">其他</a></li>
+				 				</ul>
+							</div><!--div:dropdown-->
+						</td>
+					</tr>
+					<tr>
+						<td class="condition-title">薪资期望</td>
+						<td>
+							<div class="dropdown" style="margin-left:20px;">
+				 				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">薪资待遇选择<span class="caret"></span>
+				  				</button>
+				  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					  				<li><a href="#">面议</a></li>
+					   				<li><a href="#">3k/月以下</a></li>
+					   				<li><a href="#">3k~5k/月</a></li>
+					   				<li><a href="#">5k~7k/月</a></li>
+					   				<li><a href="#">7k~10k/月</a></li>
+					   				<li><a href="#">10k~15k/月</a></li>
+									<li><a href="#">15k~20k/月</a></li>
+									<li><a href="#">20k~30k/月</a></li>
+									<li><a href="#">30k~50k/月</a></li>
+									<li><a href="#">50k/月以上</a></li>
+				 				</ul>
+							</div><!--div:dropdown-->
+						</td>
+					</tr>
+
+
+					<tr>
+						<td class="condition-title">工作经验</td>
+						<td>
+							<input style="width:400px" type="text">
+							<div id="org"></div> 
+							<input style="margin-top: 10px" type="button" onclick="add1();" value="添加" />
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">教育经历</td>
+						<td>
+							<input style="width:400px" type="text">
+							<div id="org2"></div> 
+							<input style="margin-top: 10px" type="button" onclick="add2();" value="添加" />
+						</td>
+					</tr>
+
+
 
 					<tr>
 						<td class="condition-title">所属区域</td>
@@ -491,8 +578,27 @@
 <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
+function add1(){
+    var input1 = document.createElement('input');
+    input1.setAttribute('type', 'text');
+    input1.setAttribute('style', 'width:400px;margin-top:10px');
+    input1.setAttribute('name', 'organizers[]');
+    input1.setAttribute('class', 'git');
+    
+    var btn1 = document.getElementById("org");
+    btn1.insertBefore(input1,null);
+}
 
-
+function add2(){
+    var input1 = document.createElement('input');
+    input1.setAttribute('type', 'text');
+    input1.setAttribute('style', 'width:400px;margin-top:10px');
+    input1.setAttribute('name', 'organizers[]');
+    input1.setAttribute('class', 'git');
+    
+    var btn1 = document.getElementById("org2");
+    btn1.insertBefore(input1,null);
+}
 
 
 
@@ -739,6 +845,7 @@ function Removefunction3(){
 	$("#preview3").attr("src","../recourse/Image/whitespace.jpg");
 	$("#preview3").style("border","0 px");
 }
+
 
 </script>
 </body>
