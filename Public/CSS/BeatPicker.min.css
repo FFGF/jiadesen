@@ -224,7 +224,13 @@
 
 .beatpicker .footer .button.today{margin-left:2%}
 
-.beatpicker input[type="text"]::-moz-placeholder{color:#959595;font-size:74%;opacity:1;text-transform:lowercase}.beatpicker input[type="text"]::-webkit-input-placeholder{color:#959595;font-size:74%;opacity:1;text-transform:lowercase}.beatpicker input[type="text"]:-moz-placeholder{color:#959595;font-size:74%;opacity:1;text-transform:lowercase}.beatpicker input[type="text"]:-ms-input-placeholder{color:#959595;font-size:74%;opacity:1;text-transform:lowercase}
+.beatpicker input[type="text"]::-moz-placeholder{color:#959595;font-size:74%;opacity:1;text-transform:lowercase}
+
+.beatpicker input[type="text"]::-webkit-input-placeholder{color:#959595;font-size:74%;opacity:1;text-transform:lowercase}
+
+.beatpicker input[type="text"]:-moz-placeholder{color:#959595;font-size:74%;opacity:1;text-transform:lowercase}
+
+.beatpicker input[type="text"]:-ms-input-placeholder{color:#959595;font-size:74%;opacity:1;text-transform:lowercase}
 
 
 
