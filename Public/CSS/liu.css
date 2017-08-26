@@ -454,3 +454,14 @@ border-color: #ccc;
 	margin-left: -45px;
 }
 
+
+
+/*
+2017-8-26
+ */
+.distributeleft{
+	border-right: 1px solid #e4e4e4; float: left; width: 160px; height: 145px;text-align: center; vertical-align: middle !important; background-color: #f2f2f2; font-weight: normal; line-height: 2.5; color: #666; width: 160px;
+}
+.distributeright{
+	float: left;width: 270px;height: 145px;
+}
