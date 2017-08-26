@@ -6,6 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Public/CSS/liu.css">
+
+
+     <link rel="stylesheet" href="../Public/CSS/BeatPicker.min.css"/>
+
+
 </head>
 <body>
 
@@ -68,7 +73,7 @@
 							<li><a href="../csocompany/repwd.html">修改密码</a></li>
 							<li><a href="../csocompany/MyInfo.html">我的资料</a></li>
 							<li><a href="../csocompany/security.html">账户安全</a></li>
-							<li><a href="../csocompany/myCoupon.html">我的点券</a></li>
+							<li><a href="../csocompany/myCoupon.html">我的安券</a></li>
 						<li><a href="../csocompany/payHistory.html">充值记录</a></li>
 						<li><a href="../csocompany/myIntegral.html">我的积分</a></li>
 						</ul>
@@ -83,7 +88,7 @@
 						<ul>								
 							<li><a href="../csocompany/EmployFeedback.html">招聘反馈</a></li>	
 							<li><a href="../csocompany/SupplierFeedbackInfo.html">医疗机构需求信息</a></li>	
-							<li><a href="#">供货商需求信息</a></li>	
+							<li><a href="../csocompany/SupplierNeedInfo.html">供货商需求信息</a></li>	
 						</ul>
 
 						<h4>我的关注</h4>
@@ -153,6 +158,22 @@
 						</td>
 					</tr>
 
+
+
+					<tr>
+						<td class="condition-title">专业</td>
+						<td>
+							<p>营销</p>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">专业能力</td>
+						<td>
+							<p>学术推广</p>
+						</td>
+					</tr>
+
 					<tr>
 						<td class="condition-title">区域</td>
 						<td>
@@ -161,15 +182,88 @@
 					</tr>
 
 					<tr>
+						<td class="condition-title">推广医院</td>
+						<td>
+							<p>北京地坛医院<br>上海静安医院</p>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">推广科室</td>
+						<td>
+							<p>神经科<br>骨科<br>病理科</p>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">身份证正面</td>
+						<td>
+							<img style="margin-left: 20px" src="../recourse/Image/身份证正面.jpg" alt="">
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">身份证反面</td>
+						<td>
+							<img style="margin-left: 20px" src="../recourse/Image/身份证反面.jpg" alt="">
+						</td>
+					</tr>
+
+					<tr>
 						<td class="condition-title">简历详情</td>
 						<td>
-							<p>简历详情描述描述.............</p>
+							<p>简历详情描述详情描述详情描述详情描述详情描述</p>
 						</td>
 					</tr>
 
 					
 				</tbody>
 		</table>
+
+
+		<div class="row leftright_part"><!--处理意见框-->
+				<div class="part_zhizhao2 condition-title">
+					处理意见
+				</div>
+
+				<div class="zhizhao-size2">
+
+
+					  <label>
+					    <input type="radio" style="margin-left:20px" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+					    需要面试
+					  </label>
+
+
+
+					  <label>
+					    <input type="radio" style="margin-left:30px" name="optionsRadios" id="optionsRadios2" value="option2">
+					    不需要面试
+					  </label>
+
+
+					  <p style="margin-top: 30px;margin-left:30px">若需要面试，请填写下面信息并发送：</p>
+
+					  <div style="margin-left:30px"><p style="float:left">面试地址：</p> 
+					  <input style="width:250px" type="text"></div>
+
+
+					  <div style="margin-top:10px;margin-left:30px"><p style="float:left">面试时间：</p> 
+
+					  <input style="width:250px" type="text" data-beatpicker="true" data-beatpicker-module="today,clear"/>
+
+					  </div>
+
+
+					  <div style="margin-top:10px;margin-left:30px"><p style="float:left">联系电话：</p> <input style="width:250px" type="text"></div>
+
+
+					  <button class="btn btn-default resumeposition">发送</button>
+
+					
+					
+				</div>
+		</div>
 
 
 				
@@ -237,6 +331,10 @@
 
 <script type="text/javascript" src="../jquery-2.1.1/jquery.js"></script>
 <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+<script src="../Public/JS//BeatPicker.min.js"></script>
+<script src="../Public/JS/jquery-1.12.4.min.js"></script>
+
 
 <script type="text/javascript">
 
