@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="Public/CSS/main.css">
     <link rel="stylesheet" href="Public/CSS/liMarquee.css">
+    <link rel="stylesheet" href="Public/CSS/select2.min.css">
 	<script type="text/javascript" src="Public/JS/area.js" ></script>
 	<style type="text/css">
 	.first-bar .navbar-brand{padding-top: 15px;}
@@ -149,6 +150,7 @@
           <ul class="dropdown-menu">
             <li><a href="">法律法规</a></li>
             <li><a href="">招标信息</a></li>
+            <li><a href="">招标信息</a></li>
           </ul>
         </li>
 
@@ -179,10 +181,10 @@
 		</div>
 	</div>
 </div>
+<!-- 条件选择下拉框 -->
 <div class="container agency">
 	<div class="row area">
-		<div class="col-md-1"><span>地区选择：</span></div>
-		<div class="col-md-8">
+		<div class="col-md-4">
 			<div class="info">
 				<div>
 					<select id="s_province" name="s_province"></select>  
@@ -194,137 +196,143 @@
 			    <div id="show"></div>
 			</div>
 		</div>
-	</div>
 
-	<div class="row hospital">
-		<div class="col-md-1">
-			<span>产品分类：</span>
-		</div>
-		<div class="col-md-8">
-			<ul>
-				<li class="click">全部</li>
-				<li>临床检验</li>
-				<li>电子超声</li>
-				<li>实验仪器</li>
-				<li>医用光学</li>
-				<li>医学影像</li>
-				<li>手术急救</li>
-				<li>消毒灭菌</li>
-				<li>医用耗材</li>
-			</ul>
-		</div>
-		<div class="col-md-1">
-			<!-- <span class="more" data-flag=1 id="fgf">更多<i></i></span> -->
+		<div class="col-md-4">
+			<select class="js-example-data-array" id="findCategory" data-placeholder="请选择产品分类">
+		       <option value=""></option>
+		    </select>
 		</div>
 	</div>
-
-<!-- 	<div class="row keshi">
-		<div class="col-md-1"><span>科室分类：</span></div>
-		<div class="col-md-8">
-			<ul>
-				<li class="click">全部</li>
-				<li>内科</li>
-				<li>血液科</li>
-				<li>呼吸科</li>
-				<li>心内科</li>
-				<li>神经科</li>
-				<li>消化科</li>
-				<li>内分泌</li>
-				<li>妇产科</li>
-				<li>儿科</li>
-				<li>计生科</li>
-				<li>康复护理科</li>
-				<li>注射/输液室</li>
-				<li>实验/化验室/病理科</li>
-				<li>影像/放射/B超室</li>
-				<li>外科</li>
-				<li>口腔科</li>
-				<li>五官科</li>
-				<li>皮肤科</li>
-				<li>肛肠科</li>
-				<li>心胸科</li>
-				<li>泌尿科</li>
-				<li>骨伤科</li>
-				<li>中医科</li>
-				<li>麻醉科</li>
-				<li>美容整形科</li>
-				<li>消毒/清洁室</li>
-				<li>手术室/ICU</li>
-				<li>医院系统</li>
-				<li>其他科室</li>
-			</ul>
-		</div>
-		<div class="col-md-1">
-			<span class="more" data-flag=1>更多<i></i></span>
-		</div>
-	</div> -->
 </div>
-<div class="container agency-list">
-	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
-			<table class="table table-striped table-hover table-bordered">
-				<thead>
-					<tr>
-						<td>申请代理区域</td>
-						<td>产品分类</td>
-						<td>发布日期</td>
-						<td>发布人</td>
-						<td>详情</td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>上海</td>
-						<td>临床检验</td>
-						<td>2017-8-20</td>
-						<td>王小二</td>
-						<td><a href="">详情</a></td>
-					</tr>
-					<tr>
-						<td>上海</td>
-						<td>临床检验</td>
-						<td>2017-8-20</td>
-						<td>王小二</td>
-						<td><a href="">详情</a></td>
-					</tr>
-					<tr>
-						<td>上海</td>
-						<td>临床检验</td>
-						<td>2017-8-20</td>
-						<td>王小二</td>
-						<td><a href="">详情</a></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</div>
-	<div class="row">
-	    <div class="col-md-4 col-md-offset-4">
-			<nav aria-label="Page navigation">
-			  <ul class="pagination">
-			    <li>
-			      <a href="#" aria-label="Previous">
-			        <span aria-hidden="true">&laquo;</span>
-			      </a>
-			    </li>
-			    <li><a href="#">1</a></li>
-			    <li><a href="#">2</a></li>
-			    <li><a href="#">3</a></li>
-			    <li><a href="#">4</a></li>
-			    <li><a href="#">5</a></li>
-			    <li>
-			      <a href="#" aria-label="Next">
-			        <span aria-hidden="true">&raquo;</span>
-			      </a>
-			    </li>
-			  </ul>
-			  <p>共<span>10</span>页</p>
-			</nav>
+<!-- 筛选结果 -->
+<div class="container select_result">
+  <div class="row">
+    <a href="">
+	    <div class="col-md-3">
+	          <div class="thumbnail">
+	              <img src="recourse/Image/cso.jpg" alt="...">
+	              <div class="caption">
+	                  <p>申请代理区域：<span>上海</span></p>
+	                  <p>产品分类：<span>临床检验</span></p>
+	                  <p>发布日期：<span>2017-08-29</span></p>
+	              </div>
+	          </div>
 	    </div>
-	</div>
+    </a>
+    <a href="">
+	    <div class="col-md-3">
+	          <div class="thumbnail">
+	              <img src="recourse/Image/cso.jpg" alt="...">
+	              <div class="caption">
+	                  <p>申请代理区域：<span>上海</span></p>
+	                  <p>产品分类：<span>临床检验</span></p>
+	                  <p>发布日期：<span>2017-08-29</span></p>
+	              </div>
+	          </div>
+	    </div>
+    </a>
+    <a href="">
+	    <div class="col-md-3">
+	          <div class="thumbnail">
+	              <img src="recourse/Image/cso.jpg" alt="...">
+	              <div class="caption">
+	                  <p>申请代理区域：<span>上海</span></p>
+	                  <p>产品分类：<span>临床检验</span></p>
+	                  <p>发布日期：<span>2017-08-29</span></p>
+	              </div>
+	          </div>
+	    </div>
+    </a>
+    <a href="">
+	    <div class="col-md-3">
+	          <div class="thumbnail">
+	              <img src="recourse/Image/cso.jpg" alt="...">
+	              <div class="caption">
+	                  <p>申请代理区域：<span>上海</span></p>
+	                  <p>产品分类：<span>临床检验</span></p>
+	                  <p>发布日期：<span>2017-08-29</span></p>
+	              </div>
+	          </div>
+	    </div>
+    </a>        
+              
+  </div>
+  <div class="row">
+    <a href="">
+	    <div class="col-md-3">
+	          <div class="thumbnail">
+	              <img src="recourse/Image/cso.jpg" alt="...">
+	              <div class="caption">
+	                  <p>申请代理区域：<span>上海</span></p>
+	                  <p>产品分类：<span>临床检验</span></p>
+	                  <p>发布日期：<span>2017-08-29</span></p>
+	              </div>
+	          </div>
+	    </div>
+    </a>
+    <a href="">
+	    <div class="col-md-3">
+	          <div class="thumbnail">
+	              <img src="recourse/Image/cso.jpg" alt="...">
+	              <div class="caption">
+	                  <p>申请代理区域：<span>上海</span></p>
+	                  <p>产品分类：<span>临床检验</span></p>
+	                  <p>发布日期：<span>2017-08-29</span></p>
+	              </div>
+	          </div>
+	    </div>
+    </a>
+    <a href="">
+	    <div class="col-md-3">
+	          <div class="thumbnail">
+	              <img src="recourse/Image/cso.jpg" alt="...">
+	              <div class="caption">
+	                  <p>申请代理区域：<span>上海</span></p>
+	                  <p>产品分类：<span>临床检验</span></p>
+	                  <p>发布日期：<span>2017-08-29</span></p>
+	              </div>
+	          </div>
+	    </div>
+    </a>
+    <a href="">
+	    <div class="col-md-3">
+	          <div class="thumbnail">
+	              <img src="recourse/Image/cso.jpg" alt="...">
+	              <div class="caption">
+	                  <p>申请代理区域：<span>上海</span></p>
+	                  <p>产品分类：<span>临床检验</span></p>
+	                  <p>发布日期：<span>2017-08-29</span></p>
+	              </div>
+	          </div>
+	    </div>
+    </a>                          
+  </div>
+
+  <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+      <nav aria-label="Page navigation">
+        <ul class="pagination">
+          <li>
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+        <p class="page">共<span>10</span>页</p>
+      </nav>
+      </div>
+  </div>  
 </div>
-
-
 <!-- 第四部分的navbar -->
 <nav class="navbar navbar-default fouth-bar">
   <div class="container">
@@ -459,51 +467,33 @@
 <script type="text/javascript" src="Public/JS/jquery.menu-aim.js"></script>
 <script type="text/javascript" src="Public/JS/fgf.js"></script>
 <script type="text/javascript" src="Public/JS/jquery.liMarquee.js"></script>
-
+<script type="text/javascript" src="Public/JS/select2.min.js"></script>
 <script>
 // 信息滚动
 $(function(){
     $('#dowebok').liMarquee();
+
+
+    // 产品分类
+  var category = [
+            { id: 0, text: '临床检验' }, 
+            { id: 1, text: '电子超声' }, 
+            { id: 2, text: '实验仪器' }, 
+            { id: 3, text: '医用光学' }, 
+            { id: 4, text: '医学影像' },
+            { id: 5, text: '手术急救' },
+            { id: 6, text: '消毒灭菌' },
+            { id: 7, text: '医用耗材' }
+            ];
+  $("#findCategory").select2({
+    data: category,
+    allowClear: true
+  });
+
+    $(".col-md-4 .select2").css("width", "200px").css("margin-top", "3px")
 });
 
-//实现地区分类点击加上背景色效果
-$(".agency .hospital ul li").on('click', function(){
-	$(".agency .hospital ul li").removeClass('click')
-	$(this).addClass('click')
-})
 
-//实现产品分类分类点击加上背景色效果
-$(".agency .area ul li").on('click', function(){
-	$(".agency .area ul li").removeClass('click')
-	$(this).addClass('click')
-})
-
-// //实现科室分类分类点击加上背景色效果
-// $(".agency .keshi ul li").on('click', function(){
-// 	$(".agency .keshi ul li").removeClass('click')
-// 	$(this).addClass('click')
-// })
-
-$(".agency .hospital .more").on('click', function(){
-	if($(this).attr('data-flag') == 1){
-		$('.agency .hospital .col-md-8 ul').css('height', '100px')
-		$('.agency .hospital .col-md-8 ul').css('overflow-y', 'auto')
-		$(this).attr('data-flag', 0)
-	}else{
-		$('.agency .hospital .col-md-8 ul').css('height', '24px')
-		$(this).attr('data-flag', 1)
-	}
-})
-
-// $(".agency .keshi .more").on('click', function(){
-// 	if($(this).attr('data-flag') == 1){
-// 		$('.agency .keshi .col-md-8 ul').css('height', '70px')
-// 		$(this).attr('data-flag', 0)
-// 	}else{
-// 		$('.agency .keshi .col-md-8 ul').css('height', '24px')
-// 		$(this).attr('data-flag', 1)
-// 	}
-// })
 // 省市县
 var Gid  = document.getElementById ;
 var showArea = function(){
