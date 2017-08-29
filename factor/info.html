@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../Public/CSS/liu.css">
+		<link rel="stylesheet" href="../Public/CSS/zh.css">
 		<link rel="stylesheet" href="../Public/CSS/bootstrap-imageupload.css">
 
        
@@ -184,6 +185,19 @@
 						<table class="table condition-table">
 							<!--包括渠道、。。。区域什么的-->
 							<tbody>
+
+								<tr>
+									<td class="condition-title">用户头像</td>
+									<td>
+										
+										<div class="con4">
+											<canvas id="cvs" width="200" height="200"></canvas>
+											<span class="btn upload">上传头像<input type="file" class="upload_pic" id="upload" /></span>
+										</div>
+
+
+									</td>
+								</tr>
 
 								<tr>
 									<td class="condition-title">用户名称</td>
@@ -460,255 +474,88 @@
  -->		<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 		<script src="../Public/JS/bootstrap-imageupload.js"></script>
 		<script type="text/javascript" src="../Public/JS/zh2.js"></script>
+		<script type="text/javascript" src="../Public/JS/regist.js"></script>
 
 		<script>
 			var $imageupload = $('.imageupload');
 			$imageupload.imageupload();
-		</script>
-
-		<script type="text/javascript">
-			
-			$(document).ready(function(){
-			  $(".addchoose").click(function(){
-			    
-			  });
-
-			   $("#savenewdepart").click(function(){
-			   	 var inputcontent = $("#newdepart1").val();
-			     //console.log(inputcontent);
-
-			     var con = $("<option>vvv</option>");
-			     con.val(inputcontent);
-			     //console.log(con.val());
-			     //$("#select4").append(con);
-			     $("#select2").append('<option value="'+inputcontent+'">'+inputcontent+'</option>');
-			   });
-
-			   $("#savenewdepart2").click(function(){
-			   	 var inputcontent = $("#newdepart2").val();
-			     //console.log(inputcontent);
-
-			     var con = $("<option>vvv</option>");
-			     con.val(inputcontent);
-			     //console.log(con.val());
-			     //$("#select4").append(con);
-			     $("#select4").append('<option value="'+inputcontent+'">'+inputcontent+'</option>');
-			   });
-
-			});
 
 
 		</script>
 
-		<script type="text/javascript">
+		<script>
+		//获取上传按钮
+		var input1 = document.getElementById("upload"); 
+		 
+		if(typeof FileReader==='undefined'){ 
+		     //result.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
+		     input1.setAttribute('disabled','disabled'); 
+		}else{ 
+		     input1.addEventListener('change',readFile,false); 
+		     /*input1.addEventListener('change',function (e){
+		     	console.log(this.files);//上传的文件列表
+		     },false); */
+		}
+		function readFile(){ 
+			var file = this.files[0];//获取上传文件列表中第一个文件
+			if(!/image\/\w+/.test(file.type)){
+			//图片文件的type值为image/png或image/jpg
+				alert("文件必须为图片！");
+				return false; 
+			} 
+			// console.log(file);
+			var reader = new FileReader();//实例一个文件对象
+			reader.readAsDataURL(file);//把上传的文件转换成url
+			//当文件读取成功便可以调取上传的接口
+			reader.onload = function(e){ 
+				// console.log(this.result);//文件路径
+				// console.log(e.target.result);//文件路径
+				/*var data = e.target.result.split(',');
+				var tp = (file.type == 'image/png')? 'png': 'jpg';
+				var imgUrl = data[1];//图片的url，去掉(data:image/png;base64,)
+				//需要上传到服务器的在这里可以进行ajax请求
+				// console.log(imgUrl);
+				// 创建一个 Image 对象 
+				var image = new Image();
+				// 创建一个 Image 对象 
+				// image.src = imgUrl;
+				image.src = e.target.result;
+				image.onload = function(){
+					document.body.appendChild(image);
+				}*/
+
+				var image = new Image();
+				// 设置src属性 
+				image.src = e.target.result;
+				var max=200;
+				// 绑定load事件处理器，加载完成后执行，避免同步问题
+				image.onload = function(){ 
+					// 获取 canvas DOM 对象 
+					var canvas = document.getElementById("cvs"); 
+					// 如果高度超标 宽度等比例缩放 *= 
+					/*if(image.height > max) {
+						image.width *= max / image.height; 
+						image.height = max;
+					} */
+					// 获取 canvas的 2d 环境对象, 
+					var ctx = canvas.getContext("2d"); 
+					// canvas清屏 
+					ctx.clearRect(0, 0, canvas.width, canvas.height); 
+					// 重置canvas宽高
+					/*canvas.width = image.width;
+					canvas.height = image.height;
+					if (canvas.width>max) {canvas.width = max;}*/
+					// 将图像绘制到canvas上
+					// ctx.drawImage(image, 0, 0, image.width, image.height);
+					ctx.drawImage(image, 0, 0, 200, 200);
+					// 注意，此时image没有加入到dom之中
+				};  
+			}
+		};
+		</script>
 
 
 
-
-
-function change() {
-    var pic = document.getElementById("preview"),
-        file = document.getElementById("f");
-
-
-
-    var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
-
-     // gif在IE浏览器暂时无法显示
-     if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
-         alert("图片的格式必须为png或者jpg或者jpeg格式！"); 
-         return;
-     }
-     var isIE = navigator.userAgent.match(/MSIE/)!= null,
-         isIE6 = navigator.userAgent.match(/MSIE 6.0/)!= null;
-
-     if(isIE) {
-        file.select();
-        var reallocalpath = document.selection.createRange().text;
-
-        // IE6浏览器设置img的src为本地路径可以直接显示图片
-         if (isIE6) {
-            pic.src = reallocalpath;
-         }else {
-            // 非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现
-             pic.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src=\"" + reallocalpath + "\")";
-             // 设置img的src为base64编码的透明图片 取消显示浏览器默认图片
-             pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
-         }
-     }else {
-        html5Reader(file);
-     }
-}
-
- function html5Reader(file){
-     var file = file.files[0];
-     var reader = new FileReader();
-     reader.readAsDataURL(file);
-     reader.onload = function(e){
-         var pic = document.getElementById("preview");
-         pic.src=this.result;
-     }
- }
-
-
-
-function change2() {
-    var pic = document.getElementById("preview2"),
-        file = document.getElementById("f2");
-
-    var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
-
-     // gif在IE浏览器暂时无法显示
-     if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
-         alert("图片的格式必须为png或者jpg或者jpeg格式！"); 
-         return;
-     }
-     var isIE = navigator.userAgent.match(/MSIE/)!= null,
-         isIE6 = navigator.userAgent.match(/MSIE 6.0/)!= null;
-
-     if(isIE) {
-        file.select();
-        var reallocalpath = document.selection.createRange().text;
-
-        // IE6浏览器设置img的src为本地路径可以直接显示图片
-         if (isIE6) {
-            pic.src = reallocalpath;
-         }else {
-            // 非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现
-             pic.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src=\"" + reallocalpath + "\")";
-             // 设置img的src为base64编码的透明图片 取消显示浏览器默认图片
-             pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
-         }
-     }else {
-        html5Reader2(file);
-     }
-}
-
- function html5Reader2(file){
-     var file = file.files[0];
-     var reader = new FileReader();
-     reader.readAsDataURL(file);
-     reader.onload = function(e){
-         var pic = document.getElementById("preview2");
-         pic.src=this.result;
-     }
- }
-
-
-function change3() {
-    var pic = document.getElementById("preview3"),
-        file = document.getElementById("f3");
-
-    var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
-
-     // gif在IE浏览器暂时无法显示
-     if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
-         alert("图片的格式必须为png或者jpg或者jpeg格式！"); 
-         return;
-     }
-     var isIE = navigator.userAgent.match(/MSIE/)!= null,
-         isIE6 = navigator.userAgent.match(/MSIE 6.0/)!= null;
-
-     if(isIE) {
-        file.select();
-        var reallocalpath = document.selection.createRange().text;
-
-        // IE6浏览器设置img的src为本地路径可以直接显示图片
-         if (isIE6) {
-            pic.src = reallocalpath;
-         }else {
-            // 非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现
-             pic.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src=\"" + reallocalpath + "\")";
-             // 设置img的src为base64编码的透明图片 取消显示浏览器默认图片
-             pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
-         }
-     }else {
-        html5Reader3(file);
-     }
-}
-
- function html5Reader3(file){
-     var file = file.files[0];
-     var reader = new FileReader();
-     reader.readAsDataURL(file);
-     reader.onload = function(e){
-         var pic = document.getElementById("preview3");
-         pic.src=this.result;
-     }
- }
-
-
- function change4() {
-    var pic = document.getElementById("preview4"),
-        file = document.getElementById("f4");
-
-    var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
-
-     // gif在IE浏览器暂时无法显示
-     if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
-         alert("图片的格式必须为png或者jpg或者jpeg格式！"); 
-         return;
-     }
-     var isIE = navigator.userAgent.match(/MSIE/)!= null,
-         isIE6 = navigator.userAgent.match(/MSIE 6.0/)!= null;
-
-     if(isIE) {
-        file.select();
-        var reallocalpath = document.selection.createRange().text;
-
-        // IE6浏览器设置img的src为本地路径可以直接显示图片
-         if (isIE6) {
-            pic.src = reallocalpath;
-         }else {
-            // 非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现
-             pic.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src=\"" + reallocalpath + "\")";
-             // 设置img的src为base64编码的透明图片 取消显示浏览器默认图片
-             pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
-         }
-     }else {
-        html5Reader4(file);
-     }
-}
-
- function html5Reader4(file){
-     var file = file.files[0];
-     var reader = new FileReader();
-     reader.readAsDataURL(file);
-     reader.onload = function(e){
-         var pic = document.getElementById("preview4");
-         pic.src=this.result;
-     }
- }
-
-
-function Removefunction(){
-	//document.getElementById("preview").parentNode.removeChild(document.getElementById("preview"));
-	var file = $("#f");  
-    file.replaceWith(file.clone());
-	$("#preview").attr("src","../recourse/Image/whitespace.jpg");
-	$("#preview").style("border","0 px");
-}
-function Removefunction2(){
-	var file = $("#f2");  
-    file.replaceWith(file.clone());
-	$("#preview2").attr("src","../recourse/Image/whitespace.jpg");
-	$("#preview2").style("border","0 px");
-}
-function Removefunction3(){
-	var file = $("#f3");  
-    file.replaceWith(file.clone());
-	$("#preview3").attr("src","../recourse/Image/whitespace.jpg");
-	$("#preview3").style("border","0 px");
-}
-function Removefunction4(){
-	var file = $("#f4");  
-    file.replaceWith(file.clone());
-	$("#preview4").attr("src","../recourse/Image/whitespace.jpg");
-	$("#preview4").style("border","0 px");
-}
-
-
-</script>
 	</body>
 	
 
