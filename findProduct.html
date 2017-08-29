@@ -172,7 +172,7 @@
     </div>
 
     <div class="col-md-3">
-      <select class="js-example-data-array" id="hospitalCategory" data-placeholder="请选择品牌">
+      <select class="js-example-data-array" id="brandCategory" data-placeholder="请选择品牌">
         <option value=""></option>
       </select>
     </div>
@@ -489,16 +489,16 @@ $(document).ready(function() {
     allowClear: true
   });
 // 品牌
-  var hospitalCategory = [
-              { id: 0, text: '上海市第一人民医院' }, 
-              { id: 1, text: '宝山区骨科医院' }, 
-              { id: 2, text: '大场镇医院' }, 
-              { id: 3, text: '上海大学校医院' }, 
-              { id: 4, text: '宝山区第二人民医院' }
+  var brandCategory = [
+              { id: 0, text: '3M' }, 
+              { id: 1, text: '六六视觉' }, 
+              { id: 2, text: '迈瑞Mindray' }, 
+              { id: 3, text: '钱璟' }, 
+              { id: 4, text: '邦健' }
               ];
 
-  $("#hospitalCategory").select2({
-    data: hospitalCategory,
+  $("#brandCategory").select2({
+    data: brandCategory,
     allowClear: true
   })
 // 科室
