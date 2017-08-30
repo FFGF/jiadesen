@@ -167,14 +167,14 @@ color:#333; background-color: #fff; border-color: #ccc; }
 .leftright_part .part_shenfen { border-right: 1px solid #e4e4e4; float: left; width: 160px; height: 320px; }
 .condition-title { text-align: center; vertical-align: middle !important; background-color: #f2f2f2; font-weight: normal; line-height: 2.5; color: #666; width: 160px; }
 .zhengjian-size { width: 680px; float: left; }
-.zhengjian-size input { width: 250px; height: 23px; border: 0px; margin-top: 30px; }
+
 .zhengjian-size .upload_p { font-size: 15px; margin-left: 25px; float: left; }
 .yulan_p { margin-left: 30px; }
 .zhengjian-size img { width: 490px; height: 190px; margin-left: 70px; }
 .leftright_part .part_zhizhao { border-right: 1px solid #e4e4e4; float: left; width: 160px; height: 500px; }
 .condition-title { text-align: center; vertical-align: middle !important; background-color: #f2f2f2; font-weight: normal; line-height: 2.5; color: #666; width: 160px; }
 .zhizhao-size { width: 680px; float: left; }
-.zhizhao-size input { width: 250px; height: 23px; border: 0px; margin-top: 30px; }
+
 .zhizhao-size .upload_p { font-size: 15px; margin-left: 25px; float: left; }
 .yulan_p { margin-left: 30px; }
 .zhizhao-size img { width: 490px; height: 380px; margin-left: 70px; }
@@ -507,3 +507,34 @@ border-color: #ccc;
 }
 
 
+
+
+/*
+关于我的资料页面乱码问题
+ */
+
+.zhengjian-size .wenjian { width: 250px; 
+	height: 23px; border: 0px; margin-top: 30px; 
+}
+
+.zhengjian-size .fileuploadclass{
+border: 1px solid; height: 35px;
+margin-left: 412px;
+margin-top: -128px;
+width: 90px;
+border-color: #ccc;
+}
+
+
+.zhizhao-size .wenjian { 
+	width: 250px; height: 23px; 
+	border: 0px; margin-top: 30px; 
+}
+
+.zhizhao-size .fileuploadclass{
+border: 1px solid; height: 35px;
+margin-left: 412px;
+margin-top: -128px;
+width: 90px;
+border-color: #ccc;
+}
