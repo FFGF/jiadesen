@@ -187,17 +187,10 @@
 				<div class="col-md-10">
 					<!--右侧-->
 					<div class="row">
-						<h3>我的资料</h3>
+						<h3>资料修改</h3>
 						<table class="table condition-table">
 							<!--包括渠道、。。。区域什么的-->
 							<tbody>
-
-								<tr>
-									<td class="condition-title">邀请码</td>
-									<td>
-										<p>dls001</p>
-									</td>
-								</tr>
 
 								<tr>
 									<td class="condition-title">用户头像</td>
@@ -205,7 +198,9 @@
 										
 										<div class="con4">
 											<canvas id="cvs" width="200" height="200"></canvas>
+											<span class="btn upload">上传头像<input type="file" class="upload_pic" id="upload" /></span>
 										</div>
+
 
 									</td>
 								</tr>
@@ -213,21 +208,21 @@
 								<tr>
 									<td class="condition-title">用户名称</td>
 									<td>
-										<p>fewfds</p>
+										<input class="form-control" type="text" style="width: 200px;">
 									</td>
 								</tr>
 
 								<tr>
 									<td class="condition-title">手机号码</td>
 									<td>
-										<p>18181737326</p>
+										<input class="form-control" type="text" style="width: 200px;">
 									</td>
 								</tr>
 
 								<tr>
 									<td class="condition-title">注册邮箱</td>
 									<td>
-										<p>214343426@163.com</p>
+										<input type="text" class="form-control" id="info_phone" oninput="checknumb()" style="width:340px" placeholder="请输入邮箱">
 									</td>
 								</tr>
 
@@ -241,21 +236,112 @@
 								<tr>
 									<td class="condition-title">品牌</td>
 									<td>
-										<p>松下</p>
+										<input class="form-control" type="text" style="width: 200px;">
 									</td>
 								</tr>
 
 								<tr>
 									<td class="condition-title">区域</td>
 									<td>
-										<p>上海市-上海市-宝山区</p>
+
+										<div class="info">
+											<div>
+												<select id="s_province" name="s_province"></select>
+												<select id="s_city" name="s_city"></select>
+												<select id="s_county" name="s_county"></select>
+												<script class="resources library" src="http://sandbox.runjs.cn/uploads/rs/267/g3ugugjp/area.js" type="text/javascript"></script>
+
+												<script type="text/javascript">
+													_init_area();
+												</script>
+											</div>
+											<div id="show"></div>
+										</div>
+
 									</td>
 								</tr>
 
 							</tbody>
 						</table>
+<!-- 
+						<div class="row leftright_part" style="margin-bottom: 0px;">
+							<div class="part1 condition-title">
+								品牌产品
+							</div>
+
+							<div class="part2">
+								<select id="select1" multiple="multiple" class="select1class">
+									<option>xxx凝血仪</option>
+									<option>yyy支架</option>
+									<option>zzz呼吸器</option>
+									<option>aaa检测仪</option>
+									<option>其他</option>
+								</select>
+							</div>
+
+							<div class="part3">
+								<input class="rightchoose" type="button" value=">>" onclick="selectedToRight();" /><br/>
+								<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft();" /><br/>
+							</div>
+
+							<div class="part4">
+								<select id="select2" multiple="multiple" class="select1class">
+									<option>ddd析透仪</option>
+								</select>
+							</div>
+						</div> -->
 
 
+						<!-- <div class="row leftright_part" style="margin-bottom: 0px;">
+							<div class="part1 condition-title">
+								品牌产品
+							</div>
+
+
+							<div class="part2">
+								<select id="select1" multiple="multiple" class="select1class">
+					                <option>xxx凝血仪</option>
+									<option>yyy支架</option>
+									<option>zzz呼吸器</option>
+									<option>aaa检测仪</option>
+									<option>其他</option>		         
+			                	</select>
+							</div>
+
+
+							<div class="part3">
+								<input class="rightchoose" type="button" value=">>" onclick="selectedToRight();"/><br/>
+								<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft();"/><br/>
+
+								<input data-target="#modal1" data-toggle="modal" data-target=".bs-example-modal-sm" class="addchoose" type="button" value="+" onclick="appendOption();"/><br/>
+
+							</div>
+
+							<div id="modal1" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+											<div class="modal-dialog modal-sm" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+											        	<h4 class="modal-title">新添加产品</h4>
+											        </div>
+											      	<div class="modal-body">
+											        	<input id="newdepart1" placeholder="请输入新产品"></input>
+											      	</div>
+											      	<div class="modal-footer">
+												        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												        <button id="savenewdepart" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+												    </div>
+												</div>
+											</div>
+							</div>
+
+
+							<div class="part4">
+								<select id="select2" multiple="multiple" class="select1class">
+			                		<option>ddd析透仪</option>
+			                	</select>
+							</div>
+						</div>
+ -->
 
 						<div class="row leftright_part">
 							<div class="part_zhizhao condition-title">
@@ -266,7 +352,14 @@
 
 
 								<form enctype="multipart/form-data" name="form3">
+								    <p class="upload_p">上传营业执照:&nbsp;&nbsp;&nbsp;</p>	
+								    <input id="f3" type="file" name="f3" onchange="change3()" />
 								   
+								    <p"></p>
+								    <p class="yulan_p">预览:</p>
+
+									<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
+
 								    <img id="preview3" alt="" name="pic" />
 								</form>
 								
@@ -282,7 +375,14 @@
 
 
 								<form enctype="multipart/form-data" name="form3">
+								    <p class="upload_p">上传许可证:&nbsp;&nbsp;&nbsp;</p>	
+								    <input id="f3" type="file" name="f3" onchange="change3()" />
 								   
+								    <p"></p>
+								    <p class="yulan_p">预览:</p>
+
+									<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
+
 								    <img id="preview3" alt="" name="pic" />
 								</form>
 								
@@ -298,7 +398,14 @@
 
 
 									<form enctype="multipart/form-data" name="form3">
+									    <p class="upload_p">上传授权书:&nbsp;&nbsp;&nbsp;</p>	
+									    <input id="f3" type="file" name="f3" onchange="change3()" />
 									   
+									    <p"></p>
+									    <p class="yulan_p">预览:</p>
+
+										<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
+
 									    <img id="preview3" alt="" name="pic" />
 									</form>
 									
@@ -312,7 +419,7 @@
 
 				<div>
 					<div class="form-group" style="margin-left: 680px;">
-						<a href="infoChange.html"><button type="submit" class="btn btn-default">修改</button></a>
+						<button type="submit" class="btn btn-default">确认</button>
 					</div>
 					<!--第五部分：预览发布-->
 

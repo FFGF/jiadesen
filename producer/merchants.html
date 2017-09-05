@@ -126,7 +126,7 @@
 							
 								<!-- 
 								<li>
-									<a href="CSOapply.html">区域代理请求信息</a>
+									<a href="CSOperson.html">区域代理请求信息</a>
 								</li>
 
 								<li>
@@ -299,20 +299,20 @@
 						</div>
 
 						<div id="modal1" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-										<div class="modal-dialog modal-sm" role="document">
-											<div class="modal-content">
-												<div class="modal-header">
-										        	<h4 class="modal-title">新添加医院</h4>
-										        </div>
-										      	<div class="modal-body">
-										        	<input id="newdepart1" placeholder="请输入新医院名称"></input>
-										      	</div>
-										      	<div class="modal-footer">
-											        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-											        <button id="savenewdepart" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
-											    </div>
-											</div>
-										</div>
+							<div class="modal-dialog modal-sm" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+							        	<h4 class="modal-title">新添加医院</h4>
+							        </div>
+							     	<div class="modal-body">
+							        	<input id="newdepart1" placeholder="请输入新医院名称"></input>
+							      	</div>
+							      	<div class="modal-footer">
+								        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								        <button id="savenewdepart" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+								    </div>
+								</div>
+							</div>
 						</div>
 
 
@@ -323,24 +323,58 @@
 						</div>
 					</div>
 
-					<table class="table condition-table" style="margin-top: 0px;">
-						<!--包括渠道、。。。区域什么的-->
-						<tbody>
+					
 
-							<tr>
-								<td class="condition-title">科室分类</td>
-								<td>
-									<select class="form-control" id="info_usertype" style="width: 340px;" oninput="chose()">
-										<option disabled selected value>科室分类，可多选</option>
-										<option>血液科</option>
-										<option>内科</option>
-										<option>外科</option>
-									</select>
-								</td>
-							</tr>
+					<div class="row leftright_part" style="margin-top: 0px;margin-bottom: 0px;">
+						<div class="part1 condition-title">
+							科室分类
+						</div>
 
-						</tbody>
-					</table>
+
+						<div class="part2">
+							<select id="select1" multiple="multiple" class="select1class">
+				                <option>外科</option>
+				                <option>内科</option>
+				                <option>神经科</option>
+				                <option>五官科</option>
+				                <option>血液科</option>
+				               		         
+		                	</select>
+						</div>
+
+
+						<div class="part3">
+							<input class="rightchoose" type="button" value=">>" onclick="selectedToRight();"/><br/>
+							<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft();"/><br/>
+
+							<input data-target="#modal1" data-toggle="modal" data-target=".bs-example-modal-sm" class="addchoose" type="button" value="+" onclick="appendOption();"/><br/>
+
+						</div>
+
+						<div id="modal1" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+							<div class="modal-dialog modal-sm" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+							        	<h4 class="modal-title">新添加科室</h4>
+							        </div>
+							     	<div class="modal-body">
+							        	<input id="newdepart1" placeholder="请输入新医院名称"></input>
+							      	</div>
+							      	<div class="modal-footer">
+								        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								        <button id="savenewdepart" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+								    </div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="part4">
+							<select id="select2" multiple="multiple" class="select1class">
+		                		<option>牙科</option>
+		                	</select>
+						</div>
+					</div>
 
 				</div>
 

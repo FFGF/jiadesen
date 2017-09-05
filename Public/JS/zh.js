@@ -180,6 +180,9 @@ function YYYYMMDDstart()
 		        e.options.length = 1;   
 		   }
 
+
+
+
 //广告费用监听 
 function adsPrice() {
 	var sType = document.getElementById("adsTime").value;

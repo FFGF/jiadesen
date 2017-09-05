@@ -3,12 +3,11 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>医疗机构联系信息-生产商</title>
+		<title>修改手机-生产商</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../Public/CSS/liu.css">
-		<script type="text/javascript" src="../Public/JS/ssq.js"></script>
 
 	</head>
 
@@ -60,6 +59,7 @@
 			</div>
 			<!-- /.container-fluid -->
 		</nav>
+
 
 		<div class="container-fluid medium">
 			<!--<p>段落测试</p>-->
@@ -170,118 +170,64 @@
 				</div>
 				<!--左侧手风琴框-->
 
-				<div class="col-md-10"><!--右侧-->
-		
+				<div class="col-md-10">
+					<!--右侧-->
+					
+					<div class="row">
+						<h3>修改手机</h3>
+						<div class="container col-md-10 " style="margin-top:30px;margin-bottom:20px;">
 
-			<table class="table condition-table"><!--包括渠道、。。。区域什么的-->
-				<tbody>
-					<tr>
-						<td class="condition-title">联系人</td>
-						<td>
-							<p>王小二</p>
-						</td>
-					</tr>
+							<form class="form-horizontal pull-left">
 
-					<tr>
-						<td class="condition-title">联系电话</td>
-						<td>
-							<p>12365489708</p>
-						</td>
-					</tr>
+								<div class="form-group">
+									<label class="col-md-4 control-label">原手机号码：</label>
+									<div class="col-md-6">
+										<input type="password" class="form-control" id="pwd" style="width:340px;display: inline;" oninput="validate()" onKeyUp="pwStrength(this.value)" onBlur="pwStrength(this.value)" placeholder="请输入原密码">
 
-					<tr>
-						<td class="condition-title">EMAIL</td>
-						<td>
-							<p>aaaaa@163.com</p>
-						</td>
-					</tr>
+									</div>
+								</div>
 
+								
+								
+								
+								<div class="form-group">
+									<label class="col-md-4 control-label">新手机号码：</label>
+									<div class="col-md-4">
+										<input type="password" class="form-control" id="pwd_again" style="width:340px;display: inline;" oninput="validate()" placeholder="请输入再次确认密码">
+									</div>
 
-					<tr>
-						<td class="condition-title">拟采购产品名称</td>
-						<td>
-							<p>血液分析仪</p>
-						</td>
-					</tr>
+								</div>
 
-					<tr>
-						<td class="condition-title">产品类别</td>
-						<td>
-							<p>临床研究-血液分析仪</p>
-						</td>
-					</tr>
+								<!--短信验证码-->
+						        <div class="form-group">
+						          	<label class="col-md-4 control-label">短信验证码：</label>
+						          	<div class="col-md-4">
+							            <div class="input-group" style="width: 340px;">
+							              	<input type="text" id="dxCode" class="form-control" oninput="check_d()" placeholder="请输入短信验证码" />
+							              	<span class="input-group-btn">
+							                    <input class="btn btn-default" id="time_btn" type="button" value="发送短信验证码" onclick="showtime(60)" />
+							                </span>
+							            </div>
 
-					<tr>
-						<td class="condition-title">使用科室</td>
-						<td>
-							<p>神经科<br>
-							骨科<br>
-							普外科</p>
-						</td>
-					</tr>
+						          	</div>
+						        </div>
 
-					<tr>
-						<td class="condition-title">规格</td>
-						<td>
-							<p>395(W)*405(H)*459(D)</p>
-						</td>
-					</tr>
+								<div class="form-group" style="margin-left: 250px;">
 
-					<tr>
-						<td class="condition-title">型号</td>
-						<td>
-							<p>BC-1800</p>
-						</td>
-					</tr>
+									<button type="submit" class="btn btn-default">确认</button> 
+									&nbsp;&nbsp;&nbsp;
+									<button type="submit" class="btn btn-default">重置</button>
 
-					<tr>
-						<td class="condition-title">有效期</td>
-						<td>
-							<p>2018-01-01</p>
-						</td>
-					</tr>
+								</div>
 
-					<tr>
-						<td class="condition-title">拟采购数量</td>
-						<td>
-							<p>100个</p>
-						</td>
-					</tr>
+							</form>
+						</div>
 
-					<tr>
-						<td class="condition-title">采购预算价格</td>
-						<td>
-							<p>10000元人民币  以内  有税</p>
-						</td>
-					</tr>
+					</div>
+					<!--second-row-->
 
-					<tr>
-						<td class="condition-title">交货地区</td>
-						<td>
-							<p>上海市-上海市-宝山区</p>
-						</td>
-					</tr>
-
-					<tr>
-						<td class="condition-title">交货地点</td>
-						<td>
-							<p>上海市宝山区南城路100号</p>
-						</td>
-					</tr>
-
-					<tr>
-						<td class="condition-title">采购附件</td>
-						<td>
-							<p>
-							<a href="xxx.zip">点击下载该附件</a>
-							<!--
-							将href的地址设置为一个文件的路径，点击该链接后即可弹出下载该文件的提示，完成点击下载功能。--></p>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-
-		</div><!--右侧内容-->
+				</div>
+				<!--右侧内容-->
 
 			</div>
 			<!--  整体的   左侧放置手风琴框   右侧放置内容   -->
@@ -348,6 +294,7 @@
 
 		<script type="text/javascript" src="../jquery-2.1.1/jquery.js"></script>
 		<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../Public/JS/register.js"></script>
 
 	</body>
 

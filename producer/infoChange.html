@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
-        <title>我的资料-授权代理商</title>
-        <meta charset="UTF-8">
-        
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的资料-生产商</title>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../Public/CSS/liu.css">
 		<link rel="stylesheet" href="../Public/CSS/zh.css">
 		<link rel="stylesheet" href="../Public/CSS/bootstrap-imageupload.css">
-
-       
-    </head>
+		
+	</head>
 
 	<body>
-
 
 		<!-- 最顶部的navbar -->
 		<nav class="navbar navbar-default navbar-fixed-top first-bar">
@@ -22,11 +21,11 @@
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#first-bar" aria-expanded="false">
-				        <span class="sr-only">Toggle navigation</span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				     </button>
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
 					<a class="navbar-brand" href="../index.html"><img alt="安必选医疗" src="../recourse/Image/Logo.png"></a>
 				</div>
 
@@ -74,7 +73,7 @@
 					<div class="row leftpart">
 						<div class="accountclass">
 							<!--我的账号部分-->
-							<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp &nbsp用户中心</h4>
+							<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp; &nbsp;用户中心</h4>
 						</div>
 						<!--我的账号部分-->
 
@@ -105,22 +104,20 @@
 							<h4>我的发布</h4>
 							<ul>
 								<li>
-									<a href="activities.html">优惠活动</a>
-								</li>
-
-								<li>
 									<a href=" productsInfo.html">产品信息</a>
 								</li>
 
-								
+								<li>
+									<a href="adsInfo.html">广告发布</a>
+								</li>
 
-								<!-- <li>
-									<a href="myAgents.html">我的代理商</a>
-								</li> -->
+								<li>
+									<a href="myAgents.html">授权代理商</a>
+								</li>
 
 
 								<li>
-									<a href="merchantsRecords.html">找销售代理</a>
+									<a href="merchantsRecords.html">找代理</a>
 								</li>
 
 								<li>
@@ -154,20 +151,10 @@
 								<li>
 									<a href="CSOfeedback.html">销售代理反馈</a>
 								</li>
+								 
 								<li>
 									<a href="conferencesPush.html">学术活动反馈</a>
 								</li>
-							</ul>
-
-							<h4>我的招聘</h4>
-							<ul>
-								<li>
-									<a href="EmployInfo.html">招聘信息</a>
-								</li>
-								<li>
-									<a href="EmployFeedback.html">招聘反馈</a>
-								</li>
-								
 							</ul>
 
 							<h4>联系后台</h4>
@@ -186,76 +173,88 @@
 
 				<div class="col-md-10">
 					<!--右侧-->
+
 					<div class="row">
-						<h3>我的资料</h3>
+						
+						<h3>资料修改</h3>
 						<table class="table condition-table">
 							<!--包括渠道、。。。区域什么的-->
 							<tbody>
 
 								<tr>
-									<td class="condition-title">邀请码</td>
-									<td>
-										<p>dls001</p>
-									</td>
-								</tr>
-
-								<tr>
 									<td class="condition-title">用户头像</td>
 									<td>
-										
 										<div class="con4">
 											<canvas id="cvs" width="200" height="200"></canvas>
+											<span class="btn upload">上传头像<input type="file" class="upload_pic" id="upload" /></span>
 										</div>
-
 									</td>
 								</tr>
 
 								<tr>
 									<td class="condition-title">用户名称</td>
 									<td>
-										<p>fewfds</p>
+										<input type="text" class="form-control" id="info_username" oninput="checkname()" style="width:340px" placeholder="请输入2-20位中文用户名">
 									</td>
 								</tr>
 
 								<tr>
 									<td class="condition-title">手机号码</td>
 									<td>
-										<p>18181737326</p>
+										<input type="text" class="form-control" id="info_phone" oninput="checknumb()" style="width:340px" placeholder="请输入11位手机号码">
 									</td>
 								</tr>
 
 								<tr>
 									<td class="condition-title">注册邮箱</td>
 									<td>
-										<p>214343426@163.com</p>
+										<input type="text" class="form-control" id="info_phone" oninput="checknumb()" style="width:340px" placeholder="请输入邮箱">
 									</td>
 								</tr>
 
 								<tr>
 									<td class="condition-title">用户类型</td>
 									<td>
-										<p>代理商</p>
+										<p>生产商</p>
+									</td>
+								</tr>
+
+								<tr>
+									<td class="condition-title">注册类型</td>
+									<td>
+										<input type="text" class="form-control" id="info_usertype" style="width:340px" placeholder="注册类型">
+									</td>
+								</tr>
+
+								<tr>
+									<td class="condition-title">企业名称</td>
+									<td>
+										<input type="text" class="form-control" id="info_corporation" style="width:340px" placeholder="请输入中文名称">
+										<br>
+										<input type="text" class="form-control" id="info_corporation" style="width:340px" placeholder="请输入英文名称">
+
 									</td>
 								</tr>
 
 								<tr>
 									<td class="condition-title">品牌</td>
 									<td>
-										<p>松下</p>
-									</td>
-								</tr>
+										<div id="logo">
+																						
+												<input type="file" id="logo_pic" style="width: 200px;display: inline;" value="请选择品牌logo">
+												<input type="text" style="display: inline;" placeholder="请输入品牌名称">
+												
+												<button class="btn btn-default" onclick="copy()">+</button>
+												<button class="btn btn-default" onclick="delparent(this)">-</button>
+											
+										</div>
+										<div id="logo2"></div>
 
-								<tr>
-									<td class="condition-title">区域</td>
-									<td>
-										<p>上海市-上海市-宝山区</p>
 									</td>
 								</tr>
 
 							</tbody>
 						</table>
-
-
 
 						<div class="row leftright_part">
 							<div class="part_zhizhao condition-title">
@@ -266,7 +265,14 @@
 
 
 								<form enctype="multipart/form-data" name="form3">
+								    <p class="upload_p">上传营业执照:&nbsp;&nbsp;&nbsp;</p>	
+								    <input id="f3" type="file" name="f3" onchange="change3()" />
 								   
+								    <p"></p>
+								    <p class="yulan_p">预览:</p>
+
+									<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
+
 								    <img id="preview3" alt="" name="pic" />
 								</form>
 								
@@ -282,7 +288,14 @@
 
 
 								<form enctype="multipart/form-data" name="form3">
+								    <p class="upload_p">上传许可证:&nbsp;&nbsp;&nbsp;</p>	
+								    <input id="f3" type="file" name="f3" onchange="change3()" />
 								   
+								    <p"></p>
+								    <p class="yulan_p">预览:</p>
+
+									<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
+
 								    <img id="preview3" alt="" name="pic" />
 								</form>
 								
@@ -298,7 +311,14 @@
 
 
 									<form enctype="multipart/form-data" name="form3">
+									    <p class="upload_p">上传授权书:&nbsp;&nbsp;&nbsp;</p>	
+									    <input id="f3" type="file" name="f3" onchange="change3()" />
 									   
+									    <p"></p>
+									    <p class="yulan_p">预览:</p>
+
+										<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
+
 									    <img id="preview3" alt="" name="pic" />
 									</form>
 									
@@ -306,15 +326,14 @@
 						</div>
 
 
+						<div class="form-group" style="text-align: center;">
+							<div class=" col-md-12">
+								<button type="submit" class="btn btn-default">确认</button>
+							</div>
+						</div>
 
 					</div>
-				</div>
-
-				<div>
-					<div class="form-group" style="margin-left: 680px;">
-						<a href="infoChange.html"><button type="submit" class="btn btn-default">修改</button></a>
-					</div>
-					<!--第五部分：预览发布-->
+					<!--second-row-->
 
 				</div>
 				<!--右侧内容-->
@@ -383,91 +402,96 @@
 		</nav>
 
 		<script src="../Public/JS/jquery-1.12.4.min.js"></script>
-<!-- 		<script src="../jquery-2.1.1/jquery.js"></script>
- -->		<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+ 		
+	 	<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 		<script src="../Public/JS/bootstrap-imageupload.js"></script>
 		<script type="text/javascript" src="../Public/JS/zh2.js"></script>
-		<script type="text/javascript" src="../Public/JS/regist.js"></script>
 
 		<script>
 			var $imageupload = $('.imageupload');
 			$imageupload.imageupload();
 
+			var delparent = function(o){
+				o.parentNode.parentNode.removeChild(o.parentNode)
+			}
 
+			function copy(){
+				var itm=document.getElementById("logo");
+				var cln=itm.cloneNode(true);
+				document.getElementById("logo2").appendChild(cln);
+			}
 		</script>
 
 		<script>
-		//获取上传按钮
-		var input1 = document.getElementById("upload"); 
-		 
-		if(typeof FileReader==='undefined'){ 
-		     //result.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
-		     input1.setAttribute('disabled','disabled'); 
-		}else{ 
-		     input1.addEventListener('change',readFile,false); 
-		     /*input1.addEventListener('change',function (e){
-		     	console.log(this.files);//上传的文件列表
-		     },false); */
-		}
-		function readFile(){ 
-			var file = this.files[0];//获取上传文件列表中第一个文件
-			if(!/image\/\w+/.test(file.type)){
-			//图片文件的type值为image/png或image/jpg
-				alert("文件必须为图片！");
-				return false; 
-			} 
-			// console.log(file);
-			var reader = new FileReader();//实例一个文件对象
-			reader.readAsDataURL(file);//把上传的文件转换成url
-			//当文件读取成功便可以调取上传的接口
-			reader.onload = function(e){ 
-				// console.log(this.result);//文件路径
-				// console.log(e.target.result);//文件路径
-				/*var data = e.target.result.split(',');
-				var tp = (file.type == 'image/png')? 'png': 'jpg';
-				var imgUrl = data[1];//图片的url，去掉(data:image/png;base64,)
-				//需要上传到服务器的在这里可以进行ajax请求
-				// console.log(imgUrl);
-				// 创建一个 Image 对象 
-				var image = new Image();
-				// 创建一个 Image 对象 
-				// image.src = imgUrl;
-				image.src = e.target.result;
-				image.onload = function(){
-					document.body.appendChild(image);
-				}*/
-
-				var image = new Image();
-				// 设置src属性 
-				image.src = e.target.result;
-				var max=200;
-				// 绑定load事件处理器，加载完成后执行，避免同步问题
-				image.onload = function(){ 
-					// 获取 canvas DOM 对象 
-					var canvas = document.getElementById("cvs"); 
-					// 如果高度超标 宽度等比例缩放 *= 
-					/*if(image.height > max) {
-						image.width *= max / image.height; 
-						image.height = max;
-					} */
-					// 获取 canvas的 2d 环境对象, 
-					var ctx = canvas.getContext("2d"); 
-					// canvas清屏 
-					ctx.clearRect(0, 0, canvas.width, canvas.height); 
-					// 重置canvas宽高
-					/*canvas.width = image.width;
-					canvas.height = image.height;
-					if (canvas.width>max) {canvas.width = max;}*/
-					// 将图像绘制到canvas上
-					// ctx.drawImage(image, 0, 0, image.width, image.height);
-					ctx.drawImage(image, 0, 0, 200, 200);
-					// 注意，此时image没有加入到dom之中
-				};  
+			//获取上传按钮
+			var input1 = document.getElementById("upload"); 
+			 
+			if(typeof FileReader==='undefined'){ 
+			     //result.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
+			     input1.setAttribute('disabled','disabled'); 
+			}else{ 
+			     input1.addEventListener('change',readFile,false); 
+			     /*input1.addEventListener('change',function (e){
+			     	console.log(this.files);//上传的文件列表
+			     },false); */
 			}
-		};
+			function readFile(){ 
+				var file = this.files[0];//获取上传文件列表中第一个文件
+				if(!/image\/\w+/.test(file.type)){
+				//图片文件的type值为image/png或image/jpg
+					alert("文件必须为图片！");
+					return false; 
+				} 
+				// console.log(file);
+				var reader = new FileReader();//实例一个文件对象
+				reader.readAsDataURL(file);//把上传的文件转换成url
+				//当文件读取成功便可以调取上传的接口
+				reader.onload = function(e){ 
+					// console.log(this.result);//文件路径
+					// console.log(e.target.result);//文件路径
+					/*var data = e.target.result.split(',');
+					var tp = (file.type == 'image/png')? 'png': 'jpg';
+					var imgUrl = data[1];//图片的url，去掉(data:image/png;base64,)
+					//需要上传到服务器的在这里可以进行ajax请求
+					// console.log(imgUrl);
+					// 创建一个 Image 对象 
+					var image = new Image();
+					// 创建一个 Image 对象 
+					// image.src = imgUrl;
+					image.src = e.target.result;
+					image.onload = function(){
+						document.body.appendChild(image);
+					}*/
+
+					var image = new Image();
+					// 设置src属性 
+					image.src = e.target.result;
+					var max=200;
+					// 绑定load事件处理器，加载完成后执行，避免同步问题
+					image.onload = function(){ 
+						// 获取 canvas DOM 对象 
+						var canvas = document.getElementById("cvs"); 
+						// 如果高度超标 宽度等比例缩放 *= 
+						/*if(image.height > max) {
+							image.width *= max / image.height; 
+							image.height = max;
+						} */
+						// 获取 canvas的 2d 环境对象, 
+						var ctx = canvas.getContext("2d"); 
+						// canvas清屏 
+						ctx.clearRect(0, 0, canvas.width, canvas.height); 
+						// 重置canvas宽高
+						/*canvas.width = image.width;
+						canvas.height = image.height;
+						if (canvas.width>max) {canvas.width = max;}*/
+						// 将图像绘制到canvas上
+						// ctx.drawImage(image, 0, 0, image.width, image.height);
+						ctx.drawImage(image, 0, 0, 200, 200);
+						// 注意，此时image没有加入到dom之中
+					};  
+				}
+			};
 		</script>
-
-
 
 	</body>
 	
