@@ -2,10 +2,11 @@
 <html lang="zh-CN">
 <head>
 	<meta charset="UTF-8">
-	<title>推广信息反馈--查看详情</title>
+	<title>我的简历编辑--CSO专员（销售代理专员）</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="../Public/CSS/liu.css">
 
 </head>
@@ -18,7 +19,6 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#first-bar" aria-expanded="false">
-
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -47,6 +47,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
 
 
 
@@ -117,95 +118,87 @@
 
 			<table class="table condition-table"><!--包括渠道、。。。区域什么的-->
 				<tbody>
-					<tr><!--区域-->
-						<!--http://www.jq22.com/jquery-info448-->
-						<td class="condition-title">区域</td>
+					
+					
+					<tr>
+						<td class="condition-title">职位类型</td>
 						<td>
-							<p>上海市-上海市-宝山区</p>
+							<div class="dropdown" style="margin-left:20px;">
+				 				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">职位类型选择<span class="caret"></span>
+				  				</button>
+				  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					  				<li><a href="#">临床销售</a></li>
+					   				<li><a href="#">OTC销售</a></li>
+					   				<li><a href="#">器械耗材</a></li>
+					   				<li><a href="#">招商经理</a></li>
+					   				<li><a href="#">主管/经理</a></li>
+					   				<li><a href="#">生产/研发</a></li>
+									<li><a href="#">实习</a></li>
+									<li><a href="#">其他</a></li>
+				 				</ul>
+							</div><!--div:dropdown-->
+						</td>
+					</tr>
+					<tr>
+						<td class="condition-title">薪资期望</td>
+						<td>
+							<div class="dropdown" style="margin-left:20px;">
+				 				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">薪资待遇选择<span class="caret"></span>
+				  				</button>
+				  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					  				<li><a href="#">面议</a></li>
+					   				<li><a href="#">3k/月以下</a></li>
+					   				<li><a href="#">3k~5k/月</a></li>
+					   				<li><a href="#">5k~7k/月</a></li>
+					   				<li><a href="#">7k~10k/月</a></li>
+					   				<li><a href="#">10k~15k/月</a></li>
+									<li><a href="#">15k~20k/月</a></li>
+									<li><a href="#">20k~30k/月</a></li>
+									<li><a href="#">30k~50k/月</a></li>
+									<li><a href="#">50k/月以上</a></li>
+				 				</ul>
+							</div><!--div:dropdown-->
 						</td>
 					</tr>
 
-					<tr>
-						<td class="condition-title">医疗机构</td>
-						<td><p>
-							北京地坛医院<br>
-							望京医院<br>
-							安贞医院<br>
-							微创医院<br>
-						</p></td>
-					</tr>
-
-
-					<tr><!--熟悉科室-->
-						<td class="condition-title">熟悉科室</td>
-						<td><p>
-							结核科<br>
-							肿瘤科<br>
-							骨科<br>
-							神经科<br>
-						</p></td>
-					</tr>
 
 					<tr>
-						<td class="condition-title">产品类别</td>
-						<td><p>
-							临床研究-血液分析仪</p>
+						<td class="condition-title">工作经验</td>
+						<td>
+							<div id="logo">
+																			
+									<input id="#inputjob" style="width:400px;margin-top: 8px" type="text">
+									
+									<button class="btn btn-default" onclick="copy()">+</button>
+									<button class="btn btn-default" onclick="delparent(this)">-</button>
+								
+							</div>
+							<div id="logo2"></div>
+
 						</td>
 					</tr>
 
 
 					<tr>
-						<td class="condition-title">推广经验</td>
-						<td><p>
-							5年</p>
+						<td class="condition-title">教育经历</td>
+						<td>
+							<div id="logoeducate">
+																			
+									<input style="width:400px;margin-top: 8px" type="text">
+									
+									<button class="btn btn-default" onclick="copyeducate()">+</button>
+									<button class="btn btn-default" onclick="delparenteducate(this)">-</button>
+								
+							</div>
+							<div id="logo2educate"></div>
+
 						</td>
-					</tr>		
-
-
-					<tr>
-						<td class="condition-title">专业能力</td>
-						<td><p>
-							学术推广：内容信息内容信息内容信息<br>
-							专业会议：内容信息内容信息内容信息
-						</p></td>
 					</tr>
-
-
-					<tr>
-						<td class="condition-title">联系信息</td>
-						<td><p>
-							联系人：王小二<br>
-							联系电话：12364487908<br>
-							EMAIL：wangxiaoer@123.com
-						</p></td>
-					</tr>
-
-
-					<tr>
-						<td class="condition-title">
-							关注度
-						</td>
-						<td><p>
-							50
-						</p></td>
-					</tr>
-
-					<tr>
-						<td class="condition-title">
-							供货商名称
-						</td>
-						<td><p>
-							王小二供货商
-						</p></td>
-					</tr>
+					
 
 				</tbody>
 			</table>
 
-
-			<div class="row"><!--第五部分：预览发布-->
-				<button class="btn btn-default yulan-position">预览发布</button>
-			</div><!--第五部分：预览发布-->
 
 		</div><!--右侧内容-->
 
@@ -214,8 +207,6 @@
 
 	
 </div><!--"container-fluid medium"-->
-
-
 
 
 
@@ -275,103 +266,105 @@
 <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
-var Gid  = document.getElementById ;
-var showArea = function(){
-	Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" + 	
-	Gid('s_city').value + " - 县/区" + 
-	Gid('s_county').value + "</h3>"
-							}
-Gid('s_county').setAttribute('onchange','showArea()');
 
-//http://www.cnblogs.com/lantu1989/p/6148319.html
-// 选中添加到右边
-function selectedToRight(){
-    
-    // 获取select2标签
-    var select2 = document.getElementById("select2");
-    // 获取select1标签
-    var select1 = document.getElementById("select1");
-    // 获取option
-    var option1 = select1.getElementsByTagName("option");
-    // 遍历
-    for (var i=0;i<option1.length;i++) {
-        var optioni = option1[i];
-        //是否被选中
-        if(optioni.selected == true){
-            // 添加到select2里面
-            select2.appendChild(optioni);
-            //数组长度发生变化，需要处理
-            i--;
-        }
-    }
+var delparent = function(o){
+
+				o.parentNode.parentNode.removeChild(o.parentNode);
+
 }
 
-// 选中添加到左边
-function selectedToLeft(){
-    
-    // 获取select2标签
-    var select2 = document.getElementById("select2");
-    // 获取select1标签
-    var select1 = document.getElementById("select1");
-    // 获取option
-    var option2 = select2.getElementsByTagName("option");
-    // 遍历
-    for (var i=0;i<option2.length;i++) {
-        var optioni = option2[i];
-        //是否被选中
-        if(optioni.selected == true){
-            // 添加到select1里面
-            select1.appendChild(optioni);
-            //数组长度发生变化，需要处理
-            i--;
-        }
-    }
+function copy(){
+				var itm=document.getElementById("logo");
+				var cln=itm.cloneNode(true);
+				document.getElementById("logo2").appendChild(cln);
 }
 
-function selectedToRight2(){
-    // 获取select2标签
-    var select4 = document.getElementById("select4");
-    // 获取select1标签
-    var select3 = document.getElementById("select3");
-    // 获取option
-    var option3 = select3.getElementsByTagName("option");
-    // 遍历
-    for (var i=0;i<option3.length;i++) {
-        var optioni = option3[i];
-        //是否被选中
-        if(optioni.selected == true){
-            // 添加到select2里面
-            select4.appendChild(optioni);
-            //数组长度发生变化，需要处理
-            i--;
-        }
-    }
+
+var delparenteducate = function(o){
+				o.parentNode.parentNode.removeChild(o.parentNode)
 }
 
-// 选中添加到左边
-function selectedToLeft2(){
-    
-    // 获取select2标签
-    var select4 = document.getElementById("select4");
-    // 获取select1标签
-    var select3 = document.getElementById("select3");
-    // 获取option
-    var option4 = select4.getElementsByTagName("option");
-    // 遍历
-    for (var i=0;i<option4.length;i++) {
-        var optioni = option4[i];
-        //是否被选中
-        if(optioni.selected == true){
-            // 添加到select1里面
-            select3.appendChild(optioni);
-            //数组长度发生变化，需要处理
-            i--;
-        }
-    }
+function copyeducate(){
+				var itm=document.getElementById("logoeducate");
+				var cln=itm.cloneNode(true);
+				document.getElementById("logo2educate").appendChild(cln);
 }
+
+
+//获取上传按钮
+		var input1 = document.getElementById("upload"); 
+		 
+		if(typeof FileReader==='undefined'){ 
+		     //result.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
+		     input1.setAttribute('disabled','disabled'); 
+		}else{ 
+		     input1.addEventListener('change',readFile,false); 
+		     /*input1.addEventListener('change',function (e){
+		     	console.log(this.files);//上传的文件列表
+		     },false); */
+		}
+		function readFile(){ 
+			var file = this.files[0];//获取上传文件列表中第一个文件
+			if(!/image\/\w+/.test(file.type)){
+			//图片文件的type值为image/png或image/jpg
+				alert("文件必须为图片！");
+				return false; 
+			} 
+			// console.log(file);
+			var reader = new FileReader();//实例一个文件对象
+			reader.readAsDataURL(file);//把上传的文件转换成url
+			//当文件读取成功便可以调取上传的接口
+			reader.onload = function(e){ 
+				// console.log(this.result);//文件路径
+				// console.log(e.target.result);//文件路径
+				/*var data = e.target.result.split(',');
+				var tp = (file.type == 'image/png')? 'png': 'jpg';
+				var imgUrl = data[1];//图片的url，去掉(data:image/png;base64,)
+				//需要上传到服务器的在这里可以进行ajax请求
+				// console.log(imgUrl);
+				// 创建一个 Image 对象 
+				var image = new Image();
+				// 创建一个 Image 对象 
+				// image.src = imgUrl;
+				image.src = e.target.result;
+				image.onload = function(){
+					document.body.appendChild(image);
+				}*/
+
+				var image = new Image();
+				// 设置src属性 
+				image.src = e.target.result;
+				var max=200;
+				// 绑定load事件处理器，加载完成后执行，避免同步问题
+				image.onload = function(){ 
+					// 获取 canvas DOM 对象 
+					var canvas = document.getElementById("cvs"); 
+					// 如果高度超标 宽度等比例缩放 *= 
+					/*if(image.height > max) {
+						image.width *= max / image.height; 
+						image.height = max;
+					} */
+					// 获取 canvas的 2d 环境对象, 
+					var ctx = canvas.getContext("2d"); 
+					// canvas清屏 
+					ctx.clearRect(0, 0, canvas.width, canvas.height); 
+					// 重置canvas宽高
+					/*canvas.width = image.width;
+					canvas.height = image.height;
+					if (canvas.width>max) {canvas.width = max;}*/
+					// 将图像绘制到canvas上
+					// ctx.drawImage(image, 0, 0, image.width, image.height);
+					ctx.drawImage(image, 0, 0, 200, 200);
+					// 注意，此时image没有加入到dom之中
+				};  
+			}
+		};
+
+
+
+
+
 
 </script>
-
-
 </body>
 </html>

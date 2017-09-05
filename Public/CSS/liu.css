@@ -392,7 +392,7 @@ border-color: #ccc;
 2017-8-25 SupplierNeedInfo
  */
 .SupplierNeedclass1{
-	width:100px;
+	width:130px;
 }
 .SupplierNeedclass2{
 	width:100px;
@@ -419,7 +419,7 @@ border-color: #ccc;
 
 
 .csocompanysupplier1{
-	width:100px;
+	width:125px;
 }
 .csocompanysupplier2{
 	width:120px;
@@ -491,6 +491,13 @@ border-color: #ccc;
      float: left;
      position: relative;
 }
+
+.upload p{
+    margin-top: -13px;
+    margin-left: 2px;
+}
+
+
 .upload_pic{
      display: block;
      width: 100%;
@@ -538,3 +545,18 @@ margin-top: -128px;
 width: 90px;
 border-color: #ccc;
 }
+
+
+/*
+2017-9-4
+ */
+.resume-position { margin-left: 420px; margin-top: 35px; background-color: #66b3ff; width: 85px; }
+
+/*
+.col-md-2 {
+    width: 17.666667%;
+}
+.col-md-10 {
+    width: 82.3333333%
+}
+*/
