@@ -1,5 +1,5 @@
 th{
-white-space:nowrap;
+     white-space:nowrap;
 }
 
 
@@ -38,6 +38,11 @@ white-space:nowrap;
 #cvs{
 	border: 1px solid #000;
 	margin:20px 0 20px 50px;
+}
+
+.upload p{
+     margin-top: -13px;
+     margin-left: 2px
 }
 
 
