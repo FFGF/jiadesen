@@ -59,6 +59,9 @@ function createCode() {
 	}
 	checkCode.value = code; //把code值赋给验证码  
 }
+
+
+
 //校验验证码  
 function check() {
 	var inputCode = document.getElementById("check_one").value.toUpperCase(); //取得输入的验证码并转化为大写   

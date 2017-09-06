@@ -8,9 +8,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Public/CSS/main.css">
-    <link rel="stylesheet" href="../Public/CSS/zh.css">
     <style>
       .first-bar .navbar-brand{padding-top: 15px;}
+      
+      /*验证码*/
+      #code {
+     font-family: Arial, 宋体;
+     font-style: italic;
+     color: green;
+     border: 0;
+     padding: 2px 3px;
+     letter-spacing: 3px;
+     font-weight: bolder;
+    }
+
+
+    /*上传头像*/
+    .con4{
+         width: 300px;
+         height: auto;
+         overflow: hidden;
+         margin: 20px auto;
+         color: #FFFFFF;
+    }
+    .con4 .btn{
+         width: 100%;
+         height: 40px;
+         line-height: 40px;
+         text-align: center;
+         background: #d8b49c;
+         display: block;
+         font-size: 16px;
+         border-radius: 5px;
+    }
+    .con4 .upload{
+         float: left;
+         position: relative;
+    }
+    .con4 .upload_pic{
+         display: block;
+         width: 100%;
+         height: 30px;
+         position: absolute;
+         left: 0;
+         top: 0;
+         opacity: 0;
+         border-radius: 5px;
+    }
+    #cvs{
+      border: 1px solid #000;
+      margin:20px 0 20px 50px;
+    }
+
+    .upload p{
+         margin-top: -8px;
+         margin-left: 2px
+    }
     </style>
 
   </head>
@@ -82,10 +135,12 @@
         <div class="form-group">
           <label class="col-md-4 control-label">用户头像：</label>
           <div class="col-md-4">
-                    <div class="con4">
-                      <canvas id="cvs" width="200" height="200"></canvas>
-                      <span class="btn upload">上传头像<input type="file" class="upload_pic" id="upload" /></span>
-                    </div>
+              <div class="con4">
+                <canvas id="cvs" width="200" height="200"></canvas>
+                  <span class="btn upload">
+                    <p>上传头像</p><input type="file" class="upload_pic" id="upload" />
+                  </span>
+              </div>
 
           </div>
         </div>
@@ -363,17 +418,7 @@
   <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="Public/JS/register.js"></script>
 
-  <style type='text/css'>
-    #code {
-      font-family: Arial, 宋体;
-      font-style: italic;
-      color: green;
-      border: 0;
-      padding: 2px 3px;
-      letter-spacing: 3px;
-      font-weight: bolder;
-    }
-  </style>
+  
 
   <script>
   //获取上传按钮
