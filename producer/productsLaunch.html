@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>产品信息发布</title>
+		<title>产品信息发布-生产商</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
@@ -32,7 +32,7 @@
 					<ul class="nav navbar-nav">
 					 <li class="welcome"><a>欢迎王小二</a></li>
 						<li class="active">
-							<a href="../login.html">请登录 <span class="sr-only">(current)</span></a>
+							<a href="../login.html">我的账号 <span class="sr-only">(current)</span></a>
 						</li>
 
 						<li>
@@ -89,7 +89,7 @@
 									<a href="security.html">账户安全</a>
 								</li>
 								<li>
-									<a href="myCoupon.html">我的点券</a>
+									<a href="myCoupon.html">我的安券</a>
 								</li>
 								<li>
 									<a href="payHistory.html">充值记录</a>
@@ -110,21 +110,21 @@
 								</li>
 
 								<li>
-									<a href="myAgents.html">我的代理商</a>
+									<a href="myAgents.html">授权代理商</a>
 								</li>
 
 
 								<li>
-									<a href="merchantsRecords.html">找CSO</a>
+									<a href="merchantsRecords.html">找代理</a>
 								</li>
 
 								<li>
-									<a href="conferences.html">学术会议</a>
+									<a href="conferences.html">学术活动</a>
 								</li>
 							
 								<!-- 
 								<li>
-									<a href="CSOapply.html">区域代理请求信息</a>
+									<a href="CSOperson.html">区域代理请求信息</a>
 								</li>
 
 								<li>
@@ -144,14 +144,14 @@
 							<h4>我的反馈</h4>
 							<ul>
 								<li>
-									<a href="hospitalPush.html">医疗机构反馈</a>
+									<a href="hospitalPush.html">医疗机构需求信息</a>
 								</li>
 								<li>
-									<a href="#">CSO反馈</a>
+									<a href="CSOfeedback.html">销售代理反馈</a>
 								</li>
 								 
 								<li>
-									<a href="conferencesPush.html">学术会议反馈</a>
+									<a href="conferencesPush.html">学术活动反馈</a>
 								</li>
 							</ul>
 
@@ -186,10 +186,14 @@
 							</tr>
 
 							<tr>
-								<!--第二行-->
 								<td class="condition-title">品牌</td>
 								<td>
-									<input class="form-control" type="text" style="width: 200px;">
+									<select class="form-control" id="" style="width: 200px;margin-left: 20px">
+										<option disabled selected value>选择品牌</option>
+										<option>西门子</option>
+										<option>博世</option>
+										<option>松下</option>
+									</select>
 								</td>
 								<td class="condition-title">产地</td>
 								<td>
@@ -201,14 +205,35 @@
 								<!--第三行-->
 								<td class="condition-title">产品类别</td>
 								<td>
-									<input class="form-control" type="text" style="width: 200px;">
+									<select class="form-control" id="" style="width: 200px;margin-left: 20px">
+										<option disabled selected value>选择类别</option>
+										<option>1类</option>
+										<option>2类</option>
+										<option>3类</option>
+									</select>
 								</td>
 								<td class="condition-title">适用科室</td>
+								<td>
+									<select class="form-control" id="" style="width: 200px;margin-left: 20px">
+										<option disabled selected value>选择科室</option>
+										<option>内科</option>
+										<option>外科</option>
+										<option>神经科</option>
+									</select>
+								</td>
+							</tr>
+
+							<tr>
+								<!--第四行-->
+								<td class="condition-title">规格</td>
+								<td>
+									<input class="form-control" type="text" style="width: 200px;">
+								</td>
+								<td class="condition-title">单位</td>
 								<td>
 									<input class="form-control" type="text" style="width: 200px;">
 								</td>
 							</tr>
-
 							
 						</tbody>
 					</table>
@@ -282,23 +307,23 @@
 								</tr>
 							
 							<tr>
-								<!--第七行-->
+								
 								<td class="condition-title">产品介绍</td>
 								<td>
 									<div>
-										<textarea class="form-control" rows="3" style="width: 400px;display: inline;"></textarea>
-										<button class="btn btn-default">上传</button>
+										<input type="file" accept="application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+										<p>*只可上传.doc,.docx格式word文档</p>
 									</div>									
 								</td>
 							</tr>
 							
 							<tr>
-								<!--第八行-->
+								
 								<td class="condition-title">技术参数</td>
 								<td>
 									<div>
-										<textarea class="form-control" rows="3" style="width: 400px;display: inline;"></textarea>
-										<button class="btn btn-default">上传</button>
+										<input type="file" accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+										<p>*只可上传.xls,.xlsx格式excel文档</p>
 									</div>
 								</td>
 							</tr>

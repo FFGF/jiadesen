@@ -3,12 +3,13 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>优惠活动</title>
+		<title>优惠活动-授权代理商</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../Public/CSS/liu.css">
-		<link rel="stylesheet" href="../Public/CSS/bootstrap-imageupload.css">
+		<link rel="stylesheet" href="../Public/CSS/zh.css">
+
 	</head>
 
 	<body>
@@ -23,7 +24,7 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
-				    </button>
+				     </button>
 					<a class="navbar-brand" href="../index.html"><img alt="安必选医疗" src="../recourse/Image/Logo.png"></a>
 				</div>
 
@@ -32,7 +33,7 @@
 					<ul class="nav navbar-nav">
 					 <li class="welcome"><a>欢迎王小二</a></li>
 						<li class="active">
-							<a href="../login.html">请登录 <span class="sr-only">(current)</span></a>
+							<a href="../login.html">我的账号 <span class="sr-only">(current)</span></a>
 						</li>
 
 						<li>
@@ -65,7 +66,6 @@
 
 			<div class="row">
 				<!--  整体的   左侧放置手风琴框   右侧放置内容   -->
-
 				<div class="col-md-2">
 					<!--左侧手风琴框-->
 
@@ -90,7 +90,7 @@
 									<a href="security.html">账户安全</a>
 								</li>
 								<li>
-									<a href="myCoupon.html">我的点券</a>
+									<a href="myCoupon.html">我的安券</a>
 								</li>
 								<li>
 									<a href="payHistory.html">充值记录</a>
@@ -110,9 +110,7 @@
 									<a href=" productsInfo.html">产品信息</a>
 								</li>
 
-								<li>
-									<a href="EmployInfo.html">招聘信息</a>
-								</li>
+								
 
 								<!-- <li>
 									<a href="myAgents.html">我的代理商</a>
@@ -120,16 +118,16 @@
 
 
 								<li>
-									<a href="merchantsRecords.html">找CSO</a>
+									<a href="merchantsRecords.html">找销售代理</a>
 								</li>
 
 								<li>
-									<a href="conferences.html">学术会议</a>
+									<a href="conferences.html">学术活动</a>
 								</li>
 							
 								<!-- 
 								<li>
-									<a href="CSOapply.html">区域代理请求信息</a>
+									<a href="CSOperson.html">区域代理请求信息</a>
 								</li>
 
 								<li>
@@ -149,17 +147,25 @@
 							<h4>我的反馈</h4>
 							<ul>
 								<li>
-									<a href="hospitalPush.html">医疗机构反馈</a>
+									<a href="hospitalPush.html">医疗机构需求信息</a>
 								</li>
 								<li>
-									<a href="#">CSO反馈</a>
+									<a href="CSOfeedback.html">销售代理反馈</a>
+								</li>
+								<li>
+									<a href="conferencesPush.html">学术活动反馈</a>
+								</li>
+							</ul>
+
+							<h4>我的招聘</h4>
+							<ul>
+								<li>
+									<a href="EmployInfo.html">招聘信息</a>
 								</li>
 								<li>
 									<a href="EmployFeedback.html">招聘反馈</a>
 								</li>
-								<li>
-									<a href="conferencesPush.html">学术会议反馈</a>
-								</li>
+								
 							</ul>
 
 							<h4>联系后台</h4>
@@ -174,235 +180,180 @@
 					</div>
 
 				</div>
+
 				<!--左侧手风琴框-->
 
-				<div class="col-md-9">
+				<div class="col-md-10" id="g_info">
+					<!--右侧-->
 					<div class="row">
-						<table class="table condition-table" style="margin-bottom: 0px;">
-							<!--包括渠道、。。。区域什么的-->
-							<tbody>
-								<tr>
-									<!--第一行-->
-									<td class="condition-title">产品注册名</td>
-									<td>
-										<input class="form-control" type="text" style="width: 200px;">
-									</td>
-									<td class="condition-title">产品简称</td>
-									<td>
-										<input class="form-control" type="text" style="width: 200px;">
-									</td>
-								</tr>
 
-								<tr>
-									<!--第二行-->
-									<td class="condition-title">品牌</td>
-									<td>
-										<input class="form-control" type="text" style="width: 200px;">
-									</td>
-									<td class="condition-title">产地</td>
-									<td>
-										<input class="form-control" type="text" style="width: 200px;">
-									</td>
-								</tr>
-
-								<tr>
-									<!--第三行-->
-									<td class="condition-title">产品类别</td>
-									<td>
-										<input class="form-control" type="text" style="width: 200px;">
-									</td>
-									<td class="condition-title">适用科室</td>
-									<td>
-										<input class="form-control" type="text" style="width: 200px;">
-									</td>
-								</tr>
-
-								<tr>
-									<!--第四行-->
-									<td class="condition-title">规格</td>
-									<td>
-										<input class="form-control" type="text" style="width: 200px;">
-									</td>
-									<td class="condition-title">单位</td>
-									<td>
-										<input class="form-control" type="text" style="width: 200px;">
-									</td>
-								</tr>
-
-								<tr>
-									<!--第五行-->
-									<td class="condition-title">数量</td>
-									<td>
-										<input class="form-control" type="text" style="width: 200px;">
-									</td>
-									<td class="condition-title">折扣</td>
-									<td>
-										<input class="form-control" type="text" style="width: 200px;">
-									</td>
-								</tr>
-							</tbody>
-						</table>
-
-						<table class="table condition-table" style="margin-top: 0px;margin-bottom: 0px;">
-							<tbody>
-								<tr>
-									<!--第五行-->
-									<td class="condition-title">产品注册证号</td>
-									<td>
-										<input class="form-control" type="text" style="width: 400px;">
-									</td>
-								</tr>
-
-								<tr>
-									<!--第六行-->
-									<td class="condition-title">产品图片</td>
-									<td>
-										<div class="imageupload panel panel-default" style="width:340px;">
-
-											<div class="file-tab panel-body">
-												<label class="btn btn-default btn-file">
-				                       			<span>浏览</span>
-				                       			<!-- The file is stored here. -->
-				                        			<input type="file" name="image-file_1">
-				                    			</label>
-												<button type="button" class="btn btn-default">Remove</button>
-											</div>
-											<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_1" class="btn btn-default">上传</button></P>
-										</div>
-
-										<div class="imageupload panel panel-default" style="width:340px;">
-
-											<div class="file-tab panel-body">
-												<label class="btn btn-default btn-file">
-				                       			<span>浏览</span>
-				                       			<!-- The file is stored here. -->
-				                        			<input type="file" name="image-file_2">
-				                    			</label>
-												<button type="button" class="btn btn-default">Remove</button>
-											</div>
-											<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_1" class="btn btn-default">上传</button></P>
-										</div>
-
-										<div class="imageupload panel panel-default" style="width:340px;">
-
-											<div class="file-tab panel-body">
-												<label class="btn btn-default btn-file">
-				                       			<span>浏览</span>
-				                       			<!-- The file is stored here. -->
-				                        			<input type="file" name="image-file_3">
-				                    			</label>
-												<button type="button" class="btn btn-default">Remove</button>
-											</div>
-											<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_1" class="btn btn-default">上传</button></P>
-										</div>
-
-										<div class="imageupload panel panel-default" style="width:340px;">
-
-											<div class="file-tab panel-body">
-												<label class="btn btn-default btn-file">
-				                       			<span>浏览</span>
-				                       			<!-- The file is stored here. -->
-				                        			<input type="file" name="image-file_4">
-				                    			</label>
-												<button type="button" class="btn btn-default">Remove</button>
-											</div>
-											<p style="margin-left: 20px;">图片大小不能超过5M&nbsp;&nbsp;<button type="button" id="up_1" class="btn btn-default">上传</button></P>
-										</div>
-									</td>
-								</tr>
-
-								<tr>
-									<!--第七行-->
-									<td class="condition-title">产品介绍</td>
-									<td>
-										<div>
-											<textarea class="form-control" rows="3" style="width: 400px;display: inline;"></textarea>
-											<button class="btn btn-default">上传</button>
-										</div>
-									</td>
-								</tr>
-
-								<tr>
-									<!--第八行-->
-									<td class="condition-title">技术参数</td>
-									<td>
-										<div>
-											<textarea class="form-control" rows="3" style="width: 400px;display: inline;"></textarea>
-											<button class="btn btn-default">上传</button>
-										</div>
-									</td>
-								</tr>
-
-								
-
-								<tr>
-									<!--第十一行-->
-									<td class="condition-title">可选配件</td>
-									<td>
-										<div>
-											<textarea class="form-control" rows="3" style="width: 400px;display: inline;"></textarea>
-											<button class="btn btn-default">上传</button>
-										</div>
-									</td>
-								</tr>
-
-								<tr>
-									<td class="condition-title">招商区域</td>
-									<td>
-
-										<div class="info">
-											<div>
-												<select id="s_province" name="s_province"></select>
-												<select id="s_city" name="s_city"></select>
-												<select id="s_county" name="s_county"></select>
-												<script class="resources library" src="http://sandbox.runjs.cn/uploads/rs/267/g3ugugjp/area.js" type="text/javascript"></script>
-
-												<script type="text/javascript">
-													_init_area();
-												</script>
-											</div>
-											<div id="show"></div>
-										</div>
-
-									</td>
-								</tr>
-
-							</tbody>
-						</table>
-
-						<div class="row leftright_part" style="margin-top: 0px;margin-left: 45px;">
-							<div class="part1 condition-title">
-								医疗机构
+						<div class="col-md-1"></div>
+						<div class="col-md-5">
+							<div class="input-group inputsize">
+								<input type="text" class="form-control" placeholder="请输入关键字...">
+								<span class="input-group-btn">
+		        						<button class="btn btn-default" type="button">搜索</button>
+		      					</span>
 							</div>
+							<!-- /input-group -->
+						</div>
+						<!-- /.col-lg-6 -->
+						<div class="col-md-1"></div>
 
-							<div class="part2">
-								<select id="select1" multiple="multiple" class="select1class" style="height: 200px;">
-									<option>上海市第一人民医院</option>
-									<option>南京市鼓楼医院</option>
-									<option>北京市人民医院</option>
-									<option>杭州市人民医院</option>
-									<option>江苏省人民医院</option>
-									<option>广东省人民医院</option>
-									<option>其他</option>
-								</select>
-							</div>
+						<div class="col-md-5">
+							<a href="activitiesLaunch.html"><button class="btn btn-default" type="button" style="width: 108px;" id="" aria-haspopup="true">优惠信息发布
+							</button></a>
 
-							<div class="part3">
-								<input class="rightchoose" type="button" value=">>" onclick="selectedToRight();" /><br/>
-								<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft();" /><br/>
-							</div>
 
-							<div class="part4">
-								<select id="select2" multiple="multiple" class="select1class" style="height: 200px;">
-									<option>上海市第九人民医院</option>
-								</select>
+							<button class="btn btn-default" data-toggle="modal" data-target="#myModal" type="button" style="width: 108px;" id="b1" aria-haspopup="true">撤回
+							</button>
+						</div>
+						
+						<div class="col-md-6">
+							
+
+							<!-- 模态框（Modal） -->
+							<div class="modal fade" id="myModal" style="margin-top: 200px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+												&times;
+											</button>
+											<h4 class="modal-title" id="myModalLabel">提示</h4>
+										</div>
+										<div class="modal-body">
+											确认是否撤回已选记录？
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">撤回
+											</button>
+											<button type="button" class="btn btn-default">
+											我再想想
+											</button>
+										</div>
+									</div>
+									<!-- /.modal-content -->
+								</div>
+								<!-- /.modal -->
 							</div>
 						</div>
-
-						<br />
-						<button class="btn btn-default center-block">发布</button>
+						<!--col-md-2 dropclass-->
 
 					</div>
+					<!-- /.row -->
+
+					<div class="row">
+						<table class="table table-striped table-hover product-list-table" id="goods_1">
+							<thead class="tablehead">
+								<th class="selectclass"> </th>
+								<th>序号</th>
+								<th>发布状态</th>
+								<th>产品注册名称</th>
+								<th>产品简称</th>
+								<th>品牌</th>
+								<th>产地</th>
+								<th>产品类别</th>
+								<th>适用科室</th>
+								<th>产品注册证号</th>
+								<th>发布日期</th>
+								<th>数量</th>
+								<th>时间期限</th>
+								<th>关注度</th>
+							</thead>
+
+							<tbody>
+								<tr>
+									<!-- 第一条信息（一行）-->
+									<td><input type="checkbox" name="item1" value="value1"></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+
+								<tr>
+									<!-- 第二条信息（一行）-->
+									<td><input type="checkbox" name="item2" value="value2"></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+
+							</tbody>
+						</table>
+
+					</div>
+					<!--second-row-->
+
+					<div class="row">
+						<!--third-row-->
+						<hr class="hrclass">
+						<div class="col-md-2 quanxuan1">
+
+						</div>
+						<!--col-md-3-->
+
+						<div class="col-md-3 quanxuan2">
+							<p class="pitem-info">共有xx条记录，每页显示20条</p>
+						</div>
+						<!--col-md-3-->
+
+						<div class="col-md-7 quanxuan3">
+							<nav aria-label="Page navigation">
+								<ul class="pagination">
+									<li>
+										<a href="#" aria-label="Previous">
+											<span aria-hidden="true">&laquo;</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#">4</a>
+									</li>
+									<li>
+										<a href="#">5</a>
+									</li>
+									<li>
+										<a href="#" aria-label="Next">
+											<span aria-hidden="true">&raquo;</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<!--col-md-6-->
+
+					</div>
+					<!--third-row-->
+
 				</div>
 				<!--右侧内容-->
 
@@ -469,18 +420,9 @@
 			<!-- /.container-fluid -->
 		</nav>
 
-		<script src="../Public/JS/jquery-1.12.4.min.js"></script>
-<!-- 		<script src="../jquery-2.1.1/jquery.js"></script>
- -->		<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-		<script src="../Public/JS/bootstrap-imageupload.js"></script>
-		<script type="text/javascript" src="../Public/JS/zh2.js"></script>
-
-		<script>
-			var $imageupload = $('.imageupload');
-			$imageupload.imageupload();
-		</script>
-
+		<script type="text/javascript" src="../jquery-2.1.1/jquery.js"></script>
+		<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		
 	</body>
-	
 
 </html>

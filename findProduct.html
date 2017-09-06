@@ -7,87 +7,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="Public/CSS/main.css">
+    <link rel="stylesheet" href="Public/CSS/select2.min.css">
 
 	<style type="text/css">
 /*必须放在这个地方这一行代码*/
 .first-bar .navbar-brand{padding-top: 15px;}
 
-.brand-select { margin: 40px auto; border-top: 1px solid #ddd; }
-.brand-select > .row:first-child { border-bottom: 1px solid #ddd; }
-.select-value { margin: 10px 20px 10px 20px; }
-.select-value span { display: none; }
-.select-value .col-md-2 { border: 1px solid #ddd; margin: -1px -1px 0 0; padding-left: 0px; padding-right: 0px; }
-.select-value .col-md-2 a { text-decoration: none; color: red; cursor: pointer; }
-.select-key { background-color: #f3f3f3; width: 90px; padding-left: 5px; }
-.select-ext span { display: inline-block; border: 1px solid #ddd; width: 70px; margin-top: 2px; padding-left: 2px; margin-right: 5px; }
-.select-ext span:hover { cursor: pointer; color: red; }
-.select-ext span i { transition: all 0.5s ease-in-out; }
-.select-ext span:hover i { transform: rotate(180deg); transform: rotate(180deg); -ms-transform: rotate(180deg); 	/* IE 9 */ -moz-transform: rotate(180deg); 	/* Firefox */ -webkit-transform: rotate(180deg); /* Safari 和 Chrome */ -o-transform: rotate(180deg); }
-.select-ext span:first-child i { background: url(../../recourse/Image/down_arrow.png); width: 17px; height: 15px; position: absolute; left: 63px; top: 6px; }
-.select-ext span:last-child i { background: url(../../recourse/Image/plus_math.png); width: 17px; height: 15px; position: absolute; left: 139px; top: 6px; }
-.brand-select .col-md-8 .nav li a { padding: 5px 5px; padding-top: 0px; padding-bottom: 0px; }
-.brand-select .col-md-8 .nav li a:hover { border: 1px solid red; border-radius: 2px; color: red; background: white; cursor: pointer; }
-#myTabs { margin-top: 5px; }
-.tab-content { overflow-y: auto; height: 158px; }
-.show-select .brand { font-style: normal; margin-right: 5px; }
-.show-select .name { color: red; }
-.show-select .one-condition-brand { margin-right: 10px; border: 1px solid #ddd; display: inline-block; padding-left: 8px; padding-right: 8px; border-right: 20px solid #ddd; background-color: #ddd; }
-.show-select .one-condition-brand:hover { border: 1px solid red; border-right: 20px solid red; background-color: white; cursor: pointer; }
-.show-select .one-condition-brand .glyphicon { left: 24px; }
-.show-select .one-condition-brand:hover .glyphicon { color: white; }
-.show-select .one-condition-product { margin-right: 10px; border: 1px solid #ddd; display: inline-block; padding-left: 8px; padding-right: 8px; border-right: 20px solid #ddd; background-color: #ddd; }
-.show-select .one-condition-product:hover { border: 1px solid red; border-right: 20px solid red; background-color: white; cursor: pointer; }
-.show-select .one-condition-product .glyphicon { left: 24px; }
-.show-select .one-condition-product:hover .glyphicon { color: white; }
-.show-select .one-condition-keshi { margin-right: 10px; border: 1px solid #ddd; display: inline-block; padding-left: 8px; padding-right: 8px; border-right: 20px solid #ddd; background-color: #ddd; }
-.show-select .one-condition-keshi:hover { border: 1px solid red; border-right: 20px solid red; background-color: white; cursor: pointer; }
-.show-select .one-condition-keshi .glyphicon { left: 24px; }
-.show-select .one-condition-keshi:hover .glyphicon { color: white; }
-.col-xs-1-8, .col-sm-1-8, .col-md-1-8, .col-lg-1-8 { min-height: 1px; padding-left: 15px; padding-right: 15px; position: relative; }
-.col-xs-1-8 { width: 12.5%; float: left; }
-@media (min-width:768px) {
-	.col-sm-1-8 { width: 12.5%; float: left; }
-}
-@media (min-width:992px) {
-	.col-md-1-8 { width: 12.5%; float: left; }
-}
-@media (min-width:1200px) {
-	.col-lg-1-8 { width: 12.5%; float: left; }
-}
-.product-kind { height: 40px; border-bottom: 1px solid #ddd; }
-.product-kind .col-md-8 { padding-top: 10px; }
-.product-kind .col-md-8 .col-md-1-8 span { color: #005aa0; cursor: pointer; }
-.product-kind .col-md-8 .col-md-1-8 span:hover { color: #e4393c; }
-.product-kind .select-ext span i { left: 183px; }
-.product-kind .select-ext span { margin-left: 116px; }
-.product-category { padding-left: 5px; width: 90px; height: 40px; background-color: #f3f3f3; }
-.keshi { width: 90px; background-color: #f3f3f3; padding-left: 5px; }
-.hospital-department { border-bottom: 1px solid #ddd; }
-.hospital-department .col-md-8 span { color: #005aa0; cursor: pointer; }
-.hospital-department .col-md-8 span:hover { color: #e4393c; }
-.hospital-department .col-md-8 { padding-top: 10px; padding-bottom: 10px; margin-right: 40px; }
-.more-keshi { overflow-y: auto; height: 90px; overflow-x: hidden; }
-.juti-product-list table { border: 1px solid #ddd; }
-.juti-product-list table thead { background-color: #f3f3f3; }
-.juti-product-list table tbody tr td:nth-child(3) { vertical-align: middle; }
-.juti-product-list table tbody tr td:nth-child(3) a:hover { color: #ff8f0f; cursor: pointer; text-decoration: none; }
-.juti-product-list table tbody tr td:nth-child(4) { vertical-align: middle; }
-.juti-product-list table tbody tr td:nth-child(5) { vertical-align: middle; }
-.juti-product-list table tbody tr td:nth-child(6) { vertical-align: middle; }
-.juti-product-list .quanxuan { margin-top: 0px; }
-.juti-product-list .pagination { margin: 0px; }
-.juti-product-list .col-md-4 nav p { display: inline-block; position: relative; top: -10px; left: 10px }
-.juti-product-list .quanxuan .guanzu { margin-left: 5px; cursor: pointer; color: #0099ff; }
-.juti-product-list .quanxuan .guanzu:hover { color: black; }
+ .container .daohang{ font-size: 15px; padding-bottom: 10px; } 
+ .container .daohang .col-md-12{ padding-left: 0px; }
 
-    .container .daohang{
-      font-size: 15px;
-      padding-bottom: 10px;
-    }
-    .container .daohang .col-md-12{
-      padding-left: 0px;
-    }
 	</style>
+}
 </head>
 <body>
 <div class="contactWe"></div>
@@ -108,7 +38,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse pull-right" id="first-bar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="login.html">请登录 <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="login.html">我的账号 <span class="sr-only">(current)</span></a></li>
 
         <li><a href="register.html">免费注册</a></li>
 
@@ -193,8 +123,8 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">找渠道 <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <!-- <li><a href="generalizeList.html">招商查询信息</a></li> -->
-            <li><a href="agencyList.html">区域代理信息</a></li>
-            <li><a href="directSellingHospital.html">直销医院信息</a></li>
+            <li><a href="agencyList.html">销售代理公司信息</a></li>
+            <li><a href="directSellingHospital.html">销售代理专员信息</a></li>
             <li><a href="procurementList.html">医院需求信息</a></li>
           </ul>
         </li>
@@ -205,15 +135,18 @@
             <li><a href="">物流服务</a></li>
             <li><a href="">融资服务</a></li>
             <li><a href="">商务服务</a></li>
+            <li><a href="">培训服务</a></li>
           </ul>
         </li>
-        <li><a href="#">找人才</a></li>
+        <li><a href="findTalent.html">找人才</a></li>
 
         <li class="dropdown" id="fifth-dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">找资讯<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="">法律法规</a></li>
+            <li><a href="">行业热点</a></li>
             <li><a href="">招标信息</a></li>
+            <li><a href="">中标信息</a></li>
+            <li><a href="">法律法规</a></li>
           </ul>
         </li>
                 
@@ -231,237 +164,30 @@
     </div>
   </div>
 </div>
-<!-- 显示选择的条件 -->
-<div class="container show-select">
-    <div class="row">
-<!--         <div class="one-condition-brand">
-	        <i class="brand">品牌:</i>
-	        <span class="name">华为</span>
-	        <span class="glyphicon glyphicon-remove"></span>
-        </div> -->
-<!--         <div class="one-condition-product">
-	        <i class="brand">产品分类:</i>
-	        <span class="name">临床检验</span>
-	        <span class="glyphicon glyphicon-remove"></span>
-        </div> -->
-		<!-- <div class="one-condition-keshi">
-		    <i class="brand">科室:</i>
-		    <span class="name">内科学系</span>
-		    <span class="glyphicon glyphicon-remove"></span>
-		</div> -->
+<!-- 条件选择下拉框 -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+     <select class="js-example-data-array" id="findCategory" data-placeholder="请选择产品分类">
+       <option value=""></option>
+     </select>
     </div>
+
+    <div class="col-md-3">
+      <select class="js-example-data-array" id="brandCategory" data-placeholder="请选择品牌">
+        <option value=""></option>
+      </select>
+    </div>
+
+    <div class="col-md-3">
+      <select class="js-example-data-array" id="hospitalOffice" data-placeholder="请选择科室">
+        <option value=""></option>
+      </select>
+    </div>
+
+  </div>
 </div>
-<!-- 条件筛选 -->
-<div class="container brand-select">
-	<!-- 品牌 -->
-	<div class="row">
-		<div class="col-md-2 select-key"><span>品牌：</span></div>
-
-		<div class="col-md-8" id="longMenu" style="display: none">		
-			<div>
-			  <!-- Nav tabs -->
-			  <ul class="nav nav-tabs" role="tablist" id="myTabs">
-			    <li role="presentation"><a href="#ALL" aria-controls="ALL" role="tab" data-toggle="tab">所有品牌</a></li>
-			    <li role="presentation"><a href="#A" aria-controls="A" role="tab" data-toggle="tab">A</a></li>
-			    <li role="presentation"><a href="#B" aria-controls="B" role="tab" data-toggle="tab">B</a></li>
-			    <li role="presentation"><a href="#C" aria-controls="C" role="tab" data-toggle="tab">C</a></li>
-			    <li role="presentation"><a href="#D" aria-controls="D" role="tab" data-toggle="tab">D</a></li>
-			    <li role="presentation"><a href="#E" aria-controls="E" role="tab" data-toggle="tab">E</a></li>
-			    <li role="presentation"><a href="#F" aria-controls="F" role="tab" data-toggle="tab">F</a></li>
-			    <li role="presentation"><a href="#G" aria-controls="G" role="tab" data-toggle="tab">G</a></li>
-			    <li role="presentation"><a href="#H" aria-controls="H" role="tab" data-toggle="tab">H</a></li>
-			    <li role="presentation"><a href="#I" aria-controls="I" role="tab" data-toggle="tab">I</a></li>
-			    <li role="presentation"><a href="#G" aria-controls="G" role="tab" data-toggle="tab">J</a></li>
-			    <li role="presentation"><a href="#K" aria-controls="K" role="tab" data-toggle="tab">K</a></li>
-			    <li role="presentation"><a href="#L" aria-controls="L" role="tab" data-toggle="tab">L</a></li>
-			    <li role="presentation"><a href="#M" aria-controls="M" role="tab" data-toggle="tab">M</a></li>
-			    <li role="presentation"><a href="#N" aria-controls="N" role="tab" data-toggle="tab">N</a></li>
-			    <li role="presentation"><a href="#O" aria-controls="O" role="tab" data-toggle="tab">O</a></li>
-			    <li role="presentation"><a href="#P" aria-controls="P" role="tab" data-toggle="tab">P</a></li>
-			    <li role="presentation"><a href="#Q" aria-controls="Q" role="tab" data-toggle="tab">Q</a></li>
-			    <li role="presentation"><a href="#R" aria-controls="R" role="tab" data-toggle="tab">R</a></li>
-			    <li role="presentation"><a href="#S" aria-controls="S" role="tab" data-toggle="tab">S</a></li>
-			    <li role="presentation"><a href="#T" aria-controls="T" role="tab" data-toggle="tab">T</a></li>
-			    <li role="presentation"><a href="#U" aria-controls="U" role="tab" data-toggle="tab">U</a></li>
-			    <li role="presentation"><a href="#V" aria-controls="V" role="tab" data-toggle="tab">V</a></li>
-			    <li role="presentation"><a href="#W" aria-controls="W" role="tab" data-toggle="tab">W</a></li>
-			    <li role="presentation"><a href="#X" aria-controls="X" role="tab" data-toggle="tab">X</a></li>
-			    <li role="presentation"><a href="#Y" aria-controls="Y" role="tab" data-toggle="tab">Y</a></li>
-			    <li role="presentation"><a href="#Z" aria-controls="Z" role="tab" data-toggle="tab">Z</a></li>
-			    <li role="presentation"><a href="#others" aria-controls="others" role="tab" data-toggle="tab">其他</a></li>
-			  </ul>
-			  <!-- Tab panes -->
-			  <div class="tab-content">
-			    <div role="tabpanel" class="tab-pane active" id="ALL">
-					<div class="select-value">
-						<div class="row">
-							<div class="col-md-2"><a ><img src="recourse/Image/huawei.jpg" alt=""><span>华为</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/apple.jpg" alt=""><span>苹果</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/xiaomi.jpg" alt=""><span>小米</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/huawei.jpg" alt=""><span>华为1</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/apple.jpg" alt=""><span>苹果1</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/xiaomi.jpg" alt=""><span>小米1</span></a></div>
-						</div>
-						<div class="row">
-							<div class="col-md-2"><a ><img src="recourse/Image/huawei.jpg" alt=""><span>熊猫1</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/apple.jpg" alt=""><span>小猪</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/xiaomi.jpg" alt=""><span>猴子</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/huawei.jpg" alt=""><span>大象</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/apple.jpg" alt=""><span>爆米花</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/xiaomi.jpg" alt=""><span>香蕉</span></a></div>
-						</div>
-						<div class="row">
-							<div class="col-md-2"><a ><img src="recourse/Image/huawei.jpg" alt=""><span>熊猫1</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/apple.jpg" alt=""><span>小猪</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/xiaomi.jpg" alt=""><span>猴子</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/huawei.jpg" alt=""><span>大象</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/apple.jpg" alt=""><span>爆米花</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/xiaomi.jpg" alt=""><span>香蕉</span></a></div>
-						</div>
-						<div class="row">
-							<div class="col-md-2"><a ><img src="recourse/Image/huawei.jpg" alt=""><span>熊猫1</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/apple.jpg" alt=""><span>小猪</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/xiaomi.jpg" alt=""><span>猴子</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/huawei.jpg" alt=""><span>大象</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/apple.jpg" alt=""><span>爆米花</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/xiaomi.jpg" alt=""><span>香蕉</span></a></div>
-						</div>
-						<div class="row">
-							<div class="col-md-2"><a ><img src="recourse/Image/huawei.jpg" alt=""><span>熊猫1</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/apple.jpg" alt=""><span>小猪</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/xiaomi.jpg" alt=""><span>猴子</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/huawei.jpg" alt=""><span>大象</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/apple.jpg" alt=""><span>爆米花</span></a></div>
-							<div class="col-md-2"><a ><img src="recourse/Image/xiaomi.jpg" alt=""><span>香蕉</span></a></div>
-						</div>
-					</div>
-			    </div>
-			    <div role="tabpanel" class="tab-pane" id="A">一无所有</div>
-			    <div role="tabpanel" class="tab-pane" id="B">我不在乎</div>
-			    <div role="tabpanel" class="tab-pane" id="C">快乐就好</div>
-			  </div>
-			</div>
-		</div>
-
-		<div class="col-md-8 select-value" id="shortMenu">
-			<div class="row">
-				<div class="col-md-2"><a id="fgf"><img src="recourse/Image/huawei.jpg" alt=""><span>华为</span></a></div>
-				<div class="col-md-2"><a ><img src="recourse/Image/apple.jpg" alt=""><span>苹果</span></a></div>
-				<div class="col-md-2"><a ><img src="recourse/Image/xiaomi.jpg" alt=""><span>小米</span></a></div>
-				<div class="col-md-2"><a ><img src="recourse/Image/huawei.jpg" alt=""><span>华为1</span></a></div>
-				<div class="col-md-2"><a ><img src="recourse/Image/apple.jpg" alt=""><span>苹果1</span></a></div>
-				<div class="col-md-2"><a ><img src="recourse/Image/xiaomi.jpg" alt=""><span>小米1</span></a></div>
-			</div>
-			<div class="row">
-				<div class="col-md-2"><a ><img src="recourse/Image/huawei.jpg" alt=""><span>熊猫1</span></a></div>
-				<div class="col-md-2"><a ><img src="recourse/Image/apple.jpg" alt=""><span>小猪</span></a></div>
-				<div class="col-md-2"><a ><img src="recourse/Image/xiaomi.jpg" alt=""><span>猴子</span></a></div>
-				<div class="col-md-2"><a ><img src="recourse/Image/huawei.jpg" alt=""><span>大象</span></a></div>
-				<div class="col-md-2"><a ><img src="recourse/Image/apple.jpg" alt=""><span>爆米花</span></a></div>
-				<div class="col-md-2"><a ><img src="recourse/Image/xiaomi.jpg" alt=""><span>香蕉</span></a></div>
-			</div>
-		</div>
-		<div class="col-md-2 select-ext"><span id="more" data-flag=1>更多<i></i></span><span>多选<i></i></span></div>
-	</div>
-
-	<!-- 种类 -->
-	<div class="row product-kind">
-		<div class="col-md-2 product-category"><span>产品分类：</span></div>
-		<div class="col-md-8">
-			<div class="row">
-				<div class="col-md-1-8"><span>临床检验</span></div>
-				<div class="col-md-1-8"><span>电子超声</span></div>
-				<div class="col-md-1-8"><span>实验仪器</span></div>
-				<div class="col-md-1-8"><span>医用光学</span></div>
-				<div class="col-md-1-8"><span>医学影像</span></div>
-				<div class="col-md-1-8"><span>手术急救</span></div>
-				<div class="col-md-1-8"><span>消毒灭菌</span></div>
-				<div class="col-md-1-8"><span>医用耗材</span></div>
-			</div>
-		</div>
-		<div class="col-md-2 select-ext"><span>多选<i></i></span></div>
-	</div>
-
-	<!-- 科室 -->
-	<div class="row hospital-department">
-		<div class="col-md-2 keshi"><span>科室：</span></div>
-		<div class="col-md-8 less-keshi">
-			<div class="row">
-				<div class="col-md-1-8"><span>内科学系</span></div>
-				<div class="col-md-1-8"><span>心内科</span></div>
-				<div class="col-md-1-8"><span>呼吸内科</span></div>
-				<div class="col-md-1-8"><span>消化内科</span></div>
-				<div class="col-md-1-8"><span>肾内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-			</div>
-			<div class="row">
-				<div class="col-md-1-8"><span>内科学系</span></div>
-				<div class="col-md-1-8"><span>心内科</span></div>
-				<div class="col-md-1-8"><span>呼吸内科</span></div>
-				<div class="col-md-1-8"><span>消化内科</span></div>
-				<div class="col-md-1-8"><span>肾内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-			</div>
-		</div>
-		<div class="col-md-8 more-keshi" style="display: none">
-			<div class="row">
-				<div class="col-md-1-8"><span>内科学系</span></div>
-				<div class="col-md-1-8"><span>心内科</span></div>
-				<div class="col-md-1-8"><span>呼吸内科</span></div>
-				<div class="col-md-1-8"><span>消化内科</span></div>
-				<div class="col-md-1-8"><span>肾内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-			</div>
-			<div class="row">
-				<div class="col-md-1-8"><span>内科学系</span></div>
-				<div class="col-md-1-8"><span>心内科</span></div>
-				<div class="col-md-1-8"><span>呼吸内科</span></div>
-				<div class="col-md-1-8"><span>消化内科</span></div>
-				<div class="col-md-1-8"><span>肾内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-			</div>
-			<div class="row">
-				<div class="col-md-1-8"><span>内科学系</span></div>
-				<div class="col-md-1-8"><span>心内科</span></div>
-				<div class="col-md-1-8"><span>呼吸内科</span></div>
-				<div class="col-md-1-8"><span>消化内科</span></div>
-				<div class="col-md-1-8"><span>肾内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-			</div>
-			<div class="row">
-				<div class="col-md-1-8"><span>内科学系</span></div>
-				<div class="col-md-1-8"><span>心内科</span></div>
-				<div class="col-md-1-8"><span>呼吸内科</span></div>
-				<div class="col-md-1-8"><span>消化内科</span></div>
-				<div class="col-md-1-8"><span>肾内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-			</div>
-			<div class="row">
-				<div class="col-md-1-8"><span>内科学系</span></div>
-				<div class="col-md-1-8"><span>心内科</span></div>
-				<div class="col-md-1-8"><span>呼吸内科</span></div>
-				<div class="col-md-1-8"><span>消化内科</span></div>
-				<div class="col-md-1-8"><span>肾内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-				<div class="col-md-1-8"><span>血液内科</span></div>
-			</div>
-		</div>
-		<div class="col-md-2 select-ext"><span id="keshi-more" data-flag=1>更多<i></i></span><span>多选<i></i></span></div>
-	</div>
-</div>
+<!-- 优惠活动按钮 -->
 <form class="container">
   <div class="row">
     <div class="col-md-offset-0 col-md-10">
@@ -474,121 +200,145 @@
   </div>
 </form>
 <!-- 筛选出来的产品 -->
-<div class="container juti-product-list">
-	<div class="row">
-		<table class="table table-striped table-hover">
-			<thead>
-				<tr>
-					<th>选择</th>
-					<th>产品图片</th>
-					<th>产品名称</th>
-					<th>品牌</th>
-					<th>型号</th>
-          <th>招商区域</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><input type="checkbox" value="1" name="product-id"></td>
-					<td><a href=""><img src="recourse/Image/hot3.jpg" alt=""></a></td>
-					<td><a href="product.html">Bio-Rad伯乐 1575型强力洗板机</a></td>
-					<td>Bio-Rad伯乐</td>
-					<td>1575</td>
-          <td>全国</td>
-				</tr>
-        <tr>
-          <td><input type="checkbox" value="1" name="product-id"></td>
-          <td><a href=""><img src="recourse/Image/hot3.jpg" alt=""></a></td>
-          <td><a href="product.html">Bio-Rad伯乐 1575型强力洗板机</a></td>
-          <td>Bio-Rad伯乐</td>
-          <td>1575</td>
-          <td>全国</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" value="1" name="product-id"></td>
-          <td><a href=""><img src="recourse/Image/hot3.jpg" alt=""></a></td>
-          <td><a href="product.html">Bio-Rad伯乐 1575型强力洗板机</a></td>
-          <td>Bio-Rad伯乐</td>
-          <td>1575</td>
-          <td>全国</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" value="1" name="product-id"></td>
-          <td><a href=""><img src="recourse/Image/hot3.jpg" alt=""></a></td>
-          <td><a href="product.html">Bio-Rad伯乐 1575型强力洗板机</a></td>
-          <td>Bio-Rad伯乐</td>
-          <td>1575</td>
-          <td>全国</td>
-        </tr> 
-        <tr>
-          <td><input type="checkbox" value="1" name="product-id"></td>
-          <td><a href=""><img src="recourse/Image/hot3.jpg" alt=""></a></td>
-          <td><a href="product.html">Bio-Rad伯乐 1575型强力洗板机</a></td>
-          <td>Bio-Rad伯乐</td>
-          <td>1575</td>
-          <td>全国</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" value="1" name="product-id"></td>
-          <td><a href=""><img src="recourse/Image/hot3.jpg" alt=""></a></td>
-          <td><a href="product.html">Bio-Rad伯乐 1575型强力洗板机</a></td>
-          <td>Bio-Rad伯乐</td>
-          <td>1575</td>
-          <td>全国</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" value="1" name="product-id"></td>
-          <td><a href=""><img src="recourse/Image/hot3.jpg" alt=""></a></td>
-          <td><a href="product.html">Bio-Rad伯乐 1575型强力洗板机</a></td>
-          <td>Bio-Rad伯乐</td>
-          <td>1575</td>
-          <td>全国</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" value="1" name="product-id"></td>
-          <td><a href=""><img src="recourse/Image/hot3.jpg" alt=""></a></td>
-          <td><a href="product.html">Bio-Rad伯乐 1575型强力洗板机</a></td>
-          <td>Bio-Rad伯乐</td>
-          <td>1575</td>
-          <td>全国</td>
-        </tr>                                       
-			</tbody>
-		</table>
-	</div>
 
-	<div class="row">
-	    <div class="col-md-4 quanxuan">
-	      <div class="checkbox">
-	        <label>
-	          <input type="checkbox" data-flag=1> 全选
-	        </label>
-	        <span class="guanzu">关注</span>
-	      </div>
-	    </div>
-	    <div class="col-md-4 col-md-offset-2">
-			<nav aria-label="Page navigation">
-			  <ul class="pagination">
-			    <li>
-			      <a href="#" aria-label="Previous">
-			        <span aria-hidden="true">&laquo;</span>
-			      </a>
-			    </li>
-			    <li><a href="#">1</a></li>
-			    <li><a href="#">2</a></li>
-			    <li><a href="#">3</a></li>
-			    <li><a href="#">4</a></li>
-			    <li><a href="#">5</a></li>
-			    <li>
-			      <a href="#" aria-label="Next">
-			        <span aria-hidden="true">&raquo;</span>
-			      </a>
-			    </li>
-			  </ul>
-			  <p>共<span>10</span>页</p>
-			</nav>
-	    </div>
-	</div>
+<div class="container select_result">
+  <div class="row">
+    <div class="col-md-3">
+        <a href="product.html">
+          <div class="thumbnail">
+              <img src="recourse/Image/recommend-1.jpg" alt="...">
+              <div class="caption">
+                  <p><a href="">Bio-Rad伯乐 1575型强力洗板机</a></p>
+                  <p><a href="">Bio-Rad伯乐</a></p>
+                  <p>招商区域：<span>全国</span></p>
+                  <p>浏览量：<span>209</span></p>
+              </div>
+          </div>
+        </a>
+    </div>  
+    <div class="col-md-3">
+        <a href="product.html">
+          <div class="thumbnail">
+              <img src="recourse/Image/recommend-2.jpg" alt="...">
+              <div class="caption">
+                  <p><a href="">Bio-Rad伯乐 1575型强力洗板机</a></p>
+                  <p><a href="">Bio-Rad伯乐</a></p>
+                  <p>招商区域：<span>全国</span></p>
+                  <p>浏览量：<span>209</span></p>
+              </div>
+          </div>
+        </a>
+    </div> 
+    <div class="col-md-3">
+        <a href="product.html">
+          <div class="thumbnail">
+              <img src="recourse/Image/recommend-3.jpg" alt="...">
+              <div class="caption">
+                  <p><a href="">Bio-Rad伯乐 1575型强力洗板机</a></p>
+                  <p><a href="">Bio-Rad伯乐</a></p>
+                  <p>招商区域：<span>全国</span></p>
+                  <p>浏览量：<span>209</span></p>
+              </div>
+          </div>
+        </a>
+    </div> 
+    <div class="col-md-3">
+        <a href="product.html">
+          <div class="thumbnail">
+              <img src="recourse/Image/recommend-4.jpg" alt="...">
+              <div class="caption">
+                  <p><a href="">Bio-Rad伯乐 1575型强力洗板机</a></p>
+                  <p><a href="">Bio-Rad伯乐</a></p>
+                  <p>招商区域：<span>全国</span></p>
+                  <p>浏览量：<span>209</span></p>
+              </div>
+          </div>
+        </a>
+    </div>                  
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+        <a href="product.html">
+          <div class="thumbnail">
+              <img src="recourse/Image/recommend-5.jpg" alt="...">
+              <div class="caption">
+                  <p><a href="">Bio-Rad伯乐 1575型强力洗板机</a></p>
+                  <p><a href="">Bio-Rad伯乐</a></p>
+                  <p>招商区域：<span>全国</span></p>
+                  <p>浏览量：<span>209</span></p>
+              </div>
+          </div>
+        </a>
+    </div>  
+    <div class="col-md-3">
+        <a href="product.html">
+          <div class="thumbnail">
+              <img src="recourse/Image/recommend-6.jpg" alt="...">
+              <div class="caption">
+                  <p><a href="">Bio-Rad伯乐 1575型强力洗板机</a></p>
+                  <p><a href="">Bio-Rad伯乐</a></p>
+                  <p>招商区域：<span>全国</span></p>
+                  <p>浏览量：<span>209</span></p>
+              </div>
+          </div>
+        </a>
+    </div> 
+    <div class="col-md-3">
+        <a href="product.html">
+          <div class="thumbnail">
+              <img src="recourse/Image/recommend-7.jpg" alt="...">
+              <div class="caption">
+                  <p><a href="">Bio-Rad伯乐 1575型强力洗板机</a></p>
+                  <p><a href="">Bio-Rad伯乐</a></p>
+                  <p>招商区域：<span>全国</span></p>
+                  <p>浏览量：<span>209</span></p>
+              </div>
+          </div>
+        </a>
+    </div> 
+    <div class="col-md-3">
+        <a href="product.html">
+          <div class="thumbnail">
+              <img src="recourse/Image/recommend-8.jpg" alt="...">
+              <div class="caption">
+                  <p><a href="">Bio-Rad伯乐 1575型强力洗板机</a></p>
+                  <p><a href="">Bio-Rad伯乐</a></p>
+                  <p>招商区域：<span>全国</span></p>
+                  <p>浏览量：<span>209</span></p>
+              </div>
+          </div>
+        </a>
+    </div>                  
+  </div>
+
+  <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+      <nav aria-label="Page navigation">
+        <ul class="pagination">
+          <li>
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+        <p class="page">共<span>10</span>页</p>
+      </nav>
+      </div>
+  </div>
 </div>
+
+
+
 <!-- 第四部分的navbar -->
 <nav class="navbar navbar-default fouth-bar">
   <div class="container">
@@ -721,170 +471,56 @@
 <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="Public/JS/jquery.menu-aim.js"></script>
 <script type="text/javascript" src="Public/JS/fgf.js"></script>
+<script type="text/javascript" src="Public/JS/select2.min.js"></script>
 <script>
-$(function(){
-	//设置“品牌”高度和中间的图片高度一致
-	$(".brand-select .row:first .col-md-2:first").height($(".brand-select .row:first").height())
-	//设置“更多多选”高度和中间图片一致
-	$(".brand-select .row:first .col-md-2:last").height($(".brand-select .row:first").height())
+$(document).ready(function() {
 
-	$(" .select-value .col-md-2").on('mouseenter', function(){
-		$(this).find('img').css('display', 'none');
-		$(this).find('a').css({
-			"display": "block",
-			"width": "130px",
-			"height": "36px",
-			"border": "2px solid red",
-			"margin-left": "-2px",
-			"text-align": "center",
-			"line-height": "36px",
-		})
-		$(this).find('span').css('display', 'block')
-	}).on('mouseleave', function(){
-		$(this).find('img').css('display', 'block');
-		$(this).find('a').css({
-			"display": "block",
-			"width": "130px",
-			"height": "36px",
-			"border": "0px solid red",
-			"margin-left": "0px",
-			"text-align": "center",
-			"line-height": "36px",
-		})
-		$(this).find('span').css('display', 'none')
-	})
-	//当点击“更多”时，会出现标签页，标签页里面的tab显示设置
-	$(".tab-content .select-value .col-md-2").on('mouseenter', function(){
-		$(this).find('img').css('display', 'none');
-		$(this).find('a').css({
-			"display": "block",
-			"width": "118px",
-			"height": "36px",
-			"border": "2px solid red",
-			"margin-left": "0px",
-			"text-align": "center",
-			"line-height": "36px",
-		})
-		$(this).find('span').css('display', 'block')
-	}).on('mouseleave', function(){
-		$(this).find('img').css('display', 'block');
-		$(this).find('a').css({
-			"display": "block",
-			"width": "130px",
-			"height": "36px",
-			"border": "0px solid red",
-			"margin-left": "0px",
-			"text-align": "center",
-			"line-height": "36px",
-		})
-		$(this).find('span').css('display', 'none')
-	})
-	// #标签页
-	$("#myTabs a").on('mouseover', function(){
-		$(this).tab('show')
-	})
-	//点击“more”出现长菜单，再点击“more”出现短菜单
-	$("#more").on('click', function(){
-		if($(this).attr('data-flag') == 1){
-			$("#longMenu").css("display", "block")
-			$("#shortMenu").css("display", "none")
-			$(this).attr('data-flag', 0)
-			//设置“品牌”高度和中间的图片高度一致
-			$(".brand-select .row:first .col-md-2:first").height($(".brand-select .row:first").height())
-			//设置“更多多选”高度和中间图片一致
-			$(".brand-select .row:first .col-md-2:last").height($(".brand-select .row:first").height())
-		}else{
-			$("#longMenu").css("display", "none")
-			$("#shortMenu").css("display", "block")
-			$(this).attr('data-flag', 1)
-			//设置“品牌”高度和中间的图片高度一致
-			$(".brand-select .row:first .col-md-2:first").height(($("#shortMenu").height()+20))
-			//设置“更多多选”高度和中间图片一致
-			$(".brand-select .row:first .col-md-2:last").height(($("#shortMenu").height()+20))
-		}
-	})
+// 产品分类
+  var category = [
+            { id: 0, text: '临床检验' }, 
+            { id: 1, text: '电子超声' }, 
+            { id: 2, text: '实验仪器' }, 
+            { id: 3, text: '医用光学' }, 
+            { id: 4, text: '医学影像' },
+            { id: 5, text: '手术急救' },
+            { id: 6, text: '消毒灭菌' },
+            { id: 7, text: '医用耗材' }
+            ];
+  $("#findCategory").select2({
+    data: category,
+    allowClear: true
+  });
+// 品牌
+  var brandCategory = [
+              { id: 0, text: '3M' }, 
+              { id: 1, text: '六六视觉' }, 
+              { id: 2, text: '迈瑞Mindray' }, 
+              { id: 3, text: '钱璟' }, 
+              { id: 4, text: '邦健' }
+              ];
 
-	//点击品牌里面的图标，上面显示选择条件,并隐藏品牌选择的div
-	$(".select-value a").on('click', function(){
-		var brand_name = $(this).find('span').text()
-		$(".show-select .row").append('<div class="one-condition-brand"><i class="brand">品牌:</i><span class="name">'+ brand_name+'</span><span class="glyphicon glyphicon-remove"></span></div>')
-		//隐藏掉品牌选择div
-		$(".brand-select .row").eq(0).css('display', 'none');
-	})
-   //当点击上面选择的品牌时，删除已选择的品牌条件， 使品牌选择div可见
-	$(".show-select .row ").on('click', '.one-condition-brand', function(){
-		$(".brand-select .row").eq(0).css('display', 'block');
-		$(".show-select .row .one-condition-brand").remove()
-	})
-	//给每个“产品分类”下面的span绑定一个点击事件
-	$(".product-kind .col-md-8 span").on('click', function(){
-		var product = $(this).text()
-		$(".show-select .row").append('<div class="one-condition-product"><i class="brand">产品分类:</i><span class="name">'+product+'</span><span class="glyphicon glyphicon-remove"></span></div>')
-		//隐藏掉产品分类div
-		$(".product-kind").css('display', 'none')
-	})
-	//当点击上面选择的产品种类时，删除已选择的产品种类条件， 使产品种类div可见
-	$(".show-select .row ").on('click', '.one-condition-product', function(){
-		$(".product-kind").css('display', 'block');
-		$(".show-select .row .one-condition-product").remove()
-	})
+  $("#brandCategory").select2({
+    data: brandCategory,
+    allowClear: true
+  })
+// 科室
+  var hospitalOffice = [
+              { id: 0, text: '内科学系' }, 
+              { id: 1, text: '心内科' }, 
+              { id: 2, text: '呼吸内科' }, 
+              { id: 3, text: '消化内科' }, 
+              { id: 4, text: '肾内科' }
+              ]
+  $("#hospitalOffice").select2({
+    data: hospitalOffice,
+    allowClear: true
+  })
 
+  $(".col-md-3 .select2").css("width", "200px")
+});
 
-	$(".keshi").height($(".hospital-department").height())
-
-	$("#keshi-more").on('click', function(){
-		if($(this).attr('data-flag') ==1 ){
-			$(".less-keshi").css('display', 'none')
-			$(".more-keshi").css('display', 'block')
-			$(this).attr('data-flag', 0)
-			$(".keshi").height($(".hospital-department").height())
-		}else{
-			$(".less-keshi").css('display', 'block')
-			$(".more-keshi").css('display', 'none')
-			$(this).attr('data-flag', 1)
-			$(".keshi").height(($(".hospital-department").height()-30))
-		}
-	})
-
-	$(".hospital-department .col-md-8 span").on('click', function(){
-		var keshi_name = $(this).text()
-		$(".show-select .row").append('<div class="one-condition-keshi"><i class="brand">科室:</i><span class="name">'+keshi_name+'</span><span class="glyphicon glyphicon-remove"></span></div>')
-		$(".hospital-department").css('display', 'none')
-	})
-	//当点击上面选择的产品种类时，删除已选择的产品种类条件， 使产品种类div可见
-	$(".show-select .row ").on('click', '.one-condition-keshi', function(){
-		$(".hospital-department").css('display', 'block');
-		$(".show-select .row .one-condition-keshi").remove()
-	})
-
-	//当点击全选按钮时，全部选中或者全部不选
-	$(".juti-product-list .quanxuan label input").on('click',function(){
-		if($(this).attr('data-flag') == 1){
-			$(".juti-product-list table input").prop('checked', true)
-			$(this).attr('data-flag', 0)
-		}else{
-			$(".juti-product-list table input").prop('checked', false)
-			$(this).attr('data-flag', 1)			
-		}
-		
-	})
-	//点击关注按钮
-	$(".juti-product-list .quanxuan .guanzu").on('click', function(){
-	    var xuanzong = new Array()
-		$(".juti-product-list table  input:checked").each(function(){
-			xuanzong.push($(this).val())
-		})
-		if(xuanzong.length == 0){
-			alert("请选择产品")
-		}else{
-			alert("关注成功")
-			//还要判断是否登录
-			//把选择的关注添加到数据库中
-		}
-	})
-	
-})
 
 </script>
+
 </body>
 </html>

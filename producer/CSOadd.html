@@ -3,11 +3,12 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>CSO添加</title>
+		<title>CSO添加-生产商</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../Public/CSS/liu.css">
+		<link rel="stylesheet" type="text/css" href="../Public/CSS/BeatPicker.min.css"> 
 
 	</head>
 
@@ -32,7 +33,7 @@
 					<ul class="nav navbar-nav">
 					 <li class="welcome"><a>欢迎王小二</a></li>
 						<li class="active">
-							<a href="../login.html">请登录 <span class="sr-only">(current)</span></a>
+							<a href="../login.html">我的账号 <span class="sr-only">(current)</span></a>
 						</li>
 
 						<li>
@@ -89,7 +90,7 @@
 									<a href="security.html">账户安全</a>
 								</li>
 								<li>
-									<a href="myCoupon.html">我的点券</a>
+									<a href="myCoupon.html">我的安券</a>
 								</li>
 								<li>
 									<a href="payHistory.html">充值记录</a>
@@ -110,21 +111,21 @@
 								</li>
 
 								<li>
-									<a href="myAgents.html">我的代理商</a>
+									<a href="myAgents.html">授权代理商</a>
 								</li>
 
 
 								<li>
-									<a href="merchantsRecords.html">找CSO</a>
+									<a href="merchantsRecords.html">找代理</a>
 								</li>
 
 								<li>
-									<a href="conferences.html">学术会议</a>
+									<a href="conferences.html">学术活动</a>
 								</li>
 							
 								<!-- 
 								<li>
-									<a href="CSOapply.html">区域代理请求信息</a>
+									<a href="CSOperson.html">区域代理请求信息</a>
 								</li>
 
 								<li>
@@ -144,14 +145,14 @@
 							<h4>我的反馈</h4>
 							<ul>
 								<li>
-									<a href="hospitalPush.html">医疗机构反馈</a>
+									<a href="hospitalPush.html">医疗机构需求信息</a>
 								</li>
 								<li>
-									<a href="#">CSO反馈</a>
+									<a href="CSOfeedback.html">销售代理反馈</a>
 								</li>
 								 
 								<li>
-									<a href="conferencesPush.html">学术会议反馈</a>
+									<a href="conferencesPush.html">学术活动反馈</a>
 								</li>
 							</ul>
 
@@ -187,7 +188,19 @@
 								<!--区域-->
 								<td class="condition-title">区域</td>
 								<td>
-									<input class="form-control" type="text" style="width: 400px;">
+									<div class="info">
+										<div>
+											<select id="s_province" name="s_province"></select>
+											<select id="s_city" name="s_city"></select>
+											<select id="s_county" name="s_county"></select>
+											<script class="resources library" src="http://sandbox.runjs.cn/uploads/rs/267/g3ugugjp/area.js" type="text/javascript"></script>
+
+											<script type="text/javascript">
+												_init_area();
+											</script>
+										</div>
+										<div id="show"></div>
+									</div>
 								</td>
 							</tr>
 
@@ -216,15 +229,80 @@
 							</tr>
 
 							<tr>
-								<!--代理产品-->
-								<td class="condition-title">代理产品</td>
+								<td class="condition-title">品牌</td>
 								<td>
-									<textarea class="form-control" rows="3" type="text" style="width: 400px;margin-left: 20px"></textarea>
+									<select class="form-control" id="" style="width: 400px;margin-left: 20px">
+										<option disabled selected value>选择品牌</option>
+										<option>西门子</option>
+										<option>博世</option>
+										<option>松下</option>
+									</select>
 								</td>
 							</tr>
 
-							<tr>
-								<!--代理时间-->
+						</tbody>
+					</table>
+
+
+							<div class="row leftright_part" style="margin-bottom: 0px;">
+								<div class="part1 condition-title">
+									代理产品
+								</div>
+
+
+								<div class="part2">
+									<select id="select1" multiple="multiple" class="select1class">
+						                <option>aaaa</option>
+						                <option>bbbb</option>
+						                <option>cccc</option>
+						                <option>dddd</option>
+						                	         
+				                	</select>
+								</div>
+
+
+								<div class="part3">
+									<input class="rightchoose" type="button" value=">>" onclick="selectedToRight();"/><br/>
+									<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft();"/><br/>
+
+									<input data-target="#modal1" data-toggle="modal" data-target=".bs-example-modal-sm" class="addchoose" type="button" value="+" onclick="appendOption();"/><br/>
+
+								</div>
+
+								<div id="modal1" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+									<div class="modal-dialog modal-sm" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+									        	<h4 class="modal-title">新添加产品</h4>
+									        </div>
+									     	<div class="modal-body">
+									        	<input id="newdepart1" placeholder="请输入新医院名称"></input>
+									      	</div>
+									      	<div class="modal-footer">
+										        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										        <button id="savenewdepart" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+										    </div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="part4">
+									<select id="select2" multiple="multiple" class="select1class">
+				                		<option>eeee</option>
+				                	</select>
+								</div>
+							</div>
+
+					
+
+
+
+					<table class="table condition-table" style="margin-top: 0px">
+						
+						<tbody>
+
+							<!-- <tr>
 								<td class="condition-title">代理时间</td>
 								<td>
 									<form name="reg_testdate" style="margin-left: 20px">
@@ -242,13 +320,23 @@
 							</tr>
 
 							<tr>
-								<!--代理时限-->
 								<td class="condition-title">代理时限</td>
 								<td>
 									<input class="form-control" type="text" style="width: 100px;display: inline;">
 									<label>年</label>
 								</td>
+							</tr> -->
+
+
+							<tr>
+								<td class="condition-title">代理时间</td>
+								<td>
+									<input type="text" data-beatpicker="true" data-beatpicker-position="['*','*']" data-beatpicker-range="true" data-beatpicker-module="today,clear">
+								</td>
 							</tr>
+
+
+
 							
 							
 						</tbody>
@@ -326,6 +414,8 @@
 		<script type="text/javascript" src="../jquery-2.1.1/jquery.js"></script>
 		<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../Public/JS/zh.js"></script>
+		<script src="../Public/JS/BeatPicker.min.js"></script> 
+
 
 	</body>
 

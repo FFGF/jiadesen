@@ -3,13 +3,69 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>上海安必选</title>
+    <title>用户注册</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="Public/CSS/main.css">
+    <link rel="stylesheet" href="Public/CSS/zh.css">
+
     <style>
       .first-bar .navbar-brand{padding-top: 15px;}
+      
+      /*验证码*/
+      #code {
+     font-family: Arial, 宋体;
+     font-style: italic;
+     color: green;
+     border: 0;
+     padding: 2px 3px;
+     letter-spacing: 3px;
+     font-weight: bolder;
+    }
+
+
+    /*上传头像*/
+    .con4{
+         width: 300px;
+         height: auto;
+         overflow: hidden;
+         margin: 20px auto;
+         color: #FFFFFF;
+    }
+    .con4 .btn{
+         width: 100%;
+         height: 40px;
+         line-height: 40px;
+         text-align: center;
+         background: #d8b49c;
+         display: block;
+         font-size: 16px;
+         border-radius: 5px;
+    }
+    .con4 .upload{
+         float: left;
+         position: relative;
+    }
+    .con4 .upload_pic{
+         display: block;
+         width: 100%;
+         height: 30px;
+         position: absolute;
+         left: 0;
+         top: 0;
+         opacity: 0;
+         border-radius: 5px;
+    }
+    #cvs{
+      border: 1px solid #000;
+      margin:20px 0 20px 50px;
+    }
+
+    .upload p{
+         margin-top: -8px;
+         margin-left: 2px
+    }
     </style>
 
   </head>
@@ -34,7 +90,7 @@
         <div class="collapse navbar-collapse pull-right" id="first-bar">
           <ul class="nav navbar-nav">
             <li class="active">
-              <a href="login.html">请登录 <span class="sr-only">(current)</span></a>
+              <a href="login.html">我的账号 <span class="sr-only">(current)</span></a>
             </li>
 
             <li>
@@ -76,6 +132,20 @@
       </div>
 
       <form class="form-horizontal">
+
+        <!--用户头像-->
+        <div class="form-group">
+          <label class="col-md-4 control-label">用户头像：</label>
+          <div class="col-md-4">
+              <div class="con4">
+                <canvas id="cvs" width="200" height="200"></canvas>
+                  <span class="btn upload">
+                    <p>上传头像</p><input type="file" class="upload_pic" id="upload" />
+                  </span>
+              </div>
+
+          </div>
+        </div>
 
         <!--姓名输入-->
         <div class="form-group">
@@ -149,7 +219,6 @@
               <span id="pwd_e" class="glyphicon glyphicon-remove form-control-feedback"></span>
             </label>
           </div>
-
         </div>
         <!--密码强度-->
         <div class="form-group">
@@ -176,14 +245,14 @@
         </div>
         <!--注册类型-->
         <div class="form-group">
-          <label for="inputEmail3" class="col-md-4 control-label">注册类型</label>
+          <label for="inputEmail3" class="col-md-4 control-label">注册类型：</label>
           <div class="col-md-4">
             <select class="form-control" id="usertype" style="width: 340px;" oninput="chose()">
               <option disabled selected value>请选择</option>
               <option>生产商</option>
-              <option>一级代理商</option>
-              <option>CSO专员</option>
-              <option>CSO公司</option>
+              <option>授权代理</option>
+              <option>销售代理专员</option>
+              <option>销售代理公司</option>
               <option>医疗机构</option>
             </select> 
             
@@ -193,6 +262,17 @@
             </label>
           </div>
           
+        </div>
+        <!-- 推荐码 -->
+        <div class="form-group">
+          <label class="col-md-4 control-label">推荐码：</label>
+          <div class="col-md-4">
+            <input type="text" class="form-control"  style="width:340px;display: inline;" placeholder="请输入推荐码(如果没有可以不填写)">
+            <label>
+              <span  class="glyphicon glyphicon-ok form-control-feedback form" style="display:none"></span>
+              <span  class="glyphicon glyphicon-remove form-control-feedback"></span>
+            </label>
+          </div>
         </div>
         <!--协议注册-->
         <div class="form-group" style="text-align: center;">
@@ -350,16 +430,77 @@
   <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="Public/JS/register.js"></script>
 
-  <style type='text/css'>
-    #code {
-      font-family: Arial, 宋体;
-      font-style: italic;
-      color: green;
-      border: 0;
-      padding: 2px 3px;
-      letter-spacing: 3px;
-      font-weight: bolder;
+  
+
+  <script>
+  //获取上传按钮
+  var input1 = document.getElementById("upload"); 
+   
+  if(typeof FileReader==='undefined'){ 
+       //result.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
+       input1.setAttribute('disabled','disabled'); 
+  }else{ 
+       input1.addEventListener('change',readFile,false); 
+       /*input1.addEventListener('change',function (e){
+        console.log(this.files);//上传的文件列表
+       },false); */
+  }
+  function readFile(){ 
+    var file = this.files[0];//获取上传文件列表中第一个文件
+    if(!/image\/\w+/.test(file.type)){
+    //图片文件的type值为image/png或image/jpg
+      alert("文件必须为图片！");
+      return false; 
+    } 
+    // console.log(file);
+    var reader = new FileReader();//实例一个文件对象
+    reader.readAsDataURL(file);//把上传的文件转换成url
+    //当文件读取成功便可以调取上传的接口
+    reader.onload = function(e){ 
+      // console.log(this.result);//文件路径
+      // console.log(e.target.result);//文件路径
+      /*var data = e.target.result.split(',');
+      var tp = (file.type == 'image/png')? 'png': 'jpg';
+      var imgUrl = data[1];//图片的url，去掉(data:image/png;base64,)
+      //需要上传到服务器的在这里可以进行ajax请求
+      // console.log(imgUrl);
+      // 创建一个 Image 对象 
+      var image = new Image();
+      // 创建一个 Image 对象 
+      // image.src = imgUrl;
+      image.src = e.target.result;
+      image.onload = function(){
+        document.body.appendChild(image);
+      }*/
+
+      var image = new Image();
+      // 设置src属性 
+      image.src = e.target.result;
+      var max=200;
+      // 绑定load事件处理器，加载完成后执行，避免同步问题
+      image.onload = function(){ 
+        // 获取 canvas DOM 对象 
+        var canvas = document.getElementById("cvs"); 
+        // 如果高度超标 宽度等比例缩放 *= 
+        /*if(image.height > max) {
+          image.width *= max / image.height; 
+          image.height = max;
+        } */
+        // 获取 canvas的 2d 环境对象, 
+        var ctx = canvas.getContext("2d"); 
+        // canvas清屏 
+        ctx.clearRect(0, 0, canvas.width, canvas.height); 
+        // 重置canvas宽高
+        /*canvas.width = image.width;
+        canvas.height = image.height;
+        if (canvas.width>max) {canvas.width = max;}*/
+        // 将图像绘制到canvas上
+        // ctx.drawImage(image, 0, 0, image.width, image.height);
+        ctx.drawImage(image, 0, 0, 200, 200);
+        // 注意，此时image没有加入到dom之中
+      };  
     }
-  </style>
+  };
+  </script>
 
 </html>

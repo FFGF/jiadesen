@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <title>我的资料-授权代理商</title>
+        <meta charset="UTF-8">
+        
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../Public/CSS/liu.css">
+		<link rel="stylesheet" href="../Public/CSS/zh.css">
+		<link rel="stylesheet" href="../Public/CSS/bootstrap-imageupload.css">
+
+       
+    </head>
+
+	<body>
+
+
+		<!-- 最顶部的navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top first-bar">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#first-bar" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				     </button>
+					<a class="navbar-brand" href="../index.html"><img alt="安必选医疗" src="../recourse/Image/Logo.png"></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse pull-right" id="first-bar">
+					<ul class="nav navbar-nav">
+					 <li class="welcome"><a>欢迎王小二</a></li>
+						<li class="active">
+							<a href="../login.html">请登录 <span class="sr-only">(current)</span></a>
+						</li>
+
+						<li>
+							<a href="../register.html">免费注册</a>
+						</li>
+
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">系统公告 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">公告一</a>
+								</li>
+								<li>
+									<a href="#">公告二</a>
+								</li>
+								<li>
+									<a href="#">公告三</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+		<div class="container-fluid medium">
+			<!--<p>段落测试</p>-->
+
+			<div class="row">
+				<!--  整体的   左侧放置手风琴框   右侧放置内容   -->
+				<div class="col-md-2">
+					<!--左侧手风琴框-->
+
+					<div class="row leftpart">
+						<div class="accountclass">
+							<!--我的账号部分-->
+							<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp &nbsp用户中心</h4>
+						</div>
+						<!--我的账号部分-->
+
+						<div class="infoclass">
+							<!--我的账号  下面部分-->
+							<h4>我的账户</h4>
+							<ul>
+								<li>
+									<a href="repwd.html">修改密码</a>
+								</li>
+								<li>
+									<a href="info.html">我的资料</a>
+								</li>
+								<li>
+									<a href="security.html">账户安全</a>
+								</li>
+								<li>
+									<a href="myCoupon.html">我的安券</a>
+								</li>
+								<li>
+									<a href="payHistory.html">充值记录</a>
+								</li>
+								<li>
+									<a href="myIntegral.html">我的积分</a>
+								</li>
+							</ul>
+
+							<h4>我的发布</h4>
+							<ul>
+								<li>
+									<a href="activities.html">优惠活动</a>
+								</li>
+
+								<li>
+									<a href=" productsInfo.html">产品信息</a>
+								</li>
+
+								
+
+								<!-- <li>
+									<a href="myAgents.html">我的代理商</a>
+								</li> -->
+
+
+								<li>
+									<a href="merchantsRecords.html">找销售代理</a>
+								</li>
+
+								<li>
+									<a href="conferences.html">学术活动</a>
+								</li>
+							
+								<!-- 
+								<li>
+									<a href="CSOperson.html">区域代理请求信息</a>
+								</li>
+
+								<li>
+									<a href="CSOhospital.html">直销医院请求信息</a>
+								</li>
+
+								
+								<li>
+									<a href="myInstitutions.html">我的直销机构</a>
+								</li>
+														
+							
+								 -->
+								
+							</ul>
+
+							<h4>我的反馈</h4>
+							<ul>
+								<li>
+									<a href="hospitalPush.html">医疗机构需求信息</a>
+								</li>
+								<li>
+									<a href="CSOfeedback.html">销售代理反馈</a>
+								</li>
+								<li>
+									<a href="conferencesPush.html">学术活动反馈</a>
+								</li>
+							</ul>
+
+							<h4>我的招聘</h4>
+							<ul>
+								<li>
+									<a href="EmployInfo.html">招聘信息</a>
+								</li>
+								<li>
+									<a href="EmployFeedback.html">招聘反馈</a>
+								</li>
+								
+							</ul>
+
+							<h4>联系后台</h4>
+							<ul>								
+								<li>
+									<a href="#">问小安</a>
+								</li>								
+							</ul>
+
+						</div>
+						<!--我的账号  下面部分-->
+					</div>
+
+				</div>
+				<!--左侧手风琴框-->
+
+				<div class="col-md-10">
+					<!--右侧-->
+					<div class="row">
+						<h3>资料修改</h3>
+						<table class="table condition-table">
+							<!--包括渠道、。。。区域什么的-->
+							<tbody>
+
+								<tr>
+									<td class="condition-title">用户头像</td>
+									<td>
+										
+										<div class="con4">
+											<canvas id="cvs" width="200" height="200"></canvas>
+											<span class="btn upload">
+												<p>上传头像</p><input type="file" class="upload_pic" id="upload" />
+											</span>
+										</div>
+
+
+									</td>
+								</tr>
+
+								<tr>
+									<td class="condition-title">用户名称</td>
+									<td>
+										<input class="form-control" type="text" style="width: 200px;">
+									</td>
+								</tr>
+
+								<tr>
+									<td class="condition-title">手机号码</td>
+									<td>
+										<input class="form-control" type="text" style="width: 200px;">
+									</td>
+								</tr>
+
+								<tr>
+									<td class="condition-title">注册邮箱</td>
+									<td>
+										<input type="text" class="form-control" id="info_phone" oninput="checknumb()" style="width:340px" placeholder="请输入邮箱">
+									</td>
+								</tr>
+
+								<tr>
+									<td class="condition-title">用户类型</td>
+									<td>
+										<p>代理商</p>
+									</td>
+								</tr>
+
+								<tr>
+									<td class="condition-title">品牌</td>
+									<td>
+										<input class="form-control" type="text" style="width: 200px;">
+									</td>
+								</tr>
+
+								<tr>
+									<td class="condition-title">区域</td>
+									<td>
+
+										<div class="info">
+											<div>
+												<select id="s_province" name="s_province"></select>
+												<select id="s_city" name="s_city"></select>
+												<select id="s_county" name="s_county"></select>
+												<script class="resources library" src="http://sandbox.runjs.cn/uploads/rs/267/g3ugugjp/area.js" type="text/javascript"></script>
+
+												<script type="text/javascript">
+													_init_area();
+												</script>
+											</div>
+											<div id="show"></div>
+										</div>
+
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+<!-- 
+						<div class="row leftright_part" style="margin-bottom: 0px;">
+							<div class="part1 condition-title">
+								品牌产品
+							</div>
+
+							<div class="part2">
+								<select id="select1" multiple="multiple" class="select1class">
+									<option>xxx凝血仪</option>
+									<option>yyy支架</option>
+									<option>zzz呼吸器</option>
+									<option>aaa检测仪</option>
+									<option>其他</option>
+								</select>
+							</div>
+
+							<div class="part3">
+								<input class="rightchoose" type="button" value=">>" onclick="selectedToRight();" /><br/>
+								<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft();" /><br/>
+							</div>
+
+							<div class="part4">
+								<select id="select2" multiple="multiple" class="select1class">
+									<option>ddd析透仪</option>
+								</select>
+							</div>
+						</div> -->
+
+
+						<!-- <div class="row leftright_part" style="margin-bottom: 0px;">
+							<div class="part1 condition-title">
+								品牌产品
+							</div>
+
+
+							<div class="part2">
+								<select id="select1" multiple="multiple" class="select1class">
+					                <option>xxx凝血仪</option>
+									<option>yyy支架</option>
+									<option>zzz呼吸器</option>
+									<option>aaa检测仪</option>
+									<option>其他</option>		         
+			                	</select>
+							</div>
+
+
+							<div class="part3">
+								<input class="rightchoose" type="button" value=">>" onclick="selectedToRight();"/><br/>
+								<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft();"/><br/>
+
+								<input data-target="#modal1" data-toggle="modal" data-target=".bs-example-modal-sm" class="addchoose" type="button" value="+" onclick="appendOption();"/><br/>
+
+							</div>
+
+							<div id="modal1" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+											<div class="modal-dialog modal-sm" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+											        	<h4 class="modal-title">新添加产品</h4>
+											        </div>
+											      	<div class="modal-body">
+											        	<input id="newdepart1" placeholder="请输入新产品"></input>
+											      	</div>
+											      	<div class="modal-footer">
+												        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												        <button id="savenewdepart" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+												    </div>
+												</div>
+											</div>
+							</div>
+
+
+							<div class="part4">
+								<select id="select2" multiple="multiple" class="select1class">
+			                		<option>ddd析透仪</option>
+			                	</select>
+							</div>
+						</div>
+ -->
+
+						<div class="row leftright_part">
+							<div class="part_zhizhao condition-title">
+								营业执照
+							</div>
+
+							<div class="zhizhao-size">
+
+
+								<form enctype="multipart/form-data" name="form3">
+								    <p class="upload_p">上传营业执照:&nbsp;&nbsp;&nbsp;</p>	
+								    <input id="f3" type="file" name="f3" onchange="change3()" />
+								   
+								    <p"></p>
+								    <p class="yulan_p">预览:</p>
+
+									<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
+
+								    <img id="preview3" alt="" name="pic" />
+								</form>
+								
+							</div>
+						</div>
+
+						<div class="row leftright_part">
+							<div class="part_zhizhao condition-title">
+								医疗器械经营许可证
+							</div>
+
+							<div class="zhizhao-size">
+
+
+								<form enctype="multipart/form-data" name="form3">
+								    <p class="upload_p">上传许可证:&nbsp;&nbsp;&nbsp;</p>	
+								    <input id="f3" type="file" name="f3" onchange="change3()" />
+								   
+								    <p"></p>
+								    <p class="yulan_p">预览:</p>
+
+									<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
+
+								    <img id="preview3" alt="" name="pic" />
+								</form>
+								
+							</div>
+						</div>
+
+						<div class="row leftright_part">
+								<div class="part_zhizhao condition-title">
+									代理授权书
+								</div>
+
+								<div class="zhizhao-size">
+
+
+									<form enctype="multipart/form-data" name="form3">
+									    <p class="upload_p">上传授权书:&nbsp;&nbsp;&nbsp;</p>	
+									    <input id="f3" type="file" name="f3" onchange="change3()" />
+									   
+									    <p"></p>
+									    <p class="yulan_p">预览:</p>
+
+										<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
+
+									    <img id="preview3" alt="" name="pic" />
+									</form>
+									
+								</div>
+						</div>
+
+
+
+					</div>
+				</div>
+
+				<div>
+					<div class="form-group" style="margin-left: 680px;">
+						<button type="submit" class="btn btn-default">确认</button>
+					</div>
+					<!--第五部分：预览发布-->
+
+				</div>
+				<!--右侧内容-->
+
+			</div>
+			<!--  整体的   左侧放置手风琴框   右侧放置内容   -->
+
+		</div>
+		<!--"container-fluid medium"-->
+
+		<!-- 底部的footer -->
+		<nav class="navbar-inverse footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>新手指南</li>
+							<li>用户注册</li>
+						</ul>
+					</div>
+
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>北登服务</li>
+							<li>服务协议</li>
+						</ul>
+					</div>
+
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>信息安全</li>
+							<li>免责声明</li>
+						</ul>
+					</div>
+
+					<div class="col-md-2">
+						<ul class="list-unstyled">
+							<li>隐私声明</li>
+							<li>法律声明</li>
+							<li>联系我们</li>
+							<li>关于我们</li>
+						</ul>
+					</div>
+
+					<div class="col-md-4">
+						<img src="../recourse/Image/weixin.jpg" alt="" class="img-responsive" style="width: 100px">
+					</div>
+				</div>
+
+				<hr class="divider">
+
+				<div class="row">
+					<div class="col-md-12 word-list">
+						隐私声明 | 法律声明 | 联系我们 | 关于我们 | 产品地图 | 器械数据库 | 知识库 | 网站导航 | 互联网药品信息服务资格证
+					</div>
+
+					<div class="col-md-12 word-list">
+					</div>
+
+					<div class="col-md-12 word-list" style="margin-bottom: 50px">
+					</div>
+
+				</div>
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+		<script src="../Public/JS/jquery-1.12.4.min.js"></script>
+<!-- 		<script src="../jquery-2.1.1/jquery.js"></script>
+ -->		<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<script src="../Public/JS/bootstrap-imageupload.js"></script>
+		<script type="text/javascript" src="../Public/JS/zh2.js"></script>
+		<script type="text/javascript" src="../Public/JS/regist.js"></script>
+
+		<script>
+			var $imageupload = $('.imageupload');
+			$imageupload.imageupload();
+
+
+		</script>
+
+		<script>
+		//获取上传按钮
+		var input1 = document.getElementById("upload"); 
+		 
+		if(typeof FileReader==='undefined'){ 
+		     //result.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
+		     input1.setAttribute('disabled','disabled'); 
+		}else{ 
+		     input1.addEventListener('change',readFile,false); 
+		     /*input1.addEventListener('change',function (e){
+		     	console.log(this.files);//上传的文件列表
+		     },false); */
+		}
+		function readFile(){ 
+			var file = this.files[0];//获取上传文件列表中第一个文件
+			if(!/image\/\w+/.test(file.type)){
+			//图片文件的type值为image/png或image/jpg
+				alert("文件必须为图片！");
+				return false; 
+			} 
+			// console.log(file);
+			var reader = new FileReader();//实例一个文件对象
+			reader.readAsDataURL(file);//把上传的文件转换成url
+			//当文件读取成功便可以调取上传的接口
+			reader.onload = function(e){ 
+				// console.log(this.result);//文件路径
+				// console.log(e.target.result);//文件路径
+				/*var data = e.target.result.split(',');
+				var tp = (file.type == 'image/png')? 'png': 'jpg';
+				var imgUrl = data[1];//图片的url，去掉(data:image/png;base64,)
+				//需要上传到服务器的在这里可以进行ajax请求
+				// console.log(imgUrl);
+				// 创建一个 Image 对象 
+				var image = new Image();
+				// 创建一个 Image 对象 
+				// image.src = imgUrl;
+				image.src = e.target.result;
+				image.onload = function(){
+					document.body.appendChild(image);
+				}*/
+
+				var image = new Image();
+				// 设置src属性 
+				image.src = e.target.result;
+				var max=200;
+				// 绑定load事件处理器，加载完成后执行，避免同步问题
+				image.onload = function(){ 
+					// 获取 canvas DOM 对象 
+					var canvas = document.getElementById("cvs"); 
+					// 如果高度超标 宽度等比例缩放 *= 
+					/*if(image.height > max) {
+						image.width *= max / image.height; 
+						image.height = max;
+					} */
+					// 获取 canvas的 2d 环境对象, 
+					var ctx = canvas.getContext("2d"); 
+					// canvas清屏 
+					ctx.clearRect(0, 0, canvas.width, canvas.height); 
+					// 重置canvas宽高
+					/*canvas.width = image.width;
+					canvas.height = image.height;
+					if (canvas.width>max) {canvas.width = max;}*/
+					// 将图像绘制到canvas上
+					// ctx.drawImage(image, 0, 0, image.width, image.height);
+					ctx.drawImage(image, 0, 0, 200, 200);
+					// 注意，此时image没有加入到dom之中
+				};  
+			}
+		};
+		</script>
+
+
+
+	</body>
+	
+
+</html>
