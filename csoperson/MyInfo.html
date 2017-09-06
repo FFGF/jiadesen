@@ -60,44 +60,52 @@
 
 			<div class="row leftpart">
 				<div class="accountclass"><!--我的账号部分-->
-					<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp &nbsp用户中心</h4>
+					<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp; &nbsp;用户中心</h4>
 				</div><!--我的账号部分-->
 			
 
 				<div class="infoclass"><!--我的账号  下面部分-->
 					<h4>我的账户</h4>
-						<ul>
-							<li><a href="../csoperson/repwd.html">修改密码</a></li>
-							<li><a href="../csoperson/MyInfo.html">我的资料</a></li>
-							<li><a href="../csoperson/security.html">账户安全</a></li>
-							<li><a href="../csoperson/myCoupon.html">我的安券</a></li>
-						<li><a href="../csoperson/payHistory.html">充值记录</a></li>
-						<li><a href="../csoperson/myIntegral.html">我的积分</a></li>
+					<ul>
+						<li><a href="../csoperson/repwd.html">修改密码</a></li>
+						<li><a href="../csoperson/MyInfo.html">我的资料</a></li>
+						<li><a href="../csoperson/security.html">账户安全</a></li>
+						<li><a href="../csoperson/myCoupon.html">我的安券</a></li>
+					<li><a href="../csoperson/payHistory.html">充值记录</a></li>
+					<li><a href="../csoperson/myIntegral.html">我的积分</a></li>
 
-						</ul>
+					</ul>
+						
+					<h4>我的求职</h4>
+					<ul>
+						<li><a href="../csoperson/MyResume.html"">我的简历</a></li>
+						<li><a href="../csoperson/WantJobInfo.html">求职信息</a></li>
+						<li><a href="../csoperson/WantJobFeedback.html">求职反馈</a></li>
+					</ul>
 
-						<h4>我的发布</h4>
-						<ul>
-							<li><a href="../csoperson/WantJobInfo.html">求职信息</a></li>	
-							<li><a href="../csoperson/ExtensionInfoFeedback.html">推广信息</a></li>		
-						</ul>
+					<h4>我的发布</h4>
+					<ul>
+							
+						<li><a href="../csoperson/ExtensionInfoFeedback.html">产品代理需求</a></li>		
+					</ul>
 
-						<h4>我的反馈</h4>
-						<ul>								
-							<li><a href="../csoperson/WantJobFeedback.html">求职反馈</a></li>	
-							<li><a href="../csoperson/SupplierFeedbackInfo.html">医疗机构需求信息</a></li>	
-							<li><a href="../csoperson/SupplierNeedInfo.html">供货商需求信息</a></li>					
-						</ul>
+					<h4>我的反馈</h4>
+					<ul>								
+							
+						<li><a href="../csoperson/SupplierFeedbackInfo.html">医疗机构发布的信息</a></li>	
+						<li><a href="../csoperson/SupplierNeedInfo.html">生产厂家发布的信息</a></li>
+						<li><a href="../csoperson/SupplierNeedInfo2.html">授权代理商发布的信息</a></li>					
+					</ul>
 
-						<h4>我的关注</h4>
-						<ul>									
-							<li><a href="../csoperson/MyConcern.html">我的关注</a></li>	
-						</ul>
+					<h4>我的关注</h4>
+					<ul>									
+						<li><a href="../csoperson/MyConcern.html">我的关注</a></li>	
+					</ul>
 
-						<h4>联系后台</h4>
-						<ul>
-							<li><a href="../csoperson/consult.html">问小安</a></li>					
-						</ul>
+					<h4>联系后台</h4>
+					<ul>
+						<li><a href="../csoperson/consult.html">问小安</a></li>					
+					</ul>
 
 				</div><!--我的账号  下面部分-->
 			</div>	
@@ -110,14 +118,20 @@
 
 			<table class="table condition-table"><!--包括渠道、。。。区域什么的-->
 				<tbody>
-					
+					<tr>
+						<td class="condition-title">推荐码</td>
+						<td>
+							<p>FWE7UH9S8D</p>
+						</td>
+					</tr>
+
 					<tr>
 						<td class="condition-title">用户头像</td>
 						<td>
 										
 							<div class="con4">
 								<canvas id="cvs" width="200" height="200"></canvas>
-								<span class="btn upload">上传头像<input type="file" class="upload_pic" id="upload" /></span>
+								<span class="btn upload"><p>上传头像</p><input type="file" class="upload_pic" id="upload" /></span>
 							</div>
 
 
@@ -146,6 +160,8 @@
 							<p>销售代理专员</p>
 						</td>
 					</tr>
+
+					
 
 
 					<tr>
@@ -233,67 +249,6 @@
 							<input class="ExtensionExperience-size" type="text">&nbsp;&nbsp;岁
 						</td>
 					</tr>
-					<tr>
-						<td class="condition-title">职位类型</td>
-						<td>
-							<div class="dropdown" style="margin-left:20px;">
-				 				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">职位类型选择<span class="caret"></span>
-				  				</button>
-				  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-					  				<li><a href="#">临床销售</a></li>
-					   				<li><a href="#">OTC销售</a></li>
-					   				<li><a href="#">器械耗材</a></li>
-					   				<li><a href="#">招商经理</a></li>
-					   				<li><a href="#">主管/经理</a></li>
-					   				<li><a href="#">生产/研发</a></li>
-									<li><a href="#">实习</a></li>
-									<li><a href="#">其他</a></li>
-				 				</ul>
-							</div><!--div:dropdown-->
-						</td>
-					</tr>
-					<tr>
-						<td class="condition-title">薪资期望</td>
-						<td>
-							<div class="dropdown" style="margin-left:20px;">
-				 				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">薪资待遇选择<span class="caret"></span>
-				  				</button>
-				  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-					  				<li><a href="#">面议</a></li>
-					   				<li><a href="#">3k/月以下</a></li>
-					   				<li><a href="#">3k~5k/月</a></li>
-					   				<li><a href="#">5k~7k/月</a></li>
-					   				<li><a href="#">7k~10k/月</a></li>
-					   				<li><a href="#">10k~15k/月</a></li>
-									<li><a href="#">15k~20k/月</a></li>
-									<li><a href="#">20k~30k/月</a></li>
-									<li><a href="#">30k~50k/月</a></li>
-									<li><a href="#">50k/月以上</a></li>
-				 				</ul>
-							</div><!--div:dropdown-->
-						</td>
-					</tr>
-
-
-					<tr>
-						<td class="condition-title">工作经验</td>
-						<td>
-							<input style="width:400px" type="text">
-							<div id="org"></div> 
-							<input style="margin-top: 10px" type="button" onclick="add1();" value="添加" />
-						</td>
-					</tr>
-
-					<tr>
-						<td class="condition-title">教育经历</td>
-						<td>
-							<input style="width:400px" type="text">
-							<div id="org2"></div> 
-							<input style="margin-top: 10px" type="button" onclick="add2();" value="添加" />
-						</td>
-					</tr>
-
-
 
 					<tr>
 						<td class="condition-title">所属区域</td>

@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 	<meta charset="UTF-8">
-	<title>发布推广信息</title>
+	<title>产品代理需求发布</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
@@ -67,39 +67,46 @@
 
 				<div class="infoclass"><!--我的账号  下面部分-->
 					<h4>我的账户</h4>
-						<ul>
-							<li><a href="../csoperson/repwd.html">修改密码</a></li>
-							<li><a href="../csoperson/MyInfo.html">我的资料</a></li>
-							<li><a href="../csoperson/security.html">账户安全</a></li>
-							<li><a href="../csoperson/myCoupon.html">我的安券</a></li>
-						<li><a href="../csoperson/payHistory.html">充值记录</a></li>
-						<li><a href="../csoperson/myIntegral.html">我的积分</a></li>
+					<ul>
+						<li><a href="../csoperson/repwd.html">修改密码</a></li>
+						<li><a href="../csoperson/MyInfo.html">我的资料</a></li>
+						<li><a href="../csoperson/security.html">账户安全</a></li>
+						<li><a href="../csoperson/myCoupon.html">我的安券</a></li>
+					<li><a href="../csoperson/payHistory.html">充值记录</a></li>
+					<li><a href="../csoperson/myIntegral.html">我的积分</a></li>
 
-						</ul>
+					</ul>
+						
+					<h4>我的求职</h4>
+					<ul>
+						<li><a href="../csoperson/MyResume.html"">我的简历</a></li>
+						<li><a href="../csoperson/WantJobInfo.html">求职信息</a></li>
+						<li><a href="../csoperson/WantJobFeedback.html">求职反馈</a></li>
+					</ul>
 
-						<h4>我的发布</h4>
-						<ul>
-							<li><a href="../csoperson/WantJobInfo.html">求职信息</a></li>	
-							<li><a href="../csoperson/ExtensionInfoFeedback.html">推广信息</a></li>		
-						</ul>
+					<h4>我的发布</h4>
+					<ul>
+							
+						<li><a href="../csoperson/ExtensionInfoFeedback.html">产品代理需求</a></li>		
+					</ul>
 
-						<h4>我的反馈</h4>
-						<ul>								
-							<li><a href="../csoperson/WantJobFeedback.html">求职反馈</a></li>	
-							<li><a href="../csoperson/SupplierFeedbackInfo.html">医疗机构需求信息</a></li>	
-							<li><a href="../csoperson/SupplierNeedInfo.html">供货商需求信息</a></li>					
-						</ul>
+					<h4>我的反馈</h4>
+					<ul>								
+							
+						<li><a href="../csoperson/SupplierFeedbackInfo.html">医疗机构发布的信息</a></li>	
+						<li><a href="../csoperson/SupplierNeedInfo.html">生产厂家发布的信息</a></li>
+						<li><a href="../csoperson/SupplierNeedInfo2.html">授权代理商发布的信息</a></li>					
+					</ul>
 
-						<h4>我的关注</h4>
-						<ul>									
-							<li><a href="../csoperson/MyConcern.html">我的关注</a></li>	
-						</ul>
+					<h4>我的关注</h4>
+					<ul>									
+						<li><a href="../csoperson/MyConcern.html">我的关注</a></li>	
+					</ul>
 
-						<h4>联系后台</h4>
-						<ul>
-							<li><a href="../csoperson/consult.html">问小安</a></li>					
-						</ul>
-
+					<h4>联系后台</h4>
+					<ul>
+						<li><a href="../csoperson/consult.html">问小安</a></li>					
+					</ul>
 				</div><!--我的账号  下面部分-->
 			</div>	
 
@@ -107,6 +114,8 @@
 
 
 		<div class="col-md-10"><!--右侧-->
+
+			
 
 			<div class="row leftright_part0">
 				<div class="part11 condition-title">
@@ -138,29 +147,9 @@
 					<input class="rightchoosecp" type="button" value=">>" onclick="selectedToRight();"/><br/>
 					<input class="leftchoose" type="button" value="<<" onclick="selectedToLeft();"/><br/>
 					
-					<!--
-					<input data-target="#modal1" data-toggle="modal" data-target=".bs-example-modal-sm" class="addchoose" type="button" value="+" onclick="appendOption();"/><br/>
-					-->
 				</div>
 
-				<!--
-				<div id="modal1" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-								<div class="modal-dialog modal-sm" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-								        	<h4 class="modal-title">新添加医院</h4>
-								        </div>
-								      	<div class="modal-body">
-								        	<input id="newdepart1" placeholder="请输入新医院名称"></input>
-								      	</div>
-								      	<div class="modal-footer">
-									        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-									        <button id="savenewdepart" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
-									    </div>
-									</div>
-								</div>
-				</div>
-				-->
+
 
 
 				<div class="part44">
@@ -169,10 +158,66 @@
                 	</select>
 				</div>
 			</div>
+			
 		
 
 			<table class="table condition-table0">
 				<tbody>
+					<!--
+					<tr>
+						<td class="condition-title">医疗机构</td>
+						<td>
+							<div class="dropdown" style="margin-left:20px;">
+				 				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">请选择医疗机构<span class="caret"></span>
+				  				</button>
+				  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					  				<li><a href="#">北京日坛医院</a></li>
+					   				<li><a href="#">上海静安医院</a></li>
+					   				<li><a href="#">幼儿医院</a></li>
+					   				<li><a href="#">长洲医院</a></li>
+				 				</ul>
+							</div>
+						</td>
+					</tr>
+					-->
+
+					<tr>
+						<td class="condition-title">
+							品牌
+						</td>
+						<td>
+							<input class="publishinputwidth" type="text">
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">
+							分类
+						</td>
+						<td>
+							<div class="dropdown" style="margin-left:20px;float: left">
+				 				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">请选择第一大类别<span class="caret"></span>
+				  				</button>
+				  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					  				<li><a href="#">临床医学</a></li>
+					   				<li><a href="#">试剂仪器</a></li>
+					   				<li><a href="#">耗材用品</a></li>
+				 				</ul>
+							</div>
+
+
+							<div class="dropdown" style="margin-left:80px;float: left">
+				 				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">请选择第二大类别<span class="caret"></span>
+				  				</button>
+				  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					  				<li><a href="#">临床医学</a></li>
+					   				<li><a href="#">试剂仪器</a></li>
+					   				<li><a href="#">耗材用品</a></li>
+				 				</ul>
+							</div>
+						</td>
+					</tr>
+
 
 					<tr>
 						<td class="condition-title">
@@ -182,6 +227,26 @@
 							<input class="publishinputwidth" type="text">
 						</td>
 					</tr>
+					
+
+					<tr>
+						<td class="condition-title">
+							型号
+						</td>
+						<td>
+							<input class="publishinputwidth" type="text">
+						</td>
+					</tr>
+
+					<tr>
+						<td class="condition-title">
+							规格
+						</td>
+						<td>
+							<input class="publishinputwidth" type="text">
+						</td>
+					</tr>
+
 
 					<tr>
 						<td class="condition-title">
