@@ -34,7 +34,7 @@
 					<ul class="nav navbar-nav">
 					 <li class="welcome"><a>欢迎王小二</a></li>
 						<li class="active">
-							<a href="../login.html">我的账号 <span class="sr-only">(current)</span></a>
+							<a href="../login.html">请登录 <span class="sr-only">(current)</span></a>
 						</li>
 
 						<li>
@@ -176,23 +176,17 @@
 
 					<div class="row">
 						
-						<h3>我的资料</h3>
+						<h3>资料修改</h3>
 						<table class="table condition-table">
 							<!--包括渠道、。。。区域什么的-->
 							<tbody>
-
-								<tr>
-									<td class="condition-title">邀请码</td>
-									<td>
-										<p>scs001</p>
-									</td>
-								</tr>
 
 								<tr>
 									<td class="condition-title">用户头像</td>
 									<td>
 										<div class="con4">
 											<canvas id="cvs" width="200" height="200"></canvas>
+											<span class="btn upload">上传头像<input type="file" class="upload_pic" id="upload" /></span>
 										</div>
 									</td>
 								</tr>
@@ -200,44 +194,44 @@
 								<tr>
 									<td class="condition-title">用户名称</td>
 									<td>
-										<p>asasd</p>
+										<input type="text" class="form-control" id="info_username" oninput="checkname()" style="width:340px" placeholder="请输入2-20位中文用户名">
 									</td>
 								</tr>
 
 								<tr>
 									<td class="condition-title">手机号码</td>
 									<td>
-										<p>15163672889</p>
+										<input type="text" class="form-control" id="info_phone" oninput="checknumb()" style="width:340px" placeholder="请输入11位手机号码">
 									</td>
 								</tr>
 
 								<tr>
 									<td class="condition-title">注册邮箱</td>
 									<td>
-										<p>214343426@163.com</p>
+										<input type="text" class="form-control" id="info_phone" oninput="checknumb()" style="width:340px" placeholder="请输入邮箱">
 									</td>
 								</tr>
 
 								<tr>
 									<td class="condition-title">用户类型</td>
 									<td>
-										<p>代理商</p>
+										<p>生产商</p>
 									</td>
 								</tr>
 
 								<tr>
 									<td class="condition-title">注册类型</td>
 									<td>
-										<p>生产商</p>
+										<input type="text" class="form-control" id="info_usertype" style="width:340px" placeholder="注册类型">
 									</td>
 								</tr>
 
 								<tr>
 									<td class="condition-title">企业名称</td>
 									<td>
-										<p>xxx 公司</p>
+										<input type="text" class="form-control" id="info_corporation" style="width:340px" placeholder="请输入中文名称">
 										<br>
-										<p>xxx compony</p>
+										<input type="text" class="form-control" id="info_corporation" style="width:340px" placeholder="请输入英文名称">
 
 									</td>
 								</tr>
@@ -246,7 +240,13 @@
 									<td class="condition-title">品牌</td>
 									<td>
 										<div id="logo">
+																						
+												<input type="file" id="logo_pic" style="width: 200px;display: inline;" value="请选择品牌logo">
+												<input type="text" style="display: inline;" placeholder="请输入品牌名称">
 												
+												<button class="btn btn-default" onclick="copy()">+</button>
+												<button class="btn btn-default" onclick="delparent(this)">-</button>
+											
 										</div>
 										<div id="logo2"></div>
 
@@ -265,7 +265,14 @@
 
 
 								<form enctype="multipart/form-data" name="form3">
-								    
+								    <p class="upload_p">上传营业执照:&nbsp;&nbsp;&nbsp;</p>	
+								    <input id="f3" type="file" name="f3" onchange="change3()" />
+								   
+								    <p"></p>
+								    <p class="yulan_p">预览:</p>
+
+									<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
+
 								    <img id="preview3" alt="" name="pic" />
 								</form>
 								
@@ -281,7 +288,14 @@
 
 
 								<form enctype="multipart/form-data" name="form3">
+								    <p class="upload_p">上传许可证:&nbsp;&nbsp;&nbsp;</p>	
+								    <input id="f3" type="file" name="f3" onchange="change3()" />
 								   
+								    <p"></p>
+								    <p class="yulan_p">预览:</p>
+
+									<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
+
 								    <img id="preview3" alt="" name="pic" />
 								</form>
 								
@@ -297,7 +311,13 @@
 
 
 									<form enctype="multipart/form-data" name="form3">
-									    
+									    <p class="upload_p">上传授权书:&nbsp;&nbsp;&nbsp;</p>	
+									    <input id="f3" type="file" name="f3" onchange="change3()" />
+									   
+									    <p"></p>
+									    <p class="yulan_p">预览:</p>
+
+										<button type="button" class="btn btn-default" style="    margin-left: 365px;margin-top: -126px;" onclick="Removefunction3()">Remove</button>
 
 									    <img id="preview3" alt="" name="pic" />
 									</form>
@@ -308,7 +328,7 @@
 
 						<div class="form-group" style="text-align: center;">
 							<div class=" col-md-12">
-								<a href="infoChange.html"><button type="submit" class="btn btn-default">修改</button></a>
+								<button type="submit" class="btn btn-default">确认</button>
 							</div>
 						</div>
 

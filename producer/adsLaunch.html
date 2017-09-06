@@ -124,7 +124,7 @@
 							
 								<!-- 
 								<li>
-									<a href="CSOapply.html">区域代理请求信息</a>
+									<a href="CSOperson.html">区域代理请求信息</a>
 								</li>
 
 								<li>
@@ -179,7 +179,12 @@
 								
 								<td class="condition-title">品牌</td>
 								<td>
-									<input class="form-control" type="text" style="width: 400px;margin-left: 0px">
+									<select class="form-control" id="info_usertype" style="width: 400px;" oninput="chose()">
+										<option disabled selected value>请选择品牌名称</option>
+										<option>西门子</option>
+										<option>博世</option>
+										<option>松下</option>
+									</select>
 								</td>
 								
 							</tr>
@@ -189,11 +194,11 @@
 								<td class="condition-title">产品名称</td>
 								<td>
 									<select class="form-control" id="info_usertype" style="width: 400px;" oninput="chose()">
-											<option disabled selected value>请选择品牌名称</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-										</select>
+										<option disabled selected value>请选择产品名称</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+									</select>
 								</td>
 								
 							</tr>

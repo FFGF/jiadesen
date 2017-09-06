@@ -127,7 +127,7 @@
 							
 								<!-- 
 								<li>
-									<a href="CSOapply.html">区域代理请求信息</a>
+									<a href="CSOperson.html">区域代理请求信息</a>
 								</li>
 
 								<li>
@@ -203,7 +203,12 @@
 									<!--第二行-->
 									<td class="condition-title">品牌</td>
 									<td>
-										<input class="form-control" type="text" style="width: 200px;">
+										<select class="form-control" id="" style="width: 200px;margin-left: 20px">
+											<option disabled selected value>选择品牌</option>
+											<option>西门子</option>
+											<option>博世</option>
+											<option>松下</option>
+										</select>
 									</td>
 									<td class="condition-title">产地</td>
 									<td>
@@ -215,11 +220,21 @@
 									<!--第三行-->
 									<td class="condition-title">产品类别</td>
 									<td>
-										<input class="form-control" type="text" style="width: 200px;">
+										<select class="form-control" id="" style="width: 200px;margin-left: 20px">
+											<option disabled selected value>选择类别</option>
+											<option>1类</option>
+											<option>2类</option>
+											<option>3类</option>
+										</select>
 									</td>
 									<td class="condition-title">适用科室</td>
 									<td>
-										<input class="form-control" type="text" style="width: 200px;">
+										<select class="form-control" id="" style="width: 200px;margin-left: 20px">
+											<option disabled selected value>选择科室</option>
+											<option>内科</option>
+											<option>外科</option>
+											<option>神经科</option>
+										</select>
 									</td>
 								</tr>
 
@@ -306,23 +321,23 @@
 								</tr>
 
 								<tr>
-									<!--第七行-->
+								
 									<td class="condition-title">产品介绍</td>
 									<td>
 										<div>
-											<textarea class="form-control" rows="3" style="width: 400px;display: inline;"></textarea>
-											<button class="btn btn-default">上传</button>
-										</div>
+											<input type="file" accept="application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+											<p>*只可上传.doc,.docx格式word文档</p>
+										</div>									
 									</td>
 								</tr>
-
+								
 								<tr>
-									<!--第八行-->
+									
 									<td class="condition-title">技术参数</td>
 									<td>
 										<div>
-											<textarea class="form-control" rows="3" style="width: 400px;display: inline;"></textarea>
-											<button class="btn btn-default">上传</button>
+											<input type="file" accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+											<p>*只可上传.xls,.xlsx格式excel文档</p>
 										</div>
 									</td>
 								</tr>
