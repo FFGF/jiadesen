@@ -495,3 +495,16 @@ width:65px;height:42px;margin-left:10px;float:left;
  font-size: 17px;margin-left: 10px;margin-bottom: 10px;margin-top: 14px;
 }
 
+
+
+/*
+2017-9-15 修改日历控件格式
+ */
+.beatpicker li.cell{
+	width: 12%;
+}
+.beatpicker{
+	line-height: 0.99;
+}
+
+
