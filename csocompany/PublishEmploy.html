@@ -5,10 +5,10 @@
 	<title>发布招聘信息--销售代理公司</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../Public/CSS/liu.css">
+   
 
      <link rel="stylesheet" href="../Public/CSS/BeatPicker.min.css"/>
-
+ 	<link rel="stylesheet" href="../Public/CSS/liu.css">
 </head>
 <body>
 
@@ -61,7 +61,12 @@
 
 			<div class="row leftpart">
 				<div class="accountclass"><!--我的账号部分-->
-					<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp &nbsp我的信息</h4>
+					<div class="accountclassleft">
+						<img class="accountclassleftimg" src="../recourse/Image/yianLogo.jpg" >
+					</div>
+					<div class="accountclassright">
+						<p id="accountp" class="accountclassrightp">CSO公司中心</p>
+					</div>
 				</div><!--我的账号部分-->
 			
 
@@ -174,7 +179,8 @@
 					<tr>
 						<td class="condition-title">有效期</td>
 						<td>
-							<input type="text" data-beatpicker="true" data-beatpicker-module="today,clear"/>
+							<input type="text" data-beatpicker="true" data-beatpicker-module="today,clear,gotoDate
+"/>
 						</td>
 					</tr>
 
@@ -324,7 +330,7 @@
 
 <script type="text/javascript" src="../jquery-2.1.1/jquery.js"></script>
 <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-
+<script type="text/javascript" src="../Public/JS/liu.js"></script>
 <script src="../Public/JS//BeatPicker.min.js"></script>
  <script src="../Public/JS/jquery-1.12.4.min.js"></script>
 
