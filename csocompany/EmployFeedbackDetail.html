@@ -5,11 +5,11 @@
 	<title>招聘反馈页面的详情查看--销售代理公司</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../Public/CSS/liu.css">
+    
 
 
      <link rel="stylesheet" href="../Public/CSS/BeatPicker.min.css"/>
-
+	<link rel="stylesheet" href="../Public/CSS/liu.css">
 
 </head>
 <body>
@@ -63,7 +63,12 @@
 
 			<div class="row leftpart">
 				<div class="accountclass"><!--我的账号部分-->
-					<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp &nbsp我的信息</h4>
+					<div class="accountclassleft">
+						<img class="accountclassleftimg" src="../recourse/Image/yianLogo.jpg" >
+					</div>
+					<div class="accountclassright">
+						<p id="accountp" class="accountclassrightp">CSO公司中心</p>
+					</div>
 				</div><!--我的账号部分-->
 			
 
@@ -87,13 +92,13 @@
 
 					<h4>我的发布</h4>
 					<ul>		
-						<li><a href="../csocompany/AcademicConference.html">学术活动反馈</a></li>		
+								
 						<li><a href="../csocompany/ExtensionInfoFeedback.html">产品代理需求</a></li>		
 					</ul>
 
 					<h4>我的反馈</h4>
 					<ul>								
-						
+						<li><a href="../csocompany/AcademicConference.html">学术活动反馈</a></li>
 						<li><a href="../csocompany/SupplierFeedbackInfo.html">医疗机构发布的信息</a></li>	
 						<li><a href="../csocompany/SupplierNeedInfo.html">生产厂家发布的信息</a></li>	
 						<li><a href="../csocompany/SupplierNeedInfo2.html">授权代理商发布的信息</a></li>
@@ -258,7 +263,8 @@
 
 					  <div style="margin-top:10px;margin-left:30px"><p style="float:left">面试时间：</p> 
 
-					  <input style="width:250px" type="text" data-beatpicker="true" data-beatpicker-module="today,clear"/>
+					  <input style="width:250px" type="text" data-beatpicker="true" data-beatpicker-module="today,clear,gotoDate
+"/>
 
 					  </div>
 
@@ -342,7 +348,7 @@
 
 <script src="../Public/JS//BeatPicker.min.js"></script>
 <script src="../Public/JS/jquery-1.12.4.min.js"></script>
-
+<script type="text/javascript" src="../Public/JS/liu.js"></script>
 
 <script type="text/javascript">
 
