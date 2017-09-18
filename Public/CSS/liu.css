@@ -163,7 +163,7 @@ color:#333; background-color: #fff; border-color: #ccc; }
 .leftchoose { width: 82px; margin-top: 40px; margin-left: 25px; }
 .xiugai-position { margin-left: 655px; margin-top: 35px; background-color: #66b3ff; width: 85px; }
 
-/*CSO专员  上传身份证件正反面 */
+/*销售代理专员  上传身份证件正反面 */
 .leftright_part .part_shenfen { border-right: 1px solid #e4e4e4; float: left; width: 160px; height: 320px; }
 .condition-title { text-align: center; vertical-align: middle !important; background-color: #f2f2f2; font-weight: normal; line-height: 2.5; color: #666; width: 160px; }
 .zhengjian-size { width: 680px; float: left; }
@@ -371,10 +371,6 @@ tr td .default-info{
 .rightchoosecp { width: 82px; margin-top: 96px; margin-left: 25px; }
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> zhu
 /*
 2017-8-24 file upload
  */
@@ -391,121 +387,49 @@ border-color: #ccc;
 /*
 2017-8-25 SupplierNeedInfo
  */
-.SupplierNeedclass1{
-	width:100px;
-}
-.SupplierNeedclass2{
-	width:100px;
-}
-.SupplierNeedclass3{
-	width:105px;
-}
-.SupplierNeedclass4{
-	width:150px;
-}
-.SupplierNeedclass5{
-	width:80px;
-}
-.SupplierNeedclass7{
-	width:80px;
-}
-.SupplierNeedclass8{
-	width:100px;
-}
-.SupplierNeedclass9{
-	width:80px;
-}
+.SupplierNeedclass1 { width: 130px; }
+.SupplierNeedclass2 { width: 100px; }
+.SupplierNeedclass3 { width: 105px; }
+.SupplierNeedclass4 { width: 150px; }
+.SupplierNeedclass5 { width: 80px; }
+.SupplierNeedclass7 { width: 80px; }
+.SupplierNeedclass8 { width: 100px; }
+.SupplierNeedclass9 { width: 80px; }
 
-
-
-.csocompanysupplier1{
-	width:100px;
-}
-.csocompanysupplier2{
-	width:120px;
-}
-.csocompanysupplier3{
-	width:160px;
-}
-
-.csocompanysupplier6{
-	width:120px;
-}
-.csocompanysupplier7{
-	width:100px;
-}
+.csocompanysupplier1 { width: 125px; }
+.csocompanysupplier2 { width: 120px; }
+.csocompanysupplier3 { width: 160px; }
+.csocompanysupplier6 { width: 120px; }
+.csocompanysupplier7 { width: 100px; }
 
 
 /*
 2017-8-25 csocompany EmployFeedbackDetail.html
  */
-
 .leftright_part .part_zhizhao2 { border-right: 1px solid #e4e4e4; float: left; width: 160px; height: 300px; }
-
 .zhizhao-size2 { width: 680px; float: left; }
-
-.resumeposition{
-	margin-top: 26px;
-    margin-left: 180px;
-}
-
-
-.leftmove{
-	margin-left: -45px;
-}
+.resumeposition { margin-top: 26px; margin-left: 180px; }
+.leftmove { margin-left: -45px; }
 
 
 
 /*
 2017-8-26
  */
-.distributeleft{
-	border-right: 1px solid #e4e4e4; float: left; width: 160px; height: 145px;text-align: center; vertical-align: middle !important; background-color: #f2f2f2; font-weight: normal; line-height: 2.5; color: #666; width: 160px;
-}
-.distributeright{
-	float: left;width: 270px;height: 145px;
-}
+.distributeleft { border-right: 1px solid #e4e4e4; float: left; width: 160px; height: 145px; text-align: center; vertical-align: middle !important; background-color: #f2f2f2; font-weight: normal; line-height: 2.5; color: #666; width: 160px; }
+.distributeright { float: left; width: 270px; height: 145px; }
 
 
 
 /*2017-8-29 师弟上传头像部分*/
 /*上传头像*/
-.con4{
-     width: 300px;
-     height: auto;
-     overflow: hidden;
-     margin: 20px auto;
-     color: #FFFFFF;
-}
-.con4 .btn{
-     width: 100%;
-     height: 40px;
-     line-height: 40px;
-     text-align: center;
-     background: #d8b49c;
-     display: block;
-     font-size: 16px;
-     border-radius: 5px;
-}
-.con4 .upload{
-     float: left;
-     position: relative;
-}
-.con4 .upload_pic{
-     display: block;
-     width: 100%;
-     height: 40px;
-     position: absolute;
-     left: 0;
-     top: 0;
-     opacity: 0;
-     border-radius: 5px;
-}
-#cvs{
-	border: 1px solid #000;
-	margin:20px 0 20px 50px;
-}
+.con4 { width: 300px; height: auto; overflow: hidden; margin: 20px auto; color: #FFFFFF; }
+.con4 .btn { width: 100%; height: 40px; line-height: 40px; text-align: center; background: #d8b49c; display: block; font-size: 16px; border-radius: 5px; }
+.con4 .upload { float: left; position: relative; }
 
+.upload p { margin-top: -13px; margin-left: 2px; }
+.upload_pic { display: block; width: 100%; height: 40px; position: absolute; left: 0; top: 0; opacity: 0; border-radius: 5px; }
+#cvs { border: 1px solid #000; margin: 20px 0 20px 50px; }
 
 
 
@@ -513,28 +437,35 @@ border-color: #ccc;
 关于我的资料页面乱码问题
  */
 
-.zhengjian-size .wenjian { width: 250px; 
-	height: 23px; border: 0px; margin-top: 30px; 
-}
+.zhengjian-size .wenjian { width: 250px; height: 23px; border: 0px; margin-top: 30px; }
+.zhengjian-size .fileuploadclass { border: 1px solid; height: 35px; margin-left: 412px; margin-top: -128px; width: 90px; border-color: #ccc; }
 
-.zhengjian-size .fileuploadclass{
-border: 1px solid; height: 35px;
-margin-left: 412px;
-margin-top: -128px;
-width: 90px;
-border-color: #ccc;
-}
+.zhizhao-size .wenjian { width: 250px; height: 23px; border: 0px; margin-top: 30px; }
+
+.zhizhao-size .fileuploadclass { border: 1px solid; height: 35px; margin-left: 412px; margin-top: -128px; width: 90px; border-color: #ccc; }
 
 
-.zhizhao-size .wenjian { 
-	width: 250px; height: 23px; 
-	border: 0px; margin-top: 30px; 
+/*
+2017-9-4
+ */
+.resume-position { margin-left: 420px; margin-top: 35px; background-color: #66b3ff; width: 85px; }
+
+/*
+.col-md-2 {
+    width: 17.666667%;
+}
+.col-md-10 {
+    width: 82.3333333%
+}
+*/
+
+/*
+2017-9-8
+ */
+.personintro{
+	width:590px;
+	margin-left: 20px;
+	border-radius: 4px;
+	margin-top: 5px;
 }
 
-.zhizhao-size .fileuploadclass{
-border: 1px solid; height: 35px;
-margin-left: 412px;
-margin-top: -128px;
-width: 90px;
-border-color: #ccc;
-}

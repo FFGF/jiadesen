@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 	<meta charset="UTF-8">
-	<title>我的信息--CSO公司</title>
+	<title>我的信息--销售代理公司</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Public/CSS/liu.css">
@@ -29,7 +29,7 @@
       <ul class="nav navbar-nav">
 
       	<li class="welcome"><a>欢迎王小二</a></li>
-        <li class="active"><a href="../login.html">请登录 <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="../login.html">我的账号 <span class="sr-only">(current)</span></a></li>
 
         <li><a href="../register.html">免费注册</a></li>
 
@@ -64,37 +64,45 @@
 
 				<div class="infoclass"><!--我的账号  下面部分-->
 					<h4>我的账户</h4>
-						<ul>
-							<li><a href="../csocompany/repwd.html">修改密码</a></li>
-							<li><a href="../csocompany/MyInfo.html">我的资料</a></li>
-							<li><a href="../csocompany/security.html">账户安全</a></li>
-							<li><a href="../csocompany/myCoupon.html">我的安券</a></li>
-						<li><a href="../csocompany/payHistory.html">充值记录</a></li>
-						<li><a href="../csocompany/myIntegral.html">我的积分</a></li>
-						</ul>
+					<ul>
+						<li><a href="../csocompany/repwd.html">修改密码</a></li>
+						<li><a href="../csocompany/MyInfo.html">我的资料</a></li>
+						<li><a href="../csocompany/security.html">账户安全</a></li>
+						<li><a href="../csocompany/myCoupon.html">我的安券</a></li>
+					<li><a href="../csocompany/payHistory.html">充值记录</a></li>
+					<li><a href="../csocompany/myIntegral.html">我的积分</a></li>
+					</ul>
 
-						<h4>我的发布</h4>
-						<ul>		
-							<li><a href="../csocompany/EmployInfo.html">招聘信息</a></li>		
-							<li><a href="../csocompany/ExtensionInfoFeedback.html">推广信息</a></li>		
-						</ul>
+					<h4>我的招聘</h4>
+					<ul>
+						<li><a href="../csocompany/EmployInfo.html">招聘信息</a></li>
+						<li><a href="../csocompany/EmployFeedback.html">招聘反馈</a></li>	
+						
+					</ul>
 
-						<h4>我的反馈</h4>
-						<ul>								
-							<li><a href="../csocompany/EmployFeedback.html">招聘反馈</a></li>	
-							<li><a href="../csocompany/SupplierFeedbackInfo.html">医疗机构需求信息</a></li>	
-							<li><a href="../csocompany/SupplierNeedInfo.html">供货商需求信息</a></li>	
-						</ul>
+					<h4>我的发布</h4>
+					<ul>		
+								
+						<li><a href="../csocompany/ExtensionInfoFeedback.html">产品代理需求</a></li>		
+					</ul>
 
-						<h4>我的关注</h4>
-						<ul>									
-							<li><a href="../csocompany/MyConcern.html">我的关注</a></li>
-						</ul>
+					<h4>我的反馈</h4>
+					<ul>								
+						<li><a href="../csocompany/AcademicConference.html">学术活动反馈</a></li>
+						<li><a href="../csocompany/SupplierFeedbackInfo.html">医疗机构发布的信息</a></li>	
+						<li><a href="../csocompany/SupplierNeedInfo.html">生产厂家发布的信息</a></li>	
+						<li><a href="../csocompany/SupplierNeedInfo2.html">授权代理商发布的信息</a></li>
+					</ul>
 
-						<h4>联系后台</h4>
-						<ul>
-							<li><a href="../csocompany/consult.html">问小安</a></li>					
-						</ul>
+					<h4>我的关注</h4>
+					<ul>									
+						<li><a href="../csocompany/MyConcern.html">我的关注</a></li>
+					</ul>
+
+					<h4>联系后台</h4>
+					<ul>
+						<li><a href="../csocompany/consult.html">问小安</a></li>					
+					</ul>
 
 				</div><!--我的账号  下面部分-->
 			</div>	
@@ -107,13 +115,21 @@
 
 			<table class="table condition-table"><!--包括渠道、。。。区域什么的-->
 				<tbody>
+
+					<tr>
+						<td class="condition-title">推荐码</td>
+						<td>
+							<p>FWE7UH9S8D</p>
+						</td>
+					</tr>
+
 					<tr>
 						<td class="condition-title">用户头像</td>
 						<td>
 										
 							<div class="con4">
 								<canvas id="cvs" width="200" height="200"></canvas>
-								<span class="btn upload">上传头像<input type="file" class="upload_pic" id="upload" /></span>
+								<span class="btn upload"><p>上传头像</p><input type="file" class="upload_pic" id="upload" /></span>
 							</div>
 
 
@@ -143,12 +159,15 @@
 						</td>
 					</tr>
 
+
 					<tr>
 						<td class="condition-title">公司法人代表姓名</td>
 						<td>
 							<input type="text">
 						</td>
 					</tr>
+
+
 
 
 					<tr>

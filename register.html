@@ -7,7 +7,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../Public/CSS/main.css">
+    <link rel="stylesheet" href="Public/CSS/main.css">
+    <link rel="stylesheet" href="Public/CSS/zh.css">
+
     <style>
       .first-bar .navbar-brand{padding-top: 15px;}
       
@@ -88,7 +90,7 @@
         <div class="collapse navbar-collapse pull-right" id="first-bar">
           <ul class="nav navbar-nav">
             <li class="active">
-              <a href="login.html">请登录 <span class="sr-only">(current)</span></a>
+              <a href="login.html">我的账号 <span class="sr-only">(current)</span></a>
             </li>
 
             <li>
@@ -217,7 +219,6 @@
               <span id="pwd_e" class="glyphicon glyphicon-remove form-control-feedback"></span>
             </label>
           </div>
-
         </div>
         <!--密码强度-->
         <div class="form-group">
@@ -249,9 +250,9 @@
             <select class="form-control" id="usertype" style="width: 340px;" oninput="chose()">
               <option disabled selected value>请选择</option>
               <option>生产商</option>
-              <option>一级代理商</option>
-              <option>CSO专员</option>
-              <option>CSO公司</option>
+              <option>授权代理</option>
+              <option>销售代理专员</option>
+              <option>销售代理公司</option>
               <option>医疗机构</option>
             </select> 
             
@@ -261,6 +262,17 @@
             </label>
           </div>
           
+        </div>
+        <!-- 推荐码 -->
+        <div class="form-group">
+          <label class="col-md-4 control-label">推荐码：</label>
+          <div class="col-md-4">
+            <input type="text" class="form-control"  style="width:340px;display: inline;" placeholder="请输入推荐码(如果没有可以不填写)">
+            <label>
+              <span  class="glyphicon glyphicon-ok form-control-feedback form" style="display:none"></span>
+              <span  class="glyphicon glyphicon-remove form-control-feedback"></span>
+            </label>
+          </div>
         </div>
         <!--协议注册-->
         <div class="form-group" style="text-align: center;">
